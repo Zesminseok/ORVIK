@@ -15,6 +15,10 @@ workflow use.
 
 This license does not transfer ownership of BRIDGE+, its source code, protocol
 implementations, trademarks, user interface, bundled assets, or documentation.
+It also does not grant any rights in third-party trademarks, protocol names,
+certification programs, logos, product names, or software owned by AlphaTheta,
+Pioneer Corporation, TC Supply, Event Imagineering Group, ShowKontrol, or any
+other third party.
 
 ## 2. Demo and Limited Functionality
 
@@ -49,12 +53,23 @@ you may not:
   network terms that apply to you;
 - use BRIDGE+ names, icons, release assets, screenshots, or documentation in a
   way that suggests endorsement, sponsorship, certification, or affiliation.
+- use any third-party name, mark, logo, compatibility claim, or certification
+  reference in a way that suggests BRIDGE+ is official, licensed, certified,
+  endorsed, or supported by AlphaTheta, Pioneer DJ, TC Supply, Event
+  Imagineering Group, ShowKontrol, or any related party.
 
 ## 4. Interoperability Notice
 
 BRIDGE+ is an independent interoperability tool based on observed network
 behavior and publicly available information. No manufacturer source code,
-firmware, or confidential materials are licensed to users under this agreement.
+firmware, confidential materials, licensed SDK, or non-public network
+documentation are licensed to users under this agreement.
+
+BRIDGE+ is not AlphaTheta's official PRO DJ LINK Bridge application, is not a
+PRO DJ LINK licensed company product, and is not certified by AlphaTheta,
+Pioneer DJ, TC Supply, Event Imagineering Group, ShowKontrol, or any related
+party. TCNet compatibility is implemented independently and does not include
+ShowKontrol or BeatKontrol code.
 
 Nothing in this agreement grants you permission to reverse engineer BRIDGE+
 itself. Nothing in this agreement is intended to restrict rights that cannot be
@@ -120,4 +135,8 @@ agreement states otherwise.
 - 도네이션/후원은 개발 지원이며, 라이선스 구매나 기능 해금, 소유권 이전,
   보증, 지원 의무, 재배포 권한을 의미하지 않습니다.
 - BRIDGE+는 독립 상호운용성 도구이며, 언급된 제조사 또는 소프트웨어 회사와
-  제휴, 승인, 후원, 인증 관계가 없습니다.
+  제휴, 승인, 후원, 라이선스, 인증 또는 공식 연결 관계가 없습니다.
+- BRIDGE+는 AlphaTheta의 공식 PRO DJ LINK Bridge 애플리케이션이 아니며,
+  PRO DJ LINK 라이선스 회사 제품 또는 인증 제품이 아닙니다.
+- TCNet 호환 출력은 독립적으로 구현되었으며, ShowKontrol 또는 BeatKontrol
+  코드를 포함하지 않습니다.
