@@ -62,9 +62,10 @@ you may not:
 ## 4. Interoperability Notice
 
 BRIDGE+ is an independent interoperability tool based on observed network
-behavior and publicly available information. No manufacturer source code,
-firmware, confidential materials, licensed SDK, or non-public network
-documentation are licensed to users under this agreement.
+behavior and publicly available information. BRIDGE+ does not include or use
+ShowKontrol or BeatKontrol source code, AlphaTheta/Pioneer PRO DJ LINK Bridge
+source code, manufacturer firmware, licensed SDKs, confidential materials, or
+non-public network documentation.
 
 BRIDGE+ is not AlphaTheta's official PRO DJ LINK Bridge application, is not a
 PRO DJ LINK licensed company product, and is not certified by AlphaTheta,
@@ -141,3 +142,6 @@ agreement states otherwise.
   PRO DJ LINK 라이선스 회사 제품 또는 인증 제품이 아닙니다.
 - TCNet 호환 출력은 독립적으로 구현되었으며, ShowKontrol 또는 BeatKontrol
   코드를 포함하지 않습니다.
+- BRIDGE+에는 ShowKontrol, BeatKontrol, AlphaTheta/Pioneer PRO DJ LINK
+  Bridge 소스 코드, 제조사 펌웨어, 라이선스 SDK, 기밀 자료 또는 비공개 네트워크
+  문서가 포함되어 있지 않으며 이를 사용하지 않았습니다.
