@@ -10,6 +10,20 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## 1.1.7 — 2026-05-24
 
+### English
+
+- Added
+  - Improved waveform marker display in Web Viewer and the main app.
+
+- Fixed
+  - Fixed blurry or broken text in some Windows UI areas after waveform rendering.
+  - Smoothed CDJ-2000NXS2 playhead rendering in Web Viewer.
+  - Fixed the main detail waveform playhead appearing dimmed by played-region or marker caches.
+  - Fixed cue marker vertical-line alignment and opacity in the main app and Web Viewer.
+  - Improved CDJ-2000NXS2 cue, hot cue, and jog wheel stability.
+
+### 한국어
+
 - 기능 추가
   - Web Viewer와 프로그램 웨이브폼 마커 표시 개선
 
