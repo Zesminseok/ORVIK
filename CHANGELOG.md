@@ -16,6 +16,7 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   - Improved waveform marker display in Web Viewer and the main app.
 
 - Fixed
+  - Fixed internal beat phasor theme-color blending across main app layouts.
   - Fixed blurry or broken text in some Windows UI areas after waveform rendering.
   - Smoothed CDJ-2000NXS2 playhead rendering in Web Viewer.
   - Fixed the main detail waveform playhead appearing dimmed by played-region or marker caches.
@@ -28,6 +29,7 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   - Web Viewer와 프로그램 웨이브폼 마커 표시 개선
 
 - 버그 픽스
+  - 프로그램 내부 비트페이저가 모든 레이아웃에서 테마색 블렌딩을 반영하도록 수정
   - Windows에서 웨이브폼 렌더링 후 일부 텍스트가 흐려지거나 깨지는 문제 수정
   - Web Viewer의 CDJ-2000NXS2 플레이헤드 표시가 끊겨 보이는 문제 수정
   - 프로그램 디테일 웨이브폼 플레이헤드가 과거 재생영역/마커 캐시에 묻혀 어둡게 보이는 문제 수정
