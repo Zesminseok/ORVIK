@@ -8,6 +8,20 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
+## 1.2.1 — 2026-07-03
+
+### English
+
+- Improved CDJ-2000NXS2 tiny loop display in the main app and Web Viewer.
+- Improved CDJ-2000NXS2 jog, forward spin, and backspin playhead response during active loops.
+- Kept hardware TCNet timing sourced from raw PRO DJ LINK state, separate from UI-rendered playhead values.
+
+### 한국어
+
+- 프로그램과 Web Viewer에서 CDJ-2000NXS2 아주 짧은 루프 구간 표시 개선
+- 루프 중 CDJ-2000NXS2 조그, 포워드 스핀, 백스핀 플레이헤드 반응 개선
+- 하드웨어 TCNet 타이밍은 UI 표시값이 아닌 원본 PRO DJ LINK 상태 기준으로 유지
+
 ## 1.2.0 — 2026-07-02
 
 ### English
