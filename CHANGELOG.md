@@ -8,6 +8,22 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
+## 1.2.0 — 2026-07-02
+
+### English
+
+- Improved CDJ-2000NXS2 cue, hot cue, jog, vinyl, loop, and track-load transport stability.
+- Reduced UI stalls during track loading and waveform refresh.
+- Merged PDJL and TCNet connection views into a cleaner NET / 연결 page.
+- Refined mixer controls, hardware link status, Web Viewer playhead, and waveform display behavior.
+
+### 한국어
+
+- CDJ-2000NXS2 큐, 핫큐, 조그, 바이닐, 루프, 곡 로드 중 위치 추적 안정화
+- 곡 로드와 웨이브폼 갱신 중 UI 끊김 완화
+- PDJL / TCNet 연결 상태를 NET / 연결 메뉴로 통합
+- 믹서 컨트롤, 하드웨어 연결 상태, Web Viewer 플레이헤드와 웨이브폼 표시 개선
+
 ## 1.1.9 — 2026-06-14
 
 ### English
