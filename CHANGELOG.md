@@ -16,6 +16,7 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Reduced UI stalls during track loading and waveform refresh.
 - Merged PDJL and TCNet connection views into a cleaner NET / 연결 page.
 - Refined mixer controls, hardware link status, Web Viewer playhead, and waveform display behavior.
+- Added model routing for CDJ-1500X / CDJ-3000X and expanded DJM / euphonia mixer profiles.
 
 ### 한국어
 
@@ -23,6 +24,7 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - 곡 로드와 웨이브폼 갱신 중 UI 끊김 완화
 - PDJL / TCNet 연결 상태를 NET / 연결 메뉴로 통합
 - 믹서 컨트롤, 하드웨어 연결 상태, Web Viewer 플레이헤드와 웨이브폼 표시 개선
+- CDJ-1500X / CDJ-3000X 모델 분기와 DJM / euphonia 믹서 프로필 추가
 
 ## 1.1.9 — 2026-06-14
 
