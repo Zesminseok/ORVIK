@@ -105,6 +105,11 @@ express or implied, including but not limited to warranties of merchantability,
 fitness for a particular purpose, title, non-infringement, compatibility,
 accuracy, availability, or uninterrupted operation.
 
+Some jurisdictions do not allow the exclusion of implied warranties or the
+limitation of statutory consumer rights. In those jurisdictions, the above
+exclusions apply only to the extent permitted by applicable law, and any
+non-waivable statutory rights you hold as a consumer remain unaffected.
+
 ## 9. Limitation of Liability
 
 To the maximum extent permitted by applicable law, the copyright holder and
@@ -136,6 +141,9 @@ agreement states otherwise.
   기본 Pro DJ Link to TCNet 출력만 계속 작동하고 확장 기능은 비활성화됩니다.
 - 도네이션/후원은 개발 지원이며, 라이선스 구매나 기능 해금, 소유권 이전,
   보증, 지원 의무, 재배포 권한을 의미하지 않습니다.
+- 일부 관할권에서는 묵시적 보증의 배제나 소비자 법정 권리의 제한이 허용되지
+  않습니다. 그러한 관할권에서는 위 배제 조항이 관련 법률이 허용하는 범위에서만
+  적용되며, 포기할 수 없는 소비자 법정 권리는 영향을 받지 않습니다.
 - BRIDGE+는 독립 상호운용성 도구이며, 언급된 제조사 또는 소프트웨어 회사와
   제휴, 승인, 후원, 라이선스, 인증 또는 공식 연결 관계가 없습니다.
 - BRIDGE+는 AlphaTheta의 공식 PRO DJ LINK Bridge 애플리케이션이 아니며,

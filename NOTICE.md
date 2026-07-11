@@ -19,7 +19,7 @@ All trademarks are used solely for descriptive purposes related to interoperabil
 
 BRIDGE+ is not AlphaTheta's official PRO DJ LINK Bridge application and is not a PRO DJ LINK licensed company product or certified product. References to PRO DJ LINK, Pioneer DJ, CDJ, DJM, and rekordbox describe compatibility targets only.
 
-TC Supply describes TCNet as an open network protocol for exchanging show-control information between lighting, video, and other entertainment systems. BRIDGE+ implements compatible TCNet output independently. BRIDGE+ does not include ShowKontrol or BeatKontrol code, does not use TC Supply logos, and does not claim TC Supply or Event Imagineering Group endorsement, certification, support, or license status.
+TC Supply describes TCNet as an open network protocol for exchanging show-control information between lighting, video, and other entertainment systems, and the publicly available TCNet LINK Specification (© Event Imagineering Group) states that "the protocol is open and free to be used". BRIDGE+ implements compatible TCNet output independently from that public specification. BRIDGE+ does not include ShowKontrol or BeatKontrol code, does not use TC Supply logos, and does not claim TC Supply or Event Imagineering Group endorsement, certification, support, or license status.
 
 ---
 
@@ -39,7 +39,7 @@ The following bundled assets are used under their respective licenses:
 
 BRIDGE+ communicates with external systems based on **observed network behavior and publicly available information**.
 
-Its functionality is designed to interpret and translate network events between different systems for interoperability purposes. No proprietary source code, firmware, confidential materials, licensed SDK, or non-public PRO DJ LINK network documentation from any manufacturer have been used in the development of this software.
+Its functionality is designed to interpret and translate network events between different systems for interoperability purposes. No proprietary source code, firmware, confidential materials, licensed SDK, or non-public PRO DJ LINK network documentation from any manufacturer have been used in the development of this software. No third-party software was decompiled, disassembled, or otherwise code-analyzed: compatibility was achieved solely by observing network traffic between devices the developer owns or lawfully operates, a method consistent with interoperability principles recognized in major jurisdictions (including 17 U.S.C. § 1201(f), Directive 2009/24/EC, and Article 101-4 of the Korean Copyright Act).
 
 Certain identifier strings or protocol-level values that may appear in network communication are handled strictly for compatibility with existing systems and are not used as branding or representation in user-facing contexts.
 
@@ -94,7 +94,7 @@ BRIDGE+는 호환 DJ 하드웨어와 비주얼/조명 소프트웨어 간의 상
 
 BRIDGE+는 AlphaTheta의 공식 PRO DJ LINK Bridge 애플리케이션이 아니며, PRO DJ LINK 라이선스 회사의 제품 또는 인증 제품이 아닙니다. PRO DJ LINK, Pioneer DJ, CDJ, DJM, rekordbox에 대한 언급은 호환 대상 설명을 위한 것입니다.
 
-TC Supply는 TCNet을 조명, 영상 및 기타 엔터테인먼트 시스템 간 쇼 컨트롤 정보를 교환하기 위한 open network protocol로 설명합니다. BRIDGE+는 TCNet 호환 출력을 독립적으로 구현합니다. BRIDGE+에는 ShowKontrol 또는 BeatKontrol 코드가 포함되어 있지 않으며, TC Supply 로고를 사용하지 않고, TC Supply 또는 Event Imagineering Group의 승인, 인증, 지원 또는 라이선스 상태를 주장하지 않습니다.
+TC Supply는 TCNet을 조명, 영상 및 기타 엔터테인먼트 시스템 간 쇼 컨트롤 정보를 교환하기 위한 open network protocol로 설명하며, 공개된 TCNet LINK Specification(© Event Imagineering Group)은 "the protocol is open and free to be used"라고 명시합니다. BRIDGE+는 이 공개 스펙을 기반으로 TCNet 호환 출력을 독립적으로 구현합니다. BRIDGE+에는 ShowKontrol 또는 BeatKontrol 코드가 포함되어 있지 않으며, TC Supply 로고를 사용하지 않고, TC Supply 또는 Event Imagineering Group의 승인, 인증, 지원 또는 라이선스 상태를 주장하지 않습니다.
 
 ---
 
@@ -102,7 +102,7 @@ TC Supply는 TCNet을 조명, 영상 및 기타 엔터테인먼트 시스템 간
 
 BRIDGE+는 **관찰된 네트워크 동작 및 공개된 정보**를 기반으로 외부 시스템과 통신합니다.
 
-본 소프트웨어는 서로 다른 시스템 간의 상호운용성을 위해 네트워크 이벤트를 해석하고 변환하는 기능을 제공합니다. 개발 과정에서 어떠한 제조사의 비공개 소스 코드, 펌웨어, 기밀 자료, 라이선스 SDK 또는 비공개 PRO DJ LINK 네트워크 문서도 사용되지 않았습니다.
+본 소프트웨어는 서로 다른 시스템 간의 상호운용성을 위해 네트워크 이벤트를 해석하고 변환하는 기능을 제공합니다. 개발 과정에서 어떠한 제조사의 비공개 소스 코드, 펌웨어, 기밀 자료, 라이선스 SDK 또는 비공개 PRO DJ LINK 네트워크 문서도 사용되지 않았습니다. 어떠한 제3자 소프트웨어도 디컴파일, 디스어셈블 또는 코드 분석하지 않았으며, 호환성은 개발자가 소유하거나 적법하게 운용하는 장비 간 네트워크 트래픽 관찰만으로 확보되었습니다. 이는 주요 관할권에서 인정되는 상호운용성 원칙(미국 17 U.S.C. § 1201(f), EU 지침 2009/24/EC, 대한민국 저작권법 제101조의4 등)과 부합하는 방식입니다.
 
 네트워크 통신 과정에서 일부 식별 문자열 또는 프로토콜 값이 사용될 수 있으나, 이는 기존 시스템과의 호환성을 위한 것이며 사용자에게 표시되는 브랜딩 목적으로 사용되지 않습니다.
 
