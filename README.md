@@ -10,8 +10,6 @@ BRIDGE+ listens to compatible DJ network state and translates timing, transport,
 
 ## Preview
 
-FLOW deck theme on desktop (auto stage view with per-deck highlight colors) and the mobile Web Viewer.
-
 <p>
   <img src="docs/media/program_gif.gif" alt="BRIDGE+ Deck theme" width="520">
   &nbsp;
