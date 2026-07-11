@@ -23,7 +23,7 @@ other third party.
 ## 2. Demo and Limited Functionality
 
 BRIDGE+ release builds may operate as time-limited demo builds. Unless a
-separate written license says otherwise, the demo period is 240 days from first
+separate written license says otherwise, the demo period is 60 days from first
 launch.
 
 The end of the demo period does not block BRIDGE+ from launching. After the
@@ -151,7 +151,7 @@ agreement states otherwise.
   해당 라이선스가 허용하는 수정 및 디버깅 목적 리버스 엔지니어링 권리는 본
   계약의 영향을 받지 않습니다 (앱에 동봉된 LICENSE.electron.txt,
   LICENSES.chromium.html 참조).
-- 240일 데모 종료 후에도 BRIDGE+ 실행 자체는 차단되지 않습니다. 제한 모드에서
+- 60일 데모 종료 후에도 BRIDGE+ 실행 자체는 차단되지 않습니다. 제한 모드에서
   기본 Pro DJ Link to TCNet 출력만 계속 작동하고 확장 기능은 비활성화됩니다.
 - 도네이션/후원은 개발 지원이며, 라이선스 구매나 기능 해금, 소유권 이전,
   보증, 지원 의무, 재배포 권한을 의미하지 않습니다.

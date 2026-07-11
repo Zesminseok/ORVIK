@@ -22,7 +22,6 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Fixed Web Viewer loop overlay flicker and loop-mode stutter; fixed VU / fader meters not moving.
 - Reduced download size to about 73MB (from 295MB).
 - Unified Windows and macOS rendering with bundled fonts.
-- Extended the demo period from 60 to 240 days (existing installs extend automatically).
 - Updated license and notice documents: LGPL rights carve-out for the bundled Electron FFmpeg component, consumer-rights savings clause, TCNet specification citation, expanded bundled-font notices.
 
 ### 한국어
@@ -37,7 +36,6 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Web Viewer 루프 구간 깜빡임·루프 모드 끊김 수정, VU / 페이더 미터 미동작 수정
 - 다운로드 용량 약 73MB 로 축소 (기존 295MB)
 - Windows · macOS 렌더링을 번들 폰트로 통일
-- 데모 기간 60일 → 240일 연장 (기존 설치도 자동 연장)
 - 라이선스·고지 문서 갱신: 번들 Electron FFmpeg(LGPL) 권리 보장 조항, 소비자 법정 권리 보호 조항, TCNet 스펙 인용, 번들 폰트 고지 확대
 
 ## 1.2.1 — 2026-07-03
