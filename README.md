@@ -8,6 +8,18 @@
 
 BRIDGE+ listens to compatible DJ network state and translates timing, transport, metadata, and deck information into practical outputs for visual, lighting, and production environments.
 
+## Preview
+
+FLOW deck theme on desktop (auto stage view with per-deck highlight colors) and the mobile Web Viewer.
+
+<p>
+  <img src="docs/media/flow-desktop.gif" alt="BRIDGE+ FLOW deck theme" width="520">
+  &nbsp;
+  <img src="docs/media/webviewer-phone.gif" alt="BRIDGE+ Web Viewer on mobile" width="240">
+</p>
+
+> Demonstration on the developer's own hardware. UI, track names, and colors are examples.
+
 > **Trademark and affiliation notice:** BRIDGE+ is an independent third-party project. It is not affiliated with, endorsed by, sponsored by, approved by, licensed by, certified by, or otherwise officially connected to any hardware, software, or protocol owner mentioned in this repository. Product names, protocol names, and trademarks are used only to describe compatibility and interoperability. See [NOTICE.md](NOTICE.md).
 
 ---
