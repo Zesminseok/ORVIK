@@ -8,6 +8,34 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
+## 1.3.5 — 2026-07-12
+
+### English
+
+- Added FLOW deck theme: automatic stage view where the audible deck maximizes, the incoming track takes the mid slot, and the rest dock; role changes follow master / fader / on-air state with an ending-track ladder, freshly loaded tracks are prioritized, and clicking a deck pins it as hero until its track changes.
+- Added per-player highlight colors (right-click a deck or the hardware status strip) shown on deck cards, the mode bar, and the Web Viewer.
+- Added a hardware status strip in the mode bar showing connected players (number, model, color) and the mixer.
+- Upgraded the Web Viewer: real-time scrolling detail waveform at 60fps, segmented VU / fader meters, per-deck colors, bar counter, minute markers, and camelot key display; decks follow hardware connections (1–6 players).
+- Improved CDJ-2000NXS2 tracking: 32-bit native position decoding removes a rare ±65s ghost during rapid seeks, loop out-point adjustments track in real time, and cue points now match the hardware manual (cue preview release, back-cue, and parked jog never move the stored cue point).
+- Improved FLOW transitions: smooth morphs with content visible throughout; WebGL contexts survive card resizes.
+- Improved performance: removed per-frame GPU stalls, and the UI Drawing FPS option now genuinely reduces load while decks play. TCNet and PRO DJ LINK timing paths unchanged.
+- Fixed Web Viewer loop overlay flicker and loop-mode stutter; fixed VU / fader meters not moving.
+- Reduced download size to about 73MB (from 295MB).
+- Unified Windows and macOS rendering with bundled fonts.
+
+### 한국어
+
+- FLOW 덱 테마 추가: 들리는 덱이 최대화, 다음 곡이 중간 크기, 나머지는 도크로 배치되는 자동 스테이지 뷰. 마스터 / 페이더 / 온에어 상태와 종료 임박 단계에 따라 전환되고, 새로 로드한 곡을 우선하며, 덱 클릭으로 트랙이 바뀔 때까지 강제 최대화(핀) 가능
+- 플레이어별 하이라이트 색상 추가 (덱 또는 하드웨어 현황 칩 우클릭) — 덱 카드, 모드 바, Web Viewer 에 동일 표시
+- 모드 바에 연결된 플레이어(번호·모델·색상)와 믹서를 보여주는 하드웨어 현황 표시 추가
+- Web Viewer 업그레이드: 60fps 실시간 스크롤 디테일 웨이브폼, 세그먼트 VU / 페이더 미터, 덱 색상, 바 카운터, 1분 마커, Camelot 키 표시, 하드웨어 연결에 따른 덱 1~6개 자동 반영
+- CDJ-2000NXS2 트래킹 개선: 네이티브 위치 32비트 디코딩(급속 시크 시 드문 ±65초 위치 오류 제거), 루프 아웃포인트 조절 실시간 반영, 큐포인트가 하드웨어 매뉴얼과 동일하게 동작(큐 프리뷰 릴리즈·백큐·파킹 조그로는 큐포인트 불변)
+- FLOW 전환 개선: 내용이 보이는 채로 부드러운 몰프, 카드 크기 변경 시 WebGL 재구축 제거
+- 성능 개선: 프레임당 GPU 스톨 제거, UI Drawing FPS 옵션이 재생 중 실제 부하를 줄이도록 개선. TCNet · PRO DJ LINK 타이밍 경로는 변경 없음
+- Web Viewer 루프 구간 깜빡임·루프 모드 끊김 수정, VU / 페이더 미터 미동작 수정
+- 다운로드 용량 약 73MB 로 축소 (기존 295MB)
+- Windows · macOS 렌더링을 번들 폰트로 통일
+
 ## 1.2.1 — 2026-07-03
 
 ### English

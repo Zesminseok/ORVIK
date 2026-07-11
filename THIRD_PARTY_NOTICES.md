@@ -47,7 +47,8 @@ Runtime dependency:
 
 Bundled fonts:
 
-- DSEG7 Classic and Noto Sans KR: SIL Open Font License Version 1.1. See
+- DSEG7 Classic, Noto Sans KR, DM Mono, Space Grotesk, and Inter:
+  SIL Open Font License Version 1.1. See
   `renderer/fonts/LICENSE.txt` in the private source tree or bundled
   application notices where available.
 

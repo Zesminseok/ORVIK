@@ -27,8 +27,9 @@ TC Supply describes TCNet as an open network protocol for exchanging show-contro
 
 The following bundled assets are used under their respective licenses:
 
-- **Fonts** (`renderer/fonts/`): DSEG7 Classic and Noto Sans KR — both licensed under
-  the SIL Open Font License Version 1.1. See `renderer/fonts/LICENSE.txt`.
+- **Fonts** (`renderer/fonts/`): DSEG7 Classic, Noto Sans KR, DM Mono, Space Grotesk,
+  and Inter — all licensed under the SIL Open Font License Version 1.1.
+  See `renderer/fonts/LICENSE.txt`.
 - **Default placeholder artwork** (`default-album-artwork.png`, `renderer/assets/default-art.png`):
   Simple solid-color placeholders included with BRIDGE+ and governed by the BRIDGE+
   Binary License unless a file states otherwise.
