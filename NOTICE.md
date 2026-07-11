@@ -11,9 +11,6 @@ The following are trademarks (or registered trademarks) of their respective owne
 - **TCNet**, **ShowKontrol**, **TC Supply**, and related names or logos — marks, protocol names, product names, or trade names associated with TC Supply and/or Event Imagineering Group
 - **Resolume Arena**, **Resolume Wire** — Resolume B.V.  
 - **Art-Net** — Artistic Licence Holdings Ltd.  
-- **grandMA** — MA Lighting Technology GmbH  
-- **QLC+** — Massimo Callegari and contributors  
-- **Wirecast** — Telestream, LLC  
 
 All trademarks are used solely for descriptive purposes related to interoperability and compatibility. No trademark use in this repository or binary distribution should be understood as an endorsement, sponsorship, certification, or official relationship.
 
@@ -86,15 +83,21 @@ BRIDGE+는 호환 DJ 하드웨어와 비주얼/조명 소프트웨어 간의 상
 - **TCNet**, **ShowKontrol**, **TC Supply** 및 관련 명칭/로고 — TC Supply 및/또는 Event Imagineering Group과 관련된 표장, 프로토콜명, 제품명 또는 상호입니다.
 - **Resolume Arena**, **Resolume Wire** — Resolume B.V.  
 - **Art-Net** — Artistic Licence Holdings Ltd.  
-- **grandMA** — MA Lighting Technology GmbH  
-- **QLC+** — Massimo Callegari 및 기여자  
-- **Wirecast** — Telestream, LLC  
 
 모든 상표는 상호운용성 및 호환성 설명을 위한 목적으로만 사용됩니다. 이 저장소 또는 바이너리 배포물의 상표 사용은 보증, 후원, 인증 또는 공식 관계를 의미하지 않습니다.
 
 BRIDGE+는 AlphaTheta의 공식 PRO DJ LINK Bridge 애플리케이션이 아니며, PRO DJ LINK 라이선스 회사의 제품 또는 인증 제품이 아닙니다. PRO DJ LINK, Pioneer DJ, CDJ, DJM, rekordbox에 대한 언급은 호환 대상 설명을 위한 것입니다.
 
 TC Supply는 TCNet을 조명, 영상 및 기타 엔터테인먼트 시스템 간 쇼 컨트롤 정보를 교환하기 위한 open network protocol로 설명하며, 공개된 TCNet LINK Specification(© Event Imagineering Group)은 "the protocol is open and free to be used"라고 명시합니다. BRIDGE+는 이 공개 스펙을 기반으로 TCNet 호환 출력을 독립적으로 구현합니다. BRIDGE+에는 ShowKontrol 또는 BeatKontrol 코드가 포함되어 있지 않으며, TC Supply 로고를 사용하지 않고, TC Supply 또는 Event Imagineering Group의 승인, 인증, 지원 또는 라이선스 상태를 주장하지 않습니다.
+
+---
+
+## 번들 서드파티 자산
+
+- **폰트** (`renderer/fonts/`): DSEG7 Classic, Noto Sans KR, DM Mono, Space Grotesk,
+  Inter — 모두 SIL Open Font License 1.1. 상세는 앱에 동봉된 `renderer/fonts/LICENSE.txt` 참조.
+- **기본 앨범아트 플레이스홀더**: BRIDGE+ 에 포함된 단색 이미지 (바이너리 라이선스 적용).
+- **QR 코드 생성** (`qrcode` npm 패키지): MIT License.
 
 ---
 

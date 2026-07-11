@@ -86,8 +86,23 @@ Bridge 접근은 라이선스 회사 및 인증 제품 맥락에서 설명됩니
 그 지위를 주장하지 않습니다.
 
 TC Supply는 TCNet을 조명, 영상 및 기타 엔터테인먼트 시스템 간 쇼 컨트롤
-정보를 교환하기 위한 open network protocol로 설명합니다. BRIDGE+는 TCNet
-호환 출력을 독립적으로 구현합니다. BRIDGE+는 ShowKontrol 또는 BeatKontrol이
+정보를 교환하기 위한 open network protocol로 설명하며, 공개된 TCNet LINK
+Specification(© Event Imagineering Group)은 "the protocol is open and free
+to be used"라고 명시합니다. BRIDGE+는 이 공개 스펙을 기반으로 TCNet 호환
+출력을 독립적으로 구현합니다. BRIDGE+는 ShowKontrol 또는 BeatKontrol이
 아니며, 해당 코드를 포함하지 않고, TC Supply, Event Imagineering Group,
 ShowKontrol 또는 관련 당사자의 승인, 인증, 지원 또는 라이선스 상태를 주장하지
 않습니다.
+
+BRIDGE+는 Electron(MIT) 데스크톱 앱이며 Chromium, Node.js, V8, ICU, FFmpeg
+등을 함께 배포합니다. 각 라이선스 전문은 앱에 동봉된 `LICENSE.electron.txt`,
+`LICENSES.chromium.html`에 있습니다. 번들된 FFmpeg 라이브러리는 GNU Lesser
+General Public License(LGPL) 적용을 받는 무수정 동적 링크 라이브러리로,
+소스 코드는 Electron/Chromium 오픈소스 프로젝트에서 구할 수 있습니다.
+BRIDGE+ 바이너리 라이선스는 이 구성요소에 대해 LGPL이 부여하는 권리를
+제한하지 않습니다.
+
+번들 폰트(DSEG7 Classic, Noto Sans KR, DM Mono, Space Grotesk, Inter)는
+모두 SIL Open Font License 1.1 적용을 받으며, 저작권 고지와 라이선스 전문이
+앱에 동봉되어 있습니다. QR 코드 생성은 MIT License 의 `qrcode` npm 패키지를
+사용합니다.
