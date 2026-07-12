@@ -27,7 +27,7 @@ BRIDGE+ listens to compatible DJ network state and translates timing, transport,
 BRIDGE+ release packages are distributed as desktop binaries for macOS and Windows.
 The public GitHub repository contains documentation for the released packages; application source code is maintained separately.
 
-This release is a **60-day demo release**. The demo period starts on first launch. When the demo period ends, BRIDGE+ still launches and continues in limited mode with basic Pro DJ Link to TCNet output for timecode, faders, track metadata, and artwork; extended features are disabled.
+This release is a **demo build with no time limit at this time**. All features are available. A time-limited demo may be introduced in a future release; if that happens, BRIDGE+ will still launch and continue in a limited mode with basic Pro DJ Link to TCNet output.
 
 BRIDGE+ binaries may not be copied, modified, redistributed, mirrored, sold, sublicensed, or reverse engineered except where applicable law cannot restrict those rights.
 
@@ -117,7 +117,7 @@ BRIDGE+는 호환 DJ 네트워크 상태를 수신하고, 타이밍 / 재생 상
 BRIDGE+ 릴리스 패키지는 macOS 및 Windows용 데스크톱 바이너리로 배포됩니다.
 공개 GitHub 저장소에는 릴리스 패키지 설명을 위한 문서만 포함되며, 애플리케이션 소스 코드는 별도로 관리됩니다.
 
-이 릴리스는 **60일 데모 릴리스**입니다. 데모 기간은 첫 실행일부터 시작됩니다. 데모 기간이 종료되어도 BRIDGE+ 실행 자체는 차단되지 않으며, 제한 모드에서 타임코드, 페이더, 곡 메타데이터, 앨범아트의 기본 Pro DJ Link → TCNet 출력만 계속 작동하고 확장 기능은 비활성화됩니다.
+이 릴리스는 **현재 기간 제한이 없는 데모 빌드**입니다. 모든 기능을 사용할 수 있습니다. 향후 릴리스에서 기간 제한 데모가 도입될 수 있으며, 그 경우에도 BRIDGE+ 실행 자체는 차단되지 않고 기본 Pro DJ Link → TCNet 출력의 제한 모드로 계속 작동합니다.
 
 BRIDGE+ 바이너리는 관련 법률상 제한할 수 없는 경우를 제외하고 복사, 수정, 재배포, 미러링, 판매, 재라이선스, 리버스 엔지니어링이 금지됩니다.
 
