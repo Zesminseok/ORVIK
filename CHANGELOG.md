@@ -8,6 +8,30 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
+## 1.3.7 — 2026-07-12
+
+### English
+
+- Fixed LTC 29.97 drop-frame output glitching once per minute — receivers locked to ORVIK's LTC no longer lose sync at minute boundaries during normal playback.
+- Fixed Art-Net conformance: ArtPollReply now advertises the correct listen port (6454) and full 15-bit universe address, and ArtSync follows the configured destination instead of always broadcasting.
+- Fixed CDJ metadata sessions reconnecting after every 5 seconds of idle — track metadata and artwork now load faster on consecutive track loads.
+- Removed three crash/stall risks: viewer socket errors could take down the whole app, a first-time local track import could freeze timing for up to 2 seconds, and Art-Net send errors on flaky adapters could crash the process.
+- Hardened the Web Viewer server: connection cap, in-memory caches, and malformed-data guards; added regression tests.
+- Master BPM header widget redesigned (segment style) — the deck number chip now follows your per-deck highlight color.
+- Added keyboard usability: Enter commits any settings field, amber focus ring for keyboard navigation, tooltips on the OSC address buttons.
+- Web Viewer: ORVIK icon and full-screen standalone mode when added to a phone home screen.
+
+### 한국어
+
+- LTC 29.97 드롭프레임 출력이 분마다 글리치되던 문제 수정 — 정상 재생 중 분 경계에서 수신 장비가 싱크를 잃지 않습니다.
+- Art-Net 정합 수정: ArtPollReply 가 올바른 수신 포트(6454)와 15비트 유니버스 전체 주소를 광고하고, ArtSync 가 항상 브로드캐스트 대신 설정된 목적지를 따릅니다.
+- CDJ 메타데이터 세션이 유휴 5초마다 재접속하던 문제 수정 — 연속 트랙 로드 시 곡 정보·아트워크가 더 빨리 뜹니다.
+- 크래시/멈춤 위험 3건 제거: 뷰어 소켓 에러로 앱 전체가 종료될 수 있던 문제, 첫 로컬 트랙 임포트 시 타이밍이 최대 2초 얼 수 있던 문제, 불안정한 어댑터에서 Art-Net 송신 에러로 프로세스가 종료될 수 있던 문제.
+- Web Viewer 서버 하드닝: 연결 수 제한, 메모리 캐시, 비정형 데이터 가드 + 회귀 테스트 추가.
+- 마스터 BPM 헤더 위젯 재설계(세그먼트형) — 덱 번호 칩이 플레이어별 하이라이트 색을 따라갑니다.
+- 키보드 사용성: 설정 입력 Enter 확정, 키보드 탐색용 앰버 포커스 링, OSC 주소 버튼 툴팁.
+- Web Viewer: 휴대폰 홈화면 추가 시 ORVIK 아이콘 + 전체화면 단독 실행 모드.
+
 ## 1.3.6 — 2026-07-12
 
 ### English

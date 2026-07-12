@@ -3,7 +3,7 @@
 > Independent desktop bridge for synchronizing compatible DJ hardware, virtual decks, visual software, lighting systems, DAWs, and timecode workflows.
 
 [![License: Proprietary](https://img.shields.io/badge/license-proprietary-red.svg)](BINARY_LICENSE.md)
-[![Version](https://img.shields.io/badge/version-1.3.6-orange.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-1.3.7-orange.svg)](CHANGELOG.md)
 [![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows-lightgrey.svg)]()
 
 ORVIK listens to compatible DJ network state and translates timing, transport, metadata, and deck information into practical outputs for visual, lighting, and production environments.
@@ -67,9 +67,9 @@ TCNet output (Resolume Arena), PRO DJ LINK input (CDJ-3000 / CDJ-2000NXS2 / DJM-
 
 Download the native package for your operating system from [Releases](../../releases):
 
-- **macOS Apple Silicon**: `ORVIK-1.3.6-mac-arm64.dmg`
-- **macOS Intel**: `ORVIK-1.3.6-mac-x64.dmg`
-- **Windows x64**: `ORVIK-1.3.6-win-x64.exe`
+- **macOS Apple Silicon**: `ORVIK-1.3.7-mac-arm64.dmg`
+- **macOS Intel**: `ORVIK-1.3.7-mac-x64.dmg`
+- **Windows x64**: `ORVIK-1.3.7-win-x64.exe`
 
 Install or run the downloaded package. No separate runtime installation is required for normal use.
 
@@ -149,9 +149,9 @@ TCNet 출력(Resolume Arena), PRO DJ LINK 입력(CDJ-3000 / CDJ-2000NXS2 / DJM-9
 
 [Releases](../../releases)에서 운영체제에 맞는 네이티브 패키지를 다운로드하세요.
 
-- **macOS Apple Silicon**: `ORVIK-1.3.6-mac-arm64.dmg`
-- **macOS Intel**: `ORVIK-1.3.6-mac-x64.dmg`
-- **Windows x64**: `ORVIK-1.3.6-win-x64.exe`
+- **macOS Apple Silicon**: `ORVIK-1.3.7-mac-arm64.dmg`
+- **macOS Intel**: `ORVIK-1.3.7-mac-x64.dmg`
+- **Windows x64**: `ORVIK-1.3.7-win-x64.exe`
 
 다운로드한 패키지를 설치하거나 실행하면 됩니다. 일반 사용에는 별도 런타임 설치가 필요하지 않습니다.
 
