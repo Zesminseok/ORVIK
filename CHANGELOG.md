@@ -8,6 +8,22 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
+## 1.3.8 — 2026-07-13
+
+### English
+
+- Added a section navigation rail to Settings — icons on the left jump to each section, with the current section highlighted while scrolling.
+- Fixed RGB waveform analysis permanently stopping for the rest of the session if its background worker crashed once — it now recovers automatically.
+- Improved Web Viewer performance on phones: removed per-frame forced layout reflows (up to ~30 per frame with 6 decks) and skipped redundant screen updates for paused decks. Smoother on low-end devices, identical visuals.
+- Keyboard/screen-reader labels for icon-only buttons (settings rail, OSC address add/remove).
+
+### 한국어
+
+- 설정에 섹션 내비게이션 레일 추가 — 왼쪽 아이콘으로 각 섹션 바로 이동, 스크롤 중 현재 섹션이 하이라이트됩니다.
+- RGB 웨이브폼 분석이 백그라운드 워커 크래시 한 번으로 세션 내내 멈추던 문제 수정 — 자동 복구됩니다.
+- 휴대폰 Web Viewer 성능 개선: 프레임당 강제 리플로우(6덱 기준 최대 ~30회) 제거, 정지된 덱의 불필요한 화면 갱신 생략. 저사양 기기에서 더 부드럽고 화면은 동일합니다.
+- 아이콘 전용 버튼(설정 레일, OSC 주소 추가/삭제)에 키보드·스크린리더 라벨 추가.
+
 ## 1.3.7 — 2026-07-12
 
 ### English
