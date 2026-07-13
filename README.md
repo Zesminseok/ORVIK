@@ -1,6 +1,6 @@
 # ORVIK
 
-> Independent desktop bridge for synchronizing compatible DJ hardware, virtual decks, visual software, lighting systems, DAWs, and timecode workflows.
+> DJ hardware to VJ software / lighting software (TCNet · Art-Net · LTC · MIDI)
 
 [![License: Proprietary](https://img.shields.io/badge/license-proprietary-red.svg)](BINARY_LICENSE.md)
 [![Version](https://img.shields.io/badge/version-1.3.8-orange.svg)](CHANGELOG.md)
