@@ -1,4 +1,8 @@
-# ORVIK
+<p align="center">
+  <img src="docs/media/orvik-logo.png" alt="ORVIK" width="128">
+</p>
+
+<h1 align="center">ORVIK</h1>
 
 > DJ hardware → visuals · lighting · DAW sync (TCNet · Art-Net · LTC · MIDI)
 
