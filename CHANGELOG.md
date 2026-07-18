@@ -7,6 +7,42 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
+## 1.4.2 — 2026-07-19
+
+### English
+
+- Mixer panel: channel fader curve, crossfader curve, and EQ/ISO mode are now shown from the DJM; fixed V10 6-channel EQ knobs showing shifted values.
+- Channel and master VU meters redrawn as continuous bars for better level visibility.
+- New UI Scale option (100 / 125 / 150%) for HiDPI monitors.
+- All UI fonts are now bundled — the app renders fully offline.
+- Fixed small text looking blurry on Windows.
+- UI improvements.
+
+### 한국어
+
+- 믹서 패널: DJM 의 채널 페이더 커브·크로스페이더 커브·EQ/ISO 모드 표시, V10 6채널 EQ 노브 값이 밀려 보이던 문제 수정.
+- 채널·마스터 VU 미터를 연속 바 형태로 변경해 레벨 가시성 개선.
+- HiDPI 모니터용 UI 배율 옵션 추가 (100 / 125 / 150%).
+- 모든 UI 폰트 내장 — 오프라인에서도 완전하게 표시됩니다.
+- Windows 에서 작은 글씨가 뭉개져 보이던 문제 수정.
+- UI 개선.
+
+## 1.4.1 — 2026-07-17
+
+### English
+
+- Fixed the Settings window layout collapsing into narrow vertical columns on Windows.
+- Fixed repeated deck paint errors during track loading (waveform transition).
+- The sidebar Settings button now toggles the Settings window — click again to close it.
+- Minor bug fixes and improvements.
+
+### 한국어
+
+- Windows 에서 설정 창이 좁은 세로 컬럼으로 깨지던 문제 수정.
+- 트랙 로딩 중(웨이브폼 전환) 덱 페인트 오류가 반복되던 문제 수정.
+- 사이드바 설정 버튼이 설정 창을 토글 — 다시 누르면 닫힙니다.
+- 자잘한 버그 수정 및 개선.
+
 ## 1.4.0 — 2026-07-14
 
 ### English
