@@ -11,6 +11,10 @@
 [![Version](docs/media/badge-version.svg)](CHANGELOG.md)
 [![Status: Beta](https://img.shields.io/badge/status-beta-yellow.svg)]()
 [![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows-lightgrey.svg)]()
+[![Issues · DM @zes_minseok](docs/media/badge-dm.svg)](https://instagram.com/zes_minseok)
+
+> Found a bug or have a question? GitHub Issues or an Instagram DM — both are fine.
+> 버그·문의는 GitHub 이슈 또는 인스타그램 DM 으로 보내주셔도 됩니다.
 
 Independent desktop bridge that reads a compatible Pioneer DJ network and turns tempo, beat, position, and track info into synced outputs for visual, lighting, and production software.
 
