@@ -7,6 +7,32 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
+## 1.5.0 — 2026-08-06
+
+### English
+
+**Mirror Mode (new)** — view an ORVIK running on another PC as if it were local. A CDJ's track database only accepts one client, so a second PC could never show color waveforms, cues or track info — Mirror Mode relays that link: automatic server discovery, hardware-true positions, auto-reconnect, and zero TCNet/gear interference from the mirroring machine.
+
+- Track title/artist decoding hardened (Korean titles, CDJ-3000 packet variants).
+- Loop in/out points now match the deck display exactly.
+- Fixed a subtle time-readout flicker while a deck sits parked.
+- CDJ-2000NXS2 cue-point updates now follow hardware behavior.
+- Mixer VU recalibrated to the DJM's 15-LED ladder; fader/VU mini badges in FLOW & STRIP themes.
+- TCNet: deckless machines stay silent; restarting a mirror can no longer drop the hardware server from Arena.
+- More thorough port/temp-file cleanup on exit.
+
+### 한국어
+
+**미러 모드 (신규)** — 같은 네트워크의 다른 PC 에서 실행 중인 ORVIK 을 그대로 비춥니다. CDJ 의 트랙 데이터베이스는 한 프로그램만 접속할 수 있어 두 번째 PC 에서는 컬러 웨이브폼·큐·트랙 정보를 볼 수 없었는데, 미러 모드가 그 연결을 대신합니다 — 서버 자동 탐색, 하드웨어 원본 위치 그대로, 자동 재연결, 미러 머신은 TCNet·장비에 일절 간섭하지 않습니다.
+
+- 트랙 제목·아티스트 표기 안정화 (한글 제목, CDJ-3000 변종 패킷).
+- 루프 인/아웃 포인트가 기기 표시와 정확히 일치.
+- 정지 중 현재 시간 표시가 미세하게 떨리던 문제 수정.
+- CDJ-2000NXS2 큐 포인트 갱신 규칙을 하드웨어 동작에 맞춤.
+- 믹서 VU 를 DJM 15-LED 에 맞춰 재보정, FLOW·STRIP 테마에 페이더/VU 미니 표시.
+- TCNet: 실기 없는 머신은 송출하지 않고, 미러 재시작이 서버에 영향을 주지 않습니다.
+- 종료 시 포트·임시파일 정리 강화.
+
 ## 1.4.3 — 2026-07-24
 
 ### English
