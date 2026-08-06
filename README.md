@@ -32,6 +32,7 @@ Independent desktop bridge that reads a compatible Pioneer DJ network and turns 
 - **OSC BPM · Art-Net Timecode · LTC · MIDI Clock · MTC** — for lighting consoles, DAWs, and timecode gear.
 - **Virtual Deck** — local 6-deck playback (MP3, WAV, FLAC, AAC, OGG, M4A, AIFF), no hardware needed.
 - **Web Viewer** — monitor decks, waveform, cues, and timecode from a phone/tablet browser on the same network.
+- **Mirror Mode** — a second PC mirrors the hardware-connected ORVIK (decks, mixer, color waveforms, cues) over the network. New in 1.5.0.
 
 ## Supported hardware
 
@@ -69,7 +70,7 @@ Independent interoperability implementation based on observed network behavior a
 
 > ⚠️ **베타** — 제조사 SDK가 아닌 독립 패킷 캡쳐 분석 기반이라 버그가 있을 수 있습니다. 문제는 [Issues](../../issues)로 알려주세요.
 
-**출력:** TCNet(Resolume Arena 네이티브 동기화, 확인됨) · OSC BPM · Art-Net Timecode · LTC · MIDI Clock · MTC · Virtual Deck(하드웨어 없이 로컬 재생) · Web Viewer(모바일/태블릿 모니터링).
+**출력:** TCNet(Resolume Arena 네이티브 동기화, 확인됨) · OSC BPM · Art-Net Timecode · LTC · MIDI Clock · MTC · Virtual Deck(하드웨어 없이 로컬 재생) · Web Viewer(모바일/태블릿 모니터링) · 미러 모드(다른 PC 의 ORVIK 을 그대로 표시, 1.5.0 신규).
 
 **지원 기기:**
 
