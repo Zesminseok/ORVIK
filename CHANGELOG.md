@@ -16,7 +16,6 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - A disconnected CDJ leaves the deck after 10 seconds and returns automatically on reconnect.
 - Network portability — broadcasts no longer leak into VPN/virtual adapters, several venue-network address cases fixed, and a taken TCNet port now recovers automatically.
 - Visibility polish: overview waveform headroom, a clearer start-cue arrow, header and status-badge alignment.
-- Logs are unified into one file per session, saved only to the folder chosen in settings.
 
 ### 한국어
 
@@ -25,7 +24,6 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - 연결이 끊긴 CDJ 는 10초 후 덱에서 정리되고, 다시 연결되면 자동으로 돌아옵니다.
 - 네트워크 이식성 — VPN·가상 어댑터로 새던 브로드캐스트 차단, 장소별 IP 대역 접속 실패 수정, TCNet 포트 충돌 자동 복구.
 - 시인성 개선 — 오버뷰 웨이브폼 여백, 시작 큐 화살표, 헤더·상태 뱃지 정렬.
-- 로그는 세션당 한 파일로, 설정에서 지정한 폴더에만 저장됩니다.
 
 ## 1.5.0 — 2026-08-06
 
