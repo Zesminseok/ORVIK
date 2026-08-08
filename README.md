@@ -16,7 +16,7 @@
 > Found a bug or have a question? GitHub Issues or an Instagram DM — both are fine.
 > 버그·문의는 GitHub 이슈 또는 인스타그램 DM 으로 보내주셔도 됩니다.
 
-Independent desktop bridge that reads a compatible DJ hardware and turns tempo, beat, position, and track info into synced outputs for resolume and production software.
+Independent desktop bridge that reads compatible DJ hardware and turns tempo, beat, position, and track info into synced outputs for Resolume and other visual/lighting software.
 
 > ⚠️ **Beta** — built from independent packet-capture research, not a manufacturer SDK. Bugs are expected. Please report them via [Issues](../../issues).
 
@@ -29,7 +29,7 @@ Independent desktop bridge that reads a compatible DJ hardware and turns tempo, 
 ## Outputs
 
 - **TCNet** — native Resolume Arena sync (up to 6 layers). Confirmed working. Also works with other TCNet software.
-- **OSC BPM · Art-Net Timecode · LTC · MIDI Clock · MTC** — for Resolume , lighting Software, and timecode gear.
+- **OSC BPM · Art-Net Timecode · LTC · MIDI Clock · MTC** — for Resolume, lighting consoles, and timecode gear.
 - **Virtual Deck** — local 6-deck playback (MP3, WAV, FLAC, AAC, OGG, M4A, AIFF), no hardware needed.
 - **Web Viewer** — monitor decks, waveform, cues, and timecode from a phone/tablet browser on the same network.
 - **Mirror Mode** — a second PC mirrors the hardware-connected ORVIK (decks, mixer, color waveforms, cues) over the network. New in 1.5.0.
@@ -66,7 +66,7 @@ Independent interoperability implementation based on observed network behavior a
 
 ## 한국어
 
-호환 Pioneer DJ 네트워크를 읽어 템포·비트·위치·트랙 정보를 비주얼/조명/프로덕션 소프트웨어용 동기화 출력으로 변환하는 독립 데스크톱 브리지입니다.
+호환 DJ 하드웨어 네트워크를 읽어 템포·비트·위치·트랙 정보를 Resolume 등 비주얼·조명 소프트웨어용 동기화 출력으로 변환하는 독립 데스크톱 브리지입니다.
 
 > ⚠️ **베타** — 제조사 SDK가 아닌 독립 패킷 캡쳐 분석 기반이라 버그가 있을 수 있습니다. 문제는 [Issues](../../issues)로 알려주세요.
 
