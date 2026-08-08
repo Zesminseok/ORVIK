@@ -7,6 +7,26 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
+## 1.5.1 — 2026-08-09
+
+### English
+
+- FLOW theme refined — tier changes glide with a 0.5s morph, settle on a 2s promote / 5s demote grace, and short samples or parked decks no longer crowd the big tiers.
+- Position accuracy — fixed a brief stale position right after a track change (CDJ-2000NXS2), and a jumping playhead on unanalyzed tracks whose length kept flip-flopping.
+- A disconnected CDJ leaves the deck after 10 seconds and returns automatically on reconnect.
+- Network portability — broadcasts no longer leak into VPN/virtual adapters, several venue-network address cases fixed, and a taken TCNet port now recovers automatically.
+- Visibility polish: overview waveform headroom, a clearer start-cue arrow, header and status-badge alignment.
+- Logs are unified into one file per session, saved only to the folder chosen in settings.
+
+### 한국어
+
+- FLOW 테마 다듬기 — 역할 전환이 0.5초 몰프로 부드러워지고 승격 2초·강등 5초 유예로 안정화. 짧은 샘플·정지 중 덱이 큰 자리를 차지하지 않습니다.
+- 트랙 위치 정확도 — 트랙 교체 직후 이전 위치가 잠깐 표시되던 문제(CDJ-2000NXS2), 분석 안 된 트랙에서 길이가 흔들리며 플레이헤드가 튀던 문제 수정.
+- 연결이 끊긴 CDJ 는 10초 후 덱에서 정리되고, 다시 연결되면 자동으로 돌아옵니다.
+- 네트워크 이식성 — VPN·가상 어댑터로 새던 브로드캐스트 차단, 장소별 IP 대역 접속 실패 수정, TCNet 포트 충돌 자동 복구.
+- 시인성 개선 — 오버뷰 웨이브폼 여백, 시작 큐 화살표, 헤더·상태 뱃지 정렬.
+- 로그는 세션당 한 파일로, 설정에서 지정한 폴더에만 저장됩니다.
+
 ## 1.5.0 — 2026-08-06
 
 ### English
