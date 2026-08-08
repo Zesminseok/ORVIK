@@ -5,7 +5,7 @@
   </picture>
 </p>
 
-> DJ hardware → visuals · lighting · DAW sync (TCNet · Art-Net · LTC · MIDI)
+> DJ hardware → Resolume sync (TCNet · Art-Net · LTC · MIDI)
 
 [![License: Proprietary](https://img.shields.io/badge/license-proprietary-red.svg)](BINARY_LICENSE.md)
 [![Version](docs/media/badge-version.svg)](CHANGELOG.md)
@@ -16,7 +16,7 @@
 > Found a bug or have a question? GitHub Issues or an Instagram DM — both are fine.
 > 버그·문의는 GitHub 이슈 또는 인스타그램 DM 으로 보내주셔도 됩니다.
 
-Independent desktop bridge that reads a compatible Pioneer DJ network and turns tempo, beat, position, and track info into synced outputs for visual, lighting, and production software.
+Independent desktop bridge that reads a compatible DJ hardware and turns tempo, beat, position, and track info into synced outputs for resolume and production software.
 
 > ⚠️ **Beta** — built from independent packet-capture research, not a manufacturer SDK. Bugs are expected. Please report them via [Issues](../../issues).
 
@@ -29,7 +29,7 @@ Independent desktop bridge that reads a compatible Pioneer DJ network and turns 
 ## Outputs
 
 - **TCNet** — native Resolume Arena sync (up to 6 layers). Confirmed working. Also works with other TCNet software.
-- **OSC BPM · Art-Net Timecode · LTC · MIDI Clock · MTC** — for lighting consoles, DAWs, and timecode gear.
+- **OSC BPM · Art-Net Timecode · LTC · MIDI Clock · MTC** — for Resolume , lighting Software, and timecode gear.
 - **Virtual Deck** — local 6-deck playback (MP3, WAV, FLAC, AAC, OGG, M4A, AIFF), no hardware needed.
 - **Web Viewer** — monitor decks, waveform, cues, and timecode from a phone/tablet browser on the same network.
 - **Mirror Mode** — a second PC mirrors the hardware-connected ORVIK (decks, mixer, color waveforms, cues) over the network. New in 1.5.0.
