@@ -55,10 +55,12 @@ Runtime dependency:
 
 Bundled fonts:
 
-- DSEG7 Classic, Noto Sans KR, DM Mono, Space Grotesk, and Inter:
-  SIL Open Font License Version 1.1. See
-  `renderer/fonts/LICENSE.txt` in the private source tree or bundled
-  application notices where available.
+- DSEG7 Classic, Noto Sans KR, DM Mono, Space Grotesk, Inter, and JetBrains Mono:
+  SIL Open Font License Version 1.1.
+- Material Symbols: Apache License Version 2.0 (Google LLC), not the OFL.
+
+Copyright notices and full license texts for all of the above are in
+`renderer/fonts/LICENSE.txt`, which ships with the application.
 
 ## User Media
 
@@ -102,7 +104,8 @@ General Public License(LGPL) 적용을 받는 무수정 동적 링크 라이브�
 ORVIK 바이너리 라이선스는 이 구성요소에 대해 LGPL이 부여하는 권리를
 제한하지 않습니다.
 
-번들 폰트(DSEG7 Classic, Noto Sans KR, DM Mono, Space Grotesk, Inter)는
-모두 SIL Open Font License 1.1 적용을 받으며, 저작권 고지와 라이선스 전문이
+번들 폰트 중 DSEG7 Classic, Noto Sans KR, DM Mono, Space Grotesk, Inter,
+JetBrains Mono 는 SIL Open Font License 1.1, Material Symbols 는 Apache
+License 2.0 (Google LLC) 적용을 받으며, 저작권 고지와 라이선스 전문이
 앱에 동봉되어 있습니다. QR 코드 생성은 MIT License 의 `qrcode` npm 패키지를
 사용합니다.

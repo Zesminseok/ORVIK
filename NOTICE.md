@@ -25,8 +25,10 @@ TC Supply describes TCNet as an open network protocol for exchanging show-contro
 The following bundled assets are used under their respective licenses:
 
 - **Fonts** (`renderer/fonts/`): DSEG7 Classic, Noto Sans KR, DM Mono, Space Grotesk,
-  and Inter — all licensed under the SIL Open Font License Version 1.1.
-  See `renderer/fonts/LICENSE.txt`.
+  Inter, and JetBrains Mono — licensed under the SIL Open Font License Version 1.1.
+  Material Symbols — licensed under the Apache License Version 2.0 (Google LLC),
+  not the OFL. Copyright notices and full license texts for all of these ship
+  with the application in `renderer/fonts/LICENSE.txt`.
 - **Default placeholder artwork** (`default-album-artwork.png`, `renderer/assets/default-art.png`):
   Simple solid-color placeholders included with ORVIK and governed by the ORVIK
   Binary License unless a file states otherwise.
@@ -38,7 +40,9 @@ ORVIK communicates with external systems based on **observed network behavior an
 
 Its functionality is designed to interpret and translate network events between different systems for interoperability purposes. No proprietary source code, firmware, confidential materials, licensed SDK, or non-public PRO DJ LINK network documentation from any manufacturer have been used in the development of this software. No third-party software was decompiled, disassembled, or otherwise code-analyzed: compatibility was achieved solely by observing network traffic between devices the developer owns or lawfully operates, a method consistent with interoperability principles recognized in major jurisdictions (including 17 U.S.C. § 1201(f), Directive 2009/24/EC, and Article 101-4 of the Korean Copyright Act).
 
-Certain identifier strings or protocol-level values that may appear in network communication are handled strictly for compatibility with existing systems and are not used as branding or representation in user-facing contexts.
+To be discovered and accepted by Pro DJ Link devices, ORVIK sends the device-identification fields that the protocol defines for that purpose. These values exist only inside network packets so that existing equipment will interoperate; they are not shown in the user interface and are not used as ORVIK branding.
+
+The publicly available information referred to above includes independent community research into the Pro DJ Link protocol, in particular Deep Symmetry's DJ Link Ecosystem Analysis (https://djl-analysis.deepsymmetry.org/). ORVIK contains no code from that project or from any other third-party implementation.
 
 ORVIK does not copy audio content, decrypt protected media, or bypass access controls. Track metadata and artwork are displayed or forwarded only from user-controlled libraries or connected devices; users are responsible for having the necessary rights to use that media and artwork.
 
@@ -95,7 +99,9 @@ TC Supply는 TCNet을 조명, 영상 및 기타 엔터테인먼트 시스템 간
 ## 번들 서드파티 자산
 
 - **폰트** (`renderer/fonts/`): DSEG7 Classic, Noto Sans KR, DM Mono, Space Grotesk,
-  Inter — 모두 SIL Open Font License 1.1. 상세는 앱에 동봉된 `renderer/fonts/LICENSE.txt` 참조.
+  Inter, JetBrains Mono — SIL Open Font License 1.1. Material Symbols — Apache
+  License 2.0 (Google LLC, OFL 아님). 저작권 고지와 라이선스 전문은 앱에 동봉된
+  `renderer/fonts/LICENSE.txt` 참조.
 - **기본 앨범아트 플레이스홀더**: ORVIK 에 포함된 단색 이미지 (바이너리 라이선스 적용).
 - **QR 코드 생성** (`qrcode` npm 패키지): MIT License.
 
@@ -107,7 +113,9 @@ ORVIK는 **관찰된 네트워크 동작 및 공개된 정보**를 기반으로 
 
 본 소프트웨어는 서로 다른 시스템 간의 상호운용성을 위해 네트워크 이벤트를 해석하고 변환하는 기능을 제공합니다. 개발 과정에서 어떠한 제조사의 비공개 소스 코드, 펌웨어, 기밀 자료, 라이선스 SDK 또는 비공개 PRO DJ LINK 네트워크 문서도 사용되지 않았습니다. 어떠한 제3자 소프트웨어도 디컴파일, 디스어셈블 또는 코드 분석하지 않았으며, 호환성은 개발자가 소유하거나 적법하게 운용하는 장비 간 네트워크 트래픽 관찰만으로 확보되었습니다. 이는 주요 관할권에서 인정되는 상호운용성 원칙(미국 17 U.S.C. § 1201(f), EU 지침 2009/24/EC, 대한민국 저작권법 제101조의4 등)과 부합하는 방식입니다.
 
-네트워크 통신 과정에서 일부 식별 문자열 또는 프로토콜 값이 사용될 수 있으나, 이는 기존 시스템과의 호환성을 위한 것이며 사용자에게 표시되는 브랜딩 목적으로 사용되지 않습니다.
+ORVIK는 Pro DJ Link 장비에 발견되고 수용되기 위해, 해당 프로토콜이 그 용도로 정의한 장치 식별 필드를 전송합니다. 이 값들은 기존 장비와의 상호운용을 위해 네트워크 패킷 안에만 존재하며, 사용자 인터페이스에 표시되지 않고 ORVIK의 브랜딩으로 사용되지 않습니다.
+
+위에서 말하는 공개된 정보에는 Pro DJ Link 프로토콜에 대한 독립적인 커뮤니티 연구, 특히 Deep Symmetry 의 DJ Link Ecosystem Analysis (https://djl-analysis.deepsymmetry.org/) 가 포함됩니다. ORVIK는 해당 프로젝트를 비롯한 어떤 제3자 구현의 코드도 포함하지 않습니다.
 
 ORVIK는 오디오 콘텐츠를 복사하거나 보호된 미디어를 복호화하거나 접근 제어를 우회하지 않습니다. 트랙 메타데이터와 앨범아트는 사용자가 관리하는 라이브러리 또는 연결된 장치에서 전달되는 범위에서만 표시/전송되며, 해당 미디어와 이미지 사용 권한은 사용자 책임입니다.
 
