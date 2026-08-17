@@ -14,6 +14,7 @@
 [![Issues · DM @zes_minseok](docs/media/badge-dm.svg)](https://instagram.com/zes_minseok)
 
 > Found a bug or have a question? GitHub Issues or an Instagram DM — both are fine.
+
 > 버그·문의는 GitHub 이슈 또는 인스타그램 DM 으로 보내주셔도 됩니다.
 
 Independent desktop bridge that reads compatible DJ hardware and turns tempo, beat, position, and track info into synced outputs for Resolume and other visual/lighting software.
