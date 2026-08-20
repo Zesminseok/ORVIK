@@ -18,3 +18,4 @@
 > 버그·문의는 GitHub 이슈 또는 인스타그램 DM 으로 보내주셔도 됩니다.
 
 The release has been removed due to the Security Vulnerability in PRO DJ LINK issue.
+https://rekordbox.com/en/2026/08/important-notice-security-vulnerability-in-pro-dj-link/
