@@ -5,7 +5,7 @@
   </picture>
 </p>
 
-> DJ hardware → Resolume sync (TCNet · Art-Net · LTC · MIDI)
+> DJ hardware → Resolume sync over TCNet
 
 [![License: Proprietary](https://img.shields.io/badge/license-proprietary-red.svg)](BINARY_LICENSE.md)
 [![Version](docs/media/badge-version.svg)](CHANGELOG.md)
@@ -33,11 +33,14 @@ next build is finished and checked against the advisory.
 
 ### What ORVIK does on the network
 
-ORVIK listens. It reads what CDJs and the mixer already broadcast and converts it to
-TCNet, Art-Net, LTC, MIDI and OSC for visual and lighting software. It does not control
-hardware, does not serve files to the LINK network, and holds no rekordbox library.
-That is a design constraint the project has kept from the start — not a claim about anyone
-else's security.
+ORVIK only reads. It takes the values the CDJs and the mixer put on the network — tempo,
+beat, position, track — and sends them to Resolume over TCNet. It does not control the
+hardware, does not put files on the LINK network, and holds no rekordbox library. That is a
+design constraint the project has kept from the start, not a claim about anyone else's
+security.
+
+LTC and MIDI timecode outputs are in the app, but they have not been checked against real
+receivers yet, so treat them as untested.
 
 ### Next build
 
@@ -64,10 +67,13 @@ USB·SD 에 민감한 파일을 두지 않기, 그리고 그 네트워크를 비
 
 ### ORVIK 이 네트워크에서 하는 일
 
-ORVIK 은 듣기만 합니다. CDJ 와 믹서가 이미 방송하는 값을 읽어 TCNet·Art-Net·LTC·MIDI·OSC
-로 변환해 영상·조명 소프트웨어에 넘깁니다. 하드웨어를 제어하지 않고, LINK 네트워크에
-파일을 제공하지 않으며, rekordbox 라이브러리를 갖지 않습니다. 처음부터 지켜 온 설계
-제약이며, 다른 제품의 보안에 대한 주장이 아닙니다.
+ORVIK 은 읽기만 합니다. CDJ 와 믹서가 네트워크로 내보내는 값 — 템포, 비트, 위치, 트랙 —
+을 받아 TCNet 으로 Resolume 에 보냅니다. 하드웨어를 제어하지 않고, LINK 네트워크에 파일을
+올리지 않으며, rekordbox 라이브러리를 갖지 않습니다. 처음부터 지켜 온 설계 제약이지,
+다른 제품의 보안에 대한 주장이 아닙니다.
+
+LTC·MIDI 타임코드 출력은 앱에 들어 있지만 실제 수신 장비로 확인하지 못했습니다. 아직
+검증되지 않은 기능으로 봐 주세요.
 
 ### 다음 빌드
 
