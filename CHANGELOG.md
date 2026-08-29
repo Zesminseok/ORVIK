@@ -7,48 +7,68 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
-## 1.5.1 — 2026-08-09
+## 1.5.2 (2026-08-30)
 
-### English
+- Resolume Arena 가 앨범아트 때문에 종료되던 문제 수정
+- 남은 시간·진행바가 표시되지 않던 문제 수정
+- 곡이 바뀌어도 이전 앨범아트가 남던 문제 수정
+- 곡 정보가 없는 덱에 다른 덱의 곡이 표시되던 문제 수정
+- 일부 구성에서 오버뷰 웨이브폼·비트그리드가 오지 않던 문제 수정
+- 미러 모드에서 덱이 NO LINK 로 보이던 문제 수정
+- 미러 모드에서 TCNet 경고가 계속 뜨던 문제 수정
+- 하단 덱 수는 곡을 올리지 않은 덱도 셉니다
 
-- FLOW theme: smoother, steadier tier changes.
-- Fixed the playhead jumping after track changes and on unanalyzed tracks.
-- Disconnected CDJs clear from the deck after 10 seconds and return on reconnect.
-- Network fixes: VPN/virtual adapters, venue IP ranges, TCNet port conflicts.
-- Small alignment and waveform polish.
+### 새 기능
+- **웨이브폼 미리보기** — 오버뷰를 누르고 있으면 그 지점의 디테일 웨이브폼을 봅니다.
+  재생은 그대로 흐르고, 손을 떼면 원래 자리로 돌아옵니다 (하드웨어 덱).
+- **FLOW 핀 버튼** — 모델명 옆 핀으로 원하는 덱을 크게 고정합니다.
+- **웹 뷰어** — 화면에 뜬 4자리 코드로 접속합니다 (긴 주소를 보내지 않아도 됩니다).
+  QR 은 그대로 바로 열리고, 뷰어를 열어둘 네트워크 인터페이스도 고를 수 있습니다.
+  신호가 끊기면 화면 상단에 표시됩니다.
 
-### 한국어
+### 화면
+- 덱 VU 미터를 연속 바로 (작은 카드에서 세그먼트가 잘 안 보였습니다)
+- 마디 카운터: 더 굵게, 클릭하면 마디 ↔ 초 전환, 다음 큐까지 8마디 이하면 빨강
+- FLOW 역할 전환에서 글자가 커졌다 줄어드는 확대감 제거
+- 그림자·글로우 제거, 색 코드 통일
+- 번체 중국어(대만) 추가
+- 송출 중 STOP 을 누르면 확인을 받습니다
+- Electron 44 로 업데이트
 
+---
+
+## 1.5.1 (2026-08-09)
+
+### 개선/수정
 - FLOW 테마 전환이 더 부드럽고 안정적으로.
 - 트랙 교체 직후·미분석 트랙에서 위치가 튀던 문제 수정.
 - 연결 끊긴 CDJ 는 10초 후 정리되고 재연결 시 자동 복귀.
 - 네트워크 수정: VPN·가상 어댑터, 장소별 IP 대역, TCNet 포트 충돌.
 - 정렬·웨이브폼 등 소소한 다듬기.
 
-## 1.5.0 — 2026-08-06
+---
 
-### English
+## 1.5.0 (2026-08-03)
 
-**Mirror Mode (new)** — view an ORVIK running on another PC as if it were local. A CDJ's track database only accepts one client, so a second PC could never show color waveforms, cues or track info — Mirror Mode relays that link: automatic server discovery, hardware-true positions, auto-reconnect, and zero TCNet/gear interference from the mirroring machine.
+### 미러 모드 (신규)
+같은 네트워크의 다른 PC 에서 실행 중인 ORVIK 을 그대로 비추는 모드입니다.
+CDJ 의 트랙 데이터베이스는 한 프로그램만 접속할 수 있어서, 두 번째 PC 에서는
+지금까지 컬러 웨이브폼·큐·트랙 정보를 볼 방법이 없었습니다 — 미러 모드가 그
+연결을 대신합니다. 실기가 연결된 ORVIK 이 서버가 되고, 다른 PC 의 ORVIK 은
+덱·믹서(페이더/EQ/VU)·웨이브폼·큐·아트워크를 자기 화면처럼 표시합니다.
 
-- Track title/artist decoding hardened (Korean titles, CDJ-3000 packet variants).
-- Loop in/out points now match the deck display exactly.
-- Fixed a subtle time-readout flicker while a deck sits parked.
-- CDJ-2000NXS2 cue-point updates now follow hardware behavior.
-- Mixer VU recalibrated to the DJM's 15-LED ladder; fader/VU mini badges in FLOW & STRIP themes.
-- TCNet: deckless machines stay silent; restarting a mirror can no longer drop the hardware server from Arena.
-- More thorough port/temp-file cleanup on exit.
+- 서버 자동 탐색 — 같은 네트워크의 ORVIK 을 찾아 PC 이름으로 보여주고, 선택만 하면 연결됩니다.
+- 위치는 하드웨어 원본 값을 그대로 중계 — 미러 화면도 실기와 같은 시점을 가리킵니다.
+- 미러 중에는 TCNet 송출과 장비 제어를 하지 않아 기존 셋업을 방해하지 않습니다.
+- 서버 종료·재시작 시 자동 재연결, 재생 중에 켜도 현재 트랙 정보를 즉시 가져옵니다.
 
-### 한국어
-
-**미러 모드 (신규)** — 같은 네트워크의 다른 PC 에서 실행 중인 ORVIK 을 그대로 비춥니다. CDJ 의 트랙 데이터베이스는 한 프로그램만 접속할 수 있어 두 번째 PC 에서는 컬러 웨이브폼·큐·트랙 정보를 볼 수 없었는데, 미러 모드가 그 연결을 대신합니다 — 서버 자동 탐색, 하드웨어 원본 위치 그대로, 자동 재연결, 미러 머신은 TCNet·장비에 일절 간섭하지 않습니다.
-
-- 트랙 제목·아티스트 표기 안정화 (한글 제목, CDJ-3000 변종 패킷).
-- 루프 인/아웃 포인트가 기기 표시와 정확히 일치.
+### 개선/수정
+- 트랙 제목·아티스트 표기 안정화 (한글 제목 오표기, CDJ-3000 변종 패킷).
+- 루프 인/아웃 포인트가 기기 표시와 정확히 일치하도록 수정.
 - 정지 중 현재 시간 표시가 미세하게 떨리던 문제 수정.
 - CDJ-2000NXS2 큐 포인트 갱신 규칙을 하드웨어 동작에 맞춤.
-- 믹서 VU 를 DJM 15-LED 에 맞춰 재보정, FLOW·STRIP 테마에 페이더/VU 미니 표시.
-- TCNet: 실기 없는 머신은 송출하지 않고, 미러 재시작이 서버에 영향을 주지 않습니다.
+- 믹서 VU 를 DJM 실기 15-LED 에 맞춰 재보정, FLOW·STRIP 테마에 페이더/VU 미니 표시 추가.
+- TCNet: 실기 없는 머신은 송출하지 않고, 미러 머신의 재시작이 서버에 영향을 주지 않습니다.
 - 종료 시 포트·임시파일 정리 강화.
 
 ## 1.4.3 — 2026-07-24
