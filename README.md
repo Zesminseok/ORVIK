@@ -31,14 +31,14 @@ macOS 13 이상 (Apple Silicon / Intel) · Windows 10·11 (x64)
 
 - Deck state, tempo, beat, position, track info, cues, waveforms and artwork
 - Up to 6 layers to Resolume and other TCNet software
-- BPM over OSC · Art-Net Timecode · LTC · MIDI Clock · MTC
+- BPM over OSC · LTC · MIDI Clock · MTC
 - Virtual Deck — plays local audio files on 6 decks
 - Mirror mode — a second PC shows everything the connected one sees
 - Web viewer — read-only monitoring from a phone or tablet
 
 - 덱 상태, 템포, 비트, 위치, 트랙 정보, 큐, 웨이브폼, 아트워크
 - Resolume 등 TCNet 소프트웨어로 최대 6레이어
-- OSC BPM · Art-Net Timecode · LTC · MIDI Clock · MTC
+- OSC BPM · LTC · MIDI Clock · MTC
 - Virtual Deck — 로컬 오디오 파일 6덱 재생
 - 미러 모드 — 두 번째 PC 가 연결된 PC 의 화면을 그대로 표시
 - 웹 뷰어 — 폰·태블릿에서 읽기 전용 모니터링
