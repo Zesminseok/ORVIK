@@ -18,45 +18,54 @@ TCNet으로 Resolume에 넘깁니다.
 [![Issues · DM @zes_minseok](docs/media/badge-dm.svg)](https://instagram.com/zes_minseok)
 
 
-## Downloads
+## Download
 
-> [!IMPORTANT]
-> The builds are down while AlphaTheta's PRO DJ LINK security advisory
-> is in effect:
-> [Important Notice: Security Vulnerability in PRO DJ LINK](https://rekordbox.com/en/2026/08/important-notice-security-vulnerability-in-pro-dj-link/)
-> (AlphaTheta, August 2026).
->
-> AlphaTheta의 PRO DJ LINK 보안 권고가 유효한 동안 다운로드를 내려두었습니다.
+[Releases](../../releases) — run it, nothing else to install.
+macOS 13+ (Apple Silicon / Intel) · Windows 10·11 (x64)
 
-The advisory says the problem "could allow a third party who gains
-unauthorized access to a PRO DJ LINK network to view data stored on a
-Windows PC/Mac, or on USB/SD cards". It covers rekordbox and some CDJ
-and XDJ models, and says nothing about third-party software.
+[Releases](../../releases)에서 받아 실행하면 됩니다. 따로 설치할 것은 없습니다.
+macOS 13 이상 (Apple Silicon / Intel) · Windows 10·11 (x64)
 
-Follow AlphaTheta's instructions: update rekordbox, keep private files
-off the USB and SD cards you use on the LINK network, and keep that
-network on a password-protected Wi-Fi or off Wi-Fi altogether.
 
-Nothing here works around or explains that problem. The downloads come
-back with the next build.
+## What it does
 
-권고문은 PRO DJ LINK 네트워크에 무단으로 접근한 제3자가 PC나 Mac, USB·SD의
-데이터를 볼 수 있는 문제라고 설명합니다. rekordbox와 일부 CDJ·XDJ가
-대상이고 서드파티 소프트웨어 이야기는 없습니다. 조치는 AlphaTheta 안내를
-따르시면 됩니다. 이 저장소에는 그 문제를 우회하거나 설명하는 내용이 없고,
-다음 빌드와 함께 다운로드를 다시 올립니다.
+- Deck state, tempo, beat, position, track info, cues, waveforms and artwork
+- Up to 6 layers to Resolume and other TCNet software
+- BPM over OSC · Art-Net Timecode · LTC · MIDI Clock · MTC
+- Virtual Deck — plays local audio files on 6 decks
+- Mirror mode — a second PC shows everything the connected one sees
+- Web viewer — read-only monitoring from a phone or tablet
+
+- 덱 상태, 템포, 비트, 위치, 트랙 정보, 큐, 웨이브폼, 아트워크
+- Resolume 등 TCNet 소프트웨어로 최대 6레이어
+- OSC BPM · Art-Net Timecode · LTC · MIDI Clock · MTC
+- Virtual Deck — 로컬 오디오 파일 6덱 재생
+- 미러 모드 — 두 번째 PC 가 연결된 PC 의 화면을 그대로 표시
+- 웹 뷰어 — 폰·태블릿에서 읽기 전용 모니터링
 
 
 ## What it does on the network
 
-ORVIK only reads. It picks up what the players and the mixer already
-send on the LINK network and passes the timing on to Resolume over
-TCNet. It never sends anything to the players, never puts files on the
-network, and has no copy of your rekordbox library.
-
-ORVIK은 읽기만 합니다. 플레이어와 믹서가 이미 보내고 있는 값을 받아
-TCNet으로 넘깁니다. 플레이어 쪽으로는 아무것도 보내지 않고, 네트워크에
-파일을 올리지 않으며, rekordbox 라이브러리를 갖고 있지 않습니다.
+> [!IMPORTANT]
+> ORVIK reads metadata, not audio. It never opens, copies or moves your
+> music files, and it has no copy of your rekordbox library. It picks up
+> what the players and the mixer already send on the LINK network —
+> tempo, beat, position, track info — and passes the timing on. It sends
+> nothing to the players and does not control them.
+>
+> That is also why AlphaTheta's PRO DJ LINK security advisory (August
+> 2026), which is about access to files on a PC/Mac or on USB/SD cards,
+> does not apply to what ORVIK does. Follow AlphaTheta's own guidance for
+> your gear and rekordbox.
+>
+> ORVIK 은 메타데이터만 읽습니다. 음원 파일을 열거나 복사하거나 옮기지 않고,
+> rekordbox 라이브러리도 갖고 있지 않습니다. 플레이어와 믹서가 이미 LINK
+> 네트워크로 보내는 값 — 템포·비트·위치·트랙 정보 — 을 받아 넘길 뿐이고,
+> 플레이어 쪽으로는 아무것도 보내지 않으며 장비를 제어하지 않습니다.
+>
+> AlphaTheta 의 PRO DJ LINK 보안 권고(2026년 8월)는 PC·Mac 이나 USB·SD 의
+> 파일 접근에 대한 것이라 ORVIK 의 동작과는 무관합니다. 장비와 rekordbox
+> 조치는 AlphaTheta 안내를 따라 주세요.
 
 > [!WARNING]
 > The LTC and MIDI timecode outputs have never been tested against a
@@ -67,13 +76,10 @@ TCNet으로 넘깁니다. 플레이어 쪽으로는 아무것도 보내지 않�
 > 들어는 있지만 이걸 믿고 운영하지 마세요.
 
 
-## Next build
+## Docs
 
-A connectivity and reliability build is in progress. It goes up once a
-session with real gear confirms it.
-
-연결성과 안정성 위주로 다음 빌드를 만들고 있습니다. 실기에서 확인되면
-올립니다.
+[Binary license](BINARY_LICENSE.md) · [Third-party notices](THIRD_PARTY_NOTICES.md) ·
+[Changelog](CHANGELOG.md)
 
 
 ## Contact
