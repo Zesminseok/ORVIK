@@ -7,7 +7,7 @@
 
 Reads tempo, beat position and track info from Pioneer DJ gear on a PRO DJ LINK network and sends it to Resolume over TCNet.
 
-CDJ·DJM이 PRO DJ LINK로 보내는 템포와 비트 위치, 트랙 정보를 읽어 TCNet으로 Resolume에 넘깁니다.
+CDJ·DJM이 PRO DJ LINK로 보내는 템포와 비트 위치, 트랙 정보를 읽어 TCNet으로 Resolume과 동기화합니다.
 
 [![License: Proprietary](https://img.shields.io/badge/license-proprietary-red.svg)](BINARY_LICENSE.md)
 [![Version](docs/media/badge-version.svg)](CHANGELOG.md)
