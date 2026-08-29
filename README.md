@@ -5,9 +5,7 @@
   </picture>
 </p>
 
-Reads tempo, beat position and track info from Pioneer DJ gear on a PRO DJ LINK network and syncs it with Resolume over TCNet.
-
-CDJ·DJM이 PRO DJ LINK로 보내는 템포와 비트 위치, 트랙 정보를 읽어 TCNet으로 Resolume과 동기화합니다.
+ORVIK reads the tempo, beat and track info your CDJs and DJM are already putting on the PRO DJ LINK network, and keeps Resolume in sync with it over TCNet.
 
 [![License: Proprietary](https://img.shields.io/badge/license-proprietary-red.svg)](BINARY_LICENSE.md)
 [![Version](docs/media/badge-version.svg)](CHANGELOG.md)
@@ -18,26 +16,19 @@ CDJ·DJM이 PRO DJ LINK로 보내는 템포와 비트 위치, 트랙 정보를 �
 
 ## Download
 
-[Releases](../../releases) — macOS 13+ (Apple Silicon / Intel), Windows 10·11 (x64).
-
+Grab it from [Releases](../../releases) and run it — there is nothing to install. macOS 13 or later (Apple Silicon or Intel), Windows 10 and 11 (x64).
 
 
 ## Security
 
-ORVIK reads metadata, not audio. It never opens, copies or moves music files, and keeps no copy of a rekordbox library. It picks up what the players and the mixer already send on the LINK network — tempo, beat, position, track info — and syncs that with your visual and lighting software. It sends nothing back to the players and does not control them.
+ORVIK only reads metadata. It never opens, copies or moves your music files, and it keeps no copy of your rekordbox library. It listens to what the players and the mixer are already sending — tempo, beat, position, track info — and syncs that with your visuals and lights. Nothing goes back to the players, and it cannot control them.
 
-AlphaTheta's PRO DJ LINK security advisory (August 2026) is about access to files on a PC or Mac, or on USB and SD cards. That is not what ORVIK touches. Follow AlphaTheta's own guidance for your gear and rekordbox.
-
-ORVIK은 메타데이터만 읽습니다. 음원 파일을 열지도 복사하지도 옮기지도 않고, rekordbox 라이브러리 사본도 갖고 있지 않습니다. 플레이어와 믹서가 이미 LINK 네트워크로 보내는 값(템포·비트·위치·트랙 정보)을 받아 영상·조명 소프트웨어와 맞출 뿐입니다. 플레이어 쪽으로는 아무것도 보내지 않고 장비를 조작하지도 않습니다.
-
-AlphaTheta의 PRO DJ LINK 보안 권고(2026년 8월)는 PC·Mac이나 USB·SD에 있는 파일 접근에 대한 내용입니다. ORVIK이 다루는 범위가 아닙니다. 장비와 rekordbox는 제조사 안내대로 하시면 됩니다.
+AlphaTheta's PRO DJ LINK advisory from August 2026 is about someone reaching files on a PC or Mac, or on a USB or SD card. That is not what ORVIK touches. For your gear and rekordbox, follow AlphaTheta's own instructions.
 
 
 ## Before a show
 
-LTC와 MIDI 타임코드 출력은 실제 수신 장비로 확인한 적이 없습니다. 기능은 들어 있지만 공연을 여기에 걸지는 마세요.
-
-The LTC and MIDI timecode outputs have never been tested against a real receiver. They are in the app, but do not plan a show around them yet.
+The LTC and MIDI timecode outputs have never been checked against a real receiver. They are in the app, but do not build a show on them yet.
 
 
 ## Docs
@@ -47,13 +38,9 @@ The LTC and MIDI timecode outputs have never been tested against a real receiver
 
 ## Contact
 
-GitHub Issues or an Instagram DM, whichever is easier.
-
-GitHub 이슈나 인스타그램 DM, 편한 쪽으로 주세요.
+Open an issue, or send an Instagram DM — whichever is easier.
 
 
 ---
 
-ORVIK is an independent product, not affiliated with, endorsed by or sponsored by AlphaTheta Corporation, Pioneer DJ or TC Supply. Product names and trademarks belong to their owners and are used here only to describe compatibility.
-
-ORVIK은 독립 제품이며 AlphaTheta Corporation, Pioneer DJ, TC Supply와 제휴·보증·후원 관계가 없습니다. 제품명과 상표는 각 소유자의 것이고, 호환성을 설명할 때만 씁니다.
+ORVIK is an independent product. It is not affiliated with, endorsed by or sponsored by AlphaTheta Corporation, Pioneer DJ or TC Supply. Their product names and trademarks appear here only to say what ORVIK works with.
