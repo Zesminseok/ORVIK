@@ -23,7 +23,7 @@ macOS 13 or later (Apple Silicon or Intel), Windows 10 and 11 (x64).
 
 ## Security
 
-ORVIK only reads metadata. It never opens, copies or moves your music files, and it keeps no copy of your rekordbox library. It listens to what the players and the mixer are already sending — tempo, beat, position, track info — and syncs that with your visuals and lights. Nothing goes back to the players, and it cannot control them.
+ORVIK only reads metadata. It never opens, copies or moves your music files, and it keeps no copy of your rekordbox library. It listens to what the players and the mixer are already sending (tempo, beat, position, track info) and syncs that with your visuals and lights. Nothing goes back to the players, and it cannot control them.
 
 AlphaTheta's PRO DJ LINK advisory from August 2026 is about someone reaching files on a PC or Mac, or on a USB or SD card. That is not what ORVIK touches. For your gear and rekordbox, follow AlphaTheta's own instructions.
 
@@ -40,7 +40,7 @@ The LTC and MIDI timecode outputs have never been checked against a real receive
 
 ## Contact
 
-Open an issue, or send an Instagram DM — whichever is easier.
+Open an issue, or send an Instagram DM
 
 
 ---
