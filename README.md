@@ -17,6 +17,7 @@ ORVIK reads the tempo, beat and track info your CDJs and DJM are already putting
 ## Download
 
 [Releases](../../releases)
+
 macOS 13 or later (Apple Silicon or Intel), Windows 10 and 11 (x64).
 
 
