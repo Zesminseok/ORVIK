@@ -18,9 +18,8 @@ CDJ·DJM이 PRO DJ LINK로 보내는 템포와 비트 위치, 트랙 정보를 �
 
 ## Download
 
-[Releases](../../releases) — run it, nothing else to install. macOS 13+ (Apple Silicon / Intel), Windows 10·11 (x64).
+[Releases](../../releases) — macOS 13+ (Apple Silicon / Intel), Windows 10·11 (x64).
 
-[Releases](../../releases)에서 받아 실행하면 됩니다. 따로 설치할 건 없습니다. macOS 13 이상(Apple Silicon / Intel), Windows 10·11(x64).
 
 
 ## Security
