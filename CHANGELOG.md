@@ -7,6 +7,14 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
+## 1.5.3 (2026-08-30)
+
+- Waveform preview works on a touchscreen. It was bound to mouse events, which touch only synthesizes for a tap, so a drag went to the page as a scroll.
+- Long-pressing the waveform no longer opens the deck colour palette on top of the preview.
+- The deck colour palette opens from the player number instead of anywhere on the card, so long-press reaches it on touch without competing with the waveform.
+
+---
+
 ## 1.5.2 (2026-08-30)
 
 - Resolume Arena 가 앨범아트 때문에 종료되던 문제 수정
