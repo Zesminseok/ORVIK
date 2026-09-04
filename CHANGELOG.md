@@ -9,6 +9,10 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## 1.5.5 (2026-09-04)
 
+**Changes**
+
+- Log capture can be turned on in release builds from the hidden menu (Alt+Shift+A).
+
 **New**
 
 - FLOW: play-state icon on dock decks.
