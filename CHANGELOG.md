@@ -9,15 +9,15 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## 1.5.4 (2026-09-04)
 
-- Waveforms no longer go blank after a theme switch or a long session. Every deck rebuild left its old WebGL context alive until garbage collection, and Chromium keeps about sixteen per window — past that it kills the oldest, which belonged to a deck still drawing. Discarded canvases now release their context, and a context the browser takes away is recovered on a fresh canvas instead of staying broken until a restart.
-- Pro DJ Link no longer picks a VPN tunnel as its network interface, and the Art-Net reply no longer carries a tunnel address. A tunnel on the same range as the venue network used to count as a match and lock the automatic choice onto it.
-- Phrase data from rekordbox exports reads correctly. The song-structure parser had the layout four bytes off, so on real tracks it found one or two phrases at beat 0.
-- SYNC on a CDJ-3000 reflects BPM sync — tempo still following the master, beats no longer aligned after a nudge. The bit was being read past.
-- Status icons (play, pause, stop, loop) are drawn as shapes instead of font glyphs, so they look the same on macOS and Windows and sit level with their label. The eject overlay on album art is a vector icon for the same reason.
-- FLOW: the small dock decks follow the mid tier's layout — title row, overview, info row — and the top two tiers are the same size. The dock timecode keeps its colour while playing, the BPM field holds its width when a track has no BPM, and remaining time shows in red.
-- ON AIR, MASTER and SYNC badges lose their dot; the off state is a little brighter; the key badge border takes the key colour.
-- Decks fade in when they appear.
-- Korean wording settled to one register, and terms that had two names each now have one.
+- Fixed waveforms going blank.
+- Fixed a VPN interface being picked for Pro DJ Link.
+- Fixed phrase data from rekordbox.
+- SYNC shows BPM sync on CDJ-3000.
+- Status icons match on macOS and Windows.
+- FLOW theme fixes.
+- Badge styling.
+- Decks fade in.
+- Korean wording.
 
 ---
 
