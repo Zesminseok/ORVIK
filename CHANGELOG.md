@@ -9,12 +9,17 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## 1.5.4 (2026-09-04)
 
-- Fixed waveforms going blank.
-- Fixed a VPN interface being picked for Pro DJ Link.
-- Fixed phrase data from rekordbox.
+**Fixes**
+
+- Waveforms going blank.
+- A VPN interface being picked for Pro DJ Link.
+- Phrase data from rekordbox.
+- Status icons misaligned on Windows.
+
+**Changes**
+
 - SYNC shows BPM sync on CDJ-3000.
-- Status icons match on macOS and Windows.
-- FLOW theme fixes.
+- FLOW theme layout.
 - Badge styling.
 - Decks fade in.
 - Korean wording.
