@@ -7,6 +7,21 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
+## 1.5.7 (2026-09-07)
+
+**Fixes**
+
+- Slow waveforms when a CDJ-3000X plays from another deck's USB.
+- Detail waveform stuck in the 2D fallback after a deck rebuild.
+- DJM-V10 on-air flags.
+- Titles cut short at an en dash.
+
+**New**
+
+- Phrase bars from CDJ-3000X.
+
+---
+
 ## 1.5.6 (2026-09-06)
 
 **Fixes**
