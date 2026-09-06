@@ -7,6 +7,28 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
+## 1.5.6 (2026-09-06)
+
+**Fixes**
+
+- Waveform missing after a track reload or USB swap.
+- Broken-image icon on the overview after a theme change.
+- White waveform while resizing the window.
+- Hangul titles cut short.
+- Deck clearing when a CDJ-3000X renumbers its slot.
+
+**Changes**
+
+- Faster waveform loading.
+- Artist names in the title colour.
+- One placeholder dash for a missing title or artist.
+
+**New**
+
+- FLOW: up to four hero decks in two columns above 1280 px.
+
+---
+
 ## 1.5.5 (2026-09-04)
 
 **Changes**
