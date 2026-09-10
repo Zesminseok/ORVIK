@@ -12,8 +12,8 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 **Fixes**
 
 - Mixer data stopping for good after a network interface change.
-- Fader moves reaching Resolume at 5 fps.
-- White detail waveform on a deck that was just rebuilt.
+- Fader moves reaching Resolume at only 5 fps.
+- White detail waveform right after a deck reconnects.
 - Korean wording in settings, mixer tooltips and the history tab.
 
 **Changes**
@@ -24,7 +24,7 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 **New**
 
-- History tab is back — real clock times, deck numbers, live rows, CSV export.
+- History tab: real clock times, deck numbers, live rows and CSV export.
 
 ---
 
