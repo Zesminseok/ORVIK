@@ -7,6 +7,27 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
+## 1.5.8 (2026-09-11)
+
+**Fixes**
+
+- Mixer data stopping for good after a network interface change.
+- Fader moves reaching Resolume at 5 fps.
+- White detail waveform on a deck that was just rebuilt.
+- Korean wording in settings, mixer tooltips and the history tab.
+
+**Changes**
+
+- BPM to OSC panel: matching icon, uppercase source, beat number instead of decimals.
+- OSC tempo follows a deck that is on air when no master is set.
+- Electron 44.3.0.
+
+**New**
+
+- History tab is back — real clock times, deck numbers, live rows, CSV export.
+
+---
+
 ## 1.5.7 (2026-09-07)
 
 **Fixes**
