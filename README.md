@@ -64,7 +64,11 @@ The log holds the PRO DJ LINK and TCNet packets ORVIK received, the track titles
 
 ## Security
 
-Metadata is all ORVIK reads. It never opens, copies or moves your music files, and it keeps no copy of your rekordbox library. It listens to what the players and the mixer already send — tempo, beat, position, track info — and matches your visuals and lights to it. Nothing goes back to the players, and it cannot control them.
+What ORVIK reads off the link is metadata. It never opens or copies the files on a CDJ or on a USB or SD card, and it keeps no copy of your rekordbox library. It listens to what the players and the mixer already send — tempo, beat, position, track info — and matches your visuals and lights to it.
+
+What goes out on the link is an announcement that ORVIK is there, plus requests for track info. It sends no command that touches playback, cues or tempo, so it cannot drive a player.
+
+Two exceptions. A virtual deck opens the file you drop on it, decodes that to a temporary WAV, and deletes the WAV on exit. The HISTORY tab keeps the title, artist, BPM and key of what you played, on this computer only.
 
 The AlphaTheta PRO DJ LINK advisory from August 2026 is about reaching files on a PC or Mac, or on a USB or SD card. That is not the area ORVIK touches. For your gear and rekordbox, follow AlphaTheta's own instructions.
 
@@ -188,7 +192,11 @@ grade_reason: "A — S1 잔존 0, S2 잔존 1, 자체검증 6항 통과. 지시�
 
 ## 보안
 
-ORVIK 이 읽는 건 메타데이터뿐. 음원 파일을 열거나 복사하거나 옮기지 않고 rekordbox 라이브러리를 따로 들고 있지도 않는다. 플레이어와 믹서가 이미 내보내는 것(템포, 비트, 위치, 트랙 정보)을 듣고 그걸 영상·조명에 맞춰 준다. 플레이어 쪽으로 되돌려 보내는 건 없고 조작도 못 한다.
+ORVIK 이 링크에서 읽는 건 메타데이터뿐. CDJ 나 USB·SD 안의 파일은 열지도 복사하지도 않고 rekordbox 라이브러리 사본도 두지 않는다. 플레이어와 믹서가 이미 내보내는 것(템포, 비트, 위치, 트랙 정보)을 듣고 그걸 영상·조명에 맞춰 준다.
+
+링크로 나가는 패킷은 자기 존재를 알리는 신호와 트랙 정보 요청뿐. 재생·큐·템포를 건드리는 명령은 보내지 않으니 ORVIK 이 플레이어를 조작할 일은 없다.
+
+예외는 둘. 가상 덱은 직접 끌어다 놓은 파일을 열고 디코딩해 임시 WAV 를 만들었다가 종료할 때 지운다. HISTORY 탭은 튼 곡의 제목·아티스트·BPM·키를 이 컴퓨터 안에만 남긴다.
 
 2026년 8월 AlphaTheta PRO DJ LINK 권고는 PC·맥이나 USB·SD 안의 파일에 접근하는 이야기다. ORVIK 이 건드리는 영역이 아니다. 장비와 rekordbox 는 AlphaTheta 안내를 따르면 된다.
 

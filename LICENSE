@@ -29,7 +29,7 @@ ORVIK desktop binaries are governed by BINARY_LICENSE.md and by any license
 terms shown in the application or release materials.
 
 Third-party names, trademarks, fonts, libraries, and other components remain
-subject to their respective owners' rights and license terms. See NOTICE.md.
+subject to their respective owners' rights and license terms. See THIRD_PARTY_NOTICES.md.
 
 THE DOCUMENTATION IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
 OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY,
@@ -40,14 +40,36 @@ REPOSITORY, THE DOCUMENTATION, OR USE OF ORVIK.
 
 KOREAN SUMMARY / 한국어 요약
 
-이 공개 저장소는 ORVIK 릴리스 문서 제공용 저장소이며 ORVIK
-애플리케이션 소스 코드 배포용 저장소가 아닙니다. 문서는 개인 확인,
-평가, 호환성 확인, 정보 제공 목적의 열람과 링크만 허용됩니다.
+이 한국어 요약은 이해를 돕기 위한 것입니다. 법적 해석이 충돌할 경우 위의
+영문 조항이 우선합니다.
 
-GitHub 플랫폼의 정상 기능(열람, GitHub 내 포크, 릴리스 다운로드)을 벗어나,
-저작권자의 사전 서면 허가 없이 문서 또는 저장소의 실질적 부분을 복사,
-재배포, 미러링, 판매, 재라이선스, 공개 수정, 번역, 2차 저작물로 배포할
-수 없습니다.
+이 공개 저장소는 ORVIK 릴리스 문서 제공용이며 ORVIK 애플리케이션 소스 코드
+배포용이 아닙니다.
 
-ORVIK 데스크톱 바이너리는 BINARY_LICENSE.md 및 앱/릴리스 자료에 표시된
-조건의 적용을 받습니다.
+이 저장소의 문서는 개인 확인, 평가, 호환성 확인, 정보 제공 목적의 열람과
+링크가 허용됩니다. 그 밖의 권리는 저작권자가 서면으로 명시하지 않는 한
+부여되지 않습니다.
+
+저작권자의 사전 서면 허가 없이 다음 행위를 할 수 없습니다.
+
+- 이 저장소 또는 그 실질적 부분을 복사, 재배포, 미러링, 판매, 재라이선스,
+  재공개하는 행위. 다만 GitHub 플랫폼의 정상 기능(열람, GitHub 내 포크,
+  릴리스 다운로드)은 예외입니다.
+- 문서를 수정, 번역, 각색하거나 2차 저작물을 만들어 공개 배포하는 행위
+- ORVIK 의 명칭, 로고, 스크린샷, 릴리스 문구, 문서를 승인·후원·인증·제휴가
+  있는 것처럼 암시하는 방식으로 사용하는 행위
+- 이 공개 저장소 라이선스를 ORVIK 애플리케이션 바이너리, 비공개 소스 코드,
+  프로토콜 구현, 상표, 번들된 서드파티 자료에 대한 라이선스로 원용하는 행위
+
+ORVIK 데스크톱 바이너리는 BINARY_LICENSE.md 및 앱이나 릴리스 자료에 표시된
+라이선스 조건의 적용을 받습니다.
+
+제3자의 명칭, 상표, 폰트, 라이브러리를 비롯한 구성요소는 각 권리자의 권리와
+라이선스 조건의 적용을 그대로 받습니다. 자세한 내용은 THIRD_PARTY_NOTICES.md 를
+참고하십시오.
+
+이 문서는 "있는 그대로(AS IS)" 제공되며 명시적이든 묵시적이든 어떠한 종류의
+보증도 하지 않습니다. 여기에는 상품성, 특정 목적 적합성, 권원, 비침해에 대한
+보증이 포함되며 이에 한정되지 않습니다. 관련 법률이 허용하는 최대 범위에서,
+저작권자는 이 저장소, 이 문서, ORVIK 사용으로부터 발생하거나 그와 관련된
+어떠한 청구, 손해, 그 밖의 책임도 지지 않습니다.

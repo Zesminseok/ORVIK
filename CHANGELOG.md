@@ -7,7 +7,7 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
-## 1.5.8 (2026-09-11)
+## 1.5.8 (2026-09-10)
 
 **Fixes**
 
@@ -182,7 +182,7 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 [유의적 버전](https://semver.org/spec/v2.0.0.html)을 따른다. 최신 버전만 한국어로 적고
 이전 버전은 위 영문을 보면 된다.
 
-## 1.5.8 (2026-09-11)
+## 1.5.8 (2026-09-10)
 
 **수정**
 
