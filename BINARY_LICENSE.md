@@ -154,16 +154,16 @@ agreement states otherwise.
 - 이 빌드는 현재 기간 제한이 없으며 모든 기능을 사용할 수 있습니다. 향후
   기간 제한 데모가 도입될 수 있고, 그 경우에도 실행은 차단되지 않으며 제한
   모드에서 기본 Pro DJ Link to TCNet 출력만 작동합니다.
-- 도네이션/후원은 개발 지원이며, 라이선스 구매나 기능 해금, 소유권 이전,
+- 도네이션/후원은 개발 지원이며 라이선스 구매나 기능 해금, 소유권 이전,
   보증, 지원 의무, 재배포 권한을 의미하지 않습니다.
 - 일부 관할권에서는 묵시적 보증의 배제나 소비자 법정 권리의 제한이 허용되지
   않습니다. 그러한 관할권에서는 위 배제 조항이 관련 법률이 허용하는 범위에서만
   적용되며, 포기할 수 없는 소비자 법정 권리는 영향을 받지 않습니다.
-- ORVIK는 독립 상호운용성 도구이며, 언급된 제조사 또는 소프트웨어 회사와
+- ORVIK는 독립 상호운용성 도구이며 언급된 제조사 또는 소프트웨어 회사와
   제휴, 승인, 후원, 라이선스, 인증 또는 공식 연결 관계가 없습니다.
-- ORVIK는 AlphaTheta의 공식 PRO DJ LINK Bridge 애플리케이션이 아니며,
+- ORVIK는 AlphaTheta의 공식 PRO DJ LINK Bridge 애플리케이션이 아니며
   PRO DJ LINK 라이선스 회사 제품 또는 인증 제품이 아닙니다.
-- TCNet 호환 출력은 독립적으로 구현되었으며, ShowKontrol 또는 BeatKontrol
+- TCNet 호환 출력은 독립적으로 구현되었으며 ShowKontrol 또는 BeatKontrol
   코드를 포함하지 않습니다.
 - ORVIK에는 ShowKontrol, BeatKontrol, AlphaTheta/Pioneer PRO DJ LINK
   Bridge 소스 코드, 제조사 펌웨어, 라이선스 SDK, 기밀 자료 또는 비공개 네트워크

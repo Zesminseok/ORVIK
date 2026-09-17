@@ -88,9 +88,9 @@ ORVIK는 호환 DJ 하드웨어와 비주얼/조명 소프트웨어 간의 상�
 - **Resolume Arena**, **Resolume Wire** — Resolume B.V.  
 - **Art-Net** — Artistic Licence Holdings Ltd.  
 
-모든 상표는 상호운용성 및 호환성 설명을 위한 목적으로만 사용됩니다. 이 저장소 또는 바이너리 배포물의 상표 사용은 보증, 후원, 인증 또는 공식 관계를 의미하지 않습니다.
+모든 상표는 상호운용성 및 호환성을 설명할 목적으로만 사용됩니다. 이 저장소 또는 바이너리 배포물의 상표 사용은 보증, 후원, 인증 또는 공식 관계를 의미하지 않습니다.
 
-ORVIK는 AlphaTheta의 공식 PRO DJ LINK Bridge 애플리케이션이 아니며, PRO DJ LINK 라이선스 회사의 제품 또는 인증 제품이 아닙니다. PRO DJ LINK, Pioneer DJ, CDJ, DJM, rekordbox에 대한 언급은 호환 대상 설명을 위한 것입니다.
+ORVIK는 AlphaTheta의 공식 PRO DJ LINK Bridge 애플리케이션이 아니며 PRO DJ LINK 라이선스 회사의 제품 또는 인증 제품이 아닙니다. PRO DJ LINK, Pioneer DJ, CDJ, DJM, rekordbox에 대한 언급은 호환 대상을 설명하기 위한 것입니다.
 
 TC Supply는 TCNet을 조명, 영상 및 기타 엔터테인먼트 시스템 간 쇼 컨트롤 정보를 교환하기 위한 open network protocol로 설명하며, 공개된 TCNet LINK Specification(© Event Imagineering Group)은 "the protocol is open and free to be used"라고 명시합니다. ORVIK는 이 공개 스펙을 기반으로 TCNet 호환 출력을 독립적으로 구현합니다. ORVIK에는 ShowKontrol 또는 BeatKontrol 코드가 포함되어 있지 않으며, TC Supply 로고를 사용하지 않고, TC Supply 또는 Event Imagineering Group의 승인, 인증, 지원 또는 라이선스 상태를 주장하지 않습니다.
 
@@ -113,7 +113,7 @@ ORVIK는 **관찰된 네트워크 동작 및 공개된 정보**를 기반으로 
 
 본 소프트웨어는 서로 다른 시스템 간의 상호운용성을 위해 네트워크 이벤트를 해석하고 변환하는 기능을 제공합니다. 개발 과정에서 어떠한 제조사의 비공개 소스 코드, 펌웨어, 기밀 자료, 라이선스 SDK 또는 비공개 PRO DJ LINK 네트워크 문서도 사용되지 않았습니다. 어떠한 제3자 소프트웨어도 디컴파일, 디스어셈블 또는 코드 분석하지 않았으며, 호환성은 개발자가 소유하거나 적법하게 운용하는 장비 간 네트워크 트래픽 관찰만으로 확보되었습니다. 이는 주요 관할권에서 인정되는 상호운용성 원칙(미국 17 U.S.C. § 1201(f), EU 지침 2009/24/EC, 대한민국 저작권법 제101조의4 등)과 부합하는 방식입니다.
 
-ORVIK는 Pro DJ Link 장비에 발견되고 수용되기 위해, 해당 프로토콜이 그 용도로 정의한 장치 식별 필드를 전송합니다. 이 값들은 기존 장비와의 상호운용을 위해 네트워크 패킷 안에만 존재하며, 사용자 인터페이스에 표시되지 않고 ORVIK의 브랜딩으로 사용되지 않습니다.
+ORVIK는 Pro DJ Link 장비가 자신을 발견하고 수용하도록, 해당 프로토콜이 그 용도로 정의한 장치 식별 필드를 전송합니다. 이 값들은 기존 장비와의 상호운용을 위해 네트워크 패킷 안에만 존재하며 사용자 인터페이스에 표시되지 않고 ORVIK의 브랜딩으로 사용되지 않습니다.
 
 위에서 말하는 공개된 정보에는 Pro DJ Link 프로토콜에 대한 독립적인 커뮤니티 연구, 특히 Deep Symmetry 의 DJ Link Ecosystem Analysis (https://djl-analysis.deepsymmetry.org/) 가 포함됩니다. ORVIK는 해당 프로젝트를 비롯한 어떤 제3자 구현의 코드도 포함하지 않습니다.
 

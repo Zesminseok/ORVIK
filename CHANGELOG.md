@@ -173,3 +173,30 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 **New**
 
 - Mirror mode: show another ORVIK on the network — decks, mixer, waveforms, cues, artwork — with server discovery and auto-reconnect.
+
+---
+
+# 변경 내역 (한국어)
+
+형식은 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), 버전 규칙은
+[유의적 버전](https://semver.org/spec/v2.0.0.html)을 따른다. 최신 버전만 한국어로 적고
+이전 버전은 위 영문을 보면 된다.
+
+## 1.5.8 (2026-09-11)
+
+**수정**
+
+- 네트워크 인터페이스가 바뀐 뒤 믹서 데이터가 영영 끊기던 문제.
+- 페이더 움직임이 Resolume 에 5fps 로만 도달하던 증상.
+- 덱 재접속 직후 디테일 웨이브폼이 흰색으로 나오던 문제.
+- 설정·믹서 툴팁·히스토리 탭의 한국어 표현.
+
+**변경**
+
+- BPM to OSC 패널: 아이콘 통일, 소스 대문자 표기, 소수점 대신 비트 번호.
+- 마스터가 없을 때 OSC 템포가 온에어 덱을 따라간다.
+- Electron 44.3.0.
+
+**추가**
+
+- 히스토리 탭: 실제 시각, 덱 번호, 라이브 행, CSV 내보내기.

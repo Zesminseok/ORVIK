@@ -5,7 +5,7 @@
   </picture>
 </p>
 
-ORVIK reads the tempo, beat and track info your CDJs and DJM are already putting on the PRO DJ LINK network, and keeps Resolume in sync with it over TCNet.
+ORVIK reads the tempo, beat and track info your CDJs and DJM already put on the PRO DJ LINK network, and hands it to Resolume over TCNet.
 
 [![License: Proprietary](https://img.shields.io/badge/license-proprietary-red.svg)](BINARY_LICENSE.md)
 [![Version](docs/media/badge-version.svg)](CHANGELOG.md)
@@ -60,6 +60,41 @@ Windows   %APPDATA%\orvik\logs
 **Choose**, next to the folder path, puts them somewhere else. Long sessions split into parts at 200 MB, and each part names the previous file on its first line. Send the set, not just the last file.
 
 The log holds the PRO DJ LINK and TCNet packets ORVIK received, the track titles that came with them, and the names and addresses of everything on your link network. Worth opening once before you post it.
+
+
+## Security
+
+Metadata is all ORVIK reads. It never opens, copies or moves your music files, and it keeps no copy of your rekordbox library. It listens to what the players and the mixer already send — tempo, beat, position, track info — and matches your visuals and lights to it. Nothing goes back to the players, and it cannot control them.
+
+The AlphaTheta PRO DJ LINK advisory from August 2026 is about reaching files on a PC or Mac, or on a USB or SD card. That is not the area ORVIK touches. For your gear and rekordbox, follow AlphaTheta's own instructions.
+
+
+## Before a show
+
+The LTC and MIDI timecode outputs have never been checked against a real receiver. They are in the app, but do not build a show on them yet.
+
+
+## Docs
+
+[Binary license](BINARY_LICENSE.md) · [Third-party notices](THIRD_PARTY_NOTICES.md) · [Changelog](CHANGELOG.md)
+
+
+## Contact
+
+Open an issue, or send an Instagram DM
+
+
+---
+
+
+ORVIK 은 CDJ 와 DJM 이 PRO DJ LINK 로 이미 흘려보내는 템포·비트·트랙 정보를 읽어 TCNet 으로 Resolume 에 물려준다.
+
+
+## 다운로드
+
+[릴리스](../../releases)
+
+macOS 13 이상(Apple 실리콘·인텔), Windows 10·11 (x64).
 
 
 ## 실행하기
@@ -151,28 +186,30 @@ grade_reason: "A — S1 잔존 0, S2 잔존 1, 자체검증 6항 통과. 지시�
 -->
 
 
-## Security
+## 보안
 
-ORVIK only reads metadata. It never opens, copies or moves your music files, and it keeps no copy of your rekordbox library. It listens to what the players and the mixer are already sending (tempo, beat, position, track info) and syncs that with your visuals and lights. Nothing goes back to the players, and it cannot control them.
+ORVIK 이 읽는 건 메타데이터뿐. 음원 파일을 열거나 복사하거나 옮기지 않고 rekordbox 라이브러리를 따로 들고 있지도 않는다. 플레이어와 믹서가 이미 내보내는 것(템포, 비트, 위치, 트랙 정보)을 듣고 그걸 영상·조명에 맞춰 준다. 플레이어 쪽으로 되돌려 보내는 건 없고 조작도 못 한다.
 
-AlphaTheta PRO DJ LINK advisory from August 2026 is about someone reaching files on a PC or Mac, or on a USB or SD card. That is not what ORVIK touches. For your gear and rekordbox, follow AlphaTheta's own instructions.
-
-
-## Before a show
-
-The LTC and MIDI timecode outputs have never been checked against a real receiver. They are in the app, but do not build a show on them yet.
+2026년 8월 AlphaTheta PRO DJ LINK 권고는 PC·맥이나 USB·SD 안의 파일에 접근하는 이야기다. ORVIK 이 건드리는 영역이 아니다. 장비와 rekordbox 는 AlphaTheta 안내를 따르면 된다.
 
 
-## Docs
+## 공연 전에
 
-[Binary license](BINARY_LICENSE.md) · [Third-party notices](THIRD_PARTY_NOTICES.md) · [Changelog](CHANGELOG.md)
+LTC·MIDI 타임코드 출력은 실제 수신기로 검증한 적이 없다. 기능은 들어 있지만 아직 이걸로 공연을 짜지는 말 것.
 
 
-## Contact
+## 문서
 
-Open an issue, or send an Instagram DM
+[바이너리 라이선스](BINARY_LICENSE.md) · [서드파티 고지](THIRD_PARTY_NOTICES.md) · [변경 내역](CHANGELOG.md)
+
+
+## 연락
+
+이슈를 열거나 인스타그램 DM
 
 
 ---
 
-ORVIK is an independent product. It is not affiliated with, endorsed by or sponsored by AlphaTheta Corporation, Pioneer DJ or TC Supply. Their product names and trademarks appear here only to say what ORVIK works with.
+ORVIK is an independent product, with no affiliation, endorsement or sponsorship from AlphaTheta Corporation, Pioneer DJ or TC Supply. Product names and trademarks are here only to say what ORVIK works with.
+
+ORVIK 은 독립 제품이다. AlphaTheta Corporation, Pioneer DJ, TC Supply 와 제휴·보증·후원 관계가 없다. 제품명과 상표는 ORVIK 이 무엇과 함께 동작하는지 밝히려고 적었을 뿐이다.

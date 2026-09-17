@@ -74,9 +74,9 @@ artwork, or media-related information in their own workflow.
 # ORVIK 서드파티 고지 요약
 
 이 파일은 ORVIK의 서드파티 상표, 프로토콜, 구성요소 관련 고지를 정리한
-문서이며, 추가 권리를 부여하지 않습니다.
+문서이며 추가 권리를 부여하지 않습니다.
 
-ORVIK는 AlphaTheta의 공식 PRO DJ LINK Bridge 애플리케이션이 아니며,
+ORVIK는 AlphaTheta의 공식 PRO DJ LINK Bridge 애플리케이션이 아니며
 AlphaTheta Corporation, Pioneer Corporation, Pioneer DJ 또는 관련 당사자와
 제휴, 승인, 후원, 라이선스, 인증 또는 공식 연결 관계가 없습니다.
 
@@ -88,11 +88,11 @@ Bridge 접근은 라이선스 회사 및 인증 제품 맥락에서 설명됩니
 그 지위를 주장하지 않습니다.
 
 TC Supply는 TCNet을 조명, 영상 및 기타 엔터테인먼트 시스템 간 쇼 컨트롤
-정보를 교환하기 위한 open network protocol로 설명하며, 공개된 TCNet LINK
+정보를 교환하기 위한 open network protocol로 설명하며 공개된 TCNet LINK
 Specification(© Event Imagineering Group)은 "the protocol is open and free
 to be used"라고 명시합니다. ORVIK는 이 공개 스펙을 기반으로 TCNet 호환
 출력을 독립적으로 구현합니다. ORVIK는 ShowKontrol 또는 BeatKontrol이
-아니며, 해당 코드를 포함하지 않고, TC Supply, Event Imagineering Group,
+아니고 해당 코드를 포함하지 않으며 TC Supply, Event Imagineering Group,
 ShowKontrol 또는 관련 당사자의 승인, 인증, 지원 또는 라이선스 상태를 주장하지
 않습니다.
 
@@ -106,6 +106,6 @@ ORVIK 바이너리 라이선스는 이 구성요소에 대해 LGPL이 부여하�
 
 번들 폰트 중 DSEG7 Classic, Noto Sans KR, DM Mono, Space Grotesk, Inter,
 JetBrains Mono 는 SIL Open Font License 1.1, Material Symbols 는 Apache
-License 2.0 (Google LLC) 적용을 받으며, 저작권 고지와 라이선스 전문이
+License 2.0 (Google LLC) 적용을 받으며 저작권 고지와 라이선스 전문이
 앱에 동봉되어 있습니다. QR 코드 생성은 MIT License 의 `qrcode` npm 패키지를
 사용합니다.
