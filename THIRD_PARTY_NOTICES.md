@@ -25,7 +25,10 @@ claim to that status.
 
 TC Supply describes TCNet as an open network protocol for exchanging
 show-control information between lighting, video, and other entertainment
-systems. ORVIK implements compatible TCNet output independently.
+systems. The published TCNet LINK Specification (V3.5.1B, © 2016–2022 Event
+Imagineering Group) states that "the protocol is open and free to be used and
+everyone can contribute". ORVIK's TCNet output is written from that published
+specification; it is not derived from any TCNet implementation.
 
 ORVIK is not ShowKontrol or BeatKontrol, does not include ShowKontrol or
 BeatKontrol code, does not use TC Supply logos, and is not affiliated with,
@@ -136,8 +139,11 @@ LINK 와 rekordbox 를 AlphaTheta Corporation 의 상표 또는 등록상표로 
 ## TC Supply / ShowKontrol / TCNet
 
 TC Supply 는 TCNet 을 조명, 영상, 그 밖의 엔터테인먼트 시스템 사이에서 쇼 컨트롤
-정보를 주고받기 위한 개방형 네트워크 프로토콜로 설명합니다. ORVIK 는 호환되는
-TCNet 출력을 독립적으로 구현했습니다.
+정보를 주고받기 위한 개방형 네트워크 프로토콜로 설명합니다. 공개된 TCNet LINK
+Specification(V3.5.1B, © 2016–2022 Event Imagineering Group)은 "the protocol is
+open and free to be used and everyone can contribute" 라고 밝히고 있습니다. ORVIK
+의 TCNet 출력은 그 공개 규격서를 보고 구현한 것이며, 다른 TCNet 구현물에서 가져온
+것이 아닙니다.
 
 ORVIK 는 ShowKontrol 도 BeatKontrol 도 아니고, 두 제품의 코드를 포함하지 않으며,
 TC Supply 의 로고를 사용하지 않습니다. 또한 TC Supply, Event Imagineering Group,

@@ -70,8 +70,8 @@ non-public network documentation.
 ORVIK is not AlphaTheta's official PRO DJ LINK Bridge application, is not a
 PRO DJ LINK licensed company product, and is not certified by AlphaTheta,
 Pioneer DJ, TC Supply, Event Imagineering Group, ShowKontrol, or any related
-party. TCNet compatibility is implemented independently and does not include
-ShowKontrol or BeatKontrol code.
+party. TCNet compatibility is written from the published TCNet LINK Specification
+and does not include ShowKontrol or BeatKontrol code.
 
 Nothing in this agreement grants you permission to reverse engineer ORVIK
 itself. Nothing in this agreement is intended to restrict rights that cannot be
@@ -188,8 +188,8 @@ PRO DJ LINK Bridge 소스 코드, 제조사 펌웨어, 라이선스 SDK, 기밀 
 ORVIK 는 AlphaTheta 의 공식 PRO DJ LINK Bridge 애플리케이션이 아니고, PRO DJ LINK
 라이선스 회사의 제품 또는 인증 제품이 아니며, AlphaTheta, Pioneer DJ, TC Supply,
 Event Imagineering Group, ShowKontrol 의 인증을 받은 제품도 아닙니다.
-TCNet 호환 출력은 독립적으로 구현되었으며 ShowKontrol 또는 BeatKontrol 코드를
-포함하지 않습니다.
+TCNet 호환 출력은 공개된 TCNet LINK Specification 을 보고 구현했으며
+ShowKontrol 또는 BeatKontrol 코드를 포함하지 않습니다.
 이 계약의 어떤 내용도 ORVIK 자체를 리버스 엔지니어링할 권한을 부여하지 않습니다.
 동시에, 이 계약의 어떤 내용도 관련 법률상 제한할 수 없는 권리, 특히 **포기할 수 없는
 상호운용성 또는 리버스 엔지니어링 권리**를 제한하려는 것이 아닙니다.

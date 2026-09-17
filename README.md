@@ -141,54 +141,6 @@ Windows   %APPDATA%\orvik\logs
 
 로그에는 ORVIK 이 받은 PRO DJ LINK·TCNet 패킷과 거기 실려 온 곡 제목, 링크 네트워크에 붙은 장비 이름과 주소가 들어간다. 올리기 전에 한 번 열어 보는 게 좋다.
 
-<!-- HUMANIZE-SUMMARY v1.6.1
-run_id: 2026-09-18-001
-route: light (risk_band=low, lexical_tell_count=0) / 강도: 보수 / 겨냥 축: da_streak_rate only
-metrics:
-  char_in: 1149
-  char_out: 1132
-  change_rate: 3.1%
-  self_check: 6/6
-  grade: A
-categories:  # before -> after
-  E-2 '-다' 평서 종결 문장: 31/31 -> 22/31 (71%)
-  da_streak 최대 연속: 31 -> 4
-  비'-다' 종결(체언 종결) 수: 0 -> 9 (29%)
-  C-11 연결어미 뒤 쉼표: 증가 0 (원문 그대로)
-  A / B / C / D / F / G / H / I / J: 탐지 0건 -> 무수정
-self_check:
-  - 고유명사·수치·인용·내용 앵커 100% 보존: OK (34개 앵커 자동 대조 통과)
-  - 변경률 30% 이하: OK (3.1% — light 경로 보수 강도라 의도적 하한)
-  - 장르 이탈 없음: OK (개발자 README 실행 안내 그대로)
-  - register 보존: OK (해라체 문어 평서 유지, 존대 상향·'-하였-' 없음)
-  - S1 잔존 0건: OK (원래 0건, 신규 발생 0)
-  - 인공 표현 추가 없음: OK (은유·상투구·반문 신규 삽입 0)
-untouched (자동 assert 통과):
-  - 헤딩 5개 + 코드 펜스 2블록 내부: byte-identical
-  - 볼드 UI 라벨 8곳: byte-identical
-  - 문장 수 31 -> 31, 산문 문단 11 -> 11, 빈 줄 배치 동일
-highlights:
-  - id: E-2
-    before: "맥은 빌드가 두 개다."
-    after: "맥은 빌드가 두 개."
-  - id: E-2
-    before: "누르고 인증한 뒤 다시 실행하면 끝이다."
-    after: "누르고 인증한 뒤 다시 실행하면 끝."
-  - id: E-2
-    before: "클릭이 번거로우면 터미널에서 한 줄로도 된다."
-    after: "클릭이 번거로우면 터미널에서 한 줄."
-  - id: E-2
-    before: "문제가 생겼을 때는 증상을 설명하는 것보다 로그 한 개가 낫다."
-    after: "문제가 생겼을 때는 증상 설명보다 로그 한 개."
-  - id: E-2
-    before: "마지막 파일 하나가 아니라 세트째 올리면 된다."
-    after: "올릴 때는 마지막 파일 하나가 아니라 세트째."
-residual_findings: >
-  E-2 잔존 1건 — '-다' 4연속 구간 1곳(로컬 네트워크 허용 문단 ~ Windows 첫 문단).
-  해당 구간의 '허용해야 한다'는 당위 서법이라, 종결 변주보다 서법 보존(quick-rules v2.4)을 우선해 그대로 둠.
-grade_reason: "A — S1 잔존 0, S2 잔존 1, 자체검증 6항 통과. 지시된 da_streak 축만 손대고 구조·코드·라벨·사실관계는 전량 보존."
--->
-
 
 ## 보안
 
