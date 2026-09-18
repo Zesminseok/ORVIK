@@ -14,12 +14,13 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Mixer data stopping for good after a network interface change.
 - Fader moves reaching Resolume at only 5 fps.
 - White detail waveform right after a deck reconnects.
-- Korean wording in settings, mixer tooltips and the history tab.
+- Korean wording in settings, and the history tab tips in every language.
+- Mixer tooltips showing in Korean whatever the language setting.
 
 **Changes**
 
-- BPM to OSC panel: matching icon, uppercase source, beat number instead of decimals.
-- OSC tempo follows a deck that is on air when no master is set.
+- The BPM page is now BPM to OSC: matching icon, uppercase source, beat number instead of decimals.
+- With no master set, OSC tempo follows a deck that is playing and on air first.
 - Electron 44.3.0.
 
 **New**
@@ -189,12 +190,13 @@ versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - 네트워크 인터페이스가 바뀐 뒤 믹서 데이터가 영영 끊기던 문제.
 - 페이더 움직임이 Resolume 에 5fps 로만 도달하던 증상.
 - 덱 재접속 직후 디테일 웨이브폼이 흰색으로 나오던 문제.
-- 설정·믹서 툴팁·히스토리 탭의 한국어 표현.
+- 설정의 한국어 표현, 그리고 모든 언어의 히스토리 탭 도움말.
+- 언어 설정과 상관없이 한국어로 뜨던 믹서 툴팁.
 
 **변경**
 
-- BPM to OSC 패널: 아이콘 통일, 소스 대문자 표기, 소수점 대신 비트 번호.
-- 마스터가 없을 때 OSC 템포가 온에어 덱을 따라간다.
+- BPM 페이지 이름이 BPM to OSC 로 바뀌었다. 아이콘 통일, 소스 대문자 표기, 소수점 대신 비트 번호.
+- 마스터가 없을 때 OSC 템포는 재생 중이면서 온에어인 덱을 먼저 따라간다.
 - Electron 44.3.0.
 
 **추가**
