@@ -1,210 +1,109 @@
-# ORVIK Third-Party Notices
+# ORVIK 서드파티 고지 / Third-Party Notices
 
-This file summarizes third-party trademark, protocol, and component notices for
-ORVIK. It is informational and does not grant additional rights.
+[한국어](#한국어) · [English](#english)
 
-## AlphaTheta / Pioneer DJ / PRO DJ LINK
+## 한국어
 
-ORVIK is an independent third-party interoperability application. It is not
-AlphaTheta's official PRO DJ LINK Bridge application and is not affiliated with,
-endorsed by, sponsored by, approved by, licensed by, certified by, or otherwise
-officially connected to AlphaTheta Corporation, Pioneer Corporation, Pioneer DJ,
-or any related party.
+이 문서는 상표, 프로토콜 참고 자료 및 번들 구성요소를 안내합니다. 각 구성요소의 원문 라이선스를 대체하거나 추가 권리를 부여하지 않습니다.
 
-References to Pioneer DJ, Pioneer, CDJ, DJM, PRO DJ LINK, rekordbox, or related
-product and technology names are used only to describe compatibility targets.
+### 상표와 독립 제품 안내
 
-Public AlphaTheta/Pioneer DJ materials identify Pioneer DJ and Pioneer as
-trademarks of Pioneer Corporation used under license, and identify PRO DJ LINK
-and rekordbox as trademarks or registered trademarks of AlphaTheta Corporation.
-Public AlphaTheta/Pioneer DJ materials also describe PRO DJ LINK Bridge access
-in the context of licensed companies and certified products. ORVIK makes no
-claim to that status.
+ORVIK는 독립적인 호환성 도구입니다. AlphaTheta의 공식 PRO DJ LINK Bridge나 TC Supply의 ShowKontrol이 아니며 AlphaTheta·Pioneer DJ·TC Supply와의 제휴·후원·인증·승인을 의미하지 않습니다.
 
-## TC Supply / ShowKontrol / TCNet
+Pioneer DJ, CDJ, DJM, PRO DJ LINK, rekordbox, TCNet, Resolume 등 제품명·기술명·상표는 호환 대상을 설명하기 위해 사용합니다. 각 상표의 권리는 해당 권리자에게 있습니다. 프로토콜의 공개 여부가 별도 상표나 인증의 사용 허가를 의미하지는 않습니다.
 
-TC Supply describes TCNet as an open network protocol for exchanging
-show-control information between lighting, video, and other entertainment
-systems. The published TCNet LINK Specification (V3.5.1B, © 2016–2022 Event
-Imagineering Group) states that "the protocol is open and free to be used and
-everyone can contribute". ORVIK's TCNet output is written from that published
-specification; it is not derived from any TCNet implementation.
+### 프로토콜 참고 자료
 
-ORVIK is not ShowKontrol or BeatKontrol, does not include ShowKontrol or
-BeatKontrol code, does not use TC Supply logos, and is not affiliated with,
-endorsed by, sponsored by, approved by, licensed by, certified by, or supported
-by TC Supply, Event Imagineering Group, ShowKontrol, or any related party.
+PRO DJ LINK 호환성은 개발자가 소유하거나 적법하게 운용하는 하드웨어와 원본 프로그램을 실행하고, Wireshark로 그 사이의 네트워크 패킷을 캡처·분석하는 방식으로 개발합니다. TCNet 출력은 [TC Supply가 공개한 TCNet LINK Specification V3.5.1B](https://www.tc-supply.com/support-documents)를 근거로 구현합니다.
 
-References to TCNet, ShowKontrol, TC Supply, or Event Imagineering Group are
-used only to describe protocol compatibility and interoperability.
+### 런타임과 라이브러리
 
-## Implementation
+ORVIK는 Electron 기반 앱입니다. Electron 자체는 MIT 라이선스이며, 함께 배포되는 Chromium·Node.js·V8·ICU·FFmpeg 등의 구성요소에는 각각의 라이선스가 적용됩니다.
 
-ORVIK is an independent implementation built for interoperability between compatible DJ
-hardware and visual or lighting software. It works from the behavior observed on the network
-between devices the developer owns or lawfully operates. No manufacturer's proprietary source
-code, firmware, confidential material, licensed SDK, or non-public documentation has been
-used, and none is contained in or distributed with ORVIK.
+무료 데모와 자발적 후원이라는 제공 방식과 관계없이, 포함된 구성요소에는 각 라이선스가 적용됩니다.
 
-Some identifier strings and protocol-level values appear in network communication for
-compatibility with existing systems. They are not branding and are not a representation of
-origin, affiliation, or endorsement.
+가상 덱의 별도 오디오 변환 경로는 사용자 컴퓨터에 설치된 `ffmpeg` 실행 파일을 찾습니다. 현재 배포 구성에는 그 실행 파일을 따로 포함하지 않습니다. 이것은 Electron에 포함된 FFmpeg 구성요소와 별개이며, 가상 덱을 사용하지 않아도 배포 패키지에 포함된 구성요소의 라이선스는 적용됩니다.
 
-Compatibility comes from observing network traffic between devices the developer owns or
-lawfully operates, and from publicly available information. This follows the interoperability
-principles recognized in major jurisdictions, including 17 U.S.C. § 1201(f), Directive
-2009/24/EC, and Article 101-4 of the Korean Copyright Act.
+| 구성요소 | 라이선스 및 고지 위치 |
+| --- | --- |
+| Electron | MIT. 배포 패키지의 Electron 라이선스 파일(`LICENSE.electron.txt` 또는 `LICENSE`) |
+| Chromium 및 포함 구성요소 | 여러 라이선스. 배포 패키지의 `LICENSES.chromium.html` |
+| Electron에 포함된 FFmpeg | LGPL-2.1-or-later 및 해당 파일별 고지. `LICENSES.chromium.html` 참조 |
+| `qrcode` | MIT. 패키지의 `license` 파일 |
+| `bytenode` | MIT. 패키지의 `LICENSE` 파일 |
+| 위 패키지의 전이 의존성 | 각 패키지에 포함된 저작권 고지와 라이선스 |
 
-The publicly available information referred to above includes independent community research
-into the Pro DJ Link protocol, in particular Deep Symmetry's DJ Link Ecosystem Analysis
-(https://djl-analysis.deepsymmetry.org/). ORVIK contains no code from that project or from
-any other third-party implementation.
+패키지 파일은 앱 리소스 또는 `app.asar` 안에 포함될 수 있습니다. 위 표는 고지 위치 안내이며, 저작권 고지와 라이선스 전문을 생략해도 된다는 뜻이 아닙니다.
 
-ORVIK does not copy audio content, decrypt protected media, or bypass access controls.
+Electron의 버전별 소스와 의존성 참조는 [Electron 저장소](https://github.com/electron/electron)에서, Chromium의 FFmpeg 소스는 [Chromium FFmpeg 저장소](https://chromium.googlesource.com/chromium/third_party/ffmpeg/)에서 확인할 수 있습니다. 이는 업스트림 프로젝트 안내이며, 배포 바이너리와 정확히 대응하는 소스·빌드 자료 제공을 대체하지 않습니다.
 
-## Bundled Assets
+ORVIK의 앱 이용 조건은 LGPL 등 서드파티 라이선스에 따른 수정·교체·재링크 및 수정 사항 디버깅을 위한 역공학 권리를 제한하지 않습니다. 세부 조건은 해당 라이선스를 따릅니다.
 
-The default placeholder artwork (`default-album-artwork.png`,
-`renderer/assets/default-art.png`, `renderer/assets/default-art.jpg`) is the ORVIK
-application symbol, created for ORVIK and covered by the ORVIK Binary License.
+### 폰트와 아이콘
 
-## Runtime Components
+| 구성요소 | 라이선스 |
+| --- | --- |
+| DSEG7 Classic, Noto Sans KR, DM Mono, Space Grotesk, Inter, JetBrains Mono | SIL Open Font License 1.1 |
+| Material Symbols | Apache License 2.0 |
 
-ORVIK is built as an Electron desktop application (Electron 44.x). Electron
-(MIT) bundles Chromium, Node.js, V8, ICU, and the FFmpeg library, among other
-components; their license texts are distributed with the application as
-`LICENSE.electron.txt` and `LICENSES.chromium.html`.
+폰트별 저작권 고지와 라이선스 전문은 앱 리소스의 `renderer/fonts/LICENSE.txt`에 있습니다. 이 파일은 폰트와 Material Symbols에 관한 고지이며 런타임 라이브러리의 라이선스 파일을 대체하지 않습니다.
 
-The bundled FFmpeg library is licensed under the GNU Lesser General Public
-License and is distributed as an unmodified, dynamically linked library from
-the official Electron distribution. Its corresponding source code is available
-from the Electron and Chromium open-source projects
-(https://github.com/electron/electron/releases). The ORVIK binary license
-does not restrict rights granted by the LGPL for this component.
+ORVIK의 기본 앨범아트와 앱 심볼에는 [앱 이용 조건](BINARY_LICENSE.md)이 적용됩니다. 별도 라이선스가 있는 자료는 해당 라이선스를 따릅니다.
 
-Runtime dependencies:
+### 사용자 미디어
 
-- `qrcode` (MIT), together with its own dependency tree, which ships with it:
-  `dijkstrajs`, `pngjs`, `yargs`, `yargs-parser`, `cliui`, `wrap-ansi`, `string-width`,
-  `strip-ansi`, `ansi-regex`, `ansi-styles`, `color-convert`, `color-name`,
-  `emoji-regex`, `is-fullwidth-code-point`, `camelcase`, `decamelize`, `find-up`,
-  `locate-path`, `p-locate`, `p-limit`, `p-try`, `path-exists`, `get-caller-file`,
-  `require-directory`, `require-main-filename`, `set-blocking`, `which-module`,
-  `y18n` — all MIT or ISC.
-- `bytenode` (MIT): used to compile parts of the application to V8 bytecode during the
-  release build.
-
-Bundled fonts:
-
-- DSEG7 Classic, Noto Sans KR, DM Mono, Space Grotesk, Inter, and
-  JetBrains Mono: SIL Open Font License Version 1.1.
-- Material Symbols: Apache License Version 2.0 (Google LLC), not the OFL.
-
-Copyright notices and full license texts for all of the above are in
-`renderer/fonts/LICENSE.txt`, which ships with the application.
-
-## User Media
-
-ORVIK does not grant rights to any music, metadata, album artwork, device
-firmware, or third-party media. Users are responsible for ensuring that they
-have the rights required to use, display, forward, or store any metadata,
-artwork, or media-related information in their own workflow.
+ORVIK의 사용권은 음원, 앨범아트, 메타데이터 또는 그 밖의 제3자 자료에 대한 권리를 부여하지 않습니다. 사용자는 자신의 작업에서 이를 사용·표시·전달·저장하는 데 필요한 권리를 확보해야 합니다.
 
 ---
 
-# ORVIK 서드파티 고지 요약
+## English
 
-이 한국어 요약은 이해를 돕기 위한 것입니다. 법적 해석이 충돌할 경우 위의 영문
-조항이 우선합니다.
+This document identifies trademarks, protocol references and bundled components. It does not replace each component's original license or grant additional rights.
 
-이 문서는 ORVIK 의 서드파티 상표·프로토콜·구성요소 고지를 정리한 것입니다.
-정보 제공이 목적이며 추가 권리를 부여하지 않습니다.
+### Trademarks and independent product notice
 
-## AlphaTheta / Pioneer DJ / PRO DJ LINK
+ORVIK is an independent interoperability tool. It is not AlphaTheta's official PRO DJ LINK Bridge or TC Supply's ShowKontrol, and does not imply affiliation with, sponsorship by, certification by or endorsement from AlphaTheta, Pioneer DJ or TC Supply.
 
-ORVIK 는 독립적인 서드파티 상호운용성 애플리케이션입니다. AlphaTheta 의 공식
-PRO DJ LINK Bridge 애플리케이션이 아니며, AlphaTheta Corporation, Pioneer
-Corporation, Pioneer DJ 또는 관련 당사자와 제휴, 보증, 후원, 승인, 라이선스,
-인증 관계가 없고 그 밖의 공식 연결 관계도 없습니다.
+Product and technology names and trademarks, including Pioneer DJ, CDJ, DJM, PRO DJ LINK, rekordbox, TCNet and Resolume, identify compatibility targets. Each trademark remains with its respective owner. A publicly available protocol does not itself grant permission to use separate trademarks or certifications.
 
-Pioneer DJ, Pioneer, CDJ, DJM, PRO DJ LINK, rekordbox 를 비롯한 제품명·기술명에
-대한 언급은 호환 대상을 설명하기 위해서만 이루어집니다.
+### Protocol references
 
-AlphaTheta·Pioneer DJ 의 공개 자료는 Pioneer DJ 와 Pioneer 를 Pioneer
-Corporation 의 상표로, 라이선스를 받아 사용하는 것으로 밝히고 있으며, PRO DJ
-LINK 와 rekordbox 를 AlphaTheta Corporation 의 상표 또는 등록상표로 밝히고
-있습니다. 같은 자료는 PRO DJ LINK Bridge 접근을 라이선스 회사와 인증 제품의
-맥락에서 설명합니다. ORVIK 는 그러한 지위를 주장하지 않습니다.
+PRO DJ LINK interoperability is developed by running the original application alongside hardware the developer owns or lawfully operates, then capturing and analyzing their network packets with Wireshark. TCNet output is implemented from the [TCNet LINK Specification V3.5.1B published by TC Supply](https://www.tc-supply.com/support-documents).
 
-## TC Supply / ShowKontrol / TCNet
+### Runtime and libraries
 
-TC Supply 는 TCNet 을 조명, 영상, 그 밖의 엔터테인먼트 시스템 사이에서 쇼 컨트롤
-정보를 주고받기 위한 개방형 네트워크 프로토콜로 설명합니다. 공개된 TCNet LINK
-Specification(V3.5.1B, © 2016–2022 Event Imagineering Group)은 "the protocol is
-open and free to be used and everyone can contribute" 라고 밝히고 있습니다. ORVIK
-의 TCNet 출력은 그 공개 규격서를 보고 구현한 것이며, 다른 TCNet 구현물에서 가져온
-것이 아닙니다.
+ORVIK is built with Electron. Electron itself is MIT-licensed; bundled components such as Chromium, Node.js, V8, ICU and FFmpeg are subject to their respective licenses.
 
-ORVIK 는 ShowKontrol 도 BeatKontrol 도 아니고, 두 제품의 코드를 포함하지 않으며,
-TC Supply 의 로고를 사용하지 않습니다. 또한 TC Supply, Event Imagineering Group,
-ShowKontrol 또는 관련 당사자와 제휴, 보증, 후원, 승인, 라이선스, 인증, 지원
-관계가 없습니다.
+Each included component remains subject to its license regardless of the free-demo and voluntary-contribution distribution model.
 
-TCNet, ShowKontrol, TC Supply, Event Imagineering Group 에 대한 언급은 프로토콜
-호환성과 상호운용성을 설명하기 위해서만 이루어집니다.
+The separate audio-conversion path for virtual decks looks for an `ffmpeg` executable installed on the user's computer. The current distribution configuration does not bundle that executable separately. This is distinct from the FFmpeg components included with Electron, whose licenses still apply to the distributed package even when virtual decks are not used.
 
-## 구현
+| Component | License and notice location |
+| --- | --- |
+| Electron | MIT. The Electron license file in the distribution (`LICENSE.electron.txt` or `LICENSE`) |
+| Chromium and included components | Multiple licenses. `LICENSES.chromium.html` in the distribution |
+| FFmpeg included with Electron | LGPL-2.1-or-later and applicable file-specific notices. See `LICENSES.chromium.html` |
+| `qrcode` | MIT. The package's `license` file |
+| `bytenode` | MIT. The package's `LICENSE` file |
+| Transitive dependencies of these packages | Copyright notices and licenses included with each package |
 
-ORVIK는 **관찰된 네트워크 동작 및 공개된 정보**를 기반으로 외부 시스템과 통신합니다.
+Package files may be inside the application resources or `app.asar`. This table identifies notice locations; it does not permit omission of copyright notices or full license texts.
 
-본 소프트웨어는 서로 다른 시스템 간의 상호운용성을 위해 네트워크 이벤트를 해석하고 변환하는 기능을 제공합니다. 개발 과정에서 어떠한 제조사의 독점적 소스 코드, 펌웨어, 기밀 자료, 라이선스 SDK 또는 비공개 PRO DJ LINK 네트워크 문서도 사용되지 않았습니다. 호환성은 개발자가 소유하거나 적법하게 운용하는 장비 사이의 네트워크 트래픽 관찰과 공개된 정보에서 확보되었습니다. 이는 주요 관할권이 인정하는 상호운용성 원칙과 부합하는 방식입니다(미국 17 U.S.C. § 1201(f), EU 지침 2009/24/EC, 대한민국 저작권법 제101조의4).
+Version-specific Electron source and dependency references are available in the [Electron repository](https://github.com/electron/electron); Chromium's FFmpeg source is in the [Chromium FFmpeg repository](https://chromium.googlesource.com/chromium/third_party/ffmpeg/). These are upstream project references, not a substitute for providing source and build materials that correspond exactly to a distributed binary.
 
-ORVIK는 Pro DJ Link 장비가 자신을 발견하고 수용하도록, 해당 프로토콜이 그 용도로 정의한 장치 식별 필드를 전송합니다. 이 값들은 기존 장비와의 상호운용을 위해 네트워크 패킷 안에만 존재하며 사용자 인터페이스에 표시되지 않고 ORVIK의 브랜딩으로 사용되지 않습니다.
+ORVIK's application license does not restrict modification, replacement, relinking or reverse engineering to debug modifications where permitted by third-party licenses such as the LGPL. The applicable license governs the details.
 
-위에서 말하는 공개된 정보에는 Pro DJ Link 프로토콜에 대한 독립적인 커뮤니티 연구, 특히 Deep Symmetry 의 DJ Link Ecosystem Analysis (https://djl-analysis.deepsymmetry.org/) 가 포함됩니다. ORVIK는 해당 프로젝트를 비롯한 어떤 제3자 구현의 코드도 포함하지 않습니다.
+### Fonts and icons
 
-네트워크 통신에 나타나는 일부 식별 문자열과 프로토콜 값은 기존 시스템과의 호환을 위한
-것이며, 브랜딩이 아니고 출처·제휴·보증의 표시도 아닙니다.
+| Component | License |
+| --- | --- |
+| DSEG7 Classic, Noto Sans KR, DM Mono, Space Grotesk, Inter, JetBrains Mono | SIL Open Font License 1.1 |
+| Material Symbols | Apache License 2.0 |
 
-ORVIK는 오디오 콘텐츠를 복사하거나 보호된 미디어를 복호화하거나 접근 제어를 우회하지 않습니다. 트랙 메타데이터와 앨범아트는 사용자가 관리하는 라이브러리 또는 연결된 장치에서 전달되는 범위에서만 표시/전송되며, 해당 미디어와 이미지 사용 권한은 사용자 책임입니다.
+Font copyright notices and full license texts are in `renderer/fonts/LICENSE.txt` in the application resources. That file covers fonts and Material Symbols; it does not replace runtime library license files.
 
-## 번들 자산
+ORVIK's default artwork and application symbol are covered by the [application license](BINARY_LICENSE.md). Separately licensed materials remain subject to their own licenses.
 
-기본 앨범아트(`default-album-artwork.png`, `renderer/assets/default-art.png`,
-`renderer/assets/default-art.jpg`)는 ORVIK 애플리케이션 심볼로, ORVIK 를 위해 자체
-제작했으며 ORVIK 바이너리 라이선스의 적용을 받습니다.
+### User media
 
-## 런타임 구성요소
-
-ORVIK 는 Electron 데스크톱 애플리케이션으로 빌드됩니다(Electron 44.x).
-Electron(MIT)은 Chromium, Node.js, V8, ICU, FFmpeg 라이브러리를 비롯한 구성요소를
-번들하며, 각 라이선스 전문은 `LICENSE.electron.txt` 와 `LICENSES.chromium.html`
-로 앱과 함께 배포됩니다.
-
-번들된 FFmpeg 라이브러리는 GNU Lesser General Public License 를 따르며, 공식
-Electron 배포본의 수정되지 않은 동적 링크 라이브러리로 배포됩니다. 대응 소스
-코드는 Electron 및 Chromium 오픈소스 프로젝트에서 구할 수 있습니다
-(https://github.com/electron/electron/releases). ORVIK 바이너리 라이선스는 이
-구성요소에 대해 LGPL 이 부여하는 권리를 제한하지 않습니다.
-
-런타임 의존성:
-
-- `qrcode` npm 패키지: MIT License.
-- `bytenode` npm 패키지(MIT): 릴리스 빌드에서 앱의 일부를 V8 바이트코드로 컴파일하는
-  데 사용합니다.
-
-번들 폰트:
-
-- DSEG7 Classic, Noto Sans KR, DM Mono, Space Grotesk, Inter, JetBrains Mono:
-  SIL Open Font License Version 1.1.
-- Material Symbols: Apache License Version 2.0 (Google LLC). OFL 이 아닙니다.
-
-위 항목의 저작권 고지와 라이선스 전문은 앱과 함께 배포되는
-`renderer/fonts/LICENSE.txt` 에 있습니다.
-
-## 사용자 미디어
-
-ORVIK 는 음원, 메타데이터, 앨범아트, 장치 펌웨어, 서드파티 미디어에 대한 어떠한
-권리도 부여하지 않습니다. 사용자는 자신의 작업 흐름에서 메타데이터, 아트워크,
-미디어 관련 정보를 사용·표시·전달·저장하는 데 필요한 권리를 확보할 책임이
-있습니다.
+An ORVIK license grants no rights to music, artwork, metadata or other third-party materials. Users must obtain the rights needed to use, display, forward or store them in their workflow.

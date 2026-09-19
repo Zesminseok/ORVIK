@@ -5,171 +5,121 @@
   </picture>
 </p>
 
-ORVIK reads the tempo, beat and track info your CDJs and DJM already put on the PRO DJ LINK network, and hands it to Resolume over TCNet.
+[한국어](#한국어) · [English](#english)
 
 [![License: Proprietary](https://img.shields.io/badge/license-proprietary-red.svg)](BINARY_LICENSE.md)
 [![Version](docs/media/badge-version.svg)](CHANGELOG.md)
-[![Status: Beta](https://img.shields.io/badge/status-beta-yellow.svg)]()
-[![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows-lightgrey.svg)]()
-[![Issues · DM @zes_minseok](docs/media/badge-dm.svg)](https://instagram.com/zes_minseok)
+![Status: Demo](https://img.shields.io/badge/status-demo-yellow.svg)
+![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows-lightgrey.svg)
 
+## 한국어
 
-## Download
+ORVIK는 PRO DJ LINK 네트워크의 CDJ·DJM에서 템포, 비트, 재생 위치, 트랙 정보를 받아 TCNet으로 Resolume 등 호환 소프트웨어에 전달하는 앱입니다. 장비에 데이터 요청을 보내지만 재생·큐·템포를 제어하지 않습니다.
 
-[Releases](../../releases)
+현재 개발 중인 **무료 데모**로 공개하고 있습니다. 후원은 개발을 돕기 위한 자발적인 선택입니다. **후원으로 기능이 열리거나 사용 제한이 해제되지 않으며**, 후원 여부와 관계없이 같은 데모 기능을 사용할 수 있습니다. 현재 데모에는 기간 제한이 없습니다. 후원은 정식 제품의 구매나 예약 구매가 아니며, 정식 버전의 제공 또는 완성 시점을 보장하지 않습니다.
 
-macOS 13 or later (Apple Silicon or Intel), Windows 10 and 11 (x64).
+### 다운로드 및 실행
 
+[최신 릴리스](https://github.com/Zesminseok/ORVIK/releases/latest)에서 운영체제에 맞는 파일을 받으세요.
 
-## Running it
+| 환경 | 파일 |
+| --- | --- |
+| macOS 13 이상 · Apple Silicon | `mac-arm64.dmg` |
+| macOS 13 이상 · Intel | `mac-x64.dmg` |
+| Windows 10·11 · x64 | `win-x64.exe` · 설치 없이 실행 |
 
-Two Mac builds. `arm64` for Apple Silicon, `x64` for Intel; the Apple menu, About This Mac, says which one you have. Windows is one portable `.exe` with no install step — drop it in whatever folder your show tools live in.
+**macOS:** DMG를 열어 ORVIK를 응용 프로그램으로 옮기세요. 현재 배포본은 Apple Developer ID 서명·공증이 없어 첫 실행이 차단될 수 있습니다. 위 릴리스에서 받은 앱인지 확인한 뒤, 한 번 실행하고 **시스템 설정 → 개인정보 보호 및 보안 → 그래도 열기**를 선택하세요. 자세한 절차는 [Apple 안내](https://support.apple.com/ko-kr/102445)를 참고하세요.
 
-### macOS
+**Windows:** 내려받은 `.exe`를 실행하세요. SmartScreen 경고가 표시되면 출처를 확인한 뒤 **추가 정보 → 실행**을 선택할 수 있습니다. 조직에서 관리하는 PC에서는 관리자 정책이 적용될 수 있습니다.
 
-The app is not signed with an Apple Developer certificate, so the first launch is blocked. Open the DMG, drag ORVIK into Applications, and launch it once: you get a warning that macOS cannot verify it. Close that, go to System Settings → Privacy & Security, scroll down, and there is a line saying ORVIK was blocked with an **Open Anyway** button. Click it, authenticate, and launch again — done. Once only.
+컴퓨터와 DJ 장비를 같은 로컬 네트워크에 연결하고 ORVIK에서 해당 네트워크 인터페이스를 선택하세요. macOS의 로컬 네트워크 접근 요청은 허용하고, Windows 방화벽에서는 신뢰하는 공연용 개인 네트워크에 한해 ORVIK 통신을 허용하세요.
 
-On Ventura and Sonoma you can skip System Settings: Control-click ORVIK in Applications and choose Open. Sequoia closed that route, which is why the long way is above.
+### 주요 기능
 
-If clicking through it is a nuisance, one line in Terminal:
+- 장비의 덱·믹서 상태, 트랙 정보, 큐, 웨이브폼, 앨범아트 표시
+- TCNet 출력과 BPM to OSC
+- 로컬 오디오 파일을 재생하는 가상 덱
+- 같은 네트워크에서 확인하는 웹 뷰어와 다른 ORVIK 화면을 표시하는 미러 모드
+- HISTORY 재생 기록과 CSV 내보내기
 
-```
-xattr -dr com.apple.quarantine /Applications/ORVIK.app
-```
+장비·펌웨어·연결 구성에 따라 수신 가능한 정보가 다릅니다. LTC·MIDI Clock·MTC 출력은 실제 수신 장비에서의 검증이 완료되지 않았으므로 공연에 사용하기 전에 전체 연결을 확인하세요.
 
-The first time ORVIK looks for players, macOS asks whether to allow local network access. Allow it. Deny it and the app opens but not a single CDJ turns up — indistinguishable from an unplugged cable.
+### 데이터와 로그
 
-### Windows
+ORVIK는 장비 발견과 메타데이터·웨이브폼·믹서 상태 수신에 필요한 네트워크 통신을 합니다. TCNet·OSC 출력이나 웹 뷰어·미러 모드를 사용하면 관련 정보가 설정된 수신 대상이나 연결된 클라이언트에 전달됩니다.
 
-The `.exe` is portable, so a double-click brings it straight up. Unsigned, so SmartScreen stops it with a blue panel: **More info**, then **Run anyway**.
+HISTORY 기록은 컴퓨터에 저장되며 CSV로 내보낼 수 있습니다. 가상 덱은 사용자가 선택한 로컬 파일을 읽고, 재생 방식에 따라 임시 WAV를 만들 수 있습니다. 임시 파일은 정상 종료 시 정리되지만 비정상 종료 시 남을 수 있습니다.
 
-The firewall asks next. Tick **Private networks** and allow it. PRO DJ LINK and TCNet are both UDP broadcast, so a firewall that blocks them leaves the device list empty.
+로그는 기본으로 꺼져 있습니다. 문제를 기록하려면 다음 순서로 진행하세요.
 
+1. 설정의 정보(Info) 섹션에서 **Option+Shift+A**(macOS) 또는 **Alt+Shift+A**(Windows)를 누릅니다.
+2. **로그 캡처(Log capture)**를 켜고 표시된 저장 폴더를 확인합니다. **선택(Choose)**으로 위치를 바꿀 수 있습니다.
+3. 시작 과정까지 기록하려면 ORVIK를 다시 실행한 뒤 문제를 재현합니다.
+4. 로그가 여러 파일로 나뉘었다면 해당 시간대의 파일을 함께 보관합니다.
 
-## Logs
+로그에는 곡 제목, 장비 이름, 네트워크 주소 등이 포함될 수 있습니다. 공개 이슈에 첨부하기 전에 내용을 확인하고 공유할 필요가 없는 정보는 가려 주세요.
 
-When something breaks, one log beats a description of the symptom. Logging is off by default and there is no button for it on the main window. Open Settings, scroll to the Info section, and press **Option-Shift-A** — **Alt+Shift+A** on Windows — and two more rows appear. Tick **Log capture** and restart ORVIK. Capture starts with the process, so a log taken without the restart is missing the part you need to see.
+### 문서와 문의
 
-Files are named `Orvik-<timestamp>.log`, and they collect here:
+[변경 내역](CHANGELOG.md) · [앱 이용 조건](BINARY_LICENSE.md) · [문서 이용 조건](LICENSE) · [서드파티 고지](THIRD_PARTY_NOTICES.md)
 
-```
-macOS     ~/Library/Application Support/orvik/logs
-Windows   %APPDATA%\orvik\logs
-```
+문의: [GitHub Issues](https://github.com/Zesminseok/ORVIK/issues) · [Instagram @zes_minseok](https://instagram.com/zes_minseok)
 
-**Choose**, next to the folder path, puts them somewhere else. Long sessions split into parts at 200 MB, and each part names the previous file on its first line. Send the set, not just the last file.
-
-The log holds the PRO DJ LINK and TCNet packets ORVIK received, the track titles that came with them, and the names and addresses of everything on your link network. Worth opening once before you post it.
-
-
-## Security
-
-What ORVIK reads off the link is metadata. It never opens or copies the files on a CDJ or on a USB or SD card, and it keeps no copy of your rekordbox library. It listens to what the players and the mixer already send — tempo, beat, position, track info — and matches your visuals and lights to it.
-
-What goes out on the link is an announcement that ORVIK is there, plus requests for data: track info, waveforms, mixer state. It sends no command that touches playback, cues or tempo, so it cannot drive a player.
-
-Two exceptions. A virtual deck opens the file you drop on it, decodes that to a temporary WAV, and deletes the WAV on exit. The HISTORY tab keeps the title, artist, BPM and key of what you played, on this computer only.
-
-The AlphaTheta PRO DJ LINK advisory from August 2026 is about reaching files on a PC or Mac, or on a USB or SD card. ORVIK never opens a storage device itself. Analysis data such as waveforms, cues and beat grids comes from asking the player, and ORVIK gets only what the player hands over. For your gear and rekordbox, follow AlphaTheta's own instructions.
-
-
-## Before a show
-
-The LTC and MIDI timecode outputs have never been checked against a real receiver. They are in the app, but do not build a show on them yet.
-
-
-## Docs
-
-[Binary license](BINARY_LICENSE.md) · [Third-party notices](THIRD_PARTY_NOTICES.md) · [Changelog](CHANGELOG.md)
-
-
-## Contact
-
-Open an issue, or send an Instagram DM
-
+이 저장소는 문서와 배포 파일을 제공하며 앱 소스 코드는 공개하지 않습니다. ORVIK는 AlphaTheta·Pioneer DJ·TC Supply와 제휴하거나 해당 업체의 인증을 받은 제품이 아닙니다. 제품명과 상표는 호환 대상을 설명하기 위해 사용합니다.
 
 ---
 
+## English
 
-ORVIK 은 CDJ 와 DJM 이 PRO DJ LINK 로 이미 흘려보내는 템포·비트·트랙 정보를 읽어 TCNet 으로 Resolume 에 물려준다.
+ORVIK receives tempo, beats, playback position and track information from CDJs and DJMs on a PRO DJ LINK network, then sends it to compatible software such as Resolume over TCNet. It sends data requests to the hardware but does not control playback, cues or tempo.
 
+ORVIK is currently available as a **free demo under development**. Contributions are voluntary support for development. **Contributing does not unlock features or remove usage restrictions**; everyone has access to the same demo features whether or not they contribute. The current demo has no time limit. A contribution is not a purchase or preorder of a finished product and does not guarantee a final release or a completion date.
 
-## 다운로드
+### Download and run
 
-[릴리스](../../releases)
+Choose the file for your system from the [latest release](https://github.com/Zesminseok/ORVIK/releases/latest).
 
-macOS 13 이상(Apple 실리콘·인텔), Windows 10·11 (x64).
+| System | File |
+| --- | --- |
+| macOS 13 or later · Apple Silicon | `mac-arm64.dmg` |
+| macOS 13 or later · Intel | `mac-x64.dmg` |
+| Windows 10/11 · x64 | `win-x64.exe` · portable, no installation |
 
+**macOS:** Open the DMG and move ORVIK to Applications. Current builds lack an Apple Developer ID signature and notarization, so macOS may block the first launch. Confirm that the app came from the release linked above, try opening it once, then select **System Settings → Privacy & Security → Open Anyway**. See [Apple's instructions](https://support.apple.com/en-us/102445) for details.
 
-## 실행하기
+**Windows:** Run the downloaded `.exe`. If SmartScreen displays a warning, verify the source before choosing **More info → Run anyway**. Administrator policies may apply on managed computers.
 
-맥은 빌드가 두 개. Apple 실리콘이면 `arm64`, 인텔이면 `x64` 를 받으면 되고, 어느 쪽인지는 애플 메뉴의 '이 Mac에 관하여'에 나온다. 윈도우는 포터블 `.exe` 하나라 설치 과정이 없다. 쓰던 공연 폴더에 그냥 넣어 두면 그만.
+Connect the computer and DJ hardware to the same local network and select that network interface in ORVIK. Allow local network access when macOS requests it. In Windows Firewall, allow ORVIK communication on your trusted private show network.
 
-### macOS
+### Features
 
-Apple 개발자 인증서로 서명하지 않은 앱이라 첫 실행은 막힌다. DMG 를 열어 ORVIK 을 응용 프로그램으로 옮기고 한 번 실행하면 확인할 수 없다는 경고가 뜬다. 그 창을 닫고 시스템 설정 → 개인정보 보호 및 보안으로 가서 아래로 내리면, ORVIK 이 차단됐다는 줄과 **그래도 열기**(Open Anyway) 버튼이 있다. 누르고 인증한 뒤 다시 실행하면 끝. 처음 한 번만 하면 된다.
+- Deck and mixer status, track information, cues, waveforms and artwork
+- TCNet output and BPM to OSC
+- Virtual decks for local audio files
+- A web viewer on the same network and mirror mode for displaying another ORVIK instance
+- HISTORY playback records and CSV export
 
-Ventura·Sonoma 에서는 시스템 설정까지 갈 것 없이 응용 프로그램에서 ORVIK 을 Control-클릭하고 열기를 고르면 된다. Sequoia 부터 이 방법이 막혀서 위처럼 도는 것이다.
+Available data depends on the hardware, firmware and network setup. LTC, MIDI Clock and MTC output validation with physical receivers is not complete; check the full signal path before using them in a show.
 
-클릭이 번거로우면 터미널에서 한 줄.
+### Data and logs
 
-```
-xattr -dr com.apple.quarantine /Applications/ORVIK.app
-```
+ORVIK communicates over the network to discover hardware and receive metadata, waveforms and mixer state. When you use TCNet or OSC output, the web viewer or mirror mode, relevant information is sent to the configured recipients or connected clients.
 
-ORVIK 이 플레이어를 처음 찾을 때 macOS 가 로컬 네트워크 접근을 허용할지 묻는다. 허용해야 한다. 거부하면 앱은 켜지는데 CDJ 가 하나도 안 잡혀서, 랜선이 빠진 것과 똑같아 보인다.
+HISTORY records are stored on the computer and can be exported to CSV. Virtual decks read local files selected by the user and may create temporary WAV files depending on the playback path. Temporary files are cleaned up on normal exit but may remain after an abnormal exit.
 
-### Windows
+Logging is off by default. To record a problem:
 
-`.exe` 는 포터블이라 더블클릭하면 바로 뜬다. 서명이 없어서 SmartScreen 이 파란 창으로 막는데 **추가 정보**를 누르고 **실행**을 고르면 통과.
+1. Open the Info section in Settings and press **Option+Shift+A** on macOS or **Alt+Shift+A** on Windows.
+2. Enable **Log capture** and check the displayed folder. Use **Choose** to change it.
+3. Restart ORVIK before reproducing the problem if you need to capture startup as well.
+4. If the log spans several files, keep the files covering the relevant period together.
 
-이어서 방화벽이 묻는다. **개인 네트워크**를 체크하고 허용해야 한다. PRO DJ LINK 도 TCNet 도 UDP 브로드캐스트라, 방화벽에 막히면 기기 목록이 빈 채로 뜬다.
+Logs may contain track titles, device names and network addresses. Review them and redact information that does not need to be shared before attaching them to a public issue.
 
+### Documentation and contact
 
-## 로그
+[Changelog](CHANGELOG.md) · [Application license](BINARY_LICENSE.md) · [Documentation license](LICENSE) · [Third-party notices](THIRD_PARTY_NOTICES.md)
 
-문제가 생겼을 때는 증상 설명보다 로그 한 개. 로그는 기본으로 꺼져 있고 메인 화면에 버튼도 없다. 설정을 열어 정보 섹션까지 내린 다음 **Option-Shift-A**, 윈도우는 **Alt+Shift+A** 를 누르면 두 줄이 더 나타난다. **로그 캡처**를 켜고 ORVIK 을 다시 시작. 캡처는 프로세스와 함께 시작하므로, 재시작하지 않고 뽑은 로그에는 정작 봐야 할 구간이 없다.
+Contact: [GitHub Issues](https://github.com/Zesminseok/ORVIK/issues) · [Instagram @zes_minseok](https://instagram.com/zes_minseok)
 
-파일 이름은 `Orvik-<타임스탬프>.log`, 쌓이는 곳은 아래.
-
-```
-macOS     ~/Library/Application Support/orvik/logs
-Windows   %APPDATA%\orvik\logs
-```
-
-폴더 경로 옆 **선택**으로 다른 위치를 지정할 수 있다. 긴 세션은 200MB 에서 파트가 갈리고 파트마다 첫 줄에 이전 파일 이름이 적힌다. 올릴 때는 마지막 파일 하나가 아니라 세트째.
-
-로그에는 ORVIK 이 받은 PRO DJ LINK·TCNet 패킷과 거기 실려 온 곡 제목, 링크 네트워크에 붙은 장비 이름과 주소가 들어간다. 올리기 전에 한 번 열어 보는 게 좋다.
-
-
-## 보안
-
-ORVIK 이 링크에서 읽는 건 메타데이터뿐. CDJ 나 USB·SD 안의 파일은 열지도 복사하지도 않고 rekordbox 라이브러리 사본도 두지 않는다. 플레이어와 믹서가 이미 내보내는 것(템포, 비트, 위치, 트랙 정보)을 듣고 그걸 영상·조명에 맞춰 준다.
-
-링크로 나가는 패킷은 자기 존재를 알리는 신호와 데이터 요청뿐. 트랙 정보, 웨이브폼, 믹서 상태를 달라고 묻고 재생·큐·템포를 건드리는 명령은 보내지 않으니 ORVIK 이 플레이어를 조작할 일은 없다.
-
-예외는 둘. 가상 덱은 직접 끌어다 놓은 파일을 열고 디코딩해 임시 WAV 를 만들었다가 종료할 때 지운다. HISTORY 탭은 튼 곡의 제목·아티스트·BPM·키를 이 컴퓨터 안에만 남긴다.
-
-2026년 8월 AlphaTheta PRO DJ LINK 권고는 PC·맥이나 USB·SD 안의 파일에 접근하는 이야기다. ORVIK 은 저장장치를 직접 열지 않는다. 웨이브폼·큐·비트그리드 같은 분석 데이터도 플레이어에게 요청해서 플레이어가 주는 만큼만 받는다. 장비와 rekordbox 는 AlphaTheta 안내를 따르면 된다.
-
-
-## 공연 전에
-
-LTC·MIDI 타임코드 출력은 실제 수신기로 검증한 적이 없다. 기능은 들어 있지만 아직 이걸로 공연을 짜지는 말 것.
-
-
-## 문서
-
-[바이너리 라이선스](BINARY_LICENSE.md) · [서드파티 고지](THIRD_PARTY_NOTICES.md) · [변경 내역](CHANGELOG.md)
-
-
-## 연락
-
-이슈를 열거나 인스타그램 DM
-
-
----
-
-ORVIK is an independent product, with no affiliation, endorsement or sponsorship from AlphaTheta Corporation, Pioneer DJ or TC Supply. Product names and trademarks are here only to say what ORVIK works with.
-
-ORVIK 은 독립 제품이다. AlphaTheta Corporation, Pioneer DJ, TC Supply 와 제휴·보증·후원 관계가 없다. 제품명과 상표는 ORVIK 이 무엇과 함께 동작하는지 밝히려고 적었을 뿐이다.
+This repository provides documentation and release downloads; the application source code is not public. ORVIK is not affiliated with or certified by AlphaTheta, Pioneer DJ or TC Supply. Product names and trademarks identify compatibility targets.
