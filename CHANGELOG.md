@@ -12,25 +12,13 @@
 
 - 한국어·중국어·일본어 트랙 제목이 앱과 Resolume Arena에서 깨져 보이던 문제.
 - 곡을 빠르게 넘긴 뒤 마지막 곡 로딩이 늦던 문제.
-- LTC의 덱 속도 추종, MTC 송신 간격, 덱 정지 시 Art-Net 동작.
-- 크로스페이더 커브 아이콘이 반대로 표시되던 문제.
-- 루프 중 핫큐 동작, 루프 큐가 일반 큐로 표시되던 문제.
-- 자기 USB로 재생하는 덱의 메모리 큐 색상과 핫큐 목록.
-- 웨이브폼 크기가 바뀔 때 흰색으로 깜빡이던 문제.
-- FLOW: 피치에 따라 템포 표시가 밀리던 문제.
-- 웹 뷰어: 일시정지 중 루프 구간이 사라지던 문제.
-
-**변경**
-
-- 다크 테마의 글자와 테두리를 더 밝게 조정.
-- 화면 갱신을 최대 60fps로 제한.
-- 세션 로그를 200MB 단위로 나눠 저장.
-- 서드파티 라이선스 문서를 앱에 동봉. FFmpeg 소스: https://github.com/Zesminseok/ORVIK/releases/tag/third-party-electron-v44.3.0
+- LTC·MTC·Art-Net 타임코드 출력 동작.
+- 루프 중 핫큐 동작, 루프 큐와 메모리 큐 표시.
+- UI·테마 수정(다크 테마 가독성, FLOW, 믹서, 웨이브폼, 웹 뷰어).
 
 **추가**
 
 - 야외용 라이트 색상 모드(앱, 웹 뷰어).
-- 요소별 색상 직접 지정.
 - 웹 뷰어: 다크/라이트 전환, 프레이즈 구간 표시.
 - STOP 확인 대화상자.
 
@@ -216,25 +204,13 @@ Changes in public releases.
 
 - Korean, Chinese and Japanese track titles garbled in the app and in Resolume Arena.
 - Last track loading late after skipping through tracks quickly.
-- LTC following deck speed, MTC timing, Art-Net when a deck stops.
-- Crossfader curve icons shown reversed.
-- Hot cue pressed during a loop; loop cues shown as plain cues.
-- Memory cue colours and the hot cue list on decks playing their own USB.
-- White flash when a waveform changes size.
-- FLOW: tempo readout shifting with pitch.
-- Web viewer: loop region disappearing while paused.
-
-**Changes**
-
-- Brighter text and outlines in the dark theme.
-- Drawing capped at 60 fps.
-- Session log split into 200 MB parts.
-- Third-party licences ship with the app. FFmpeg source: https://github.com/Zesminseok/ORVIK/releases/tag/third-party-electron-v44.3.0
+- LTC, MTC and Art-Net timecode output behaviour.
+- Hot cue during a loop; loop cue and memory cue display.
+- UI and theme fixes (dark theme readability, FLOW, mixer, waveform, web viewer).
 
 **New**
 
 - Light colour scheme for outdoor use (app and web viewer).
-- Per-element colour overrides.
 - Web viewer: Dark/Light switch and phrase band.
 - STOP confirmation dialog.
 
