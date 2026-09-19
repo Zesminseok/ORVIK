@@ -37,6 +37,8 @@ Copyright (c) 2026 Zesminseok. All rights reserved.
 
 이 조건은 관련 법률상 제한할 수 없는 이용자의 권리나 서드파티 라이선스가 부여한 권리를 제한하지 않습니다. 여기에는 해당 조건을 충족하는 상호운용성 목적의 역분석과, LGPL 등 적용 라이선스가 허용하거나 요구하는 수정·교체·재링크 및 그 수정 사항을 디버깅하기 위한 역공학이 포함됩니다. 이러한 권리를 행사하는 데 사전 서면 허가는 필요하지 않습니다.
 
+ORVIK는 LGPL-2.1-or-later의 FFmpeg 라이브러리를 사용합니다. FFmpeg의 저작권은 해당 기여자에게 있으며 ORVIK가 소유하지 않습니다. [FFmpeg 안내](https://github.com/Zesminseok/ORVIK/blob/main/docs/third-party/FFMPEG.md)에서 대응 소스·빌드 자료와 저작권 고지 위치를 확인할 수 있습니다.
+
 서드파티 구성요소에는 해당 라이선스가 우선하며 ORVIK의 독점 라이선스로 대체되지 않습니다. 구성요소와 고지 위치는 [서드파티 고지](THIRD_PARTY_NOTICES.md)를 참고하십시오.
 
 ### 5. 독립 제품 및 미디어 권리
@@ -99,6 +101,8 @@ Inspecting the logs and settings provided by ORVIK for normal installation, conf
 ### 4. Rights under law and third-party licenses
 
 These terms do not restrict rights that cannot be limited under applicable law or rights granted by third-party licenses. This includes interoperability reverse engineering that meets the applicable conditions, and modification, replacement, relinking and reverse engineering to debug modifications as permitted or required by applicable licenses such as the LGPL. No prior written permission is required to exercise these rights.
+
+ORVIK uses FFmpeg libraries under LGPL-2.1-or-later. FFmpeg copyright belongs to its contributors, not ORVIK. See the [FFmpeg guide](https://github.com/Zesminseok/ORVIK/blob/main/docs/third-party/FFMPEG.md) for matching source, build materials and copyright notice locations.
 
 The applicable third-party license takes precedence for its component and is not replaced by ORVIK's proprietary license. See [Third-party notices](THIRD_PARTY_NOTICES.md) for components and notice locations.
 

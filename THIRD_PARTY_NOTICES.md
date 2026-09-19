@@ -35,6 +35,8 @@ ORVIK는 Electron 기반 앱입니다. Electron 자체는 MIT 라이선스이며
 
 패키지 파일은 앱 리소스 또는 `app.asar` 안에 포함될 수 있습니다. 위 표는 고지 위치 안내이며, 저작권 고지와 라이선스 전문을 생략해도 된다는 뜻이 아닙니다.
 
+현재 준비된 Electron 44.3.0의 대응 FFmpeg 소스·패치·빌드 자료와 교체 절차는 [FFmpeg 안내](https://github.com/Zesminseok/ORVIK/blob/main/docs/third-party/FFMPEG.md)에 있습니다. 앱에는 `licenses/` 폴더로 라이선스 전문과 버전 목록을 별도로 포함합니다. 다른 Electron 버전에는 해당 버전의 자료가 필요합니다.
+
 Electron의 버전별 소스와 의존성 참조는 [Electron 저장소](https://github.com/electron/electron)에서, Chromium의 FFmpeg 소스는 [Chromium FFmpeg 저장소](https://chromium.googlesource.com/chromium/third_party/ffmpeg/)에서 확인할 수 있습니다. 이는 업스트림 프로젝트 안내이며, 배포 바이너리와 정확히 대응하는 소스·빌드 자료 제공을 대체하지 않습니다.
 
 ORVIK의 앱 이용 조건은 LGPL 등 서드파티 라이선스에 따른 수정·교체·재링크 및 수정 사항 디버깅을 위한 역공학 권리를 제한하지 않습니다. 세부 조건은 해당 라이선스를 따릅니다.
@@ -88,6 +90,8 @@ The separate audio-conversion path for virtual decks looks for an `ffmpeg` execu
 | Transitive dependencies of these packages | Copyright notices and licenses included with each package |
 
 Package files may be inside the application resources or `app.asar`. This table identifies notice locations; it does not permit omission of copyright notices or full license texts.
+
+Matching FFmpeg source, patches, build materials and replacement instructions prepared for Electron 44.3.0 are available in the [FFmpeg guide](https://github.com/Zesminseok/ORVIK/blob/main/docs/third-party/FFMPEG.md). Full licenses and a version manifest are included separately in the application’s `licenses/` directory. Other Electron versions require their own matching materials.
 
 Version-specific Electron source and dependency references are available in the [Electron repository](https://github.com/electron/electron); Chromium's FFmpeg source is in the [Chromium FFmpeg repository](https://chromium.googlesource.com/chromium/third_party/ffmpeg/). These are upstream project references, not a substitute for providing source and build materials that correspond exactly to a distributed binary.
 

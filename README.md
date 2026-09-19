@@ -22,6 +22,8 @@ ORVIK는 PRO DJ LINK 네트워크의 CDJ·DJM에서 템포, 비트, 재생 위�
 
 [최신 릴리스](https://github.com/Zesminseok/ORVIK/releases/latest)에서 운영체제에 맞는 파일을 받으세요.
 
+ORVIK는 LGPL-2.1-or-later의 FFmpeg 라이브러리를 사용합니다. [FFmpeg 소스·라이선스·교체 안내](docs/third-party/FFMPEG.md)에서 해당 Electron 버전의 자료를 확인하세요.
+
 | 환경 | 파일 |
 | --- | --- |
 | macOS 13 이상 · Apple Silicon | `mac-arm64.dmg` |
@@ -78,6 +80,8 @@ ORVIK is currently available as a **free demo under development**. Contributions
 ### Download and run
 
 Choose the file for your system from the [latest release](https://github.com/Zesminseok/ORVIK/releases/latest).
+
+ORVIK uses FFmpeg libraries under LGPL-2.1-or-later. See [FFmpeg source, licenses and replacement instructions](docs/third-party/FFMPEG.md) for the matching Electron version.
 
 | System | File |
 | --- | --- |
