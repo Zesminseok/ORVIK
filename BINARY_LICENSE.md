@@ -1,6 +1,6 @@
 # ORVIK 앱 이용 조건 / Binary License Agreement
 
-Copyright (c) 2026 Zesminseok. All rights reserved.
+Copyright (c) 2026 ZES (Kim Min Seok). All rights reserved.
 
 [한국어](#한국어) · [English](#english)
 
