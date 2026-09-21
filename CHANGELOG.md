@@ -6,6 +6,30 @@
 
 공개 릴리스의 변경 내역입니다.
 
+## 1.6.1 (2026-09-21)
+
+**수정**
+
+- LTC가 수신기에서 몇 프레임 늦게 읽히던 문제.
+- CDJ-2000NXS2 웨이브폼을 기다리느라 다음 곡 표시가 늦던 문제.
+- 이미 쓰고 있는 덱 번호로 CDJ-2000NXS2에 요청해 거부당하던 문제.
+- 믹서가 없거나 나중에 켜지면 Pro DJ Link에 연결되지 않던 문제.
+- 한 덱에 요청이 겹칠 때 곡 정보·큐·웨이브폼이 끊기던 문제.
+- 설정 창 테두리가 두 줄로 보이던 문제.
+
+**변경**
+
+- SMPTE 출력을 창 아래 도크로 옮겼습니다. 어느 탭에서나 보이고 접을 수 있습니다.
+- 마스터 출력 소스: A, B, 시스템 시계, 프리휠.
+- 오프셋을 시·분·초·프레임 버튼으로(Ctrl을 누르면 10씩) 맞추고, 켜고 끌 수 있습니다.
+- 채널별 Art-Net 버튼을 없앴습니다.
+
+**추가**
+
+- SMPTE 출력 별도 창. Windows에서는 자체 타이틀바를 씁니다.
+
+---
+
 ## 1.6.0 (2026-09-20)
 
 **수정**
@@ -197,6 +221,30 @@
 ## English
 
 Changes in public releases.
+
+## 1.6.1 (2026-09-21)
+
+**Fixes**
+
+- LTC read a few frames late at the receiver.
+- Next track showing late while waiting on a CDJ-2000NXS2 waveform.
+- CDJ-2000NXS2 refusing requests made with a live deck's player number.
+- Pro DJ Link not joining with no mixer, or with a mixer switched on later.
+- Track info, cues and waveform cutting out when requests overlapped on one deck.
+- Settings window borders drawn twice.
+
+**Changes**
+
+- SMPTE output moved to a dock at the bottom of the window — on every tab, collapsible.
+- Master output sources: A, B, system clock, freewheel.
+- Offset set by hour, minute, second and frame buttons (hold Ctrl for ten), and can be switched off.
+- Per-channel Art-Net button removed.
+
+**New**
+
+- SMPTE output in its own window, with its own title bar on Windows.
+
+---
 
 ## 1.6.0 (2026-09-20)
 
