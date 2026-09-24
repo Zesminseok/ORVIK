@@ -12,9 +12,9 @@ Copyright (c) 2026 ZES (Kim Min Seok). All rights reserved.
 
 앱, 소스 코드, UI, 자산 또는 상표의 소유권은 이전되지 않습니다. 서드파티 자료에는 해당 권리자의 조건이 적용됩니다.
 
-### 2. 데모와 릴리스별 조건
+### 2. 베타와 릴리스별 조건
 
-현재 배포본은 개발 중인 무료 데모입니다. 후원하지 않아도 내려받아 사용할 수 있으며, 후원 여부에 따른 기능 차이나 후원으로 해제되는 제한은 없습니다. 현재 데모에는 기간 제한이 없습니다. 완성된 제품이 아니므로 기능과 동작은 개발 과정에서 변경될 수 있습니다.
+현재 배포본은 개발 중인 무료 베타입니다. 후원하지 않아도 내려받아 사용할 수 있으며, 후원 여부에 따른 기능 차이나 후원으로 해제되는 제한은 없습니다. 현재 베타에는 기간 제한이 없습니다. 완성된 제품이 아니므로 기능과 동작은 개발 과정에서 변경될 수 있습니다.
 
 향후 버전의 제공 방식이나 이용 조건이 달라지는 경우 해당 릴리스에서 안내합니다. 현재 무료 제공이나 후원은 향후 버전의 가격·제공 조건 또는 완성 시점에 대한 약속이 아닙니다.
 
@@ -49,7 +49,7 @@ ORVIK는 독립적인 호환성 도구이며 AlphaTheta의 공식 PRO DJ LINK Br
 
 ### 6. 후원
 
-후원·팁은 자발적인 개발 지원이며, 현재 데모의 이용 대금이나 정식 제품의 구매·예약 구매가 아닙니다. 후원하지 않아도 같은 데모 기능을 사용할 수 있으며, 후원으로 기능이 열리거나 사용 제한이 해제되지 않습니다. 후원은 별도의 사용권, 정식 버전이나 특정 기능의 제공 약속, 완성 기한, 개별 기술 지원·보증 또는 소스 코드·상표 권리를 부여하지 않습니다. 관련 법률상 제한할 수 없는 권리는 영향을 받지 않습니다.
+후원·팁은 자발적인 개발 지원이며, 현재 베타의 이용 대금이나 정식 제품의 구매·예약 구매가 아닙니다. 후원하지 않아도 같은 베타 기능을 사용할 수 있으며, 후원으로 기능이 열리거나 사용 제한이 해제되지 않습니다. 후원은 별도의 사용권, 정식 버전이나 특정 기능의 제공 약속, 완성 기한, 개별 기술 지원·보증 또는 소스 코드·상표 권리를 부여하지 않습니다. 관련 법률상 제한할 수 없는 권리는 영향을 받지 않습니다.
 
 ### 7. 사용권 종료
 
@@ -77,9 +77,9 @@ These terms apply to ORVIK macOS and Windows application binaries and ORVIK asse
 
 Ownership of the application, source code, UI, assets or trademarks is not transferred. Third-party materials remain subject to their rights holders' terms.
 
-### 2. Demo and release-specific terms
+### 2. Beta and release-specific terms
 
-The current distribution is a free demo under development. It can be downloaded and used without contributing, and there are no feature differences or restrictions that can be removed by contributing. The current demo has no time limit. It is not a finished product, and features and behavior may change during development.
+The current distribution is a free beta under development. It can be downloaded and used without contributing, and there are no feature differences or restrictions that can be removed by contributing. The current beta has no time limit. It is not a finished product, and features and behavior may change during development.
 
 Any changes to the distribution model or terms of use for future versions will be stated with the relevant release. Current free access and contributions are not promises about future pricing, availability terms or a completion date.
 
@@ -114,7 +114,7 @@ This license grants no rights to third-party media such as music or artwork. Use
 
 ### 6. Support payments
 
-Donations and tips are voluntary support for development, not payment for access to the current demo or a purchase or preorder of a finished product. The same demo features are available without contributing; contributions do not unlock features or remove usage restrictions. Contributions do not grant a separate license, a commitment to deliver a final version or specific features, a completion deadline, individual technical support or warranties, or source-code or trademark rights. Rights that cannot be restricted under applicable law are unaffected.
+Donations and tips are voluntary support for development, not payment for access to the current beta or a purchase or preorder of a finished product. The same beta features are available without contributing; contributions do not unlock features or remove usage restrictions. Contributions do not grant a separate license, a commitment to deliver a final version or specific features, a completion deadline, individual technical support or warranties, or source-code or trademark rights. Rights that cannot be restricted under applicable law are unaffected.
 
 ### 7. Termination
 
