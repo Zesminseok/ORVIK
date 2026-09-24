@@ -73,7 +73,7 @@ HISTORY 기록은 컴퓨터에 저장되며 CSV로 내보낼 수 있습니다. �
 
 ## English
 
-ORVIK sends playback information from DJ equipment to VJ software such as Resolume. It receives BPM, beats, playback position and track information from CDJs and DJMs connected over PRO DJ LINK and passes it on over TCNet, so visuals can follow the music the DJ is playing. ORVIK only requests information from the equipment and does not control playback, cues or tempo.
+ORVIK sends playback information from DJ equipment to VJ software such as Resolume. It receives information from CDJs and DJMs connected over PRO DJ LINK and passes it on over TCNet, so visuals can follow the music the DJ is playing. ORVIK only requests information from the equipment and never controls it.
 
 ORVIK is currently available as a **free beta under development**. Contributions are voluntary support for development. **Contributing does not unlock features or remove usage restrictions**; everyone has access to the same beta features whether or not they contribute. The current beta has no time limit. A contribution is not a purchase or preorder of a finished product and does not guarantee a final release or a completion date.
 
