@@ -6,6 +6,37 @@
 
 공개 릴리스의 변경 내역입니다.
 
+## 1.6.2 (2026-09-25)
+
+**수정**
+
+- 멈춘 덱의 디테일 웨이브폼 뒷부분이 비어 보이던 문제.
+- 믹서 VU 칸 수와 CLIP 표시가 DJM과 다르던 문제.
+- 60 FPS로 설정해도 화면이 60 FPS로 그려지지 않던 문제.
+- 먼저 켜진 TCNet 노드와 서버 역할이 겹치던 문제.
+- 새 곡을 올려도 이전 곡의 프레이즈가 남던 문제.
+- 페이더를 올려 둔 채 재생을 누르면 SMPTE READY가 시작되지 않던 문제.
+- 앱을 켜기 전에 올린 곡의 정보가 늦게 뜨던 문제.
+
+**변경**
+
+- CDJ의 곡 정보·웨이브폼·큐를 Pro DJ Link UDP로 먼저 받습니다. dbserver는 UDP로 오지 않는 것만 채웁니다.
+- 하드웨어 디테일 웨이브폼을 픽셀마다 빠짐없이 그립니다.
+- 웹 뷰어가 하드웨어 웨이브폼을 앱과 똑같이 그립니다.
+- "데모" 대신 "무료 베타"로 표기합니다.
+- UI·테마 수정(FLOW 핀, 체크박스, SMPTE 도크).
+
+**추가**
+
+- 미디어 칩: 곡이 든 USB·SD를 rekordbox 미디어 색과 덱 번호로 표시.
+- 믹서 채널별 CLIP 표시.
+- CDJ-3000 프레이즈의 필인 구간 표시.
+- SMPTE: M이 A·B 중 CDJ 템포 마스터를 따라갑니다.
+- SMPTE: 첫 곡이 나가면 READY가 프리휠을 시작합니다.
+- SMPTE 도크가 마지막 상태 그대로 다시 열립니다.
+
+---
+
 ## 1.6.1 (2026-09-21)
 
 **수정**
@@ -221,6 +252,37 @@
 ## English
 
 Changes in public releases.
+
+## 1.6.2 (2026-09-25)
+
+**Fixes**
+
+- Detail waveform of a stopped deck showing blank past a point.
+- Mixer VU levels and CLIP not matching the DJM.
+- 60 FPS setting not drawing at 60 FPS.
+- Clashing with a TCNet node that was switched on first.
+- Previous track's phrases staying after loading a new track.
+- SMPTE READY not starting when play was pressed with the fader already up.
+- Track info showing late for tracks loaded before the app started.
+
+**Changes**
+
+- Track info, waveforms and cues come over Pro DJ Link UDP first; dbserver fills in only what UDP doesn't send.
+- Hardware detail waveform draws every point in each pixel.
+- Web viewer draws hardware waveforms the same as the app.
+- "Demo" is now "free beta".
+- UI and theme fixes (FLOW pin, checkboxes, SMPTE dock).
+
+**New**
+
+- Media chip: the USB or SD a track is on, in its rekordbox media colour with the deck number.
+- Per-channel CLIP on the mixer.
+- CDJ-3000 phrase fill-ins on the waveform.
+- SMPTE: M follows the CDJ tempo master between A and B.
+- SMPTE: READY starts the freewheel when the first track goes out.
+- SMPTE dock reopens as it was left.
+
+---
 
 ## 1.6.1 (2026-09-21)
 
