@@ -14,7 +14,7 @@
 
 ## 한국어
 
-ORVIK는 PRO DJ LINK 네트워크의 CDJ·DJM에서 템포, 비트, 재생 위치, 트랙 정보를 받아 TCNet으로 Resolume 등 호환 소프트웨어에 전달하는 앱입니다. 장비에 데이터 요청을 보내지만 재생·큐·템포를 제어하지 않습니다.
+ORVIK는 DJ 장비의 재생 정보를 Resolume 같은 VJ 소프트웨어로 보내 주는 앱입니다. PRO DJ LINK로 연결된 CDJ·DJM에서 BPM, 비트, 재생 위치, 트랙 정보를 받아 TCNet으로 전달하므로 DJ가 트는 음악에 영상을 맞출 수 있습니다. 장비에는 정보를 요청하기만 하며 재생·큐·템포는 제어하지 않습니다.
 
 현재 개발 중인 **무료 베타**로 공개하고 있습니다. 후원은 개발을 돕기 위한 자발적인 선택입니다. **후원으로 기능이 열리거나 사용 제한이 해제되지 않으며**, 후원 여부와 관계없이 같은 베타 기능을 사용할 수 있습니다. 현재 베타에는 기간 제한이 없습니다. 후원은 정식 제품의 구매나 예약 구매가 아니며, 정식 버전의 제공 또는 완성 시점을 보장하지 않습니다.
 
@@ -73,7 +73,7 @@ HISTORY 기록은 컴퓨터에 저장되며 CSV로 내보낼 수 있습니다. �
 
 ## English
 
-ORVIK receives tempo, beats, playback position and track information from CDJs and DJMs on a PRO DJ LINK network, then sends it to compatible software such as Resolume over TCNet. It sends data requests to the hardware but does not control playback, cues or tempo.
+ORVIK sends playback information from DJ equipment to VJ software such as Resolume. It receives BPM, beats, playback position and track information from CDJs and DJMs connected over PRO DJ LINK and passes it on over TCNet, so visuals can follow the music the DJ is playing. ORVIK only requests information from the equipment and does not control playback, cues or tempo.
 
 ORVIK is currently available as a **free beta under development**. Contributions are voluntary support for development. **Contributing does not unlock features or remove usage restrictions**; everyone has access to the same beta features whether or not they contribute. The current beta has no time limit. A contribution is not a purchase or preorder of a finished product and does not guarantee a final release or a completion date.
 
