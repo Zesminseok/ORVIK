@@ -20,10 +20,8 @@
 
 **변경**
 
-- CDJ의 곡 정보·웨이브폼·큐를 Pro DJ Link UDP로 먼저 받습니다. dbserver는 UDP로 오지 않는 것만 채웁니다.
 - 하드웨어 디테일 웨이브폼을 픽셀마다 빠짐없이 그립니다.
 - 웹 뷰어가 하드웨어 웨이브폼을 앱과 똑같이 그립니다.
-- "데모" 대신 "무료 베타"로 표기합니다.
 - UI·테마 수정(FLOW 핀, 체크박스, SMPTE 도크).
 
 **추가**
@@ -31,7 +29,7 @@
 - 미디어 칩: 곡이 든 USB·SD를 rekordbox 미디어 색과 덱 번호로 표시.
 - 믹서 채널별 CLIP 표시.
 - CDJ-3000 프레이즈의 필인 구간 표시.
-- SMPTE: M이 A·B 중 CDJ 템포 마스터를 따라갑니다.
+- SMPTE: M이 A·B 중 CDJ 마스터를 따라갑니다.
 - SMPTE: 첫 곡이 나가면 READY가 프리휠을 시작합니다.
 - SMPTE 도크가 마지막 상태 그대로 다시 열립니다.
 
@@ -267,10 +265,8 @@ Changes in public releases.
 
 **Changes**
 
-- Track info, waveforms and cues come over Pro DJ Link UDP first; dbserver fills in only what UDP doesn't send.
 - Hardware detail waveform draws every point in each pixel.
 - Web viewer draws hardware waveforms the same as the app.
-- "Demo" is now "free beta".
 - UI and theme fixes (FLOW pin, checkboxes, SMPTE dock).
 
 **New**
@@ -278,7 +274,7 @@ Changes in public releases.
 - Media chip: the USB or SD a track is on, in its rekordbox media colour with the deck number.
 - Per-channel CLIP on the mixer.
 - CDJ-3000 phrase fill-ins on the waveform.
-- SMPTE: M follows the CDJ tempo master between A and B.
+- SMPTE: M follows the CDJ sync master between A and B.
 - SMPTE: READY starts the freewheel when the first track goes out.
 - SMPTE dock reopens as it was left.
 
