@@ -26,7 +26,7 @@
 
 **추가**
 
-- 미디어 칩: 곡이 든 USB·SD를 rekordbox 미디어 색과 덱 번호로 표시.
+- 미디어 칩: 곡이 든 USB·SD를 rekordbox 미디어 색과 플레이어 번호로 표시.
 - 믹서 채널별 CLIP 표시.
 - CDJ-3000 프레이즈의 필인 구간 표시.
 - SMPTE: M이 A·B 중 CDJ 마스터를 따라갑니다.
@@ -271,7 +271,7 @@ Changes in public releases.
 
 **New**
 
-- Media chip: the USB or SD a track is on, in its rekordbox media colour with the deck number.
+- Media chip: the USB or SD a track is on, in its rekordbox media colour with the player number.
 - Per-channel CLIP on the mixer.
 - CDJ-3000 phrase fill-ins on the waveform.
 - SMPTE: M follows the CDJ sync master between A and B.
