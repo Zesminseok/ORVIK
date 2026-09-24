@@ -2,14 +2,14 @@
 
 ## 한국어
 
-이 자료는 Electron 44.3.0의 일반 런타임에 들어 있는 FFmpeg에 대응합니다. ORVIK가 직접 FFmpeg를 컴파일한 것이 아니라 공식 Electron 배포본을 사용합니다. 공식 ZIP의 해시와 그 안의 라이브러리 해시는 `manifest.json`에 있습니다. 앱에 임시 서명하면 macOS 라이브러리의 서명 바이트는 달라질 수 있습니다.
+이 자료는 Electron 44.4.5의 일반 런타임에 들어 있는 FFmpeg에 대응합니다. ORVIK가 직접 FFmpeg를 컴파일한 것이 아니라 공식 Electron 배포본을 사용합니다. 공식 ZIP의 해시와 그 안의 라이브러리 해시는 `manifest.json`에 있습니다. 앱에 임시 서명하면 macOS 라이브러리의 서명 바이트는 달라질 수 있습니다.
 
 ### 구성
 
 - `ffmpeg/`: Chromium FFmpeg 커밋 `2b68d2babae73714846961fb0ee47e3b3d2e39a9`의 전체 소스. 아직 Electron 패치를 적용하지 않은 트리입니다.
-- `electron/`: Electron 커밋 `07e460719c75b2ec5ee4893f7d2192ef31c7b8c2`의 전체 소스, 라이선스, 플랫폼별 빌드 설명, 의존성 기록, 릴리스 빌드 설정 및 패치.
+- `electron/`: Electron 커밋 `694f45852a0f1726cd23bfd379854de489cccb65`의 전체 소스, 라이선스, 플랫폼별 빌드 설명, 의존성 기록, 릴리스 빌드 설정 및 패치.
 - `changes.diff`: Electron의 `patches/ffmpeg/.patches`에 지정된 유일한 FFmpeg 패치 `link_with_loader_path.patch`. 패치 원문에 작성자·날짜가 있습니다. ORVIK의 추가 소스 수정은 없습니다.
-- `chromium/DEPS`, `chromium/build/`: Chromium `170c2c9ffb4da86532459d72d9eda6b4944d1670`의 의존성 기록과 빌드 스크립트.
+- `chromium/DEPS`, `chromium/build/`: Chromium `2c592105bbcd9490a9894df48d0fe59b2c512651`의 의존성 기록과 빌드 스크립트.
 - `chromium/third_party/opus/`: 위 Chromium 트리에 들어 있는 Opus 소스·헤더·빌드 스크립트·라이선스. Opus 업스트림 리비전은 `55513e81d8f606bd75d0ff773d2144e5f2a732f5`입니다.
 - `chromium/third_party/nasm/`: Chromium이 지정한 NASM 리비전 `525a09a813be0f75b646ee93fc2a31c27b87d722`의 소스와 빌드 규칙.
 - `downloads.json`: 다운로드한 원본 압축 파일의 공식 주소와 해시. `SHASUMS256.txt`는 Electron 공식 배포의 해시 목록입니다.
@@ -21,10 +21,10 @@
 플랫폼별 준비 사항은 `electron/docs/development/build-instructions-macos.md` 또는 `build-instructions-windows.md`, 전체 절차는 `build-instructions-gn.md`를 따르십시오. `depot_tools`, 플랫폼 SDK와 컴파일러가 필요합니다. 다음은 macOS 셸 표기의 고정 버전 체크아웃 예입니다. Windows에서는 해당 문서의 인용부호와 도구 설정을 사용하십시오.
 
 ```sh
-mkdir electron-44.3.0-build
-cd electron-44.3.0-build
+mkdir electron-44.4.5-build
+cd electron-44.4.5-build
 gclient config --name "src/electron" --unmanaged https://github.com/electron/electron
-gclient sync --with_branch_heads --with_tags --revision src/electron@07e460719c75b2ec5ee4893f7d2192ef31c7b8c2
+gclient sync --with_branch_heads --with_tags --revision src/electron@694f45852a0f1726cd23bfd379854de489cccb65
 cd src
 gn gen out/Release --args='import("//electron/build/args/release.gn") target_cpu="arm64"'
 autoninja -C out/Release ffmpeg
@@ -38,14 +38,14 @@ Intel macOS와 Windows x64는 `target_cpu="x64"`를 사용합니다. gclient는 
 
 ## English
 
-These materials correspond to FFmpeg in the standard Electron 44.3.0 runtime. ORVIK uses the official Electron distribution rather than compiling FFmpeg itself. `manifest.json` records hashes of the official ZIPs and their libraries. Ad-hoc application signing may change macOS library signature bytes.
+These materials correspond to FFmpeg in the standard Electron 44.4.5 runtime. ORVIK uses the official Electron distribution rather than compiling FFmpeg itself. `manifest.json` records hashes of the official ZIPs and their libraries. Ad-hoc application signing may change macOS library signature bytes.
 
 ### Contents
 
 - `ffmpeg/`: complete Chromium FFmpeg source at `2b68d2babae73714846961fb0ee47e3b3d2e39a9`, before Electron's patch.
-- `electron/`: complete Electron source at `07e460719c75b2ec5ee4893f7d2192ef31c7b8c2`, including licenses, platform build instructions, dependency records, release build configuration and patches.
+- `electron/`: complete Electron source at `694f45852a0f1726cd23bfd379854de489cccb65`, including licenses, platform build instructions, dependency records, release build configuration and patches.
 - `changes.diff`: the single FFmpeg patch listed in Electron's `patches/ffmpeg/.patches`, `link_with_loader_path.patch`, retaining its author and date. ORVIK makes no additional source changes.
-- `chromium/DEPS`, `chromium/build/`: dependency records and build scripts at Chromium `170c2c9ffb4da86532459d72d9eda6b4944d1670`.
+- `chromium/DEPS`, `chromium/build/`: dependency records and build scripts at Chromium `2c592105bbcd9490a9894df48d0fe59b2c512651`.
 - `chromium/third_party/opus/`: Opus source, headers, build scripts and licenses from that Chromium tree; upstream Opus revision `55513e81d8f606bd75d0ff773d2144e5f2a732f5`.
 - `chromium/third_party/nasm/`: source and build rules for Chromium's NASM revision `525a09a813be0f75b646ee93fc2a31c27b87d722`.
 - `downloads.json`: official download URLs and hashes for the original source archives. `SHASUMS256.txt` is Electron's official release checksum list.

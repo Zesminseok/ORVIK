@@ -1,0 +1,36 @@
+{
+  "electron": "44.4.5",
+  "electron_commit": "694f45852a0f1726cd23bfd379854de489cccb65",
+  "chromium": "152.0.7977.130",
+  "chromium_commit": "2c592105bbcd9490a9894df48d0fe59b2c512651",
+  "ffmpeg_commit": "2b68d2babae73714846961fb0ee47e3b3d2e39a9",
+  "runtime": {
+    "darwin-arm64": {
+      "electronArchive": "electron-v44.4.5-darwin-arm64.zip",
+      "electronArchiveSha256": "a212eee63ba2f45fd83bd28f77a3e3313a336ad17a4c25adf617942eef5e0e2c",
+      "libraryPath": "Electron.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libffmpeg.dylib",
+      "librarySha256": "209efad4c2a3f3dfde55d863812708fc15cdb31c3c28d7fd2e303496b6a012ee",
+      "librarySize": 2317968,
+      "chromiumNoticesSha256": "a62dabd1c6ef1327365b2a3fdffb806222684a746dcb8f4afd1c1f690eba5535"
+    },
+    "darwin-x64": {
+      "electronArchive": "electron-v44.4.5-darwin-x64.zip",
+      "electronArchiveSha256": "778350cc572c36484dd56c130cae96ad1a9a5b695ba22dd06abd23ba0a46c9de",
+      "libraryPath": "Electron.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libffmpeg.dylib",
+      "librarySha256": "38ec1418ddb6cd6b84460600bba3da87e4b90541e03c30de56a3b7ab5928462e",
+      "librarySize": 2555716,
+      "chromiumNoticesSha256": "a62dabd1c6ef1327365b2a3fdffb806222684a746dcb8f4afd1c1f690eba5535"
+    },
+    "win32-x64": {
+      "electronArchive": "electron-v44.4.5-win32-x64.zip",
+      "electronArchiveSha256": "11c395820a5aaa8ebcc0686b476d0ac98a730274ebfbdc8cf5538a7c2815cb5d",
+      "libraryPath": "ffmpeg.dll",
+      "librarySha256": "22e07be5d900ecad1fa47cbd9f783143af0058e18793b4804b887253988273ac",
+      "librarySize": 3113472,
+      "chromiumNoticesSha256": "7b328b8c7463ac9bfc7dc648c751533517c8441a0b5b21047d6c0b2620e60d70"
+    }
+  },
+  "source_url": "https://github.com/Zesminseok/ORVIK/releases/download/third-party-electron-v44.4.5/ffmpeg-electron-44.4.5-source.tar.gz",
+  "notice_url": "https://github.com/Zesminseok/ORVIK/blob/main/docs/third-party/FFMPEG.md",
+  "electronLicenseSha256": "5154e165bd6c2cc0cfbcd8916498c7abab0497923bafcd5cb07673fe8480087d"
+}
