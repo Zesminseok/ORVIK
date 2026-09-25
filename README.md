@@ -44,16 +44,25 @@ ORVIK는 LGPL-2.1-or-later로 배포되는 FFmpeg 라이브러리를 사용합�
 - 로컬 오디오 파일을 재생하는 가상 덱
 - 같은 네트워크의 다른 기기에서 보는 웹 뷰어, 다른 PC의 ORVIK 화면을 그대로 보여 주는 미러 모드
 - HISTORY 재생 기록과 CSV 내보내기
+- 새 버전 알림(자동 설치 없음)
+- 7개 언어 화면과 야외용 라이트 모드
 
 장비·펌웨어·연결 구성에 따라 받을 수 있는 정보가 다릅니다. LTC·MTC 출력은 실제 수신 장비에서 검증을 마치지 않았으므로 공연에 쓰기 전에 전체 연결을 확인하세요.
 
 ### 데이터와 로그
 
-ORVIK는 장비를 찾고 메타데이터·웨이브폼·믹서 상태를 받는 데 필요한 네트워크 통신을 합니다. TCNet·OSC 출력이나 웹 뷰어·미러 모드를 사용하면 관련 정보가 설정된 수신 대상이나 연결된 클라이언트에 전달됩니다.
+ORVIK는 인터넷 서버에 사용 기록을 보내지 않습니다. 네트워크로는 다음 정보를 주고받습니다.
 
-업데이트 확인을 켜 두면(기본값) 12시간마다 GitHub에 최신 릴리스 번호를 묻습니다. 요청에는 앱 버전만 담기고 GitHub에는 일반 웹 요청처럼 IP 주소가 전달됩니다. 설정의 정보 섹션에서 끌 수 있습니다.
+- **PRO DJ LINK**: 앱을 켜면 로컬 네트워크에 'ORVIK'라는 장치로 참여해 장비를 찾고 곡 정보·웨이브폼·큐·믹서 상태를 요청합니다. 재생이나 믹서 설정을 바꾸는 명령은 보내지 않습니다.
+- **TCNet 출력**(기본 켜짐): 같은 네트워크의 TCNet 수신 프로그램에 곡 제목·아티스트·앨범아트·재생 위치·BPM·믹서 값을 보냅니다. **BPM to OSC**(기본 꺼짐)는 BPM만 보냅니다.
+- **가상 덱 곡 정보**(TCP 12523·12524, 항상 켜짐): 같은 네트워크의 장비가 가상 덱 곡의 정보와 앨범아트를 요청하면 답합니다.
+- **웹 뷰어**(기본 꺼짐, TCP 8877): 같은 네트워크에서 4자리 코드나 QR로 여는 읽기 전용 화면입니다. 암호화하지 않은 HTTP이므로 신뢰하는 네트워크에서만 켜세요.
+- **미러 모드**(기본 켜짐): 이 PC에 CDJ가 없으면 앱을 켤 때와 설정을 열 때 같은 네트워크 대역에서 미러 서버를 찾아 자동으로 연결합니다. 설정에서 **미러 서버 제공**(기본 꺼짐, TCP 8878)을 켜면 같은 네트워크의 다른 ORVIK가 접속 코드 없이 이 PC의 덱·믹서 정보를 볼 수 있습니다. 웹 뷰어나 미러 서버가 켜져 있으면 같은 네트워크에서 코드 없이 이 컴퓨터의 이름을 확인할 수 있습니다.
+- **업데이트 확인**(기본 켜짐): 앱을 켤 때와 그 뒤 12시간마다 GitHub에 최신 릴리스 번호를 묻습니다. 요청에는 앱 버전만 담기고 GitHub에는 일반 웹 요청처럼 IP 주소가 전달됩니다. 설정의 정보 섹션에서 끌 수 있습니다.
 
-HISTORY 기록은 컴퓨터에 저장되며 CSV로 내보낼 수 있습니다. 가상 덱은 사용자가 선택한 로컬 파일을 읽습니다. 재생 방식에 따라 임시 WAV를 만들기도 합니다. 임시 파일은 정상 종료하면 정리되지만 비정상 종료되면 남을 수 있습니다.
+설정, HISTORY, 창 위치는 이 컴퓨터의 ORVIK 데이터 폴더(macOS `~/Library/Application Support/ORVIK`, Windows `%APPDATA%\ORVIK`)에 저장됩니다. 설치 없이 실행하는 Windows 버전도 같은 폴더를 씁니다. HISTORY는 10초 넘게 온에어된 곡(덱, 제목, 아티스트, BPM, 키, 시각)을 최근 1,000곡까지 자동으로 기록합니다. HISTORY 탭에서 CSV로 내보내거나 CLEAR로 지울 수 있습니다. ORVIK를 완전히 지우려면 앱과 이 폴더를 함께 삭제하세요.
+
+가상 덱은 사용자가 고른 로컬 파일을 읽습니다. 재생 방식에 따라 임시 WAV를 만들기도 합니다. 임시 파일은 정상 종료하면 지우고 비정상 종료로 남은 파일은 다음 실행 때 정리합니다.
 
 로그는 기본으로 꺼져 있습니다. 문제를 기록하려면 다음 순서로 진행하세요.
 
@@ -62,7 +71,9 @@ HISTORY 기록은 컴퓨터에 저장되며 CSV로 내보낼 수 있습니다. �
 3. 시작 과정까지 기록하려면 ORVIK를 다시 실행한 뒤 문제를 재현합니다.
 4. 로그가 여러 파일로 나뉘었다면 문제가 생긴 시간대의 파일을 함께 보관합니다.
 
-로그에는 곡 제목, 장비 이름, 네트워크 주소 등이 포함될 수 있습니다. 공개 이슈에 첨부하기 전에 내용을 확인하고 공유할 필요가 없는 정보는 가려 주세요.
+로그 캡처는 끌 때까지 앱을 다시 켜도 계속 기록됩니다. 장비 구성에 따라 시간당 1GB 가까이 쌓일 수 있고 자동으로 지워지지 않으니, 필요한 기록을 남긴 뒤에는 꺼 두세요.
+
+로그에는 곡 제목, 장비 이름, 네트워크 주소(IP·MAC), 받은 패킷의 원본 데이터가 포함될 수 있습니다. 공개 이슈에 첨부하기 전에 내용을 확인하고 공유할 필요가 없는 정보는 가려 주세요.
 
 ### 문서와 문의
 
@@ -70,7 +81,7 @@ HISTORY 기록은 컴퓨터에 저장되며 CSV로 내보낼 수 있습니다. �
 
 문의: [GitHub Issues](https://github.com/Zesminseok/ORVIK/issues) · [Instagram @zes_minseok](https://instagram.com/zes_minseok)
 
-이 저장소는 문서와 배포 파일을 제공하며 앱 소스 코드는 공개하지 않습니다. ORVIK는 AlphaTheta·Pioneer DJ·TC Supply와 제휴하거나 해당 업체의 인증을 받은 제품이 아닙니다. 제품명과 상표는 호환 대상을 설명하기 위해 사용합니다.
+이 저장소는 문서와 배포 파일을 제공하며 앱 소스 코드는 공개하지 않습니다. ORVIK는 AlphaTheta·Pioneer DJ·TC Supply·Resolume과 제휴하거나 해당 업체의 인증을 받은 제품이 아닙니다. 제품명과 상표는 호환 대상을 설명하기 위해 사용합니다.
 
 ---
 
@@ -106,16 +117,25 @@ Connect the computer and DJ hardware to the same local network and select that n
 - Virtual decks for local audio files
 - A web viewer for other devices on the same network, and mirror mode that shows another PC's ORVIK screen
 - HISTORY playback records and CSV export
+- New-version notice (no automatic install)
+- Seven UI languages and a light mode for outdoor use
 
 Available data depends on the hardware, firmware and network setup. LTC and MTC output has not been fully verified with physical receivers; check the full signal path before using it in a show.
 
 ### Data and logs
 
-ORVIK communicates over the network to discover hardware and receive metadata, waveforms and mixer state. When you use TCNet or OSC output, the web viewer or mirror mode, relevant information is sent to the configured recipients or connected clients.
+ORVIK does not send usage data to any internet server. It exchanges the following over the network:
 
-With update check on (the default), ORVIK asks GitHub for the latest release number every 12 hours. The request carries only the app version, and GitHub sees your IP address as with any web request. You can turn it off in the Info section of Settings.
+- **PRO DJ LINK**: when the app starts, it joins the local network as a device named "ORVIK", finds the hardware and requests track information, waveforms, cues and mixer state. It never sends commands that change playback or mixer settings.
+- **TCNet output** (on by default): sends track title, artist, artwork, playback position, BPM and mixer values to TCNet receivers on the same network. **BPM to OSC** (off by default) sends only the BPM.
+- **Virtual deck track information** (TCP 12523 and 12524, always on): answers when hardware on the same network asks for a virtual deck track's information and artwork.
+- **Web viewer** (off by default, TCP 8877): a read-only page on the same network, opened with a 4-character code or a QR code. It uses unencrypted HTTP, so turn it on only on networks you trust.
+- **Mirror mode** (on by default): if this PC has no CDJ, ORVIK looks for a mirror server on the same network range at launch and whenever Settings opens, and connects to it automatically. Turning on **Serve mirror** (off by default, TCP 8878) lets other ORVIK instances on the same network see this PC's deck and mixer data without an access code. While the web viewer or mirror server is on, this computer's name can be seen on the same network without a code.
+- **Update check** (on by default): at launch and every 12 hours after that, ORVIK asks GitHub for the latest release number. The request carries only the app version, and GitHub sees your IP address as with any web request. You can turn it off in the Info section of Settings.
 
-HISTORY records are stored on the computer and can be exported to CSV. Virtual decks read local files selected by the user and may create temporary WAV files depending on the playback path. Temporary files are cleaned up on normal exit but may remain after an abnormal exit.
+Settings, HISTORY and window positions are stored in ORVIK's data folder on this computer (macOS `~/Library/Application Support/ORVIK`, Windows `%APPDATA%\ORVIK`). The Windows version that runs without installation uses the same folder. HISTORY automatically records tracks that were on air for more than 10 seconds (deck, title, artist, BPM, key and time), up to the latest 1,000. You can export it to CSV or erase it with CLEAR on the HISTORY tab. To remove ORVIK completely, delete the app and this folder.
+
+Virtual decks read local files you choose and may create temporary WAV files depending on the playback path. Temporary files are deleted on normal exit, and any left after an abnormal exit are cleaned up at the next launch.
 
 Logging is off by default. To record a problem:
 
@@ -124,7 +144,9 @@ Logging is off by default. To record a problem:
 3. Restart ORVIK before reproducing the problem if you need to capture startup as well.
 4. If the log spans several files, keep the files covering the relevant period together.
 
-Logs may contain track titles, device names and network addresses. Review them and redact information that does not need to be shared before attaching them to a public issue.
+Log capture keeps recording across restarts until you turn it off. Depending on the setup it can grow to nearly 1 GB per hour and is never deleted automatically, so turn it off once you have what you need.
+
+Logs may contain track titles, device names, network addresses (IP and MAC) and raw data from received packets. Review them and redact information that does not need to be shared before attaching them to a public issue.
 
 ### Documentation and contact
 
@@ -132,4 +154,4 @@ Logs may contain track titles, device names and network addresses. Review them a
 
 Contact: [GitHub Issues](https://github.com/Zesminseok/ORVIK/issues) · [Instagram @zes_minseok](https://instagram.com/zes_minseok)
 
-This repository provides documentation and release downloads; the application source code is not public. ORVIK is not affiliated with or certified by AlphaTheta, Pioneer DJ or TC Supply. Product names and trademarks identify compatibility targets.
+This repository provides documentation and release downloads; the application source code is not public. ORVIK is not affiliated with or certified by AlphaTheta, Pioneer DJ, TC Supply or Resolume. Product names and trademarks identify compatibility targets.
