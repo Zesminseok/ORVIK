@@ -8,15 +8,15 @@
 
 ### 상표와 독립 제품 안내
 
-ORVIK는 독립적인 호환성 도구입니다. AlphaTheta의 공식 PRO DJ LINK Bridge나 TC Supply의 ShowKontrol이 아니며 AlphaTheta·Pioneer DJ·TC Supply와의 제휴·후원·인증·승인을 의미하지 않습니다.
+ORVIK는 독립적인 호환성 도구입니다. AlphaTheta의 공식 PRO DJ LINK Bridge나 TC Supply의 ShowKontrol이 아니며 AlphaTheta·Pioneer DJ·TC Supply·Resolume과의 제휴·협찬·인증·승인을 의미하지 않습니다.
 
-Pioneer DJ, CDJ, DJM, PRO DJ LINK, rekordbox, TCNet, Art-Net, Resolume 등 제품명·기술명·상표는 호환 대상을 설명하기 위해 사용합니다. 각 상표의 권리는 해당 권리자에게 있습니다. 프로토콜의 공개 여부가 별도 상표나 인증의 사용 허가를 의미하지는 않습니다.
+AlphaTheta, Pioneer DJ, CDJ, DJM, PRO DJ LINK, rekordbox, TC Supply, TCNet, ShowKontrol, Resolume, Art-Net, SMPTE 등 제품명·기술명·상표는 호환 대상을 설명하기 위해 사용합니다. 각 상표의 권리는 해당 권리자에게 있습니다. 프로토콜의 공개 여부가 별도 상표나 인증의 사용 허가를 의미하지는 않습니다.
 
 ### 프로토콜 참고 자료
 
 PRO DJ LINK 호환성은 개발자가 소유하거나 적법하게 운용하는 하드웨어와 원본 프로그램을 실행하고, Wireshark로 그 사이의 네트워크 패킷을 캡처·분석하는 방식으로 개발합니다. TCNet 출력은 [TC Supply가 공개한 TCNet LINK Specification V3.5.1B](https://www.tc-supply.com/support-documents)를 근거로 구현합니다.
 
-Art-Net 출력(ArtTimeCode·ArtSync·ArtDmx·ArtPollReply)은 [Artistic Licence가 공개한 Art-Net 4 규격서](https://art-net.org.uk/)를 근거로 구현합니다. 규격서는 로열티 없는 사용을 허용하며 다음 고지를 요구합니다: **Art-Net™ Designed by and Copyright Artistic Licence**. Art-Net™은 Artistic Licence의 상표입니다.
+Art-Net 출력(ArtTimeCode·ArtSync·ArtDmx·ArtPollReply)은 [Artistic Licence가 공개한 Art-Net 4 규격서](https://art-net.org.uk/)를 근거로 구현했으며 1.6.2부터 OEM 코드를 받기 전까지 꺼 두었습니다. 규격서는 로열티 없는 사용을 허용하며 다음 고지를 요구합니다: **Art-Net™ Designed by and Copyright Artistic Licence Engineering Ltd**. Art-Net™은 Artistic Licence Engineering Ltd의 상표입니다.
 
 ### 런타임과 라이브러리
 
@@ -41,7 +41,7 @@ ORVIK는 Electron 기반 앱입니다. Electron 자체는 MIT 라이선스이며
 
 Electron의 버전별 소스와 의존성 참조는 [Electron 저장소](https://github.com/electron/electron)에서, Chromium의 FFmpeg 소스는 [Chromium FFmpeg 저장소](https://chromium.googlesource.com/chromium/third_party/ffmpeg/)에서 확인할 수 있습니다. 이는 업스트림 프로젝트 안내이며, 배포 바이너리와 정확히 대응하는 소스·빌드 자료 제공을 대체하지 않습니다.
 
-ORVIK의 앱 이용 조건은 LGPL 등 서드파티 라이선스에 따른 수정·교체·재링크 및 수정 사항 디버깅을 위한 역공학 권리를 제한하지 않습니다. 세부 조건은 해당 라이선스를 따릅니다.
+ORVIK의 앱 이용 조건은 LGPL 등 서드파티 라이선스가 허용하거나 요구하는 수정·교체·재링크 권리와 수정 사항을 디버깅하기 위한 역공학 권리를 제한하지 않습니다. 세부 조건은 해당 라이선스를 따릅니다.
 
 ### 폰트와 아이콘
 
@@ -66,15 +66,15 @@ This document identifies trademarks, protocol references and bundled components.
 
 ### Trademarks and independent product notice
 
-ORVIK is an independent interoperability tool. It is not AlphaTheta's official PRO DJ LINK Bridge or TC Supply's ShowKontrol, and does not imply affiliation with, sponsorship by, certification by or endorsement from AlphaTheta, Pioneer DJ or TC Supply.
+ORVIK is an independent interoperability tool. It is not AlphaTheta's official PRO DJ LINK Bridge or TC Supply's ShowKontrol, and does not imply affiliation with, sponsorship by, certification by or endorsement from AlphaTheta, Pioneer DJ, TC Supply or Resolume.
 
-Product and technology names and trademarks, including Pioneer DJ, CDJ, DJM, PRO DJ LINK, rekordbox, TCNet, Art-Net and Resolume, identify compatibility targets. Each trademark remains with its respective owner. A publicly available protocol does not itself grant permission to use separate trademarks or certifications.
+Product and technology names and trademarks, including AlphaTheta, Pioneer DJ, CDJ, DJM, PRO DJ LINK, rekordbox, TC Supply, TCNet, ShowKontrol, Resolume, Art-Net and SMPTE, identify compatibility targets. Each trademark remains with its respective owner. A publicly available protocol does not itself grant permission to use separate trademarks or certifications.
 
 ### Protocol references
 
-PRO DJ LINK interoperability is developed by running the original application alongside hardware the developer owns or lawfully operates, then capturing and analyzing their network packets with Wireshark. TCNet output is implemented from the [TCNet LINK Specification V3.5.1B published by TC Supply](https://www.tc-supply.com/support-documents).
+PRO DJ LINK interoperability is developed by running hardware and the original application that the developer owns or lawfully operates, then capturing and analyzing their network packets with Wireshark. TCNet output is implemented from the [TCNet LINK Specification V3.5.1B published by TC Supply](https://www.tc-supply.com/support-documents).
 
-Art-Net output (ArtTimeCode, ArtSync, ArtDmx and ArtPollReply) is implemented from the [Art-Net 4 specification published by Artistic Licence](https://art-net.org.uk/). The specification permits royalty-free use and requires this credit: **Art-Net™ Designed by and Copyright Artistic Licence**. Art-Net™ is a trade mark of Artistic Licence.
+Art-Net output (ArtTimeCode, ArtSync, ArtDmx and ArtPollReply) was implemented from the [Art-Net 4 specification published by Artistic Licence](https://art-net.org.uk/) and has been switched off since 1.6.2 until an OEM code is issued. The specification permits royalty-free use and requires this credit: **Art-Net™ Designed by and Copyright Artistic Licence Engineering Ltd**. Art-Net™ is a trademark of Artistic Licence Engineering Ltd.
 
 ### Runtime and libraries
 
@@ -99,7 +99,7 @@ Matching FFmpeg source, patches, build materials and replacement instructions pr
 
 Version-specific Electron source and dependency references are available in the [Electron repository](https://github.com/electron/electron); Chromium's FFmpeg source is in the [Chromium FFmpeg repository](https://chromium.googlesource.com/chromium/third_party/ffmpeg/). These are upstream project references, not a substitute for providing source and build materials that correspond exactly to a distributed binary.
 
-ORVIK's application license does not restrict modification, replacement, relinking or reverse engineering to debug modifications where permitted by third-party licenses such as the LGPL. The applicable license governs the details.
+ORVIK's application license does not restrict modification, replacement, relinking or reverse engineering to debug modifications where permitted or required by third-party licenses such as the LGPL. The applicable license governs the details.
 
 ### Fonts and icons
 

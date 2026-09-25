@@ -12,7 +12,7 @@ Copyright (c) 2026 ZES (Kim Min Seok). All rights reserved.
 
 2. 허용되는 이용
 
-개인 확인, 평가, 호환성 확인 및 정보 제공 목적으로 문서를 열람하고 링크할
+개인적 참고, 평가, 호환성 확인 및 정보 제공 목적으로 문서를 열람하고 링크할
 수 있습니다. GitHub 약관과 정상적인 플랫폼 기능에 따른 열람, 포크 및
 다운로드를 제한하지 않습니다. 릴리스 앱의 이용에는 앱 라이선스가 적용됩니다.
 
@@ -32,8 +32,8 @@ ORVIK의 명칭, 로고, 스크린샷이나 문서를 제휴·후원·인증·�
 
 4. 언어 및 별도 권리
 
-한국어 전문을 먼저 제공하고 아래에 영어 번역을 제공합니다. 두 언어의 해석이
-충돌하는 경우, 관련 법률이 허용하는 범위에서 영문이 우선합니다.
+한국어 원문을 먼저 싣고 아래에 영어 번역을 제공합니다. 두 언어의 해석이
+충돌하면 한국어 원문이 우선합니다.
 서드파티 권리와 라이선스는 THIRD_PARTY_NOTICES.md를 참고하십시오.
 
 ---
@@ -74,5 +74,4 @@ rights that cannot lawfully be excluded or limited.
 4. Languages and separate rights
 
 The full Korean text appears first, followed by this English translation. If
-interpretations conflict, English prevails to the extent permitted
-by applicable law. See THIRD_PARTY_NOTICES.md for third-party rights and licenses.
+interpretations conflict, the Korean original prevails. See THIRD_PARTY_NOTICES.md for third-party rights and licenses.
