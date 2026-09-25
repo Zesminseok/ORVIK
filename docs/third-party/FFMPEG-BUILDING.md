@@ -1,8 +1,8 @@
-# FFmpeg build materials / FFmpeg 빌드 자료
+# FFmpeg 빌드 자료 / FFmpeg build materials
 
 ## 한국어
 
-이 자료는 Electron 44.4.5의 일반 런타임에 들어 있는 FFmpeg에 대응합니다. ORVIK가 직접 FFmpeg를 컴파일한 것이 아니라 공식 Electron 배포본을 사용합니다. 공식 ZIP의 해시와 그 안의 라이브러리 해시는 `manifest.json`에 있습니다. 앱에 임시 서명하면 macOS 라이브러리의 서명 바이트는 달라질 수 있습니다.
+이 자료는 Electron 44.4.5의 일반 런타임에 들어 있는 FFmpeg에 대응합니다. ORVIK가 직접 FFmpeg를 컴파일한 것이 아니라 공식 Electron 배포본을 사용합니다. 공식 ZIP의 해시와 그 안의 라이브러리 해시는 압축 파일의 `manifest.json`(이 저장소에서는 [런타임 대응 목록](ffmpeg-electron-44.4.5.json))에 있습니다. 앱에 임시 서명하면 macOS 라이브러리의 서명 바이트는 달라질 수 있습니다.
 
 ### 구성
 
@@ -34,11 +34,11 @@ Intel macOS와 Windows x64는 `target_cpu="x64"`를 사용합니다. gclient는 
 
 이것은 독립 FFmpeg CLI용 `./configure` 빌드가 아닙니다. Electron의 `build/args/release.gn`이 `all.gn`을 읽고 공유 라이브러리로 구성합니다. `ffmpeg_branding="Chrome"`, `proprietary_codecs=true`, `is_component_ffmpeg=true` 설정을 유지하십시오. `ffmpeg/chromium/config/Chrome/` 아래에 해당 운영체제·CPU의 생성된 코덱 설정이 있습니다. PGO 프로필·툴체인 취득은 Electron 문서 및 `electron/build/pgo_profiles/README.md`를 따릅니다.
 
-압축 파일은 전체 Chromium 작업 공간이나 운영체제 SDK를 담지 않습니다. 나머지 빌드 환경은 고정된 DEPS에 따라 동기화해야 합니다. 위 빌드 경로는 업스트림 문서·설정에서 정리했으며 여기서 전체 컴파일하거나 수정 라이브러리로 앱을 실행해 검증하지는 않았습니다. 비트 단위 재현을 보장하지 않습니다. 라이브러리 교체 방법과 허용 범위는 `README.md`를 참조하십시오.
+압축 파일은 전체 Chromium 작업 공간이나 운영체제 SDK를 담지 않습니다. 나머지 빌드 환경은 고정된 DEPS에 따라 동기화해야 합니다. 위 빌드 경로는 업스트림 문서·설정에서 정리했으며 여기서 전체 컴파일하거나 수정 라이브러리로 앱을 실행해 검증하지는 않았습니다. 비트 단위 재현을 보장하지 않습니다. 라이브러리 교체 방법과 허용 범위는 압축 파일의 `README.md`(이 저장소에서는 [FFmpeg 안내](FFMPEG.md))를 참조하십시오.
 
 ## English
 
-These materials correspond to FFmpeg in the standard Electron 44.4.5 runtime. ORVIK uses the official Electron distribution rather than compiling FFmpeg itself. `manifest.json` records hashes of the official ZIPs and their libraries. Ad-hoc application signing may change macOS library signature bytes.
+These materials correspond to FFmpeg in the standard Electron 44.4.5 runtime. ORVIK uses the official Electron distribution rather than compiling FFmpeg itself. The archive's `manifest.json` (in this repository: the [runtime manifest](ffmpeg-electron-44.4.5.json)) records hashes of the official ZIPs and their libraries. Ad-hoc application signing may change macOS library signature bytes.
 
 ### Contents
 

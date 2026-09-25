@@ -22,12 +22,12 @@ ORVIK는 Electron에 포함된 FFmpeg 라이브러리를 사용합니다. FFmpeg
 
 ### 호환 라이브러리 교체
 
-LGPL이 허용하는 수정·교체·재링크와 수정 디버깅을 위한 역공학에는 ORVIK의 사전 허가가 필요하지 않습니다. 같은 플랫폼·CPU·인터페이스에 맞는 라이브러리를 사용하십시오. 원본 앱을 백업하고 별도 복사본에서 작업하십시오.
+LGPL이 허용하거나 요구하는 수정·교체·재링크와 수정 디버깅을 위한 역공학에는 ORVIK의 사전 허가가 필요하지 않습니다. 같은 플랫폼·CPU·인터페이스에 맞는 라이브러리를 사용하십시오. 원본 앱을 백업하고 별도 복사본에서 작업하십시오.
 
-- **macOS:** 앱을 종료하고 `ORVIK.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libffmpeg.dylib`를 교체합니다. 서명이 무효화되면 본인의 수정한 앱 복사본에 `codesign --force --deep --sign - --timestamp=none /path/to/ORVIK.app`을 실행하여 임시 서명할 수 있습니다. 관리자·운영체제 보안 정책은 별도로 적용됩니다.
+- **macOS:** 앱을 종료하고 `ORVIK.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libffmpeg.dylib`를 교체합니다. 서명이 무효화되면 본인이 수정한 앱 복사본에 `codesign --force --deep --sign - --timestamp=none /path/to/ORVIK.app`을 실행하여 임시 서명할 수 있습니다. 관리자·운영체제 보안 정책은 별도로 적용됩니다.
 - **Windows portable:** 기본 런처는 실행할 때 `%TEMP%\Orvik`을 다시 풀고 종료 시 정리합니다. 실행 중 이 폴더 전체를 별도 쓰기 가능한 폴더로 복사한 뒤 원래 앱을 종료합니다. 복사본의 `ffmpeg.dll`을 교체하고 **복사본 안의 `ORVIK.exe`를 직접 실행**합니다. 원래 portable 런처를 다시 실행하면 교체본이 사용되지 않습니다. 작업 관리자에서 실제 실행 위치를 확인할 수 있습니다.
 
-ORVIK의 패키지 생성 검사는 배포 직전 라이브러리와 고지의 대응만 확인합니다. 실행 시 FFmpeg 해시를 검사하여 사용자 교체를 막지 않습니다. 수정된 라이브러리의 동작과 Windows 교체 절차의 실제 기동은 별도 검증이 필요합니다.
+ORVIK의 패키지 생성 검사는 배포 직전 라이브러리와 고지의 대응만 확인합니다. 앱은 실행 중 FFmpeg 해시를 검사하지 않으므로 사용자 교체를 막지 않습니다. 수정된 라이브러리의 동작과 Windows 교체 절차의 실제 기동은 별도 검증이 필요합니다.
 
 ## English
 
@@ -51,14 +51,14 @@ Build requirements and commands are in the archive's `BUILDING.md` and Electron'
 
 ### Replacing a compatible library
 
-No prior ORVIK permission is required for modification, replacement, relinking or reverse engineering to debug modifications as allowed by the LGPL. Use a library matching the platform, CPU and interface. Back up the original application and work on a separate copy.
+No prior ORVIK permission is required for modification, replacement, relinking or reverse engineering to debug modifications as permitted or required by the LGPL. Use a library matching the platform, CPU and interface. Back up the original application and work on a separate copy.
 
 - **macOS:** Quit the app and replace `ORVIK.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libffmpeg.dylib`. If its signature becomes invalid, you can ad-hoc sign your modified copy with `codesign --force --deep --sign - --timestamp=none /path/to/ORVIK.app`. Administrator and operating-system security policies still apply.
 - **Windows portable:** The default launcher extracts to `%TEMP%\Orvik` on each launch and cleans up on exit. While it runs, copy that entire folder to a separate writable location, then quit the original app. Replace `ffmpeg.dll` in the copy and **run the copied `ORVIK.exe` directly**. Running the original portable launcher again will not use your replacement. Task Manager can show the actual running location.
 
-ORVIK's packaging check verifies the library and notices before distribution. It does not enforce a runtime FFmpeg hash that would prevent user replacement. Behavior with a modified library and actual startup using the Windows replacement procedure require separate validation.
+ORVIK's packaging check only verifies that the library and notices match before distribution. It does not enforce a runtime FFmpeg hash that would prevent user replacement. Behavior with a modified library and actual startup using the Windows replacement procedure require separate validation.
 
-## Source archive SHA256
+## 소스 압축 파일 SHA256 / Source archive SHA256
 
 ```text
 c44cc183ad0eab3e8e9a354baf19212a4faedeb87e8277c1fdbbba5bf6c1ca8d  ffmpeg-electron-44.4.5-source.tar.gz
