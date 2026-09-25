@@ -6,6 +6,20 @@
 
 공개 릴리스의 변경 내역입니다.
 
+## 1.6.3 (2026-09-25)
+
+**수정**
+
+- 가상 덱에 MKV·DTS·AC3 등 FFmpeg 변환이 필요한 파일이 올라가지 않던 문제.
+
+**변경**
+
+- 앱 이용 조건: 소유하거나 관리하는 여러 기기에서 쓸 수 있고(베타 기간) 한국어판과 영어판의 뜻이 다르면 한국어 원문이 우선합니다.
+- 기간 제한이 없는 동안 첫 실행 시각을 기록하지 않고 예전 빌드가 남긴 기록을 지웁니다.
+- 설정 정보에 FFmpeg 고지를 표시하고 앱에 들어 있는 라이선스 파일을 여는 버튼을 추가했습니다.
+
+---
+
 ## 1.6.2 (2026-09-25)
 
 **수정**
@@ -253,6 +267,20 @@
 ## English
 
 Changes in public releases.
+
+## 1.6.3 (2026-09-25)
+
+**Fixes**
+
+- Virtual decks refusing MKV, DTS, AC3 and other files that need FFmpeg conversion.
+
+**Changes**
+
+- Terms of use: during the beta ORVIK may be used on several devices you own or control, and the Korean original prevails if the Korean and English versions differ in meaning.
+- No first-run record is kept while there is no time limit; records left by earlier builds are removed.
+- Settings > Info shows the FFmpeg notice, plus a button that opens the licence files bundled with the app.
+
+---
 
 ## 1.6.2 (2026-09-25)
 
