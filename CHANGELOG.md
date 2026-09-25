@@ -45,7 +45,7 @@
 - LTC가 수신기에서 몇 프레임 늦게 읽히던 문제.
 - CDJ-2000NXS2 웨이브폼을 기다리느라 다음 곡 표시가 늦던 문제.
 - 이미 쓰고 있는 덱 번호로 CDJ-2000NXS2에 요청해 거부당하던 문제.
-- 믹서가 없거나 나중에 켜지면 Pro DJ Link에 연결되지 않던 문제.
+- 믹서가 없거나 나중에 켜지면 PRO DJ LINK에 연결되지 않던 문제.
 - 한 덱에 요청이 겹칠 때 곡 정보·큐·웨이브폼이 끊기던 문제.
 - 설정 창 테두리가 두 줄로 보이던 문제.
 
@@ -293,7 +293,7 @@ Changes in public releases.
 - LTC read a few frames late at the receiver.
 - Next track showing late while waiting on a CDJ-2000NXS2 waveform.
 - CDJ-2000NXS2 refusing requests made with a live deck's player number.
-- Pro DJ Link not joining with no mixer, or with a mixer switched on later.
+- PRO DJ LINK not joining with no mixer, or with a mixer switched on later.
 - Track info, cues and waveform cutting out when requests overlapped on one deck.
 - Settings window borders drawn twice.
 
@@ -404,7 +404,7 @@ Changes in public releases.
 **Fixes**
 
 - Waveforms going blank.
-- A VPN interface being picked for Pro DJ Link.
+- A VPN interface being picked for PRO DJ LINK.
 - Phrase data from rekordbox.
 - Status icons misaligned on Windows.
 
