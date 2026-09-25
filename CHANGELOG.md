@@ -17,12 +17,14 @@
 - 새 곡을 올려도 이전 곡의 프레이즈가 남던 문제.
 - 페이더를 올려 둔 채 재생을 누르면 SMPTE READY가 시작되지 않던 문제.
 - 앱을 켜기 전에 올린 곡의 정보가 늦게 뜨던 문제.
+- 웹 뷰어에서 피치가 bpm 단위로 표시되던 문제.
 
 **변경**
 
 - 하드웨어 디테일 웨이브폼을 픽셀마다 빠짐없이 그립니다.
 - 웹 뷰어가 하드웨어 웨이브폼을 앱과 똑같이 그립니다.
 - UI·테마 수정(FLOW 핀, 체크박스, SMPTE 도크).
+- CDJ·DJM 기능 이름을 매뉴얼 표기에 맞췄습니다(PRO DJ LINK, SOUND COLOR FX, BALANCE 등).
 
 **추가**
 
@@ -32,6 +34,7 @@
 - SMPTE: M이 A·B 중 CDJ 마스터를 따라갑니다.
 - SMPTE: 첫 곡이 나가면 READY가 프리휠을 시작합니다.
 - SMPTE 도크가 마지막 상태 그대로 다시 열립니다.
+- 새 버전 알림: 새 릴리스가 나오면 헤더에 표시합니다(12시간마다 확인, 설정에서 끌 수 있음).
 
 ---
 
@@ -262,12 +265,14 @@ Changes in public releases.
 - Previous track's phrases staying after loading a new track.
 - SMPTE READY not starting when play was pressed with the fader already up.
 - Track info showing late for tracks loaded before the app started.
+- Web viewer showing pitch with a bpm unit.
 
 **Changes**
 
 - Hardware detail waveform draws every point in each pixel.
 - Web viewer draws hardware waveforms the same as the app.
 - UI and theme fixes (FLOW pin, checkboxes, SMPTE dock).
+- CDJ and DJM controls named as in the manuals (PRO DJ LINK, SOUND COLOR FX, BALANCE and others).
 
 **New**
 
@@ -277,6 +282,7 @@ Changes in public releases.
 - SMPTE: M follows the CDJ sync master between A and B.
 - SMPTE: READY starts the freewheel when the first track goes out.
 - SMPTE dock reopens as it was left.
+- Update notice: a new release shows in the header (checked every 12 hours, can be turned off in settings).
 
 ---
 
