@@ -22,7 +22,7 @@ ORVIK는 DJ 장비의 재생 정보를 Resolume 같은 VJ 소프트웨어로 보
 
 [최신 릴리스](https://github.com/Zesminseok/ORVIK/releases/latest)에서 운영체제에 맞는 파일을 받으세요.
 
-ORVIK는 LGPL-2.1-or-later의 FFmpeg 라이브러리를 사용합니다. [FFmpeg 소스·라이선스·교체 안내](docs/third-party/FFMPEG.md)에서 해당 Electron 버전의 자료를 확인하세요.
+ORVIK는 LGPL-2.1-or-later로 배포되는 FFmpeg 라이브러리를 사용합니다. 받은 릴리스의 Electron 버전에 맞는 자료는 [FFmpeg 소스·라이선스·교체 안내](docs/third-party/FFMPEG.md)에 있습니다.
 
 | 환경 | 파일 |
 | --- | --- |
@@ -34,30 +34,33 @@ ORVIK는 LGPL-2.1-or-later의 FFmpeg 라이브러리를 사용합니다. [FFmpeg
 
 **Windows:** 내려받은 `.exe`를 실행하세요. SmartScreen 경고가 표시되면 출처를 확인한 뒤 **추가 정보 → 실행**을 선택할 수 있습니다. 조직에서 관리하는 PC에서는 관리자 정책이 적용될 수 있습니다.
 
-컴퓨터와 DJ 장비를 같은 로컬 네트워크에 연결하고 ORVIK에서 해당 네트워크 인터페이스를 선택하세요. macOS의 로컬 네트워크 접근 요청은 허용하고, Windows 방화벽에서는 신뢰하는 공연용 개인 네트워크에 한해 ORVIK 통신을 허용하세요.
+컴퓨터와 DJ 장비를 같은 로컬 네트워크에 연결하고 ORVIK에서 그 네트워크에 연결된 인터페이스를 선택하세요. macOS가 로컬 네트워크 접근을 물으면 허용하고, Windows 방화벽에서는 신뢰하는 공연용 개인 네트워크에 한해 ORVIK 통신을 허용하세요.
 
 ### 주요 기능
 
 - 장비의 덱·믹서 상태, 트랙 정보, 큐, 웨이브폼, 앨범아트 표시
 - TCNet 출력과 BPM to OSC
+- SMPTE 타임코드 출력(LTC·MTC)
 - 로컬 오디오 파일을 재생하는 가상 덱
-- 같은 네트워크에서 확인하는 웹 뷰어와 다른 ORVIK 화면을 표시하는 미러 모드
+- 같은 네트워크의 다른 기기에서 보는 웹 뷰어, 다른 PC의 ORVIK 화면을 그대로 보여 주는 미러 모드
 - HISTORY 재생 기록과 CSV 내보내기
 
-장비·펌웨어·연결 구성에 따라 수신 가능한 정보가 다릅니다. LTC·MIDI Clock·MTC 출력은 실제 수신 장비에서의 검증이 완료되지 않았으므로 공연에 사용하기 전에 전체 연결을 확인하세요.
+장비·펌웨어·연결 구성에 따라 받을 수 있는 정보가 다릅니다. LTC·MTC 출력은 실제 수신 장비에서 검증을 마치지 않았으므로 공연에 쓰기 전에 전체 연결을 확인하세요.
 
 ### 데이터와 로그
 
-ORVIK는 장비 발견과 메타데이터·웨이브폼·믹서 상태 수신에 필요한 네트워크 통신을 합니다. TCNet·OSC 출력이나 웹 뷰어·미러 모드를 사용하면 관련 정보가 설정된 수신 대상이나 연결된 클라이언트에 전달됩니다.
+ORVIK는 장비를 찾고 메타데이터·웨이브폼·믹서 상태를 받는 데 필요한 네트워크 통신을 합니다. TCNet·OSC 출력이나 웹 뷰어·미러 모드를 사용하면 관련 정보가 설정된 수신 대상이나 연결된 클라이언트에 전달됩니다.
 
-HISTORY 기록은 컴퓨터에 저장되며 CSV로 내보낼 수 있습니다. 가상 덱은 사용자가 선택한 로컬 파일을 읽고, 재생 방식에 따라 임시 WAV를 만들 수 있습니다. 임시 파일은 정상 종료 시 정리되지만 비정상 종료 시 남을 수 있습니다.
+업데이트 확인을 켜 두면(기본값) 12시간마다 GitHub에 최신 릴리스 번호를 묻습니다. 요청에는 앱 버전만 담기고 GitHub에는 일반 웹 요청처럼 IP 주소가 전달됩니다. 설정의 정보 섹션에서 끌 수 있습니다.
+
+HISTORY 기록은 컴퓨터에 저장되며 CSV로 내보낼 수 있습니다. 가상 덱은 사용자가 선택한 로컬 파일을 읽습니다. 재생 방식에 따라 임시 WAV를 만들기도 합니다. 임시 파일은 정상 종료하면 정리되지만 비정상 종료되면 남을 수 있습니다.
 
 로그는 기본으로 꺼져 있습니다. 문제를 기록하려면 다음 순서로 진행하세요.
 
 1. 설정의 정보(Info) 섹션에서 **Option+Shift+A**(macOS) 또는 **Alt+Shift+A**(Windows)를 누릅니다.
-2. **로그 캡처(Log capture)**를 켜고 표시된 저장 폴더를 확인합니다. **선택(Choose)**으로 위치를 바꿀 수 있습니다.
+2. **로그 캡처**(Log capture)를 켜고 표시된 저장 폴더를 봐 둡니다. 위치를 바꾸려면 **선택**(Choose)을 누릅니다.
 3. 시작 과정까지 기록하려면 ORVIK를 다시 실행한 뒤 문제를 재현합니다.
-4. 로그가 여러 파일로 나뉘었다면 해당 시간대의 파일을 함께 보관합니다.
+4. 로그가 여러 파일로 나뉘었다면 문제가 생긴 시간대의 파일을 함께 보관합니다.
 
 로그에는 곡 제목, 장비 이름, 네트워크 주소 등이 포함될 수 있습니다. 공개 이슈에 첨부하기 전에 내용을 확인하고 공유할 필요가 없는 정보는 가려 주세요.
 
@@ -99,15 +102,18 @@ Connect the computer and DJ hardware to the same local network and select that n
 
 - Deck and mixer status, track information, cues, waveforms and artwork
 - TCNet output and BPM to OSC
+- SMPTE timecode output (LTC, MTC)
 - Virtual decks for local audio files
-- A web viewer on the same network and mirror mode for displaying another ORVIK instance
+- A web viewer for other devices on the same network, and mirror mode that shows another PC's ORVIK screen
 - HISTORY playback records and CSV export
 
-Available data depends on the hardware, firmware and network setup. LTC, MIDI Clock and MTC output validation with physical receivers is not complete; check the full signal path before using them in a show.
+Available data depends on the hardware, firmware and network setup. LTC and MTC output has not been fully verified with physical receivers; check the full signal path before using it in a show.
 
 ### Data and logs
 
 ORVIK communicates over the network to discover hardware and receive metadata, waveforms and mixer state. When you use TCNet or OSC output, the web viewer or mirror mode, relevant information is sent to the configured recipients or connected clients.
+
+With update check on (the default), ORVIK asks GitHub for the latest release number every 12 hours. The request carries only the app version, and GitHub sees your IP address as with any web request. You can turn it off in the Info section of Settings.
 
 HISTORY records are stored on the computer and can be exported to CSV. Virtual decks read local files selected by the user and may create temporary WAV files depending on the playback path. Temporary files are cleaned up on normal exit but may remain after an abnormal exit.
 
