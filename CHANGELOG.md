@@ -4,13 +4,24 @@
 
 ## 한국어
 
-공개 릴리스의 변경 내역입니다.
+공개 릴리스와 현재 개발 중인 소스의 변경 내역입니다.
+
+## 개발 중 (미배포)
+
+**변경**
+
+- PRO DJ LINK와 TCNet을 각각 실행하고 자동 시작 여부를 설정할 수 있습니다.
+- HISTORY와 SET LIST는 정상적으로 앱을 새로 켜면 비워집니다. 비정상 종료 뒤에는 복구 여부를 묻고, 종료할 때 저장하지 않은 기록을 확인합니다.
+- 가상 덱의 외부 FFmpeg 변환 경로를 제거했습니다. MKV·DTS·AC3 등 해당 경로가 필요했던 파일은 지원하지 않습니다.
+
+**추가**
+
+- SET LIST의 곡별 SMPTE 오프셋과 목록 가져오기·내보내기.
+- 설정 백업(`.orvikcfg`)·복원·초기화.
+
+---
 
 ## 1.6.3 (2026-09-25)
-
-**수정**
-
-- 가상 덱에 MKV·DTS·AC3 등 FFmpeg 변환이 필요한 파일이 올라가지 않던 문제.
 
 **변경**
 
@@ -68,7 +79,6 @@
 - SMPTE 출력을 창 아래 도크로 옮겼습니다. 어느 탭에서나 보이고 접을 수 있습니다.
 - 마스터 출력 소스: A, B, 시스템 시계, 프리휠.
 - 오프셋을 시·분·초·프레임 버튼으로(Ctrl을 누르면 10씩) 맞추고, 켜고 끌 수 있습니다.
-- 채널별 Art-Net 버튼을 없앴습니다.
 
 **추가**
 
@@ -82,7 +92,7 @@
 
 - 한국어·중국어·일본어 트랙 제목이 앱과 Resolume Arena에서 깨져 보이던 문제.
 - 곡을 빠르게 넘긴 뒤 마지막 곡 로딩이 늦던 문제.
-- LTC·MTC·Art-Net 타임코드 출력 동작.
+- LTC·MTC 타임코드 출력 동작.
 - 루프 중 핫큐 동작, 루프 큐와 메모리 큐 표시.
 - UI·테마 수정(다크 테마 가독성, FLOW, 믹서, 웨이브폼, 웹 뷰어).
 
@@ -266,13 +276,24 @@
 
 ## English
 
-Changes in public releases.
+Changes in public releases and the current development source.
+
+## Unreleased (development source)
+
+**Changes**
+
+- PRO DJ LINK and TCNet can be started separately, with individual auto-start settings.
+- HISTORY and SET LIST start empty after a normal relaunch. After an abnormal exit, ORVIK asks whether to restore them and checks for unsaved records when quitting.
+- The external FFmpeg conversion path was removed from virtual decks. Files that needed it, including MKV, DTS and AC3, are unsupported.
+
+**New**
+
+- Track-specific SMPTE offsets in SET LIST, with list import and export.
+- Settings backup (`.orvikcfg`), restore and reset.
+
+---
 
 ## 1.6.3 (2026-09-25)
-
-**Fixes**
-
-- Virtual decks refusing MKV, DTS, AC3 and other files that need FFmpeg conversion.
 
 **Changes**
 
@@ -330,7 +351,6 @@ Changes in public releases.
 - SMPTE output moved to a dock at the bottom of the window — on every tab, collapsible.
 - Master output sources: A, B, system clock, freewheel.
 - Offset set by hour, minute, second and frame buttons (hold Ctrl for ten), and can be switched off.
-- Per-channel Art-Net button removed.
 
 **New**
 
@@ -344,7 +364,7 @@ Changes in public releases.
 
 - Korean, Chinese and Japanese track titles garbled in the app and in Resolume Arena.
 - Last track loading late after skipping through tracks quickly.
-- LTC, MTC and Art-Net timecode output behaviour.
+- LTC and MTC timecode output behaviour.
 - Hot cue during a loop; loop cue and memory cue display.
 - UI and theme fixes (dark theme readability, FLOW, mixer, waveform, web viewer).
 

@@ -54,10 +54,22 @@ Copyright and license notices remain in each source tree. The complete FFmpeg tr
 
 ### Build route
 
-Follow `electron/docs/development/build-instructions-macos.md` or `build-instructions-windows.md` for prerequisites and `build-instructions-gn.md` for the full procedure. You need `depot_tools`, platform SDKs and compilers. The shell example in the Korean section checks out the exact Electron commit and builds the FFmpeg target. On Windows, use the quoting and tool setup in its platform documentation. Use `target_cpu="x64"` for Intel macOS and Windows x64.
+Follow `electron/docs/development/build-instructions-macos.md` or `build-instructions-windows.md` for prerequisites and `build-instructions-gn.md` for the full procedure. You need `depot_tools`, platform SDKs and compilers. This macOS shell example checks out the exact Electron commit and builds the FFmpeg target:
+
+```sh
+mkdir electron-44.4.5-build
+cd electron-44.4.5-build
+gclient config --name "src/electron" --unmanaged https://github.com/electron/electron
+gclient sync --with_branch_heads --with_tags --revision src/electron@694f45852a0f1726cd23bfd379854de489cccb65
+cd src
+gn gen out/Release --args='import("//electron/build/args/release.gn") target_cpu="arm64"'
+autoninja -C out/Release ffmpeg
+```
+
+On Windows, use the quoting and tool setup in its platform documentation. Use `target_cpu="x64"` for Intel macOS and Windows x64.
 
 Gclient retrieves Chromium, FFmpeg and tools pinned by Electron's DEPS and applies Electron's patches. Do not apply `changes.diff` twice to an already patched checkout. To apply the Electron patch separately to the included original FFmpeg tree, run `git apply ../changes.diff` inside that tree. Source headers, `.gni` files and generated `config.h` files are included.
 
 This is not a standalone FFmpeg CLI `./configure` build. Electron's `build/args/release.gn` imports `all.gn` and configures a shared library. Retain `ffmpeg_branding="Chrome"`, `proprietary_codecs=true` and `is_component_ffmpeg=true`. Generated platform/CPU codec configurations are under `ffmpeg/chromium/config/Chrome/`. Follow Electron's documentation and `electron/build/pgo_profiles/README.md` for PGO profiles and toolchains.
 
-The archive does not contain an entire Chromium workspace or operating-system SDKs. Synchronize the remaining build environment using the pinned DEPS. This build route was compiled from upstream documentation and settings; a full compile and application startup with a modified library have not been performed here. Bit-for-bit reproducibility is not guaranteed. See `README.md` for replacement instructions and rights.
+The archive does not contain an entire Chromium workspace or operating-system SDKs. Synchronize the remaining build environment using the pinned DEPS. This build route was compiled from upstream documentation and settings; a full compile and application startup with a modified library have not been performed here. Bit-for-bit reproducibility is not guaranteed. See the archive's `README.md`, or this repository's [FFmpeg guide](FFMPEG.md), for replacement instructions and rights.
