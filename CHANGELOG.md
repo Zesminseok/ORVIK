@@ -8,24 +8,24 @@
 
 ## 2.0.0 (2026-10-30)
 
-ORVIK 2.0은 Electron 앱을 대체하는 네이티브 앱(C++ / JUCE)입니다. 1초 안에 켜지고 메모리와 CPU를 훨씬 덜 쓰며, 1.6의 기능을 모두 갖추고 있습니다. macOS 13.3 이상(Apple Silicon), Windows 10, 11(x64). Intel Mac 빌드는 없습니다.
+ORVIK 2.0은 Electron 앱을 대체하는 네이티브 앱(C++ / JUCE)입니다. 1초 안에 켜지고 메모리와 CPU를 훨씬 덜 쓰며 1.6의 기능을 모두 갖추고 있습니다. macOS 13.3 이상(Apple Silicon), Windows 10, 11(x64). Intel Mac 빌드는 없습니다.
 
 **추가**
 
 - OUTPUT 노드 편집기: OSC 페이지와 Art-Net DMX 패치를 대신합니다. 덱과 믹서 값을 변환(범위, 모양, 반전, 프리런, 시간 형식, 연산)해서 OSC, Art-Net / sACN DMX, MIDI CC, MIDI Note로 보냅니다. 기존 OSC 줄과 DMX 패치는 처음 켤 때 노드로 옮겨집니다.
-- SET LIST 큐 편집: 곡마다 큐(이름, 시간, 마디.박, 그룹, 동작: OSC, Art-Net DMX, MIDI, 대기)를 둡니다. 웨이브폼은 음원, HISTORY, CDJ에서 가져오고, 박, 마디, 프레임 스냅과 rekordbox 핫큐 가져오기가 있습니다.
-- CUE CALL 창: 그룹별 다음 큐, 타임라인, 남은 시간(초와 마디.박). 보드, 레이어 테마, 메인 창에 붙이거나 따로 띄우기, 폰, 태블릿용 웹 페이지(`/cuecall`).
+- SET LIST 큐 편집: 곡마다 큐(이름, 시간, 마디.박, 그룹, 동작: OSC, Art-Net DMX, MIDI, 대기)를 둡니다. 웨이브폼은 음원, HISTORY, CDJ에서 가져옵니다. 박, 마디, 프레임 스냅과 rekordbox 핫큐 가져오기가 있습니다.
+- CUE CALL 창: 그룹별 다음 큐, 타임라인, 남은 시간(초와 마디.박). 보드와 레이어 테마, 메인 창에 붙이거나 따로 띄우기, 폰과 태블릿용 웹 페이지(`/cuecall`).
 - 음성 안내: 시스템 목소리(macOS, Windows)로 "그룹, 큐 이름, 스탠바이", 박에 맞춰 "셋, 둘, 하나, 고". 그룹별 출력 장치, 박 클릭. 안내 언어는 고른 목소리의 언어를 따릅니다.
 - SHORTCUT 페이지와 MAP: 키보드, MIDI, OSC, DMX(Art-Net)로 ORVIK를 조작하고 MIDI OUT으로 상태를 돌려보냅니다. MAP은 화면의 버튼을 눌러 바로 지정합니다.
 - 등록된 OEM 코드로 내보내는 Art-Net 타임코드와 DMX 출력.
-- 시작, 종료 스플래시. HISTORY, SET LIST 자동 저장과 비정상 종료 뒤 복구 안내.
-- GPU로 그리는 웨이브폼, CDJ-3000 3band 웨이브폼을 덱 화면처럼.
+- 시작과 종료 스플래시. HISTORY, SET LIST 자동 저장과 비정상 종료 뒤 복구 안내.
+- GPU로 그리는 웨이브폼, 덱 화면처럼 보이는 CDJ-3000 3band 웨이브폼.
 
 **변경**
 
 - 네이티브 앱으로 다시 만들었습니다. 2.0은 설정을 새 폴더에 저장하므로 1.6의 설정은 옮겨지지 않습니다.
-- Windows 글자를 DirectWrite로 그립니다(작은 글씨가 선명).
-- 서드파티 구성요소가 네이티브 앱 기준으로 바뀌었습니다(JUCE 9와 포함 라이브러리, curl, zlib, 폰트). Electron, Chromium, FFmpeg 고지는 2.0에 해당하지 않습니다.
+- Windows에서는 글자를 DirectWrite로 그립니다(작은 글씨가 선명).
+- 서드파티 구성 요소가 네이티브 앱 기준으로 바뀌었습니다(JUCE 9와 포함 라이브러리, curl, zlib, 폰트). Electron, Chromium, FFmpeg 고지는 2.0에 해당하지 않습니다.
 
 **1.6.3 이후 공개하지 않았던 Electron 빌드의 변경 (2.0에 포함)**
 
@@ -42,20 +42,20 @@ ORVIK 2.0은 Electron 앱을 대체하는 네이티브 앱(C++ / JUCE)입니다.
 
 변경
 
-- PRO DJ LINK와 TCNet을 따로 켜고 끄며, 각각 자동 시작을 설정합니다.
+- PRO DJ LINK와 TCNet을 따로 켜고 끄며 각각 자동 시작을 설정합니다.
 - HISTORY와 SET LIST는 켤 때마다 새로 시작합니다. 비정상 종료 뒤에는 복구 여부를 묻습니다.
 - HISTORY에 다시 튼 곡과 가상 덱 곡도 기록합니다.
-- BPM to OSC 페이지는 OSC 페이지를 거쳐 2.0에서 OUTPUT 노드 편집기가 되었습니다. 기존 설정은 이어집니다.
-- CDJ-3000 3band 웨이브폼이 덱 화면처럼 보이고, 색 정보가 없는 디테일 웨이브폼에도 색이 입혀집니다.
+- BPM to OSC 페이지는 OSC 페이지를 거쳐 2.0에서 OUTPUT 노드 편집기가 되었습니다. 기존 설정은 유지됩니다.
+- CDJ-3000 3band 웨이브폼이 덱 화면처럼 보이고 색 정보가 없는 디테일 웨이브폼에도 색이 입혀집니다.
 - CDJ 마스터가 없으면 MASTER BPM이 온에어 덱을 따릅니다.
 - 가상 덱에서 MKV, DTS, AC3 파일은 열지 않습니다(외부 FFmpeg 변환 경로 제거).
-- 화면과 문구 정리(사이드바, 믹서 채널 색, 루프 표시, 미러 중 MIRROR 표시).
+- 화면과 문구 정리(사이드바, 믹서 채널 색, 루프 표시, 미러링 중 MIRROR 표시).
 
 추가
 
-- SET LIST: 곡별 SMPTE 오프셋 자동 적용, 목록 가져오기, 내보내기(ShowKontrol 파일 포함).
+- SET LIST: 곡별 SMPTE 오프셋 자동 적용, 목록 가져오기와 내보내기(ShowKontrol 파일 포함).
 - 설정 백업(`.orvikcfg`), 복원, 초기화.
-- 가상 덱: ALAC(.m4a), .fla 파일, 재생, CUE, 꺼내기 버튼이 있는 가상 모드 화면.
+- 가상 덱: ALAC(.m4a)와 .fla 파일, 재생, CUE, 꺼내기 버튼이 있는 가상 모드 화면.
 - rekordbox 큐 코멘트.
 - 웹 뷰어: 접속 코드 12시간 기억, 화면 확대, 오버뷰 띠.
 - OSC, SET LIST 편집 되돌리기.
@@ -64,7 +64,7 @@ ORVIK 2.0은 Electron 앱을 대체하는 네이티브 앱(C++ / JUCE)입니다.
 
 **알려진 한계**
 
-- 베타입니다. LTC, MTC, Art-Net 타임코드는 스튜디오의 수신기로 확인했고 모든 콘솔에서 확인한 것은 아닙니다. 공연 전에 확인하세요.
+- 베타입니다. LTC, MTC, Art-Net 타임코드는 스튜디오의 수신기로 확인했지만 모든 콘솔에서 확인한 것은 아닙니다. 공연 전에 확인하세요.
 - macOS 앱은 Developer ID로 서명하고 Apple 공증을 받았습니다. Windows `.exe`는 코드 서명이 없습니다.
 
 ---
