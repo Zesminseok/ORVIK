@@ -54,7 +54,7 @@ Get the file for your system from the [latest release](https://github.com/Zesmin
 3. In ORVIK's settings, pick that network interface.
 
 > [!NOTE]
-> On an Intel Mac, use [1.6.3](https://github.com/Zesminseok/ORVIK/releases/tag/v1.6.3). 1.6 settings are not carried over to 2.0.
+> There is no Intel Mac build. 1.6 settings are not carried over to 2.0.
 
 > [!TIP]
 > The macOS app is notarized by Apple. If Windows SmartScreen warns, choose **More info → Run anyway**.

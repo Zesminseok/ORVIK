@@ -55,7 +55,7 @@ TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 내보냅니다.
 3. ORVIK 설정에서 그 네트워크 인터페이스를 고릅니다.
 
 > [!NOTE]
-> Intel Mac에서는 [1.6.3](https://github.com/Zesminseok/ORVIK/releases/tag/v1.6.3)을 쓰세요. 1.6의 설정은 2.0으로 옮겨지지 않습니다.
+> Intel Mac 빌드는 없습니다. 1.6의 설정은 2.0으로 옮겨지지 않습니다.
 
 > [!TIP]
 > macOS 앱은 Apple 공증을 받았습니다. Windows에서 SmartScreen 경고가 뜨면 **추가 정보 → 실행**을 누르세요.
