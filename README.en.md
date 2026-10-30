@@ -39,7 +39,7 @@ It only reads the hardware and never controls it.
 
 Also: virtual decks, web viewer, mirror mode, HISTORY and 7 languages.
 
-## Screens
+## Screenshots
 
 <table>
 <tr>
@@ -69,10 +69,9 @@ Get the file for your system from the [latest release](https://github.com/Zesmin
 3. In ORVIK's settings, pick that network interface.
 
 > [!NOTE]
-> There is no Intel Mac build. 1.6 settings are not carried over to 2.0.
-
-> [!TIP]
-> The Windows file is not code-signed. If SmartScreen warns, choose **More info → Run anyway**.
+> - There is no Intel Mac build.
+> - 1.6 settings are not carried over to 2.0.
+> - The Windows file is not code-signed. If SmartScreen warns, choose **More info → Run anyway**.
 
 > [!IMPORTANT]
 > Beta. Check timecode and outputs with your actual receivers before a show.
@@ -83,8 +82,6 @@ ORVIK sends no usage data to the internet.
 
 <details>
 <summary>What ORVIK exchanges on the local network</summary>
-
-<br>
 
 | Feature | Default | What |
 | --- | --- | --- |
@@ -104,8 +101,6 @@ ORVIK sends no usage data to the internet.
 
 <details>
 <summary>Recording a log</summary>
-
-<br>
 
 1. In the Info section of Settings, press **Option+Shift+A** (Windows **Alt+Shift+A**).
 2. Turn on **Log capture** and reproduce the problem.
