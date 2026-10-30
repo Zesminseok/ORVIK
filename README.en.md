@@ -5,8 +5,6 @@
   <img src="docs/media/orvik-wordmark-light.png" alt="ORVIK" width="300">
 </picture>
 
-**Playback data from CDJs and DJMs, for lighting and video software**
-
 [![Version](docs/media/badge-version.svg)](CHANGELOG.md)
 ![Status: Beta](https://img.shields.io/badge/status-beta-yellow.svg)
 ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows-lightgrey.svg)
@@ -23,8 +21,8 @@
 ## What it does
 
 ORVIK reads tempo, beat, playback position, track info, cues, waveforms and mixer state from CDJs and DJMs on a
-PRO DJ LINK network and sends them out as TCNet, SMPTE timecode, OSC, DMX and MIDI. It only reads the hardware; it
-never controls it.
+PRO DJ LINK network and sends them out as TCNet, SMPTE timecode, OSC, DMX and MIDI. It only reads the hardware; 
+it never controls it.
 
 2.0 is a new native app (C++ / JUCE). It starts in under a second and is far lighter than 1.6.
 
