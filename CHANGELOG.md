@@ -6,6 +6,20 @@
 
 공개 릴리스의 변경 내역입니다.
 
+## 2.0.1 (2026-10-30)
+
+**수정**
+
+- 정식 빌드에서 SMPTE OUT의 ART(Art-Net 타임코드) 버튼이 켜지지 않고, 저장된 ART 설정도 꺼지던 문제.
+- 정식 빌드의 SHORTCUT 페이지에 DMX(Art-Net) 입력 항목과 열이 보이지 않던 문제.
+- 정식 빌드의 MAP 화면에서 DMX 지정 표시가 늦게 바뀌던 문제.
+
+**변경**
+
+- 로그 캡처 크기를 줄였습니다. 같은 장비가 보내는 패킷은 바뀐 바이트만 기록하므로, 같은 시간 동안 쌓이는 로그가 60% 정도 작아집니다.
+
+---
+
 ## 2.0.0 (2026-10-30)
 
 ORVIK 2.0은 Electron 앱을 대체하는 네이티브 앱(C++ / JUCE)입니다. 1초 안에 켜지고 메모리와 CPU를 훨씬 덜 쓰며 1.6의 기능을 모두 갖추고 있습니다. macOS 13.3 이상(Apple Silicon), Windows 10, 11(x64). Intel Mac 빌드는 없습니다.
@@ -325,6 +339,20 @@ ORVIK 2.0은 Electron 앱을 대체하는 네이티브 앱(C++ / JUCE)입니다.
 ## English
 
 Changes in public releases.
+
+## 2.0.1 (2026-10-30)
+
+**Fixes**
+
+- In release builds the SMPTE OUT ART (Art-Net timecode) button did not turn on, and a saved ART setting was switched off.
+- The SHORTCUT page of release builds did not show the DMX (Art-Net) input section and column.
+- The MAP view of release builds updated DMX bindings late.
+
+**Changes**
+
+- Smaller capture logs: packets that repeat a device's previous one are written as the bytes that changed, so the same session writes about 60% less.
+
+---
 
 ## 2.0.0 (2026-10-30)
 

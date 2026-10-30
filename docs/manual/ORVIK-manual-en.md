@@ -623,7 +623,6 @@ While mirroring, MIRROR and the server address replace the header's PRO DJ LINK 
 | --- | --- |
 | Version | the current ORVIK version. |
 | Check for updates | when on, checks for a new version after start and every 12 hours. |
-| Pre-release notice | also announces pre-release versions. |
 | Check now | checks right away; with a new version a download page button appears. |
 | Copyright | the ORVIK and JUCE copyright and license notes, and a REPORT button for enquiries. |
 | Open source | opens the folder of license files inside the app (on Windows it is unpacked to a temporary folder) or the open-source license guide. |

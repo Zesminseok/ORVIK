@@ -623,7 +623,6 @@ En espejo, MIRROR y la dirección del servidor sustituyen a los botones PRO DJ L
 | --- | --- |
 | Versión | versión actual de ORVIK. |
 | Buscar actualizaciones | activado, busca una versión nueva tras el arranque y cada 12 horas. |
-| Aviso de prelanzamientos | también avisa de versiones de prelanzamiento. |
 | Comprobar ahora | comprueba al momento; con versión nueva aparece el botón de la página de descarga. |
 | Copyright | notas de copyright y licencia de ORVIK y JUCE, y el botón REPORT para consultas. |
 | Código abierto | abre la carpeta de licencias incluida en la aplicación (en Windows se extrae a una carpeta temporal) o la guía de licencias de código abierto. |

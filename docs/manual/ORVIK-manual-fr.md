@@ -623,7 +623,6 @@ En miroir, MIRROR et l'adresse du serveur remplacent les boutons PRO DJ LINK et 
 | --- | --- |
 | Version | version actuelle d'ORVIK. |
 | Rechercher les mises à jour | activé, cherche une nouvelle version après le lancement et toutes les 12 heures. |
-| Signaler les préversions | signale aussi les préversions. |
 | Vérifier maintenant | vérifie tout de suite ; avec une nouvelle version, le bouton de la page de téléchargement apparaît. |
 | Copyright | mentions de copyright et de licence d'ORVIK et de JUCE, et le bouton REPORT pour les demandes. |
 | Open source | ouvre le dossier des licences inclus dans l'application (sous Windows, il est extrait dans un dossier temporaire) ou le guide des licences open source. |

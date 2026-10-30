@@ -623,7 +623,6 @@ Beim Spiegeln ersetzen MIRROR und die Serveradresse die Schaltflächen PRO DJ LI
 | --- | --- |
 | Version | aktuelle Version von ORVIK. |
 | Nach Updates suchen | eingeschaltet sucht es nach dem Start und alle 12 Stunden nach einer neuen Version. |
-| Vorabversionen melden | meldet auch Vorabversionen. |
 | Jetzt prüfen | prüft sofort; bei neuer Version erscheint die Schaltfläche zur Download-Seite. |
 | Copyright | Copyright- und Lizenzhinweise zu ORVIK und JUCE sowie die Schaltfläche REPORT für Anfragen. |
 | Open Source | öffnet den in der App enthaltenen Lizenzordner (unter Windows wird er in einen temporären Ordner entpackt) oder die Open-Source-Lizenzübersicht. |
