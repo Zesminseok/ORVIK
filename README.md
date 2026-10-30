@@ -5,7 +5,7 @@
   <img src="docs/media/orvik-wordmark-light.png" alt="ORVIK" width="300">
 </picture>
 
-[![Version](docs/media/badge-version.svg)](CHANGELOG.md)
+[![Release](https://img.shields.io/github/v/release/Zesminseok/ORVIK?label=release&color=2ea44f)](https://github.com/Zesminseok/ORVIK/releases/latest)
 ![Status: Beta](https://img.shields.io/badge/status-beta-yellow.svg)
 ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows-lightgrey.svg)
 [![License: Proprietary](https://img.shields.io/badge/license-proprietary-red.svg)](BINARY_LICENSE.md)
@@ -25,6 +25,17 @@ PRO DJ LINK로 연결된 CDJ와 DJM에서<br>
 TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 내보냅니다.
 
 장비를 제어하지 않고 읽기만 합니다.
+
+```mermaid
+flowchart LR
+    CDJ["CDJ"] -- "PRO DJ LINK" --> ORVIK
+    DJM["DJM"] -- "PRO DJ LINK" --> ORVIK
+    FILE["음원 파일<br/>(가상 덱)"] --> ORVIK
+    ORVIK(["ORVIK"]) --> TCNET["TCNet"]
+    ORVIK --> TC["LTC, MTC,<br/>Art-Net 타임코드"]
+    ORVIK --> CTRL["OSC, MIDI,<br/>DMX (Art-Net, sACN)"]
+    ORVIK --> WEB["웹 뷰어,<br/>CUE CALL 웹 페이지"]
+```
 
 2.0은 네이티브 앱(C++ / JUCE)으로 새로 만들었습니다.<br>
 1초 안에 켜지고 1.6보다 훨씬 가볍습니다.
@@ -80,6 +91,28 @@ TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 내보냅니다.
 > [!IMPORTANT]
 > 베타 버전입니다.<br>
 > 공연에 쓰기 전에 타임코드와 출력을 실제 수신 장비에서 꼭 확인하세요.
+
+## 호환 장비
+
+| 구분 | 내용 |
+| --- | --- |
+| 확인한 장비 | CDJ-3000X, CDJ-3000, CDJ-2000NXS2, DJM-V10, DJM-900NXS2 |
+| 받는 쪽 | TCNet, SMPTE 타임코드(LTC, MTC, Art-Net), OSC, DMX(Art-Net, sACN), MIDI를 받는 프로그램과 장비 |
+
+> [!TIP]
+> 목록에 없는 장비는 아직 확인하지 않았습니다. 받을 수 있는 정보는 기종과 펌웨어에 따라 다릅니다.<br>
+> 써 본 결과를 [Issues](https://github.com/Zesminseok/ORVIK/issues)에 남겨 주시면 반영하겠습니다.
+
+## 문제 해결
+
+| 증상 | 확인할 것 |
+| --- | --- |
+| 덱이 보이지 않고 NO LINK가 뜸 | 설정의 PRO DJ LINK 인터페이스가 CDJ와 같은 네트워크인지 확인하고 새로고침을 누릅니다. |
+| Windows에서 장비가 보이지 않음 | Windows 방화벽이 ORVIK의 네트워크 접근을 막고 있지 않은지 확인합니다. |
+| 다른 프로그램을 같이 켜면 연결되지 않음 | PRO DJ LINK 포트를 쓰는 프로그램이 있으면 ORVIK이 알려 줍니다. 그 프로그램을 끄고 PRO DJ LINK를 다시 켭니다. |
+| 받는 쪽 타임코드가 맞지 않음 | ORVIK과 받는 장비의 프레임 레이트를 같게 맞춥니다. |
+
+해결되지 않으면 아래 **문제를 로그로 남기기** 순서로 로그를 캡처해 [Issues](https://github.com/Zesminseok/ORVIK/issues)에 올려 주세요.
 
 ## 개인정보와 네트워크
 

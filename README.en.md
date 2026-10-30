@@ -5,14 +5,14 @@
   <img src="docs/media/orvik-wordmark-light.png" alt="ORVIK" width="300">
 </picture>
 
-[![Version](docs/media/badge-version.svg)](CHANGELOG.md)
+[![Release](https://img.shields.io/github/v/release/Zesminseok/ORVIK?label=release&color=2ea44f)](https://github.com/Zesminseok/ORVIK/releases/latest)
 ![Status: Beta](https://img.shields.io/badge/status-beta-yellow.svg)
 ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows-lightgrey.svg)
 [![License: Proprietary](https://img.shields.io/badge/license-proprietary-red.svg)](BINARY_LICENSE.md)
 
 [한국어](README.md) | **English**
 
-[Download](https://github.com/Zesminseok/ORVIK/releases/latest) | [Manual](docs/manual/ORVIK-manual-en.md) | [Changelog](CHANGELOG.md#english) | [Issues](https://github.com/Zesminseok/ORVIK/issues)
+[Download](https://github.com/Zesminseok/ORVIK/releases/latest) | [Manual](docs/manual/ORVIK-manual-en.md) | [Changelog](CHANGELOG.en.md) | [Issues](https://github.com/Zesminseok/ORVIK/issues)
 
 <img src="docs/media/orvik-2.0-decks.png" alt="ORVIK deck screen" width="900">
 
@@ -23,6 +23,17 @@
 ORVIK reads tempo, beat, playback position, track info, cues, waveforms and mixer state from CDJs and DJMs on a PRO DJ LINK network and sends them out as TCNet, SMPTE timecode, OSC, DMX and MIDI.
 
 It only reads the hardware and never controls it.
+
+```mermaid
+flowchart LR
+    CDJ["CDJ"] -- "PRO DJ LINK" --> ORVIK
+    DJM["DJM"] -- "PRO DJ LINK" --> ORVIK
+    FILE["Audio files<br/>(virtual decks)"] --> ORVIK
+    ORVIK(["ORVIK"]) --> TCNET["TCNet"]
+    ORVIK --> TC["LTC, MTC,<br/>Art-Net timecode"]
+    ORVIK --> CTRL["OSC, MIDI,<br/>DMX (Art-Net, sACN)"]
+    ORVIK --> WEB["Web viewer,<br/>CUE CALL web page"]
+```
 
 2.0 is a new native app (C++ / JUCE). It starts in under a second and is far lighter than 1.6.
 
@@ -76,6 +87,28 @@ Get the file for your system from the [latest release](https://github.com/Zesmin
 > [!IMPORTANT]
 > Beta. Check timecode and outputs with your actual receivers before a show.
 
+## Compatibility
+
+| | |
+| --- | --- |
+| Tested hardware | CDJ-3000X, CDJ-3000, CDJ-2000NXS2, DJM-V10, DJM-900NXS2 |
+| Receivers | software and hardware that take TCNet, SMPTE timecode (LTC, MTC, Art-Net), OSC, DMX (Art-Net, sACN) or MIDI |
+
+> [!TIP]
+> Hardware not listed here has not been tested yet. What ORVIK can read depends on the model and firmware.<br>
+> If you try other hardware, please report the result in [Issues](https://github.com/Zesminseok/ORVIK/issues).
+
+## Troubleshooting
+
+| Symptom | What to check |
+| --- | --- |
+| No decks, NO LINK shown | In settings, make sure the PRO DJ LINK interface is on the same network as the CDJs, then press refresh. |
+| No hardware found on Windows | Make sure Windows Firewall is not blocking ORVIK's network access. |
+| No connection while another program is open | ORVIK tells you when another program uses the PRO DJ LINK ports. Quit that program and turn PRO DJ LINK on again. |
+| Timecode does not match on the receiver | Set the same frame rate in ORVIK and on the receiver. |
+
+If that does not help, record a log as described under **Recording a log** below and attach it to an [issue](https://github.com/Zesminseok/ORVIK/issues).
+
 ## Privacy and network
 
 ORVIK sends no usage data to the internet.
@@ -113,7 +146,7 @@ Logs can contain track titles, device names, IP and MAC addresses. Check them be
 ## Documentation
 
 - Manual: [English](docs/manual/ORVIK-manual-en.md), [한국어](docs/manual/ORVIK-manual-ko.md), [日本語](docs/manual/ORVIK-manual-ja.md), [Español](docs/manual/ORVIK-manual-es.md), [Deutsch](docs/manual/ORVIK-manual-de.md), [Français](docs/manual/ORVIK-manual-fr.md), [繁體中文](docs/manual/ORVIK-manual-zh-TW.md)
-- [Changelog](CHANGELOG.md#english)
+- [Changelog](CHANGELOG.en.md)
 - FFmpeg materials for 1.6.x: [FFmpeg notes](docs/third-party/FFMPEG.md) (2.0 does not use FFmpeg)
 
 ## Support
