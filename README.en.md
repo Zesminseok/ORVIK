@@ -58,8 +58,7 @@ Get the file for your system from the [latest release](https://github.com/Zesmin
 > On an Intel Mac, use [1.6.3](https://github.com/Zesminseok/ORVIK/releases/tag/v1.6.3). 1.6 settings are not carried over to 2.0.
 
 > [!TIP]
-> If macOS blocks the first launch, choose **System Settings → Privacy & Security → Open Anyway**.
-> If Windows SmartScreen warns, choose **More info → Run anyway**.
+> The macOS app is notarized by Apple. If Windows SmartScreen warns, choose **More info → Run anyway**.
 
 > [!IMPORTANT]
 > Beta. Check timecode and outputs with your actual receivers before a show.

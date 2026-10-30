@@ -57,8 +57,7 @@ TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 내보냅니다. 장비를 제어�
 > Intel Mac에서는 [1.6.3](https://github.com/Zesminseok/ORVIK/releases/tag/v1.6.3)을 쓰세요. 1.6의 설정은 2.0으로 옮겨지지 않습니다.
 
 > [!TIP]
-> macOS에서 첫 실행이 막히면 **시스템 설정 → 개인정보 보호 및 보안 → 그래도 열기**를,
-> Windows에서 SmartScreen 경고가 뜨면 **추가 정보 → 실행**을 누르세요.
+> macOS 앱은 Apple 공증을 받았습니다. Windows에서 SmartScreen 경고가 뜨면 **추가 정보 → 실행**을 누르세요.
 
 > [!IMPORTANT]
 > 베타입니다. 공연에 쓰기 전에 타임코드와 출력을 실제 수신 장비와 꼭 확인하세요.
