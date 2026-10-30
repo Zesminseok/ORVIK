@@ -5,7 +5,6 @@
   <img src="docs/media/orvik-wordmark-light.png" alt="ORVIK" width="300">
 </picture>
 
-**CDJ와 DJM의 재생 정보를 조명, 영상 소프트웨어로**
 
 [![Version](docs/media/badge-version.svg)](CHANGELOG.md)
 ![Status: Beta](https://img.shields.io/badge/status-beta-yellow.svg)
@@ -23,7 +22,9 @@
 ## ORVIK는
 
 PRO DJ LINK로 연결된 CDJ와 DJM에서 템포, 비트, 재생 위치, 곡 정보, 큐, 웨이브폼, 믹서 상태를 받아
-TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 내보냅니다. 장비를 제어하지 않고 읽기만 합니다.
+TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 내보냅니다. 
+
+장비를 제어하지 않고 읽기만 합니다.
 
 2.0은 네이티브 앱(C++ / JUCE)으로 새로 만들었습니다. 1초 안에 켜지고 1.6보다 훨씬 가볍습니다.
 
