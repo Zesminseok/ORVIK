@@ -8,7 +8,7 @@
 
 ## 2.0.0 (2026-10-30)
 
-ORVIK 2.0은 Electron 앱을 대체하는 네이티브 앱(C++ / JUCE)입니다. 1초 안에 켜지고 메모리와 CPU를 훨씬 덜 쓰며, 1.6의 기능을 모두 갖추고 있습니다. macOS 13.3 이상(Apple Silicon, Intel), Windows 10, 11(x64).
+ORVIK 2.0은 Electron 앱을 대체하는 네이티브 앱(C++ / JUCE)입니다. 1초 안에 켜지고 메모리와 CPU를 훨씬 덜 쓰며, 1.6의 기능을 모두 갖추고 있습니다. macOS 13.3 이상(Apple Silicon), Windows 10, 11(x64). Intel Mac 빌드는 없습니다.
 
 **추가**
 
@@ -65,7 +65,6 @@ ORVIK 2.0은 Electron 앱을 대체하는 네이티브 앱(C++ / JUCE)입니다.
 **알려진 한계**
 
 - 베타입니다. LTC, MTC, Art-Net 타임코드는 스튜디오의 수신기로 확인했고 모든 콘솔에서 확인한 것은 아닙니다. 공연 전에 확인하세요.
-- Intel Mac 빌드는 Apple Silicon의 Rosetta 2에서만 확인했습니다.
 - macOS 앱은 Apple Developer ID 서명과 공증이 없고, Windows `.exe`는 코드 서명이 없습니다.
 
 ---
@@ -329,7 +328,7 @@ Changes in public releases.
 
 ## 2.0.0 (2026-10-30)
 
-ORVIK 2.0 is a native app (C++ / JUCE) that replaces the Electron app. It starts in under a second, uses far less memory and CPU, and keeps every feature of 1.6. macOS 13.3 or later (Apple Silicon, Intel), Windows 10/11 (x64).
+ORVIK 2.0 is a native app (C++ / JUCE) that replaces the Electron app. It starts in under a second, uses far less memory and CPU, and keeps every feature of 1.6. macOS 13.3 or later (Apple Silicon), Windows 10/11 (x64). There is no Intel Mac build.
 
 **New**
 
@@ -386,7 +385,6 @@ New
 **Known limits**
 
 - Beta. LTC, MTC and Art-Net timecode have been checked against receivers in the studio, not on every console: test before a show.
-- The Intel Mac build has been checked under Rosetta 2 on Apple Silicon only.
 - The macOS app has no Apple Developer ID signature or notarization, and the Windows `.exe` is not code-signed.
 
 ---
