@@ -88,7 +88,7 @@ Get the file for your system from the [latest release](https://github.com/Zesmin
 
 | Symptom | What to check |
 | --- | --- |
-| No&nbsp;decks,&nbsp;NO&nbsp;LINK | Pick the CDJs' network as the PRO DJ LINK interface in settings, then press refresh. |
+| No&nbsp;decks,&nbsp;NO&nbsp;LINK | Set the PRO DJ LINK interface to the CDJs' network, then press refresh. |
 | Nothing&nbsp;found&nbsp;on&nbsp;Windows | Make sure Windows Firewall is not blocking ORVIK. |
 | No&nbsp;link&nbsp;with&nbsp;another&nbsp;app | Quit the program ORVIK names, then turn PRO DJ LINK on again. |
 | Timecode&nbsp;off&nbsp;on&nbsp;the&nbsp;receiver | Use the same frame rate in ORVIK and on the receiver. |
@@ -109,7 +109,7 @@ ORVIK sends no usage data to the internet.
 | OUTPUT,&nbsp;SMPTE&nbsp;OUT | off | sends OSC, DMX, MIDI and timecode to the targets you set |
 | SHORTCUT&nbsp;input | off | receives OSC (UDP 7700) and Art-Net DMX (UDP 6454) |
 | Web&nbsp;viewer | off | TCP 8877, 4-character code, unencrypted HTTP |
-| Mirror | on | with no CDJ, connects to a mirror server on the network (serving off, TCP 8878) |
+| Mirror | on | joins a mirror server when no CDJ is found (serving off, TCP 8878) |
 | Update&nbsp;check | on | checks GitHub every 12 hours (sends only the app version) |
 
 - Spoken calls are made with the system voices; no text leaves the computer.
