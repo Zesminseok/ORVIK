@@ -26,17 +26,6 @@ TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 내보냅니다.
 
 장비를 제어하지 않고 읽기만 합니다.
 
-```mermaid
-flowchart LR
-    CDJ["CDJ"] -- "PRO DJ LINK" --> ORVIK
-    DJM["DJM"] -- "PRO DJ LINK" --> ORVIK
-    FILE["음원 파일<br/>(가상 덱)"] --> ORVIK
-    ORVIK(["ORVIK"]) --> TCNET["TCNet"]
-    ORVIK --> TC["LTC, MTC,<br/>Art-Net 타임코드"]
-    ORVIK --> CTRL["OSC, MIDI,<br/>DMX (Art-Net, sACN)"]
-    ORVIK --> WEB["웹 뷰어,<br/>CUE CALL 웹 페이지"]
-```
-
 2.0은 네이티브 앱(C++ / JUCE)으로 새로 만들었습니다.<br>
 1초 안에 켜지고 1.6보다 훨씬 가볍습니다.
 

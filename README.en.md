@@ -24,17 +24,6 @@ ORVIK reads tempo, beat, playback position, track info, cues, waveforms and mixe
 
 It only reads the hardware and never controls it.
 
-```mermaid
-flowchart LR
-    CDJ["CDJ"] -- "PRO DJ LINK" --> ORVIK
-    DJM["DJM"] -- "PRO DJ LINK" --> ORVIK
-    FILE["Audio files<br/>(virtual decks)"] --> ORVIK
-    ORVIK(["ORVIK"]) --> TCNET["TCNet"]
-    ORVIK --> TC["LTC, MTC,<br/>Art-Net timecode"]
-    ORVIK --> CTRL["OSC, MIDI,<br/>DMX (Art-Net, sACN)"]
-    ORVIK --> WEB["Web viewer,<br/>CUE CALL web page"]
-```
-
 2.0 is a new native app (C++ / JUCE). It starts in under a second and is far lighter than 1.6.
 
 ## Features
