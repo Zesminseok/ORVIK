@@ -14,7 +14,7 @@
 
 [다운로드](https://github.com/Zesminseok/ORVIK/releases/latest) | [사용 설명서](docs/manual/ORVIK-manual-ko.md) | [변경 내역](CHANGELOG.ko.md) | [문의](https://github.com/Zesminseok/ORVIK/issues)
 
-<img src="docs/media/orvik-2.0-decks.png" alt="ORVIK 덱 화면" width="900">
+<img src="docs/media/screen-decks.png" alt="ORVIK 덱 화면" width="900">
 
 </div>
 
@@ -28,32 +28,22 @@ TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 내보냅니다.
 
 ## 주요 기능
 
-| 기능 | 설명 |
-| --- | --- |
-| **DECKS** | 덱과 믹서 상태, 웨이브폼, 큐를 한눈에 |
-| **SMPTE OUT** | 레이어 A, B, MASTER의 LTC, MTC, Art-Net 타임코드 |
-| **OUTPUT** | 덱과 믹서 값을 OSC, Art-Net / sACN DMX, MIDI로 보내는 노드 편집기 |
-| **SET LIST** | 곡별 타임코드 오프셋, 큐 편집 |
-| **CUE CALL** | 그룹별 다음 큐 카운트다운, 음성 안내, 휴대폰용 웹 페이지 |
-| **SHORTCUT, MAP** | 키보드, MIDI, OSC, DMX로 ORVIK 조작 |
-
-그 밖에 가상 덱, 웹 뷰어, 미러 모드, HISTORY, 7개 언어를 지원합니다.
-
-## 스크린샷
-
 <table>
 <tr>
-<td width="50%"><img src="docs/media/screen-cuecall-board.png" alt="CUE CALL 보드"><br><sub><b>CUE CALL 보드</b>: 그룹별 다음 큐와 남은 시간</sub></td>
-<td width="50%"><img src="docs/media/screen-cuecall-layers.png" alt="CUE CALL 레이어"><br><sub><b>CUE CALL 레이어</b>: 마스터 덱 웨이브폼과 큐 타임라인</sub></td>
+<td width="50%" valign="top"><img src="docs/media/screen-smpte.png" alt="SMPTE OUT"><br><b>SMPTE OUT</b><br>레이어 A, B, MASTER의 LTC, MTC, Art-Net 타임코드</td>
+<td width="50%" valign="top"><img src="docs/media/screen-output.png" alt="OUTPUT"><br><b>OUTPUT</b><br>덱과 믹서 값을 OSC, Art-Net / sACN DMX, MIDI로 보내는 노드 편집기</td>
 </tr>
 <tr>
-<td><img src="docs/media/screen-output.png" alt="OUTPUT"><br><sub><b>OUTPUT</b>: 덱, 믹서 값을 OSC, DMX, MIDI로 연결하는 노드 편집기</sub></td>
-<td><img src="docs/media/screen-mixer.png" alt="MIXER"><br><sub><b>MIXER</b>: DJM 상태 (DJM-900NXS2)</sub></td>
+<td width="50%" valign="top"><img src="docs/media/screen-setlist.png" alt="SET LIST"><br><b>SET LIST</b><br>곡별 타임코드 오프셋, 웨이브폼과 비트 그리드 위의 큐 편집</td>
+<td width="50%" valign="top"><img src="docs/media/screen-mixer.png" alt="MIXER"><br><b>MIXER</b><br>DJM의 페이더, EQ, 이펙트, 미터 상태</td>
 </tr>
 <tr>
-<td colspan="2"><img src="docs/media/screen-cue-editor.png" alt="SET LIST 큐 편집"><br><sub><b>SET LIST 큐 편집</b>: 웨이브폼과 비트 그리드 위에 큐 배치</sub></td>
+<td width="50%" valign="top"><img src="docs/media/screen-cuecall-board.png" alt="CUE CALL 보드"><br><b>CUE CALL 보드</b><br>그룹별 다음 큐와 남은 시간, 음성 안내</td>
+<td width="50%" valign="top"><img src="docs/media/screen-cuecall-layers.png" alt="CUE CALL 레이어"><br><b>CUE CALL 레이어</b><br>마스터 덱 웨이브폼과 큐 타임라인, 휴대폰용 웹 페이지</td>
 </tr>
 </table>
+
+그 밖에 SHORTCUT과 MAP(키보드, MIDI, OSC, DMX로 ORVIK 조작), 가상 덱, 웹 뷰어, 미러 모드, HISTORY, 7개 언어를 지원합니다.
 
 ## 설치
 

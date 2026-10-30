@@ -14,7 +14,7 @@
 
 [Download](https://github.com/Zesminseok/ORVIK/releases/latest) | [Manual](docs/manual/ORVIK-manual-en.md) | [Changelog](CHANGELOG.md) | [Issues](https://github.com/Zesminseok/ORVIK/issues)
 
-<img src="docs/media/orvik-2.0-decks.png" alt="ORVIK deck screen" width="900">
+<img src="docs/media/screen-decks.png" alt="ORVIK decks" width="900">
 
 </div>
 
@@ -26,32 +26,22 @@ It only reads the hardware and never controls it.
 
 ## Features
 
-| Feature | What |
-| --- | --- |
-| **DECKS** | deck and mixer state, waveforms and cues at a glance |
-| **SMPTE OUT** | LTC, MTC and Art-Net timecode for layers A, B and MASTER |
-| **OUTPUT** | a node editor that sends deck and mixer values as OSC, Art-Net / sACN DMX and MIDI |
-| **SET LIST** | per-track timecode offsets and a cue editor |
-| **CUE CALL** | next-cue countdown per group, spoken calls, a phone web page |
-| **SHORTCUT, MAP** | control ORVIK by keyboard, MIDI, OSC and DMX |
-
-Also: virtual decks, web viewer, mirror mode, HISTORY and 7 languages.
-
-## Screenshots
-
 <table>
 <tr>
-<td width="50%"><img src="docs/media/screen-cuecall-board.png" alt="CUE CALL board"><br><sub><b>CUE CALL board</b>: each group's next cue and the time left</sub></td>
-<td width="50%"><img src="docs/media/screen-cuecall-layers.png" alt="CUE CALL layers"><br><sub><b>CUE CALL layers</b>: master deck waveform and cue timeline</sub></td>
+<td width="50%" valign="top"><img src="docs/media/screen-smpte.png" alt="SMPTE OUT"><br><b>SMPTE OUT</b><br>LTC, MTC and Art-Net timecode for layers A, B and MASTER</td>
+<td width="50%" valign="top"><img src="docs/media/screen-output.png" alt="OUTPUT"><br><b>OUTPUT</b><br>A node editor that sends deck and mixer values as OSC, Art-Net / sACN DMX and MIDI</td>
 </tr>
 <tr>
-<td><img src="docs/media/screen-output.png" alt="OUTPUT"><br><sub><b>OUTPUT</b>: a node editor wiring deck and mixer values to OSC, DMX and MIDI</sub></td>
-<td><img src="docs/media/screen-mixer.png" alt="MIXER"><br><sub><b>MIXER</b>: DJM state (DJM-900NXS2)</sub></td>
+<td width="50%" valign="top"><img src="docs/media/screen-setlist.png" alt="SET LIST"><br><b>SET LIST</b><br>Per-track timecode offsets, and cues placed on the waveform and beat grid</td>
+<td width="50%" valign="top"><img src="docs/media/screen-mixer.png" alt="MIXER"><br><b>MIXER</b><br>DJM state: faders, EQ, effects and meters</td>
 </tr>
 <tr>
-<td colspan="2"><img src="docs/media/screen-cue-editor.png" alt="SET LIST cue editor"><br><sub><b>SET LIST cue editor</b>: cues placed on the waveform and beat grid</sub></td>
+<td width="50%" valign="top"><img src="docs/media/screen-cuecall-board.png" alt="CUE CALL board"><br><b>CUE CALL board</b><br>Each group's next cue and the time left, with spoken calls</td>
+<td width="50%" valign="top"><img src="docs/media/screen-cuecall-layers.png" alt="CUE CALL layers"><br><b>CUE CALL layers</b><br>The master deck's waveform and cue timeline, also as a phone web page</td>
 </tr>
 </table>
+
+Also: SHORTCUT and MAP (control ORVIK by keyboard, MIDI, OSC and DMX), virtual decks, web viewer, mirror mode, HISTORY and 7 languages.
 
 ## Install
 
