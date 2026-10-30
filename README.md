@@ -58,8 +58,8 @@ Get the file for your system from the [latest release](https://github.com/Zesmin
 
 | System | File |
 | --- | --- |
-| macOS 13.3 or later (Apple Silicon) | `mac-arm64.dmg` |
-| Windows 10/11 (x64) | `win-x64.exe` (portable, no installation) |
+| macOS&nbsp;13.3+&nbsp;(Apple&nbsp;Silicon) | `mac-arm64.dmg` |
+| Windows&nbsp;10,&nbsp;11&nbsp;(x64) | `win-x64.exe` (portable, no installation) |
 
 1. On macOS, open the DMG and move ORVIK to Applications (notarized by Apple). On Windows, run the `.exe`.
 2. Connect the computer and the DJ hardware to the same network.
@@ -77,8 +77,8 @@ Get the file for your system from the [latest release](https://github.com/Zesmin
 
 | | |
 | --- | --- |
-| Tested hardware | CDJ-3000X, CDJ-3000, CDJ-2000NXS2, DJM-V10, DJM-900NXS2 |
-| Receivers | software and hardware that take TCNet, SMPTE timecode (LTC, MTC, Art-Net), OSC, DMX (Art-Net, sACN) or MIDI |
+| Tested&nbsp;hardware | CDJ-3000X, CDJ-3000, CDJ-2000NXS2, DJM-V10, DJM-900NXS2 |
+| Receivers | software and hardware that take TCNet, LTC, MTC, Art-Net, OSC, sACN or MIDI |
 
 > [!TIP]
 > Hardware not listed here has not been tested yet. What ORVIK can read depends on the model and firmware.<br>
@@ -88,10 +88,10 @@ Get the file for your system from the [latest release](https://github.com/Zesmin
 
 | Symptom | What to check |
 | --- | --- |
-| No decks, NO LINK shown | In settings, make sure the PRO DJ LINK interface is on the same network as the CDJs, then press refresh. |
-| No hardware found on Windows | Make sure Windows Firewall is not blocking ORVIK's network access. |
-| No connection while another program is open | ORVIK tells you when another program uses the PRO DJ LINK ports. Quit that program and turn PRO DJ LINK on again. |
-| Timecode does not match on the receiver | Set the same frame rate in ORVIK and on the receiver. |
+| No&nbsp;decks,&nbsp;NO&nbsp;LINK | Pick the CDJs' network as the PRO DJ LINK interface in settings, then press refresh. |
+| Nothing&nbsp;found&nbsp;on&nbsp;Windows | Make sure Windows Firewall is not blocking ORVIK. |
+| No&nbsp;link&nbsp;with&nbsp;another&nbsp;app | Quit the program ORVIK names, then turn PRO DJ LINK on again. |
+| Timecode&nbsp;off&nbsp;on&nbsp;the&nbsp;receiver | Use the same frame rate in ORVIK and on the receiver. |
 
 If that does not help, record a log as described under **Recording a log** below and attach it to an [issue](https://github.com/Zesminseok/ORVIK/issues).
 
@@ -104,13 +104,13 @@ ORVIK sends no usage data to the internet.
 
 | Feature | Default | What |
 | --- | --- | --- |
-| PRO DJ LINK | on | joins as a device named "ORVIK" and requests track info, waveforms, cues, mixer state |
+| PRO&nbsp;DJ&nbsp;LINK | on | joins as "ORVIK" and requests track info, waveforms, cues, mixer state |
 | TCNet | on | sends track info, artwork, position, BPM, mixer values |
-| OUTPUT, SMPTE OUT | off | sends OSC, DMX, MIDI and timecode where you set |
-| SHORTCUT input | off | receives OSC (UDP 7700) and Art-Net DMX (UDP 6454) |
-| Web viewer | off | TCP 8877, 4-character code, unencrypted HTTP |
-| Mirror | on | connects to a mirror server on the same network when this PC has no CDJ (serving is off, TCP 8878) |
-| Update check | on | asks GitHub for the latest version every 12 hours (sends only the app version) |
+| OUTPUT,&nbsp;SMPTE&nbsp;OUT | off | sends OSC, DMX, MIDI and timecode to the targets you set |
+| SHORTCUT&nbsp;input | off | receives OSC (UDP 7700) and Art-Net DMX (UDP 6454) |
+| Web&nbsp;viewer | off | TCP 8877, 4-character code, unencrypted HTTP |
+| Mirror | on | with no CDJ, connects to a mirror server on the network (serving off, TCP 8878) |
+| Update&nbsp;check | on | checks GitHub every 12 hours (sends only the app version) |
 
 - Spoken calls are made with the system voices; no text leaves the computer.
 - Settings folder: macOS `~/Library/Application Support/com.zesminseok.orvik`, Windows `%APPDATA%\Zesminseok\ORVIK`

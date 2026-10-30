@@ -60,8 +60,8 @@ TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 내보냅니다.
 
 | 운영체제 | 파일 |
 | --- | --- |
-| macOS 13.3 이상 (Apple Silicon) | `mac-arm64.dmg` |
-| Windows 10, 11 (x64) | `win-x64.exe` (설치 없이 실행) |
+| macOS&nbsp;13.3&nbsp;이상&nbsp;(Apple&nbsp;Silicon) | `mac-arm64.dmg` |
+| Windows&nbsp;10,&nbsp;11&nbsp;(x64) | `win-x64.exe` (설치 없이 실행) |
 
 1. macOS는 DMG를 열어 ORVIK를 응용 프로그램 폴더로 옮깁니다 (Apple 공증 완료).<br>
    Windows는 `.exe`를 바로 실행합니다.
@@ -81,8 +81,8 @@ TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 내보냅니다.
 
 | 구분 | 내용 |
 | --- | --- |
-| 확인한 장비 | CDJ-3000X, CDJ-3000, CDJ-2000NXS2, DJM-V10, DJM-900NXS2 |
-| 받는 쪽 | TCNet, SMPTE 타임코드(LTC, MTC, Art-Net), OSC, DMX(Art-Net, sACN), MIDI를 받는 프로그램과 장비 |
+| 확인한&nbsp;장비 | CDJ-3000X, CDJ-3000, CDJ-2000NXS2, DJM-V10, DJM-900NXS2 |
+| 받는&nbsp;쪽 | TCNet, LTC, MTC, Art-Net, OSC, sACN, MIDI를 받는 프로그램과 장비 |
 
 > [!TIP]
 > 목록에 없는 장비는 아직 확인하지 않았습니다. 받을 수 있는 정보는 기종과 펌웨어에 따라 다릅니다.<br>
@@ -92,10 +92,10 @@ TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 내보냅니다.
 
 | 증상 | 확인할 것 |
 | --- | --- |
-| 덱이 보이지 않고 NO LINK가 뜸 | 설정의 PRO DJ LINK 인터페이스가 CDJ와 같은 네트워크인지 확인하고 새로고침을 누릅니다. |
-| Windows에서 장비가 보이지 않음 | Windows 방화벽이 ORVIK의 네트워크 접근을 막고 있지 않은지 확인합니다. |
-| 다른 프로그램을 같이 켜면 연결되지 않음 | PRO DJ LINK 포트를 쓰는 프로그램이 있으면 ORVIK이 알려 줍니다. 그 프로그램을 끄고 PRO DJ LINK를 다시 켭니다. |
-| 받는 쪽 타임코드가 맞지 않음 | ORVIK과 받는 장비의 프레임 레이트를 같게 맞춥니다. |
+| 덱이&nbsp;안&nbsp;보이고&nbsp;NO&nbsp;LINK | 설정에서 PRO DJ LINK 인터페이스를 CDJ 네트워크로 고르고 새로고침 |
+| Windows에서&nbsp;장비가&nbsp;안&nbsp;보임 | Windows 방화벽이 ORVIK을 막고 있지 않은지 확인 |
+| 다른&nbsp;프로그램과&nbsp;같이&nbsp;쓰면&nbsp;연결&nbsp;안&nbsp;됨 | ORVIK이 알려 준 프로그램을 끄고 PRO DJ LINK를 다시 켬 |
+| 받는&nbsp;쪽&nbsp;타임코드가&nbsp;다름 | ORVIK과 받는 장비의 프레임 레이트를 같게 맞춤 |
 
 해결되지 않으면 아래 **문제를 로그로 남기기** 순서로 로그를 캡처해 [Issues](https://github.com/Zesminseok/ORVIK/issues)에 올려 주세요.
 
@@ -108,13 +108,13 @@ ORVIK는 인터넷으로 사용 기록을 보내지 않습니다.
 
 | 기능 | 기본값 | 내용 |
 | --- | --- | --- |
-| PRO DJ LINK | 켜짐 | 'ORVIK' 장치로 참여해<br>곡 정보, 웨이브폼, 큐, 믹서 상태를 요청 |
+| PRO&nbsp;DJ&nbsp;LINK | 켜짐 | 'ORVIK' 장치로 참여해 곡 정보, 웨이브폼, 큐, 믹서 상태를 요청 |
 | TCNet | 켜짐 | 곡 정보, 앨범아트, 재생 위치, BPM, 믹서 값을 보냄 |
-| OUTPUT, SMPTE OUT | 꺼짐 | 지정한 대상으로 OSC, DMX, MIDI, 타임코드를 보냄 |
-| SHORTCUT 입력 | 꺼짐 | OSC(UDP 7700), Art-Net DMX(UDP 6454)를 받음 |
-| 웹 뷰어 | 꺼짐 | TCP 8877, 4글자 코드, 암호화되지 않은 HTTP |
-| 미러 | 켜짐 | CDJ가 없으면 같은 네트워크의 미러 서버에 자동 연결<br>(서버 기능은 꺼짐, TCP 8878) |
-| 업데이트 확인 | 켜짐 | 12시간마다 GitHub에서 최신 버전을 확인<br>(앱 버전만 보냄) |
+| OUTPUT,&nbsp;SMPTE&nbsp;OUT | 꺼짐 | 지정한 대상으로 OSC, DMX, MIDI, 타임코드를 보냄 |
+| SHORTCUT&nbsp;입력 | 꺼짐 | OSC(UDP 7700), Art-Net DMX(UDP 6454)를 받음 |
+| 웹&nbsp;뷰어 | 꺼짐 | TCP 8877, 4글자 코드, 암호화되지 않은 HTTP |
+| 미러 | 켜짐 | CDJ가 없으면 같은 네트워크의 미러 서버에 연결 (서버 기능은 꺼짐, TCP 8878) |
+| 업데이트&nbsp;확인 | 켜짐 | 12시간마다 GitHub에서 최신 버전 확인 (앱 버전만 보냄) |
 
 - 음성 안내는 컴퓨터의 시스템 음성으로 만들며 외부로 보내지 않습니다.
 - 설정 폴더
