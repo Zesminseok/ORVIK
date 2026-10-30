@@ -21,9 +21,9 @@
 ## What it does
 
 ORVIK reads tempo, beat, playback position, track info, cues, waveforms and mixer state from CDJs and DJMs on a
-PRO DJ LINK network and sends them out as TCNet, SMPTE timecode, OSC, DMX and MIDI. It only reads the hardware
+PRO DJ LINK network and sends them out as TCNet, SMPTE timecode, OSC, DMX and MIDI.
 
-it never controls it.
+It only reads the hardware and never controls it.
 
 2.0 is a new native app (C++ / JUCE). It starts in under a second and is far lighter than 1.6.
 
