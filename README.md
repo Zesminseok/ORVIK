@@ -14,7 +14,7 @@
 
 [Download](https://github.com/Zesminseok/ORVIK/releases/latest) | [Manual](docs/manual/ORVIK-manual-en.md) | [Changelog](CHANGELOG.md) | [Issues](https://github.com/Zesminseok/ORVIK/issues)
 
-<img src="docs/media/screen-decks.png" alt="ORVIK decks" width="900">
+<img src="docs/media/shot-decks.png" alt="ORVIK decks" width="900">
 
 </div>
 
@@ -39,16 +39,16 @@ Also: virtual decks, web viewer, mirror mode, HISTORY and 7 languages.
 
 <table>
 <tr>
-<td width="50%"><img src="docs/media/screen-cuecall-board.png" alt="CUE CALL board"><br><sub><b>CUE CALL board</b>: each group's next cue and the time left</sub></td>
-<td width="50%"><img src="docs/media/screen-cuecall-layers.png" alt="CUE CALL layers"><br><sub><b>CUE CALL layers</b>: master deck waveform and cue timeline</sub></td>
+<td width="50%"><img src="docs/media/shot-cuecall-board.png" alt="CUE CALL board"><br><sub><b>CUE CALL board</b>: each group's next cue and the time left</sub></td>
+<td width="50%"><img src="docs/media/shot-cuecall-layers.png" alt="CUE CALL layers"><br><sub><b>CUE CALL layers</b>: master deck waveform and cue timeline</sub></td>
 </tr>
 <tr>
-<td width="50%"><img src="docs/media/screen-smpte.png" alt="SMPTE OUT"><br><sub><b>SMPTE OUT</b>: timecode for layers A, B and MASTER</sub></td>
-<td width="50%"><img src="docs/media/screen-output.png" alt="OUTPUT"><br><sub><b>OUTPUT</b>: node editor for OSC, DMX and MIDI</sub></td>
+<td width="50%"><img src="docs/media/shot-smpte.png" alt="SMPTE OUT"><br><sub><b>SMPTE OUT</b>: timecode for layers A, B and MASTER</sub></td>
+<td width="50%"><img src="docs/media/shot-output.png" alt="OUTPUT"><br><sub><b>OUTPUT</b>: node editor for OSC, DMX and MIDI</sub></td>
 </tr>
 <tr>
-<td width="50%"><img src="docs/media/screen-setlist.png" alt="SET LIST"><br><sub><b>SET LIST</b>: timecode offsets and the cue editor</sub></td>
-<td width="50%"><img src="docs/media/screen-mixer.png" alt="MIXER"><br><sub><b>MIXER</b>: DJM state (DJM-900NXS2)</sub></td>
+<td width="50%"><img src="docs/media/shot-setlist.png" alt="SET LIST"><br><sub><b>SET LIST</b>: timecode offsets and the cue editor</sub></td>
+<td width="50%"><img src="docs/media/shot-mixer.png" alt="MIXER"><br><sub><b>MIXER</b>: DJM state (DJM-900NXS2)</sub></td>
 </tr>
 </table>
 

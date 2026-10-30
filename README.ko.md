@@ -14,7 +14,7 @@
 
 [다운로드](https://github.com/Zesminseok/ORVIK/releases/latest) | [사용 설명서](docs/manual/ORVIK-manual-ko.md) | [변경 내역](CHANGELOG.ko.md) | [문의](https://github.com/Zesminseok/ORVIK/issues)
 
-<img src="docs/media/screen-decks.png" alt="ORVIK 덱 화면" width="900">
+<img src="docs/media/shot-decks.png" alt="ORVIK 덱 화면" width="900">
 
 </div>
 
@@ -41,16 +41,16 @@ TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 내보냅니다.
 
 <table>
 <tr>
-<td width="50%"><img src="docs/media/screen-cuecall-board.png" alt="CUE CALL 보드"><br><sub><b>CUE CALL 보드</b>: 그룹별 다음 큐와 남은 시간</sub></td>
-<td width="50%"><img src="docs/media/screen-cuecall-layers.png" alt="CUE CALL 레이어"><br><sub><b>CUE CALL 레이어</b>: 마스터 덱 웨이브폼과 큐 타임라인</sub></td>
+<td width="50%"><img src="docs/media/shot-cuecall-board.png" alt="CUE CALL 보드"><br><sub><b>CUE CALL 보드</b>: 그룹별 다음 큐와 남은 시간</sub></td>
+<td width="50%"><img src="docs/media/shot-cuecall-layers.png" alt="CUE CALL 레이어"><br><sub><b>CUE CALL 레이어</b>: 마스터 덱 웨이브폼과 큐 타임라인</sub></td>
 </tr>
 <tr>
-<td width="50%"><img src="docs/media/screen-smpte.png" alt="SMPTE OUT"><br><sub><b>SMPTE OUT</b>: 레이어 A, B, MASTER 타임코드</sub></td>
-<td width="50%"><img src="docs/media/screen-output.png" alt="OUTPUT"><br><sub><b>OUTPUT</b>: OSC, DMX, MIDI 노드 편집기</sub></td>
+<td width="50%"><img src="docs/media/shot-smpte.png" alt="SMPTE OUT"><br><sub><b>SMPTE OUT</b>: 레이어 A, B, MASTER 타임코드</sub></td>
+<td width="50%"><img src="docs/media/shot-output.png" alt="OUTPUT"><br><sub><b>OUTPUT</b>: OSC, DMX, MIDI 노드 편집기</sub></td>
 </tr>
 <tr>
-<td width="50%"><img src="docs/media/screen-setlist.png" alt="SET LIST"><br><sub><b>SET LIST</b>: 타임코드 오프셋과 큐 편집</sub></td>
-<td width="50%"><img src="docs/media/screen-mixer.png" alt="MIXER"><br><sub><b>MIXER</b>: DJM 상태 (DJM-900NXS2)</sub></td>
+<td width="50%"><img src="docs/media/shot-setlist.png" alt="SET LIST"><br><sub><b>SET LIST</b>: 타임코드 오프셋과 큐 편집</sub></td>
+<td width="50%"><img src="docs/media/shot-mixer.png" alt="MIXER"><br><sub><b>MIXER</b>: DJM 상태 (DJM-900NXS2)</sub></td>
 </tr>
 </table>
 
