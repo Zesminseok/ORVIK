@@ -18,10 +18,9 @@
 
 </div>
 
-## What it does
+## About
 
-ORVIK reads tempo, beat, playback position, track info, cues, waveforms and mixer state from CDJs and DJMs on a
-PRO DJ LINK network and sends them out as TCNet, SMPTE timecode, OSC, DMX and MIDI.
+ORVIK reads tempo, beat, playback position, track info, cues, waveforms and mixer state from CDJs and DJMs on a PRO DJ LINK network and sends them out as TCNet, SMPTE timecode, OSC, DMX and MIDI.
 
 It only reads the hardware and never controls it.
 
@@ -40,6 +39,22 @@ It only reads the hardware and never controls it.
 
 Also: virtual decks, web viewer, mirror mode, HISTORY and 7 languages.
 
+## Screens
+
+<table>
+<tr>
+<td width="50%"><img src="docs/media/screen-cuecall-board.png" alt="CUE CALL board"><br><sub><b>CUE CALL board</b>: each group's next cue and the time left</sub></td>
+<td width="50%"><img src="docs/media/screen-cuecall-layers.png" alt="CUE CALL layers"><br><sub><b>CUE CALL layers</b>: master deck waveform and cue timeline</sub></td>
+</tr>
+<tr>
+<td><img src="docs/media/screen-output.png" alt="OUTPUT"><br><sub><b>OUTPUT</b>: a node editor wiring deck and mixer values to OSC, DMX and MIDI</sub></td>
+<td><img src="docs/media/screen-mixer.png" alt="MIXER"><br><sub><b>MIXER</b>: DJM state (DJM-900NXS2)</sub></td>
+</tr>
+<tr>
+<td colspan="2"><img src="docs/media/screen-cue-editor.png" alt="SET LIST cue editor"><br><sub><b>SET LIST cue editor</b>: cues placed on the waveform and beat grid</sub></td>
+</tr>
+</table>
+
 ## Install
 
 Get the file for your system from the [latest release](https://github.com/Zesminseok/ORVIK/releases/latest).
@@ -49,7 +64,7 @@ Get the file for your system from the [latest release](https://github.com/Zesmin
 | macOS 13.3 or later (Apple Silicon) | `mac-arm64.dmg` |
 | Windows 10/11 (x64) | `win-x64.exe` (portable, no installation) |
 
-1. On macOS, open the DMG and move ORVIK to Applications. On Windows, run the `.exe`.
+1. On macOS, open the DMG and move ORVIK to Applications (notarized by Apple). On Windows, run the `.exe`.
 2. Connect the computer and the DJ hardware to the same network.
 3. In ORVIK's settings, pick that network interface.
 
@@ -57,7 +72,7 @@ Get the file for your system from the [latest release](https://github.com/Zesmin
 > There is no Intel Mac build. 1.6 settings are not carried over to 2.0.
 
 > [!TIP]
-> The macOS app is notarized by Apple. If Windows SmartScreen warns, choose **More info → Run anyway**.
+> The Windows file is not code-signed. If SmartScreen warns, choose **More info → Run anyway**.
 
 > [!IMPORTANT]
 > Beta. Check timecode and outputs with your actual receivers before a show.
@@ -108,8 +123,9 @@ Logs can contain track titles, device names, IP and MAC addresses. Check them be
 
 ## Support
 
-ORVIK is a free beta with no time limit. Contributions are voluntary support for development and do not unlock
-features. A contribution is not a purchase or preorder and does not guarantee a final version or a date.
+ORVIK is a free beta with no time limit. If you want to support development, you can do so through [GitHub Sponsors](https://github.com/sponsors/zesminseok).
+
+Contributing does not unlock features. A contribution is not a purchase or preorder and does not guarantee a final version or a date.
 
 ## Contact
 

@@ -5,7 +5,6 @@
   <img src="docs/media/orvik-wordmark-light.png" alt="ORVIK" width="300">
 </picture>
 
-
 [![Version](docs/media/badge-version.svg)](CHANGELOG.md)
 ![Status: Beta](https://img.shields.io/badge/status-beta-yellow.svg)
 ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows-lightgrey.svg)
@@ -19,10 +18,9 @@
 
 </div>
 
-## ORVIK는
+## 소개
 
-PRO DJ LINK로 연결된 CDJ와 DJM에서 템포, 비트, 재생 위치, 곡 정보, 큐, 웨이브폼, 믹서 상태를 받아
-TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 내보냅니다. 
+PRO DJ LINK로 연결된 CDJ와 DJM에서 템포, 비트, 재생 위치, 곡 정보, 큐, 웨이브폼, 믹서 상태를 받아 TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 내보냅니다.
 
 장비를 제어하지 않고 읽기만 합니다.
 
@@ -41,6 +39,22 @@ TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 내보냅니다.
 
 그 밖에 가상 덱, 웹 뷰어, 미러 모드, HISTORY, 7개 언어를 지원합니다.
 
+## 화면
+
+<table>
+<tr>
+<td width="50%"><img src="docs/media/screen-cuecall-board.png" alt="CUE CALL 보드"><br><sub><b>CUE CALL 보드</b>: 그룹별 다음 큐와 남은 시간</sub></td>
+<td width="50%"><img src="docs/media/screen-cuecall-layers.png" alt="CUE CALL 레이어"><br><sub><b>CUE CALL 레이어</b>: 마스터 덱 웨이브폼과 큐 타임라인</sub></td>
+</tr>
+<tr>
+<td><img src="docs/media/screen-output.png" alt="OUTPUT"><br><sub><b>OUTPUT</b>: 덱, 믹서 값을 OSC, DMX, MIDI로 잇는 노드 편집기</sub></td>
+<td><img src="docs/media/screen-mixer.png" alt="MIXER"><br><sub><b>MIXER</b>: DJM 상태 (DJM-900NXS2)</sub></td>
+</tr>
+<tr>
+<td colspan="2"><img src="docs/media/screen-cue-editor.png" alt="SET LIST 큐 편집"><br><sub><b>SET LIST 큐 편집</b>: 웨이브폼과 박 그리드 위에 큐 배치</sub></td>
+</tr>
+</table>
+
 ## 설치
 
 [최신 릴리스](https://github.com/Zesminseok/ORVIK/releases/latest)에서 운영체제에 맞는 파일을 받으세요.
@@ -50,7 +64,7 @@ TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 내보냅니다.
 | macOS 13.3 이상 (Apple Silicon) | `mac-arm64.dmg` |
 | Windows 10, 11 (x64) | `win-x64.exe` (설치 없이 실행) |
 
-1. macOS는 DMG를 열어 ORVIK를 응용 프로그램 폴더로 옮깁니다. Windows는 `.exe`를 바로 실행합니다.
+1. macOS는 DMG를 열어 ORVIK를 응용 프로그램 폴더로 옮깁니다 (Apple 공증 완료). Windows는 `.exe`를 바로 실행합니다.
 2. 컴퓨터와 DJ 장비를 같은 네트워크에 연결합니다.
 3. ORVIK 설정에서 그 네트워크 인터페이스를 고릅니다.
 
@@ -58,7 +72,7 @@ TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 내보냅니다.
 > Intel Mac 빌드는 없습니다. 1.6의 설정은 2.0으로 옮겨지지 않습니다.
 
 > [!TIP]
-> macOS 앱은 Apple 공증을 받았습니다. Windows에서 SmartScreen 경고가 뜨면 **추가 정보 → 실행**을 누르세요.
+> Windows 파일은 코드 서명이 없습니다. SmartScreen 경고가 뜨면 **추가 정보 → 실행**을 누르세요.
 
 > [!IMPORTANT]
 > 베타입니다. 공연에 쓰기 전에 타임코드와 출력을 실제 수신 장비와 꼭 확인하세요.
@@ -109,8 +123,9 @@ ORVIK는 인터넷으로 사용 기록을 보내지 않습니다.
 
 ## 후원
 
-ORVIK는 무료 베타이며 기간 제한이 없습니다. 후원은 개발을 돕는 자발적인 선택이고, 후원해도 기능이 더 열리지 않습니다.
-후원은 정식 제품의 구매나 예약이 아니며, 정식 버전이나 완성 시점을 보장하지 않습니다.
+ORVIK는 무료 베타이며 기간 제한이 없습니다. 개발을 돕고 싶다면 [GitHub Sponsors](https://github.com/sponsors/zesminseok)로 후원할 수 있습니다.
+
+후원해도 기능이 더 열리지 않습니다. 후원은 정식 제품의 구매나 예약이 아니며, 정식 버전이나 완성 시점을 보장하지 않습니다.
 
 ## 문의
 
