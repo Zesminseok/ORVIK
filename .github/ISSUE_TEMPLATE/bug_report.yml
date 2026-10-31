@@ -1,0 +1,64 @@
+name: Bug report
+description: Something in ORVIK does not work as the manual describes.
+title: "Bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. English or Korean is fine (한국어로 써도 됩니다).
+        For a security problem, do not open an issue: see [SECURITY.md](https://github.com/Zesminseok/ORVIK/blob/main/SECURITY.md).
+  - type: input
+    id: version
+    attributes:
+      label: ORVIK version
+      description: Settings, Info section.
+      placeholder: "2.0.2"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - macOS
+        - Windows
+    validations:
+      required: true
+  - type: input
+    id: os-version
+    attributes:
+      label: OS version
+      placeholder: "macOS 15, Windows 11"
+  - type: textarea
+    id: hardware
+    attributes:
+      label: Hardware on the link
+      description: Players and mixer with firmware versions, and the receivers ORVIK sends to.
+      placeholder: |
+        2x CDJ-3000 (firmware ...), DJM-V10 (firmware ...)
+        Resolume Arena over TCNet
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you saw, and what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Load a track on deck 2
+        2. Press play
+        3. ...
+  - type: textarea
+    id: log
+    attributes:
+      label: Log or screenshots
+      description: |
+        Drag files here. To record a log, see "Recording a log" in the README.
+        Logs can contain track titles, device names, IP and MAC addresses. Check them before attaching.

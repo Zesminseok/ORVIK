@@ -1,0 +1,25 @@
+name: Request
+description: Suggest a feature or a change.
+title: "Request: "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: English or Korean is fine (한국어로 써도 됩니다).
+  - type: textarea
+    id: need
+    attributes:
+      label: What you need
+      description: The show situation and what ORVIK should do in it.
+    validations:
+      required: true
+  - type: textarea
+    id: setup
+    attributes:
+      label: Your setup
+      description: Players, mixer and the receivers involved (lighting desk, media server, timecode reader).
+  - type: textarea
+    id: now
+    attributes:
+      label: How you handle it now
+      description: A workaround or another tool you use today, if any.

@@ -1,0 +1,50 @@
+name: Hardware result
+description: Tell us how ORVIK works with a player, mixer or receiver.
+title: "Hardware: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Results for untested hardware help most, but results for tested models are welcome too.
+        English or Korean is fine (한국어로 써도 됩니다).
+  - type: input
+    id: version
+    attributes:
+      label: ORVIK version
+      placeholder: "2.0.2"
+    validations:
+      required: true
+  - type: textarea
+    id: hardware
+    attributes:
+      label: Hardware
+      description: Model and firmware version of each device you tried.
+      placeholder: "CDJ-2000NXS (firmware ...), DJM-900NXS (firmware ...)"
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: Result
+      options:
+        - Works
+        - Works in part
+        - Does not work
+    validations:
+      required: true
+  - type: checkboxes
+    id: checked
+    attributes:
+      label: What worked
+      options:
+        - label: Decks appear with track info
+        - label: Position and BPM follow the player
+        - label: Waveforms and cues
+        - label: MIXER page values
+        - label: TCNet to the receiver
+        - label: SMPTE timecode (LTC, MTC or Art-Net)
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: What did not work, and anything else worth knowing. Screenshots help.
