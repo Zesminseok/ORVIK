@@ -8,7 +8,7 @@ Copyright (c) 2026 ZES (Kim Min Seok). All rights reserved.
 
 ### 1. 적용 범위와 사용 허가
 
-이 조건은 ORVIK의 macOS, Windows 앱 바이너리와 별도 라이선스가 없는 ORVIK 자산에 적용됩니다. ORVIK는 판매가 아닌 사용 허가 방식으로 제공됩니다. 이 조건에 따라 개인 사용, 평가, 공연, 제작 및 호환성 작업을 위해 자신이 소유하거나 관리하는 기기에 ORVIK를 설치하고 사용할 수 있는 제한적, 철회 가능, 비독점, 양도 불가 사용권을 부여합니다.
+이 조건은 ORVIK의 macOS, Windows 앱 바이너리와 별도 라이선스가 없는 ORVIK 자산에 적용됩니다. ORVIK은 판매가 아닌 사용 허가 방식으로 제공됩니다. 이 조건에 따라 개인 사용, 평가, 공연, 제작 및 호환성 작업을 위해 자신이 소유하거나 관리하는 기기에 ORVIK을 설치하고 사용할 수 있는 제한적, 철회 가능, 비독점, 양도 불가 사용권을 부여합니다.
 
 앱, 소스 코드, UI, 자산 또는 상표의 소유권은 이전되지 않습니다. 서드파티 자료에는 해당 권리자의 조건이 적용됩니다.
 
@@ -31,19 +31,19 @@ Copyright (c) 2026 ZES (Kim Min Seok). All rights reserved.
 - 앱을 이용하여 제3자의 권리를 침해하거나 접근 제어를 우회하는 행위
 - ORVIK 또는 제3자의 명칭, 상표, 자산을 사용하여 공식 제휴, 협찬, 인증, 승인이 있는 것처럼 오인시키는 행위
 
-정상적인 설치, 설정, 오류 진단을 위해 ORVIK가 제공하는 로그와 설정을 확인하는 행위는 금지하지 않습니다.
+정상적인 설치, 설정, 오류 진단을 위해 ORVIK이 제공하는 로그와 설정을 확인하는 행위는 금지하지 않습니다.
 
 ### 4. 법률 및 서드파티 라이선스에 따른 권리
 
 이 조건은 관련 법률상 제한할 수 없는 이용자의 권리나 서드파티 라이선스가 부여한 권리를 제한하지 않습니다. 여기에는 해당 조건을 충족하는 상호운용성 목적의 역분석과, 적용 라이선스가 허용하거나 요구하는 수정, 교체, 재링크 및 그 수정 사항을 디버깅하기 위한 역공학이 포함됩니다. 이러한 권리를 행사하는 데 사전 서면 허가는 필요하지 않습니다.
 
-ORVIK는 Raw Material Software Limited의 JUCE 9 프레임워크를 JUCE 9 라이선스(Starter 등급)로 사용합니다. JUCE와 JUCE에 포함된 구성요소의 저작권은 각 권리자에게 있으며 ORVIK가 소유하지 않습니다.
+ORVIK은 Raw Material Software Limited의 JUCE 9 프레임워크를 JUCE 9 라이선스(Starter 등급)로 사용합니다. JUCE와 JUCE에 포함된 구성요소의 저작권은 각 권리자에게 있으며 ORVIK이 소유하지 않습니다.
 
 서드파티 구성요소에는 해당 라이선스가 우선하며 ORVIK의 독점 라이선스로 대체되지 않습니다. 구성요소와 고지 위치는 [서드파티 고지](THIRD_PARTY_NOTICES.md)를 참고하십시오.
 
 ### 5. 독립 제품 및 미디어 권리
 
-ORVIK는 독립적인 호환성 도구이며 AlphaTheta의 공식 PRO DJ LINK Bridge나 TC Supply의 ShowKontrol이 아닙니다. 해당 업체와의 제휴나 해당 업체의 인증, 승인을 의미하지 않습니다. 제품명과 프로토콜명은 호환 대상을 설명하기 위해 사용합니다.
+ORVIK은 독립적인 호환성 도구이며 AlphaTheta의 공식 PRO DJ LINK Bridge나 TC Supply의 ShowKontrol이 아닙니다. AlphaTheta, Pioneer DJ, TC Supply, Resolume과의 제휴나 이들 업체의 협찬, 인증, 승인을 의미하지 않습니다. 제품명과 프로토콜명은 호환 대상을 설명하기 위해 사용합니다.
 
 이 사용권은 음원, 앨범아트 등 제3자 미디어에 대한 권리를 부여하지 않습니다. 이용자는 자신의 사용, 표시, 전송, 저장에 필요한 권리를 확보해야 합니다.
 
@@ -57,9 +57,9 @@ ORVIK는 독립적인 호환성 도구이며 AlphaTheta의 공식 PRO DJ LINK Br
 
 ### 8. 보증 및 책임 제한
 
-ORVIK는 있는 그대로, 이용 가능한 상태로 제공됩니다. 법률이 허용하는 범위에서 상품성, 특정 목적 적합성, 권원, 비침해, 호환성, 정확성 또는 무중단 작동을 보증하지 않습니다.
+ORVIK은 있는 그대로, 이용 가능한 상태로 제공됩니다. 법률이 허용하는 범위에서 상품성, 특정 목적 적합성, 권원, 비침해, 호환성, 정확성 또는 무중단 작동을 보증하지 않습니다.
 
-법률이 허용하는 최대 범위에서 저작권자와 기여자는 ORVIK와 관련하여 발생하는 직접 또는 간접 손해, 이익, 매출, 데이터 손실, 장비 고장, 공연 중단, 제작 손실, 네트워크 장애 또는 제3자 청구에 대해 책임을 지지 않습니다.
+법률이 허용하는 최대 범위에서 저작권자와 기여자는 ORVIK과 관련하여 발생하는 직접 또는 간접 손해, 이익, 매출, 데이터 손실, 장비 고장, 공연 중단, 제작 손실, 네트워크 장애 또는 제3자 청구에 대해 책임을 지지 않습니다.
 
 **고의나 중대한 과실로 인한 책임, 법률상 배제하거나 제한할 수 없는 책임 및 소비자의 강행법상 권리는 위 조항의 적용에서 제외됩니다.**
 
@@ -108,7 +108,7 @@ The applicable third-party license takes precedence for its component and is not
 
 ### 5. Independent product and media rights
 
-ORVIK is an independent interoperability tool. It is not AlphaTheta's official PRO DJ LINK Bridge or TC Supply's ShowKontrol, and does not imply affiliation with, certification by or endorsement from either company. Product and protocol names identify compatibility targets.
+ORVIK is an independent interoperability tool. It is not AlphaTheta's official PRO DJ LINK Bridge or TC Supply's ShowKontrol, and does not imply affiliation with, sponsorship by, certification by or endorsement from AlphaTheta, Pioneer DJ, TC Supply or Resolume. Product and protocol names identify compatibility targets.
 
 This license grants no rights to third-party media such as music or artwork. Users must obtain the rights needed for their use, display, transmission and storage.
 

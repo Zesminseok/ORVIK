@@ -6,7 +6,9 @@ Copyright (c) 2026 ZES (Kim Min Seok). All rights reserved.
 
 1. 적용 범위
 
-이 조건은 공개 저장소의 ORVIK 문서와 별도 이용 조건이 없는 ORVIK 이미지에
+이 조건은 공개 저장소의 ORVIK 문서, ORVIK 웹사이트 파일(`docs/`의 HTML, CSS,
+JavaScript와 스크린샷) 및 별도 이용 조건이 없는 ORVIK 이미지에 적용됩니다.
+웹사이트의 폰트에는 `docs/site/fonts/LICENSE.txt`의 SIL Open Font License가
 적용됩니다. 앱 바이너리는 BINARY_LICENSE.md, 서드파티 자료는 각각의
 라이선스가 적용됩니다. 앱 소스 코드나 상표에 관한 권리는 부여하지 않습니다.
 
@@ -42,8 +44,10 @@ English
 
 1. Scope
 
-These terms apply to ORVIK documentation in this public repository and ORVIK
-images without separate terms. Application binaries are governed by
+These terms apply to ORVIK documentation in this public repository, the ORVIK
+website files (the HTML, CSS, JavaScript and screenshots in `docs/`) and ORVIK
+images without separate terms. The website fonts are under the SIL Open Font
+License in `docs/site/fonts/LICENSE.txt`. Application binaries are governed by
 BINARY_LICENSE.md; third-party materials are governed by their own licenses.
 No rights to application source code or trademarks are granted.
 

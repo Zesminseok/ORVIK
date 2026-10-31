@@ -8,7 +8,7 @@
 
 ### 상표와 독립 제품 안내
 
-ORVIK는 독립적인 호환성 도구입니다. AlphaTheta의 공식 PRO DJ LINK Bridge나 TC Supply의 ShowKontrol이 아니며 AlphaTheta, Pioneer DJ, TC Supply, Resolume과의 제휴, 협찬, 인증, 승인을 뜻하지도 않습니다.
+ORVIK은 독립적인 호환성 도구입니다. AlphaTheta의 공식 PRO DJ LINK Bridge나 TC Supply의 ShowKontrol이 아니며 AlphaTheta, Pioneer DJ, TC Supply, Resolume과의 제휴, 협찬, 인증, 승인을 뜻하지도 않습니다.
 
 AlphaTheta, Pioneer DJ, CDJ, DJM, PRO DJ LINK, rekordbox, TC Supply, TCNet, ShowKontrol, Resolume, SMPTE 등 제품명, 기술명, 상표는 호환 대상을 설명하는 데 사용합니다. 각 상표의 권리는 해당 권리자에게 있습니다. 프로토콜이 공개되어 있다고 해서 별도 상표나 인증의 사용이 허가된다는 뜻은 아닙니다.
 
@@ -26,7 +26,7 @@ PRO DJ LINK 호환성은 직접 캡처한 하드웨어 네트워크 패킷을 �
 | --- | --- | --- |
 | JUCE 9.0.3 (Raw Material Software Limited) | [JUCE 9 라이선스](https://juce.com/legal/juce-9-licence/) Starter 등급으로 사용 (JUCE는 AGPL-3.0-only와 이중 라이선스) | `juce/LICENSE.md`, 구성요소 목록 `juce/JUCE.spdx.json` |
 | zlib 1.3.2 (JUCE에 포함) | Zlib | `zlib/LICENSE` |
-| HarfBuzz 14.2.1 (JUCE에 포함) | MIT-Modern-Variant | `harfbuzz/COPYING` |
+| HarfBuzz 14.2.1 (JUCE에 포함) | MIT-Modern-Variant, 해시 코드 일부는 MIT (Zilong Tan) | `harfbuzz/COPYING`, `harfbuzz/hb-algs-MIT.txt` |
 | SheenBidi 2.9.0 (JUCE에 포함) | Apache License 2.0 | `sheenbidi/LICENSE` |
 | LunaSVG 3.5.0, PlutoVG 1.3.2 (JUCE에 포함) | MIT | `lunasvg/LICENSE`, `plutovg/LICENSE` |
 | libpng 1.6.58 (JUCE에 포함) | PNG Reference Library License v2 | `libpng/LICENSE` |
@@ -35,15 +35,15 @@ PRO DJ LINK 호환성은 직접 캡처한 하드웨어 네트워크 패킷을 �
 | FLAC 1.5.0 (JUCE에 포함) | BSD-3-Clause | `flac/Flac Licence.txt` |
 | libogg 1.3.6, libvorbis 1.3.7 (JUCE에 포함) | BSD-3-Clause | `ogg/COPYING`, `vorbis/COPYING` |
 | Opus 1.6.1, opusfile, libopusenc 0.3 (JUCE에 포함) | BSD-3-Clause | `opus/`, `opusfile/COPYING`, `libopusenc/COPYING` |
-| Khronos OpenGL 헤더 (JUCE에 포함) | MIT 형식 (Khronos) | `khronos/juce_khrplatform.h` |
+| OpenGL 함수 로더 (JUCE에 포함, GLEW, Mesa, Khronos 기반) | BSD-3-Clause (GLEW), MIT (Mesa, Khronos) | `opengl/NOTICE.txt`, `khronos/juce_khrplatform.h` |
 | Tracy Profiler 0.11.1 클라이언트 (테스트 빌드에만 포함) | BSD-3-Clause | `tracy/LICENSE` |
-| Apple Lossless(ALAC) 디코더 (Apple 참조 디코더를 이식한 `renderer/alac-decode.js`를 C++로 옮김) | Apache License 2.0. Copyright (c) 2011 Apple Inc. | `alac/` |
+| Apple Lossless(ALAC) 디코더 (Apple 참조 디코더를 이식한 1.x의 `renderer/alac-decode.js`를 C++ `AlacDecode.h`로 옮김) | Apache License 2.0. Copyright (c) 2011 Apple Inc. | `alac/` |
 | curl 8.10.1 (Windows만, 정적 링크) | curl 라이선스 | `curl/COPYING` |
-| zlib 1.3.1 (Windows만, curl용 정적 링크) | Zlib | `zlib/LICENSE` |
+| zlib 1.3.1 (Windows만, curl용 정적 링크) | Zlib | `zlib-1.3.1/LICENSE` |
 
 This software is based in part on the work of the Independent JPEG Group.
 
-macOS가 제공하는 시스템 라이브러리(libcurl, zlib, ICU, CommonCrypto, Apple 프레임워크)는 앱과 함께 배포하지 않으며 각 라이선스는 macOS에 따릅니다. Windows 빌드는 curl과 zlib을 실행 파일에 넣고, 그 밖의 Windows 구성요소(Schannel, WASAPI, DirectSound, Media Foundation 등)는 운영체제가 제공합니다.
+macOS가 제공하는 시스템 라이브러리(libcurl, zlib, ICU, CommonCrypto, Apple 프레임워크)는 앱과 함께 배포하지 않으며 각 라이선스는 macOS에 따릅니다. Windows 빌드는 curl과 zlib을 실행 파일에 넣고, Microsoft C/C++ 런타임(MSVC CRT)과 Windows SDK 라이브러리를 Microsoft의 라이선스 조건에 따라 정적으로 링크합니다. 그 밖의 Windows 구성요소(Schannel, WASAPI, DirectSound, Media Foundation 등)는 운영체제가 제공합니다.
 
 ### 폰트와 아이콘
 
@@ -86,7 +86,7 @@ Each included component remains subject to its license regardless of the free-be
 | --- | --- | --- |
 | JUCE 9.0.3 (Raw Material Software Limited) | Used under the [JUCE 9 licence](https://juce.com/legal/juce-9-licence/), Starter tier (JUCE is dual-licensed with AGPL-3.0-only) | `juce/LICENSE.md`, inventory `juce/JUCE.spdx.json` |
 | zlib 1.3.2 (in JUCE) | Zlib | `zlib/LICENSE` |
-| HarfBuzz 14.2.1 (in JUCE) | MIT-Modern-Variant | `harfbuzz/COPYING` |
+| HarfBuzz 14.2.1 (in JUCE) | MIT-Modern-Variant; part of the hash code MIT (Zilong Tan) | `harfbuzz/COPYING`, `harfbuzz/hb-algs-MIT.txt` |
 | SheenBidi 2.9.0 (in JUCE) | Apache License 2.0 | `sheenbidi/LICENSE` |
 | LunaSVG 3.5.0, PlutoVG 1.3.2 (in JUCE) | MIT | `lunasvg/LICENSE`, `plutovg/LICENSE` |
 | libpng 1.6.58 (in JUCE) | PNG Reference Library License v2 | `libpng/LICENSE` |
@@ -95,15 +95,15 @@ Each included component remains subject to its license regardless of the free-be
 | FLAC 1.5.0 (in JUCE) | BSD-3-Clause | `flac/Flac Licence.txt` |
 | libogg 1.3.6, libvorbis 1.3.7 (in JUCE) | BSD-3-Clause | `ogg/COPYING`, `vorbis/COPYING` |
 | Opus 1.6.1, opusfile, libopusenc 0.3 (in JUCE) | BSD-3-Clause | `opus/`, `opusfile/COPYING`, `libopusenc/COPYING` |
-| Khronos OpenGL headers (in JUCE) | MIT-style (Khronos) | `khronos/juce_khrplatform.h` |
+| OpenGL function loader (in JUCE, based on GLEW, Mesa and Khronos) | BSD-3-Clause (GLEW), MIT (Mesa, Khronos) | `opengl/NOTICE.txt`, `khronos/juce_khrplatform.h` |
 | Tracy Profiler 0.11.1 client (test builds only) | BSD-3-Clause | `tracy/LICENSE` |
-| Apple Lossless (ALAC) decoder (C++ port of `renderer/alac-decode.js`, itself a port of Apple's reference decoder) | Apache License 2.0. Copyright (c) 2011 Apple Inc. | `alac/` |
+| Apple Lossless (ALAC) decoder (C++ `AlacDecode.h`, ported from 1.x's `renderer/alac-decode.js`, itself a port of Apple's reference decoder) | Apache License 2.0. Copyright (c) 2011 Apple Inc. | `alac/` |
 | curl 8.10.1 (Windows only, statically linked) | curl license | `curl/COPYING` |
-| zlib 1.3.1 (Windows only, statically linked for curl) | Zlib | `zlib/LICENSE` |
+| zlib 1.3.1 (Windows only, statically linked for curl) | Zlib | `zlib-1.3.1/LICENSE` |
 
 This software is based in part on the work of the Independent JPEG Group.
 
-System libraries provided by macOS (libcurl, zlib, ICU, CommonCrypto, Apple frameworks) are not distributed with the app; their licenses are those of macOS. The Windows build links curl and zlib into the executable; other Windows components (Schannel, WASAPI, DirectSound, Media Foundation and others) are provided by the operating system.
+System libraries provided by macOS (libcurl, zlib, ICU, CommonCrypto, Apple frameworks) are not distributed with the app; their licenses are those of macOS. The Windows build links curl and zlib into the executable and statically links the Microsoft C/C++ runtime (MSVC CRT) and Windows SDK libraries under Microsoft's license terms; other Windows components (Schannel, WASAPI, DirectSound, Media Foundation and others) are provided by the operating system.
 
 ### Fonts and icons
 
