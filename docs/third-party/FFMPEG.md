@@ -1,10 +1,14 @@
-# FFmpeg — Electron 44.4.5
+# FFmpeg in ORVIK 1.x (Electron 44.4.5)
+
+> [!NOTE]
+> ORVIK 2.0 is a native app and does not include FFmpeg. This page covers ORVIK 1.x (Electron) only.<br>
+> ORVIK 2.0은 네이티브 앱이며 FFmpeg를 포함하지 않습니다. 이 문서는 ORVIK 1.x(Electron)에만 해당합니다.
 
 ## 한국어
 
 ORVIK는 Electron에 포함된 FFmpeg 라이브러리를 사용합니다. FFmpeg에는 LGPL-2.1-or-later와 파일별 고지가 적용됩니다. FFmpeg의 저작권은 해당 기여자에게 있으며 ORVIK가 소유하지 않습니다. 소스 압축 파일과 앱의 `licenses/ffmpeg/` 폴더에 `COPYING.LGPLv2.1`, `FFmpeg-LICENSE.md`, Opus의 `OPUS-COPYING`이 있습니다. Electron 구성요소의 고지는 앱의 `licenses/LICENSES.chromium.html`에 있습니다.
 
-[FFmpeg 소스·빌드 자료 다운로드](https://github.com/Zesminseok/ORVIK/releases/download/third-party-electron-v44.4.5/ffmpeg-electron-44.4.5-source.tar.gz)
+1.x 릴리스는 더 이상 배포하지 않아 소스·빌드 자료의 다운로드 링크를 내렸습니다. 1.x를 받으신 분이 자료가 필요하면 [GitHub Issues](https://github.com/Zesminseok/ORVIK/issues)로 요청해 주십시오. 같은 자료(아래 SHA-256과 동일한 파일)를 제공합니다.
 
 자료에는 FFmpeg 원본 소스, Electron의 FFmpeg 패치, Electron 소스 및 빌드 설정, Chromium의 빌드 스크립트·Opus·NASM, 버전·해시 목록이 포함됩니다. ORVIK 자체 소스는 포함하지 않습니다. ORVIK는 FFmpeg 소스를 별도로 수정하지 않으며 공식 Electron 런타임의 라이브러리를 사용합니다. macOS 앱 서명 과정은 라이브러리의 서명 바이트를 바꿀 수 있습니다.
 
@@ -33,7 +37,7 @@ ORVIK의 패키지 생성 검사는 배포 직전 라이브러리와 고지의 �
 
 ORVIK uses the FFmpeg libraries included with Electron. FFmpeg is licensed under LGPL-2.1-or-later and applicable file-specific notices. Copyright belongs to its contributors, not ORVIK. The source archive and the application's `licenses/ffmpeg/` directory contain `COPYING.LGPLv2.1`, `FFmpeg-LICENSE.md` and Opus's `OPUS-COPYING`. Notices for Electron components are in the application's `licenses/LICENSES.chromium.html`.
 
-[Download FFmpeg source and build materials](https://github.com/Zesminseok/ORVIK/releases/download/third-party-electron-v44.4.5/ffmpeg-electron-44.4.5-source.tar.gz)
+1.x releases are no longer distributed, so the download link for the source and build materials has been removed. If you received a 1.x build and need the materials, request them through [GitHub Issues](https://github.com/Zesminseok/ORVIK/issues); the same files (matching the SHA-256 values below) will be provided.
 
 The materials include upstream FFmpeg source, Electron's FFmpeg patch, Electron source and build settings, Chromium build scripts, Opus, NASM, and version/hash records. They contain no ORVIK application source. ORVIK does not separately modify FFmpeg source and uses the library from the official Electron runtime. macOS application signing may change library signature bytes.
 
@@ -74,7 +78,7 @@ Materials for the Electron runtime shipped with earlier ORVIK releases. The buil
 
 | Electron | Chromium | Chromium FFmpeg | 자료 / Materials |
 | --- | --- | --- | --- |
-| 44.3.0 / `07e460719c75b2ec5ee4893f7d2192ef31c7b8c2` | 152.0.7977.78 / `170c2c9ffb4da86532459d72d9eda6b4944d1670` | `2b68d2babae73714846961fb0ee47e3b3d2e39a9` | [소스·빌드 자료 / Source and build materials](https://github.com/Zesminseok/ORVIK/releases/download/third-party-electron-v44.3.0/ffmpeg-electron-44.3.0-source.tar.gz) · [런타임 대응 목록 / Runtime manifest](ffmpeg-electron-44.3.0.json) |
+| 44.3.0 / `07e460719c75b2ec5ee4893f7d2192ef31c7b8c2` | 152.0.7977.78 / `170c2c9ffb4da86532459d72d9eda6b4944d1670` | `2b68d2babae73714846961fb0ee47e3b3d2e39a9` | 소스·빌드 자료: 요청 시 제공 / Source and build materials: on request · [런타임 대응 목록 / Runtime manifest](ffmpeg-electron-44.3.0.json) |
 
 ```text
 f70b1f701aac9f80190facc29ecbd423c87a399306e6fbe71a4ff2d778eca411  ffmpeg-electron-44.3.0-source.tar.gz
