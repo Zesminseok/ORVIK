@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/media/orvik-wordmark-dark.png">
-  <img src="docs/media/orvik-wordmark-light.png" alt="ORVIK" width="300">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/media/orvik-banner-ko-dark.png">
+  <img src="docs/media/orvik-banner-ko-light.png" alt="ORVIK: CDJ와 DJM 데이터를 TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 보냅니다" width="800">
 </picture>
 
 [![Release](https://img.shields.io/github/v/release/Zesminseok/ORVIK?label=release&color=2ea44f)](https://github.com/Zesminseok/ORVIK/releases/latest)
@@ -12,7 +12,7 @@
 
 [English](README.md) | **한국어**
 
-[다운로드](https://github.com/Zesminseok/ORVIK/releases/latest) | [사용 설명서](docs/manual/ORVIK-manual-ko.md) | [변경 내역](CHANGELOG.ko.md) | [문의](https://github.com/Zesminseok/ORVIK/issues)
+[웹사이트](https://zesminseok.github.io/ORVIK/ko/) | [다운로드](https://github.com/Zesminseok/ORVIK/releases/latest) | [사용 설명서](docs/manual/ORVIK-manual-ko.md) | [변경 내역](CHANGELOG.ko.md) | [문의](https://github.com/Zesminseok/ORVIK/issues)
 
 <img src="docs/media/shot-decks.png" alt="ORVIK 덱 화면" width="900">
 

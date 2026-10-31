@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ORVIK</title>
+<meta name="description" content="ORVIK는 PRO DJ LINK의 CDJ와 DJM을 읽어 TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 보냅니다. macOS, Windows용 무료 베타.">
+<meta name="theme-color" content="#111318">
+<meta property="og:title" content="ORVIK">
+<meta property="og:description" content="CDJ와 DJM 데이터를 TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 보냅니다.">
+<meta property="og:image" content="https://zesminseok.github.io/ORVIK/site/img/social.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="../site/img/icon.png">
+<link rel="alternate" hreflang="en" href="../">
+<link rel="preload" href="../site/fonts/jetbrains-mono-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../site/site.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<header class="nav">
+  <div class="container nav-row">
+    <nav aria-label="사이트">
+      <ul class="nav-links">
+        <li><a href="https://github.com/Zesminseok/ORVIK/blob/main/docs/manual/ORVIK-manual-ko.md">설명서</a></li>
+        <li class="nav-wide"><a href="https://github.com/Zesminseok/ORVIK/blob/main/CHANGELOG.ko.md">변경 내역</a></li>
+        <li><a href="https://github.com/Zesminseok/ORVIK/blob/main/README.ko.md">GitHub</a></li>
+        <li><a href="../" hreflang="en" lang="en">English</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container banner-grid">
+      <h1 class="name"><img src="../site/img/wordmark-hero.png" alt="ORVIK" width="783" height="242"></h1>
+      <div class="banner-aside">
+        <p class="lead">CDJ와 DJM 데이터를 TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 보냅니다.</p>
+        <div class="actions">
+          <a class="btn btn-primary" data-asset="mac" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.2/ORVIK-2.0.2-mac-arm64.dmg">Mac용 다운로드</a>
+          <a class="btn btn-secondary" data-asset="win" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.2/ORVIK-2.0.2-win-x64.exe">Windows용 다운로드</a>
+        </div>
+        <p class="meta">버전 <span data-version>2.0.2</span>, 무료 베타. Apple Silicon의 macOS 13.3 이상, Windows 10, 11.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="screen" aria-label="DECKS 페이지">
+    <div class="container">
+      <figure class="plate" data-kind="product">
+        <img src="../site/img/decks.webp" alt="ORVIK DECKS 페이지, 플레이어 네 대의 웨이브폼, 타임코드, BPM, SMPTE 레이어 버튼" width="2880" height="1540" fetchpriority="high">
+        <figcaption><b>DECKS</b> 링크에 연결된 모든 플레이어의 위치, BPM, 웨이브폼, 큐.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+
+  <section class="pages" aria-labelledby="pages-head">
+    <div class="container">
+      <div class="head-split">
+        <h2 id="pages-head">덱에서 모든 수신 장비까지</h2>
+        <p class="lead">타임코드, OSC, DMX, MIDI를 페이지마다 따로 설정합니다.</p>
+      </div>
+      <div class="switcher" data-switcher>
+        <div class="tabs" role="tablist" aria-label="ORVIK 페이지">
+          <button type="button" role="tab" id="tab-smpte" aria-controls="panel-smpte" aria-selected="true">SMPTE OUT</button>
+          <button type="button" role="tab" id="tab-output" aria-controls="panel-output" aria-selected="false" tabindex="-1">OUTPUT</button>
+          <button type="button" role="tab" id="tab-setlist" aria-controls="panel-setlist" aria-selected="false" tabindex="-1">SET LIST</button>
+          <button type="button" role="tab" id="tab-mixer" aria-controls="panel-mixer" aria-selected="false" tabindex="-1">MIXER</button>
+        </div>
+        <figure class="plate panel" data-kind="product" role="tabpanel" id="panel-smpte" aria-labelledby="tab-smpte">
+          <img src="../site/img/smpte.webp" alt="SMPTE OUT 페이지, 레이어 A, B, MASTER의 LTC, MTC, Art-Net 타임코드 설정" width="2880" height="1540" loading="lazy">
+          <figcaption><b>SMPTE OUT</b> 레이어 A, B, MASTER의 LTC, MTC, Art-Net 타임코드.</figcaption>
+        </figure>
+        <figure class="plate panel" data-kind="product" role="tabpanel" id="panel-output" aria-labelledby="tab-output">
+          <img src="../site/img/output.webp" alt="OUTPUT 페이지, 덱 값을 OSC, DMX, MIDI 대상으로 잇는 노드 편집기" width="2880" height="1540" loading="lazy">
+          <figcaption><b>OUTPUT</b> 덱과 믹서 값을 OSC, Art-Net이나 sACN DMX, MIDI로 바꾸는 노드 편집기.</figcaption>
+        </figure>
+        <figure class="plate panel" data-kind="product" role="tabpanel" id="panel-setlist" aria-labelledby="tab-setlist">
+          <img src="../site/img/setlist.webp" alt="SET LIST 페이지, 곡 네 개의 타임코드 오프셋과 웨이브폼 위의 큐 편집기" width="2880" height="1540" loading="lazy">
+          <figcaption><b>SET LIST</b> 곡마다 타임코드 오프셋을 두고, 큐가 박에 맞춰 OSC, DMX, MIDI를 보냅니다.</figcaption>
+        </figure>
+        <figure class="plate panel" data-kind="product" role="tabpanel" id="panel-mixer" aria-labelledby="tab-mixer">
+          <img src="../site/img/mixer.webp" alt="MIXER 페이지, DJM-900NXS2의 채널 페이더, EQ, FX, 레벨 미터" width="2880" height="1540" loading="lazy">
+          <figcaption><b>MIXER</b> DJM이 알려 주는 페이더, EQ, FX, 레벨 미터. 화면은 DJM-900NXS2.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="cuecall" aria-labelledby="cuecall-head">
+    <div class="container split">
+      <div class="split-text">
+        <h2 id="cuecall-head">스태프 귀에 들리는 큐 콜</h2>
+        <ul class="facts">
+          <li>그룹별 다음 큐와 남은 시간.</li>
+          <li>음성 안내: 스탠바이, 셋, 둘, 하나, 고.</li>
+          <li>같은 카운트다운을 폰에서 /cuecall로.</li>
+        </ul>
+      </div>
+      <figure class="plate split-visual" data-kind="product">
+        <img src="../site/img/cuecall-board.webp" alt="CUE CALL 보드, Lighting, Video, SFX, Laser 그룹의 카운트다운" width="2880" height="1540" loading="lazy">
+        <figcaption><b>CUE CALL</b> 보드 화면.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="specs" id="specs" aria-labelledby="specs-head">
+    <div class="container specs-grid">
+      <h2 id="specs-head">호환 장비와 환경</h2>
+      <div class="specs-body">
+        <dl class="rows">
+          <div class="row"><dt>테스트한 장비</dt><dd>CDJ-3000X, CDJ-3000, CDJ-2000NXS2, DJM-V10, DJM-900NXS2</dd></div>
+          <div class="row"><dt>보내는 신호</dt><dd>TCNet, LTC, MTC, Art-Net 타임코드, OSC, DMX(Art-Net, sACN), MIDI</dd></div>
+          <div class="row"><dt>받는 입력</dt><dd>키보드, MIDI, OSC(UDP <span class="num">7700</span>), Art-Net DMX(UDP <span class="num">6454</span>)</dd></div>
+          <div class="row"><dt>운영체제</dt><dd>Apple Silicon의 macOS 13.3 이상, Windows 10, 11(x64)</dd></div>
+          <div class="row"><dt>인터넷</dt><dd>사용 데이터를 보내지 않습니다. 업데이트 확인은 앱 버전만 보냅니다.</dd></div>
+        </dl>
+        <p class="note">그 밖의 장비는 아직 테스트하지 않았습니다. 결과는 <a href="https://github.com/Zesminseok/ORVIK/issues">Issues</a>에 알려 주세요.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="get" id="download" aria-labelledby="get-head">
+    <div class="container split split-get">
+      <div class="split-text">
+        <h2 id="get-head">ORVIK <span data-version>2.0.2</span></h2>
+        <p class="lead">기간 제한 없는 무료 베타.</p>
+        <div class="actions">
+          <a class="btn btn-primary" data-asset="mac" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.2/ORVIK-2.0.2-mac-arm64.dmg">Mac용 다운로드</a>
+          <a class="btn btn-secondary" data-asset="win" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.2/ORVIK-2.0.2-win-x64.exe">Windows용 다운로드</a>
+        </div>
+        <p class="meta">Mac DMG, <span data-size="mac">32.2 MB</span>, Apple 공증. Windows EXE, <span data-size="win">57.4 MB</span>, 서명 없음. 공연 전에 실제 수신 장비로 확인하세요. <a data-notes href="https://github.com/Zesminseok/ORVIK/releases/tag/v2.0.2">릴리즈 노트</a></p>
+      </div>
+      <figure class="plate split-visual" data-kind="product">
+        <img src="../site/img/cuecall-layers.webp" alt="CUE CALL 레이어 화면, 마스터 덱 웨이브폼과 그룹별 큐 타임라인" width="2880" height="1540" loading="lazy">
+        <figcaption><b>CUE CALL</b> 레이어 화면, 마스터 덱 웨이브폼 위의 큐.</figcaption>
+      </figure>
+    </div>
+  </section>
+</main>
+
+<footer class="mast">
+  <div class="container">
+    <img class="mast-mark" src="../site/img/wordmark.png" alt="ORVIK" width="168" height="56" loading="lazy">
+    <dl class="foot-rows">
+      <div><dt>설명서</dt><dd>
+        <a href="https://github.com/Zesminseok/ORVIK/blob/main/docs/manual/ORVIK-manual-ko.md">한국어</a>
+        <a href="https://github.com/Zesminseok/ORVIK/blob/main/docs/manual/ORVIK-manual-en.md" lang="en">English</a>
+        <a href="https://github.com/Zesminseok/ORVIK/blob/main/docs/manual/ORVIK-manual-ja.md" lang="ja">日本語</a>
+        <a href="https://github.com/Zesminseok/ORVIK/blob/main/docs/manual/ORVIK-manual-es.md" lang="es">Español</a>
+        <a href="https://github.com/Zesminseok/ORVIK/blob/main/docs/manual/ORVIK-manual-de.md" lang="de">Deutsch</a>
+        <a href="https://github.com/Zesminseok/ORVIK/blob/main/docs/manual/ORVIK-manual-fr.md" lang="fr">Français</a>
+        <a href="https://github.com/Zesminseok/ORVIK/blob/main/docs/manual/ORVIK-manual-zh-TW.md" lang="zh-TW">繁體中文</a>
+      </dd></div>
+      <div><dt>프로젝트</dt><dd>
+        <a href="https://github.com/Zesminseok/ORVIK/releases">릴리즈</a>
+        <a href="https://github.com/Zesminseok/ORVIK/blob/main/CHANGELOG.ko.md">변경 내역</a>
+        <a href="https://github.com/Zesminseok/ORVIK/issues">Issues</a>
+        <a href="https://github.com/sponsors/zesminseok">후원</a>
+        <a href="https://instagram.com/zes_minseok">Instagram</a>
+      </dd></div>
+      <div><dt>라이선스</dt><dd>
+        <a href="https://github.com/Zesminseok/ORVIK/blob/main/BINARY_LICENSE.md">앱 이용 조건</a>
+        <a href="https://github.com/Zesminseok/ORVIK/blob/main/LICENSE">문서 이용 조건</a>
+        <a href="https://github.com/Zesminseok/ORVIK/blob/main/THIRD_PARTY_NOTICES.md">서드파티 고지</a>
+        <a href="../site/fonts/LICENSE.txt">폰트</a>
+      </dd></div>
+    </dl>
+    <p class="legal">ORVIK는 AlphaTheta, Pioneer DJ, TC Supply, Resolume과 관계없는 독립 호환 도구입니다. 제품명과 상표는 호환 대상을 설명하기 위해서만 씁니다. Art-Net™ Designed by and Copyright Artistic Licence.</p>
+  </div>
+</footer>
+<script src="../site/site.js" defer></script>
+</body>
+</html>
