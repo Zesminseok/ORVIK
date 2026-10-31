@@ -15,7 +15,7 @@
 
 ## Features
 
-ORVIK reads tempo, beat, position, track info, cues, waveforms and mixer state from CDJs and DJMs on PRO DJ LINK.
+ORVIK reads tempo, beat, position, track info, cues, waveforms and mixer state from CDJs and DJMs.
 
 - **DECKS**: deck and mixer state, waveforms and cues at a glance
 - **SMPTE OUT**: LTC, MTC and Art-Net timecode for layers A, B and MASTER
