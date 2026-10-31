@@ -98,8 +98,8 @@ ORVIK only reads the DJ hardware and sends no usage data to the internet.
 | OUTPUT,&nbsp;SMPTE&nbsp;OUT | off | sends OSC, DMX, MIDI and timecode to the targets you set |
 | SHORTCUT&nbsp;input | off | receives OSC (UDP 7700) and Art-Net DMX (UDP 6454) |
 | Web&nbsp;viewer | off | TCP 8877, 4-character code, unencrypted HTTP |
-| Mirror | on | joins a mirror server when no CDJ is found (serving off, TCP 8878) |
-| Update&nbsp;check | on | checks GitHub every 12 hours (sends only the app version) |
+| Mirror | on | joins a mirror server when no CDJ is found (serving off; TCP 8878, no code) |
+| Update&nbsp;check | on | asks GitHub every 12 hours with the app version (can be turned off) |
 
 - Spoken calls are made with the system voices; no text leaves the computer.
 - Settings folder: macOS `~/Library/Application Support/com.zesminseok.orvik`, Windows `%APPDATA%\Zesminseok\ORVIK`
