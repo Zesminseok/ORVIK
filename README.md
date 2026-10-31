@@ -6,25 +6,16 @@
 </picture>
 
 [![Release](https://img.shields.io/github/v/release/Zesminseok/ORVIK?label=release&color=2ea44f)](https://github.com/Zesminseok/ORVIK/releases/latest)
-![Status: Beta](https://img.shields.io/badge/status-beta-yellow.svg)
-![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows-lightgrey.svg)
-[![License: Proprietary](https://img.shields.io/badge/license-proprietary-red.svg)](BINARY_LICENSE.md)
 
-**English** | [한국어](README.ko.md)
-
-[Website](https://zesminseok.github.io/ORVIK/) | [Download](https://github.com/Zesminseok/ORVIK/releases/latest) | [Manual](docs/manual/ORVIK-manual-en.md) | [Changelog](CHANGELOG.md) | [Issues](https://github.com/Zesminseok/ORVIK/issues)
+[Website](https://zesminseok.github.io/ORVIK/) | [Download](https://github.com/Zesminseok/ORVIK/releases/latest) | [Manual](docs/manual/ORVIK-manual-en.md) | [Changelog](CHANGELOG.md) | [Issues](https://github.com/Zesminseok/ORVIK/issues) | [한국어](README.ko.md)
 
 <img src="docs/media/shot-decks.png" alt="ORVIK decks" width="900">
 
 </div>
 
-## About
-
-ORVIK reads tempo, beat, playback position, track info, cues, waveforms and mixer state from CDJs and DJMs on a PRO DJ LINK network and sends them out as TCNet, SMPTE timecode, OSC, DMX and MIDI.
-
-It only reads the hardware and never controls it.
-
 ## Features
+
+ORVIK reads tempo, beat, position, track info, cues, waveforms and mixer state from CDJs and DJMs on PRO DJ LINK.
 
 - **DECKS**: deck and mixer state, waveforms and cues at a glance
 - **SMPTE OUT**: LTC, MTC and Art-Net timecode for layers A, B and MASTER
@@ -75,10 +66,8 @@ Get the file for your system from the [latest release](https://github.com/Zesmin
 
 ## Compatibility
 
-| | |
-| --- | --- |
-| Tested&nbsp;hardware | CDJ-3000X, CDJ-3000, CDJ-2000NXS2, DJM-V10, DJM-900NXS2 |
-| Receivers | software and hardware that take TCNet, LTC, MTC, Art-Net, OSC, sACN or MIDI |
+- **Tested hardware**: CDJ-3000X, CDJ-3000, CDJ-2000NXS2, DJM-V10, DJM-900NXS2
+- **Receivers**: software and hardware that take TCNet, LTC, MTC, Art-Net, OSC, sACN or MIDI
 
 > [!TIP]
 > Hardware not listed here has not been tested yet. What ORVIK can read depends on the model and firmware.<br>
@@ -97,7 +86,7 @@ If that does not help, record a log as described under **Recording a log** below
 
 ## Privacy and network
 
-ORVIK sends no usage data to the internet.
+ORVIK only reads the DJ hardware and sends no usage data to the internet.
 
 <details>
 <summary>What ORVIK exchanges on the local network</summary>
@@ -129,27 +118,13 @@ Logs can contain track titles, device names, IP and MAC addresses. Check them be
 
 </details>
 
-## Documentation
+## Documentation and support
 
-- Manual: [English](docs/manual/ORVIK-manual-en.md), [한국어](docs/manual/ORVIK-manual-ko.md), [日本語](docs/manual/ORVIK-manual-ja.md), [Español](docs/manual/ORVIK-manual-es.md), [Deutsch](docs/manual/ORVIK-manual-de.md), [Français](docs/manual/ORVIK-manual-fr.md), [繁體中文](docs/manual/ORVIK-manual-zh-TW.md)
-- [Changelog](CHANGELOG.md)
-- FFmpeg materials for 1.6.x: [FFmpeg notes](docs/third-party/FFMPEG.md) (2.0 does not use FFmpeg)
-
-## Support
-
-ORVIK is a free beta with no time limit. If you want to support development, you can do so through [GitHub Sponsors](https://github.com/sponsors/zesminseok).
-
-Contributing does not unlock features. A contribution is not a purchase or preorder and does not guarantee a final version or a date.
-
-## Contact
-
-- Bugs and requests: [GitHub Issues](https://github.com/Zesminseok/ORVIK/issues)
-- Instagram: [@zes_minseok](https://instagram.com/zes_minseok)
-
-## License
-
-[Application license](BINARY_LICENSE.md), [Documentation license](LICENSE), [Third-party notices](THIRD_PARTY_NOTICES.md)
-
-This repository provides documentation and release files only; the application source code is not public.
+- **Manual**: [English](docs/manual/ORVIK-manual-en.md), [한국어](docs/manual/ORVIK-manual-ko.md), [日本語](docs/manual/ORVIK-manual-ja.md), [Español](docs/manual/ORVIK-manual-es.md), [Deutsch](docs/manual/ORVIK-manual-de.md), [Français](docs/manual/ORVIK-manual-fr.md), [繁體中文](docs/manual/ORVIK-manual-zh-TW.md)
+- **Changelog**: [CHANGELOG.md](CHANGELOG.md)
+- **Contact**: [GitHub Issues](https://github.com/Zesminseok/ORVIK/issues) for bugs and requests, Instagram [@zes_minseok](https://instagram.com/zes_minseok)
+- **Support**: ORVIK is a free beta with no time limit. You can support development through [GitHub Sponsors](https://github.com/sponsors/zesminseok); it unlocks no features, is not a purchase or preorder, and does not guarantee a final version or a date.
+- **License**: [Application](BINARY_LICENSE.md), [Documentation](LICENSE), [Third-party notices](THIRD_PARTY_NOTICES.md). This repository holds documentation and release files only; the application source code is not public.
+- **FFmpeg** (1.6.x only): [FFmpeg notes](docs/third-party/FFMPEG.md). 2.0 does not use FFmpeg.
 
 <sub>ORVIK is an independent compatibility tool, not affiliated with AlphaTheta, Pioneer DJ, TC Supply or Resolume. Product names and trademarks are used only to describe compatibility. Art-Net™ Designed by and Copyright Artistic Licence.</sub>

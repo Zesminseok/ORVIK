@@ -6,27 +6,16 @@
 </picture>
 
 [![Release](https://img.shields.io/github/v/release/Zesminseok/ORVIK?label=release&color=2ea44f)](https://github.com/Zesminseok/ORVIK/releases/latest)
-![Status: Beta](https://img.shields.io/badge/status-beta-yellow.svg)
-![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows-lightgrey.svg)
-[![License: Proprietary](https://img.shields.io/badge/license-proprietary-red.svg)](BINARY_LICENSE.md)
 
-[English](README.md) | **한국어**
-
-[웹사이트](https://zesminseok.github.io/ORVIK/ko/) | [다운로드](https://github.com/Zesminseok/ORVIK/releases/latest) | [사용 설명서](docs/manual/ORVIK-manual-ko.md) | [변경 내역](CHANGELOG.ko.md) | [문의](https://github.com/Zesminseok/ORVIK/issues)
+[웹사이트](https://zesminseok.github.io/ORVIK/ko/) | [다운로드](https://github.com/Zesminseok/ORVIK/releases/latest) | [사용 설명서](docs/manual/ORVIK-manual-ko.md) | [변경 내역](CHANGELOG.ko.md) | [문의](https://github.com/Zesminseok/ORVIK/issues) | [English](README.md)
 
 <img src="docs/media/shot-decks.png" alt="ORVIK 덱 화면" width="900">
 
 </div>
 
-## 소개
-
-PRO DJ LINK로 연결된 CDJ와 DJM에서<br>
-템포, 비트, 재생 위치, 곡 정보, 큐, 웨이브폼, 믹서 상태를 받아<br>
-TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 내보냅니다.
-
-장비를 제어하지 않고 읽기만 합니다.
-
 ## 주요 기능
+
+PRO DJ LINK로 연결된 CDJ와 DJM에서 템포, 비트, 재생 위치, 곡 정보, 큐, 웨이브폼, 믹서 상태를 받습니다.
 
 - **DECKS**: 덱과 믹서 상태, 웨이브폼, 큐를 한눈에
 - **SMPTE OUT**: 레이어 A, B, MASTER의 LTC, MTC, Art-Net 타임코드
@@ -63,7 +52,7 @@ TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 내보냅니다.
 | macOS&nbsp;13.3&nbsp;이상&nbsp;(Apple&nbsp;Silicon) | `mac-arm64.dmg` |
 | Windows&nbsp;10,&nbsp;11&nbsp;(x64) | `win-x64.exe` (설치 없이 실행) |
 
-1. macOS는 DMG를 열어 ORVIK를 응용 프로그램 폴더로 옮깁니다 (Apple 공증 완료).<br>
+1. macOS는 DMG를 열어 ORVIK을 응용 프로그램 폴더로 옮깁니다 (Apple 공증 완료).<br>
    Windows는 `.exe`를 바로 실행합니다.
 2. 컴퓨터와 DJ 장비를 같은 네트워크에 연결합니다.
 3. ORVIK 설정에서 그 네트워크 인터페이스를 선택합니다.
@@ -79,10 +68,8 @@ TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 내보냅니다.
 
 ## 호환 장비
 
-| 구분 | 내용 |
-| --- | --- |
-| 확인한&nbsp;장비 | CDJ-3000X, CDJ-3000, CDJ-2000NXS2, DJM-V10, DJM-900NXS2 |
-| 받는&nbsp;쪽 | TCNet, LTC, MTC, Art-Net, OSC, sACN, MIDI를 받는 프로그램과 장비 |
+- **확인한 장비**: CDJ-3000X, CDJ-3000, CDJ-2000NXS2, DJM-V10, DJM-900NXS2
+- **받는 쪽**: TCNet, LTC, MTC, Art-Net, OSC, sACN, MIDI를 받는 프로그램과 장비
 
 > [!TIP]
 > 목록에 없는 장비는 아직 확인하지 않았습니다. 받을 수 있는 정보는 기종과 펌웨어에 따라 다릅니다.<br>
@@ -101,7 +88,7 @@ TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 내보냅니다.
 
 ## 개인정보와 네트워크
 
-ORVIK는 인터넷으로 사용 기록을 보내지 않습니다.
+ORVIK은 DJ 장비를 읽기만 하고, 인터넷으로 사용 기록을 보내지 않습니다.
 
 <details>
 <summary>로컬 네트워크에서 주고받는 데이터</summary>
@@ -136,31 +123,15 @@ ORVIK는 인터넷으로 사용 기록을 보내지 않습니다.
 
 </details>
 
-## 문서
+## 문서와 지원
 
-- 사용 설명서: [한국어](docs/manual/ORVIK-manual-ko.md), [English](docs/manual/ORVIK-manual-en.md), [日本語](docs/manual/ORVIK-manual-ja.md), [Español](docs/manual/ORVIK-manual-es.md), [Deutsch](docs/manual/ORVIK-manual-de.md), [Français](docs/manual/ORVIK-manual-fr.md), [繁體中文](docs/manual/ORVIK-manual-zh-TW.md)
-- [변경 내역](CHANGELOG.ko.md)
-- 1.6.x의 FFmpeg 자료: [FFmpeg 안내](docs/third-party/FFMPEG.md) (2.0은 FFmpeg를 쓰지 않습니다)
+- **사용 설명서**: [한국어](docs/manual/ORVIK-manual-ko.md), [English](docs/manual/ORVIK-manual-en.md), [日本語](docs/manual/ORVIK-manual-ja.md), [Español](docs/manual/ORVIK-manual-es.md), [Deutsch](docs/manual/ORVIK-manual-de.md), [Français](docs/manual/ORVIK-manual-fr.md), [繁體中文](docs/manual/ORVIK-manual-zh-TW.md)
+- **변경 내역**: [CHANGELOG.ko.md](CHANGELOG.ko.md)
+- **문의**: 버그와 요청은 [GitHub Issues](https://github.com/Zesminseok/ORVIK/issues), Instagram [@zes_minseok](https://instagram.com/zes_minseok)
+- **후원**: ORVIK은 기간 제한 없는 무료 베타입니다. [GitHub Sponsors](https://github.com/sponsors/zesminseok)로 개발을 후원할 수 있으며, 후원해도 기능이 더 열리지 않고, 정식 제품의 구매나 예약이 아니며, 정식 버전이나 완성 시점을 보장하지 않습니다.
+- **라이선스**: [앱 이용 조건](BINARY_LICENSE.md), [문서 이용 조건](LICENSE), [서드파티 고지](THIRD_PARTY_NOTICES.md). 이 저장소는 문서와 배포 파일만 제공하며 앱 소스 코드는 공개하지 않습니다.
+- **FFmpeg** (1.6.x 전용): [FFmpeg 안내](docs/third-party/FFMPEG.md). 2.0은 FFmpeg를 쓰지 않습니다.
 
-## 후원
-
-ORVIK는 무료 베타이며 기간 제한이 없습니다.<br>
-개발을 돕고 싶다면 [GitHub Sponsors](https://github.com/sponsors/zesminseok)로 후원할 수 있습니다.
-
-후원해도 기능이 더 열리지 않습니다.<br>
-후원은 정식 제품의 구매나 예약이 아니며 정식 버전이나 완성 시점을 보장하지 않습니다.
-
-## 문의
-
-- 버그, 요청: [GitHub Issues](https://github.com/Zesminseok/ORVIK/issues)
-- Instagram: [@zes_minseok](https://instagram.com/zes_minseok)
-
-## 라이선스
-
-[앱 이용 조건](BINARY_LICENSE.md), [문서 이용 조건](LICENSE), [서드파티 고지](THIRD_PARTY_NOTICES.md)
-
-이 저장소는 문서와 배포 파일만 제공하며 앱 소스 코드는 공개하지 않습니다.
-
-<sub>ORVIK는 AlphaTheta, Pioneer DJ, TC Supply, Resolume과 관계없는 독립 호환 도구입니다.<br>
+<sub>ORVIK은 AlphaTheta, Pioneer DJ, TC Supply, Resolume과 관계없는 독립 호환 도구입니다.<br>
 제품명과 상표는 호환 대상을 설명하기 위해서만 씁니다.<br>
 Art-Net™ Designed by and Copyright Artistic Licence.</sub>
