@@ -3,6 +3,3 @@ contact_links:
   - name: Manual
     url: https://github.com/Zesminseok/ORVIK/blob/main/docs/manual/ORVIK-manual-en.md
     about: Setup, every page and troubleshooting, in seven languages.
-  - name: Security problem
-    url: https://github.com/Zesminseok/ORVIK/security/advisories/new
-    about: Report it privately instead of opening an issue.
