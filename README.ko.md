@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/media/orvik-banner-ko-dark.png">
-  <img src="docs/media/orvik-banner-ko-light.png" alt="ORVIK: CDJ와 DJM 데이터를 TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 보냅니다" width="800">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/media/orvik-header-ko-dark.png">
+  <img src="docs/media/orvik-header-ko-light.png" alt="ORVIK: CDJ와 DJM 데이터를 TCNet, SMPTE 타임코드, OSC, DMX, MIDI로 보냅니다" width="800">
 </picture>
 
 [![Release](https://img.shields.io/github/v/release/Zesminseok/ORVIK?label=release&color=2ea44f)](https://github.com/Zesminseok/ORVIK/releases/latest)

@@ -1,8 +1,8 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/media/orvik-banner-dark.png">
-  <img src="docs/media/orvik-banner-light.png" alt="ORVIK: sends CDJ and DJM data as TCNet, SMPTE timecode, OSC, DMX and MIDI" width="800">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/media/orvik-header-dark.png">
+  <img src="docs/media/orvik-header-light.png" alt="ORVIK: sends CDJ and DJM data as TCNet, SMPTE timecode, OSC, DMX and MIDI" width="800">
 </picture>
 
 [![Release](https://img.shields.io/github/v/release/Zesminseok/ORVIK?label=release&color=2ea44f)](https://github.com/Zesminseok/ORVIK/releases/latest)
