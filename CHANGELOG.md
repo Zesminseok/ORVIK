@@ -5,6 +5,40 @@
 Changes in public releases. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).<br>
 Downloads are on the [latest release](https://github.com/Zesminseok/ORVIK/releases/latest) page.
 
+## [2.0.3] - 2026-11-07
+
+### Added
+
+- HISTORY and SET LIST scroll when you drag the list with a finger on a touchscreen.
+- CUE CALL layers theme: each deck's loop is shown on its waveform lane.
+- macOS: the Window menu has Minimize (⌘M) and Close (⌘W).
+
+### Changed
+
+- Detail waveforms scroll more smoothly, with far fewer one- or two-frame hitches.
+- CUE CALL board: a group with no cue in the current track gets a short card, and the groups with cues share the space.
+- Lower memory use.
+- A track without CDJ-3000 3band waveform data is not asked for it again for 30 minutes, so the players get fewer requests.
+- The web cue call page (`/cuecall`) dims and shows Offline when ORVIK stops answering, and counts fractional and drop-frame timecode exactly.
+- Changing the PRO DJ LINK or TCNet interface while devices are connected asks before applying.
+- The settings window rescans audio, LTC and MIDI devices each time it opens.
+- Malformed or oversized data from the network, set list files and audio files is handled safely.
+
+### Fixed
+
+- Korean titles, artists and cue names read from rekordbox could show as separated letters, also in TCNet metadata.
+- On Windows the screen could freeze for a moment when SMPTE OUT settings were saved.
+- Cue actions could fire early, and spoken calls come late, when playback resumed after a pause.
+- Beat counts were wrong for cues after the end of the beat grid.
+- MIDI Program Change and Channel Pressure cue actions were not sent.
+- HISTORY and SET LIST delete buttons acted on press and on a right click. They now act on a left click.
+- Ctrl+Y (redo) did not work on Windows.
+- The cue editor lost a value typed without Return when another row was clicked, and kept the audio preview playing after it closed.
+- CUE CALL windows could open off screen after their display was disconnected.
+- A virtual deck's waveform stayed dark in the light scheme, and its CUE button did not light while parked at the cue.
+- A failed HISTORY or SET LIST export showed no message.
+- Some labels in the settings window were not translated.
+
 ## [2.0.2] - 2026-10-31
 
 ### Fixed
@@ -318,6 +352,7 @@ ORVIK 2.0 is a native app (C++ / JUCE) that replaces the Electron app. It starts
 
 </details>
 
+[2.0.3]: https://github.com/Zesminseok/ORVIK/releases/tag/v2.0.3
 [2.0.2]: https://github.com/Zesminseok/ORVIK/releases/tag/v2.0.2
 [2.0.1]: https://github.com/Zesminseok/ORVIK/releases/tag/v2.0.1
 [2.0.0]: https://github.com/Zesminseok/ORVIK/releases/tag/v2.0.0

@@ -5,6 +5,40 @@
 공개 릴리스의 변경 내역입니다. 형식은 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)를 따릅니다.<br>
 파일은 [최신 릴리스](https://github.com/Zesminseok/ORVIK/releases/latest)에서 받을 수 있습니다.
 
+## [2.0.3] - 2026-11-07
+
+### 추가
+
+- 터치스크린에서 HISTORY와 SET LIST 목록을 손가락으로 끌어 스크롤할 수 있습니다.
+- CUE CALL 레이어 테마: 레인마다 그 덱의 루프 구간을 표시합니다.
+- macOS: 윈도우 메뉴에 최소화(⌘M)와 닫기(⌘W)가 생겼습니다.
+
+### 변경
+
+- 디테일 웨이브폼이 더 부드럽게 흐릅니다. 한두 프레임씩 멈칫하던 현상이 크게 줄었습니다.
+- CUE CALL 보드: 지금 곡에 큐가 없는 그룹은 카드를 낮게 줄이고, 큐가 있는 그룹이 남는 공간을 씁니다.
+- 메모리를 덜 씁니다.
+- CDJ-3000 3band 웨이브폼 데이터가 없는 곡은 30분 동안 다시 요청하지 않아 플레이어로 가는 요청이 줄었습니다.
+- 웹 큐콜 페이지(`/cuecall`)는 ORVIK이 응답하지 않으면 화면을 어둡게 하고 오프라인을 표시합니다. 소수점 프레임과 드롭 프레임 타임코드도 정확히 셉니다.
+- 장비가 연결된 상태에서 PRO DJ LINK나 TCNet 인터페이스를 바꾸면 적용하기 전에 확인을 묻습니다.
+- 설정 창을 열 때마다 오디오, LTC, MIDI 장치를 다시 찾습니다.
+- 네트워크, 세트리스트 파일, 오디오 파일에서 잘못되거나 지나치게 큰 데이터가 들어와도 안전하게 처리합니다.
+
+### 수정
+
+- rekordbox에서 읽은 한글 제목, 아티스트, 큐 이름이 자모로 풀려 보이던 문제(TCNet 메타데이터 포함).
+- Windows에서 SMPTE OUT 설정을 저장할 때 화면이 잠깐 멈추던 문제.
+- 일시정지 뒤 다시 재생하면 큐 동작이 일찍 나가거나 음성 안내가 늦던 문제.
+- 비트 그리드 끝을 지난 큐의 박 수가 틀리던 문제.
+- 큐 동작의 MIDI Program Change, Channel Pressure 메시지가 나가지 않던 문제.
+- HISTORY와 SET LIST의 삭제 버튼이 누르는 순간과 오른쪽 클릭에도 동작하던 문제. 이제 왼쪽 클릭으로만 동작합니다.
+- Windows에서 Ctrl+Y(다시 실행)가 동작하지 않던 문제.
+- 큐 편집기에서 Return 없이 입력한 값이 다른 줄을 누르면 사라지고, 편집기를 닫아도 오디오 미리듣기가 계속되던 문제.
+- 연결했던 모니터를 빼면 CUE CALL 창이 화면 밖에서 열리던 문제.
+- 라이트 테마에서 가상 덱 웨이브폼이 어둡게 남고, 큐 위치에 멈춰 있을 때 CUE 버튼에 불이 들어오지 않던 문제.
+- HISTORY, SET LIST 내보내기에 실패해도 아무 안내가 없던 문제.
+- 설정 창의 일부 문구가 번역되지 않던 문제.
+
 ## [2.0.2] - 2026-10-31
 
 ### 수정
@@ -318,6 +352,7 @@ ORVIK 2.0은 Electron 앱을 대체하는 네이티브 앱(C++ / JUCE)입니다.
 
 </details>
 
+[2.0.3]: https://github.com/Zesminseok/ORVIK/releases/tag/v2.0.3
 [2.0.2]: https://github.com/Zesminseok/ORVIK/releases/tag/v2.0.2
 [2.0.1]: https://github.com/Zesminseok/ORVIK/releases/tag/v2.0.1
 [2.0.0]: https://github.com/Zesminseok/ORVIK/releases/tag/v2.0.0
