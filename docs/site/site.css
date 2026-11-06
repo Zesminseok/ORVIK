@@ -120,3 +120,34 @@ a:hover { color: var(--color-ink); text-decoration-color: var(--color-accent); }
   .js .tabs { width: 100%; }
   .tabs button { flex: 1 1 50%; padding-inline: var(--space-sm); border-bottom: 1px solid var(--color-rule); }
 }
+
+/* live plates: the DECKS, SMPTE OUT and CUE CALL screens as short loops rendered from the app's own data.
+   They play only while on screen; reduced motion and no script leave the poster frame. */
+.plate video { width: 100%; height: auto; aspect-ratio: 2880 / 1540; object-fit: cover; display: block; background: var(--color-paper-3); outline: 1px solid var(--color-plate); outline-offset: -1px; border-radius: var(--radius-card); }
+.plate figcaption { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-2xs) var(--space-md); }
+.plate figcaption .cap { flex: 1 1 24ch; }
+.vctl { min-height: 32px; padding-inline: var(--space-sm); border: 1px solid var(--color-rule); border-radius: var(--radius-control); background: transparent; color: var(--color-ink-2); font-family: var(--font-body); font-size: var(--text-xs); font-weight: 700; cursor: pointer; transition: background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out), border-color var(--dur-micro) var(--ease-out); }
+.vctl:hover { background: var(--color-paper-2); color: var(--color-ink); border-color: var(--color-muted); }
+.vctl:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; transition: none; }
+.vctl:active { transform: translateY(1px); }
+
+@media (prefers-reduced-motion: no-preference) {
+  /* the hero arrives once: the mark wipes on from the ring, then the line and the downloads */
+  .hero h1.name img { animation: wm-in 900ms var(--ease-out) both; }
+  .banner-aside > * { animation: aside-in 520ms var(--ease-out) both; }
+  .banner-aside > :nth-child(1) { animation-delay: 360ms; }
+  .banner-aside > :nth-child(2) { animation-delay: 440ms; }
+  .banner-aside > :nth-child(3) { animation-delay: 520ms; }
+  @keyframes wm-in { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+  @keyframes aside-in { from { opacity: 0; filter: blur(6px); } to { opacity: 1; filter: blur(0); } }
+
+  /* the DECKS screen rises to full size as it comes up the page */
+  @supports (animation-timeline: view()) {
+    .screen .plate { transform-origin: 50% 0; animation: plate-rise linear both; animation-timeline: view(); animation-range: entry 0% cover 35%; }
+    @keyframes plate-rise { from { transform: scale(0.93); } to { transform: scale(1); } }
+  }
+
+  /* every other screen switches on once, top to bottom, like a monitor drawing its first frame */
+  .js .plate[data-reveal]:not(.on) > img, .js .plate[data-reveal]:not(.on) > video { clip-path: inset(0 0 100% 0); }
+  .js .plate[data-reveal].on > img, .js .plate[data-reveal].on > video { clip-path: inset(0 0 0 0); transition: clip-path 640ms var(--ease-out); }
+}

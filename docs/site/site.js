@@ -43,3 +43,42 @@
     })
     .catch(function () {});
 })();
+
+/* ORVIK site: the live screens play only while on screen and can be paused; reduced motion starts them paused.
+   Screens switch on once when they first come into view. */
+(function () {
+  var reduce = window.matchMedia ? window.matchMedia('(prefers-reduced-motion: reduce)') : { matches: false };
+  var ko = document.documentElement.lang === 'ko';
+  var L = ko ? { pause: '일시정지', play: '재생' } : { pause: 'Pause', play: 'Play' };
+  var vids = Array.prototype.slice.call(document.querySelectorAll('video.live'));
+  var sync = function (v) {
+    if (v._vis && !v._held) { var p = v.play(); if (p && p.catch) p.catch(function () {}); } else v.pause();
+  };
+  var label = function (v) { if (!v._btn) return; v._btn.textContent = v._held ? L.play : L.pause; v._btn.setAttribute('aria-pressed', v._held ? 'true' : 'false'); };
+  vids.forEach(function (v) {
+    v._held = !!reduce.matches; v._vis = false;
+    var cap = v.parentNode.querySelector('figcaption');
+    if (cap) {
+      var span = document.createElement('span'); span.className = 'cap';
+      while (cap.firstChild) span.appendChild(cap.firstChild);
+      cap.appendChild(span);
+      var b = document.createElement('button'); b.type = 'button'; b.className = 'vctl';
+      b.addEventListener('click', function () { v._held = !v._held; label(v); sync(v); });
+      cap.appendChild(b); v._btn = b; label(v);
+    }
+  });
+  var reveals = Array.prototype.slice.call(document.querySelectorAll('[data-reveal]'));
+  if (!('IntersectionObserver' in window)) {
+    reveals.forEach(function (el) { el.classList.add('on'); });
+    vids.forEach(function (v) { v._vis = true; sync(v); });
+    return;
+  }
+  var seen = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('on'); seen.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  reveals.forEach(function (el) { seen.observe(el); });
+  var watch = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { e.target._vis = e.isIntersecting; sync(e.target); });
+  }, { threshold: 0.2 });
+  vids.forEach(function (v) { watch.observe(v); });
+})();

@@ -47,8 +47,8 @@
 
   <section class="screen" aria-label="The DECKS page">
     <div class="container">
-      <figure class="plate" data-kind="product">
-        <img src="site/img/decks.webp" alt="ORVIK DECKS page with four players: waveforms, timecode, BPM and SMPTE layer buttons" width="2880" height="1540" fetchpriority="high">
+      <figure class="plate" data-kind="product" data-live>
+        <video class="live" muted loop playsinline preload="metadata" poster="site/media/decks-live.webp" width="1920" height="1026" aria-label="ORVIK DECKS page with four players: waveforms, timecode, BPM and SMPTE layer buttons"><source src="site/media/decks-live.mp4" type="video/mp4"></video>
         <figcaption><b>DECKS</b> Position, BPM, waveforms and cues for every player on the link.</figcaption>
       </figure>
     </div>
@@ -68,19 +68,19 @@
           <button type="button" role="tab" id="tab-setlist" aria-controls="panel-setlist" aria-selected="false" tabindex="-1">SET LIST</button>
           <button type="button" role="tab" id="tab-mixer" aria-controls="panel-mixer" aria-selected="false" tabindex="-1">MIXER</button>
         </div>
-        <figure class="plate panel" data-kind="product" role="tabpanel" id="panel-smpte" aria-labelledby="tab-smpte">
-          <img src="site/img/smpte.webp" alt="SMPTE OUT page: LTC, MTC and Art-Net timecode settings for layers A, B and MASTER" width="2880" height="1540" loading="lazy">
+        <figure data-reveal class="plate panel" data-kind="product" role="tabpanel" id="panel-smpte" aria-labelledby="tab-smpte" data-live>
+          <video class="live" muted loop playsinline preload="none" poster="site/media/smpte-live.webp" width="1920" height="1026" aria-label="SMPTE OUT page: LTC, MTC and Art-Net timecode settings for layers A, B and MASTER"><source src="site/media/smpte-live.mp4" type="video/mp4"></video>
           <figcaption><b>SMPTE OUT</b> LTC, MTC and Art-Net timecode for layers A, B and MASTER.</figcaption>
         </figure>
-        <figure class="plate panel" data-kind="product" role="tabpanel" id="panel-output" aria-labelledby="tab-output">
+        <figure data-reveal class="plate panel" data-kind="product" role="tabpanel" id="panel-output" aria-labelledby="tab-output">
           <img src="site/img/output.webp" alt="OUTPUT page: a node editor wiring deck values to OSC, DMX and MIDI targets" width="2880" height="1540" loading="lazy">
           <figcaption><b>OUTPUT</b> A node editor that turns deck and mixer values into OSC, Art-Net or sACN DMX and MIDI.</figcaption>
         </figure>
-        <figure class="plate panel" data-kind="product" role="tabpanel" id="panel-setlist" aria-labelledby="tab-setlist">
+        <figure data-reveal class="plate panel" data-kind="product" role="tabpanel" id="panel-setlist" aria-labelledby="tab-setlist">
           <img src="site/img/setlist.webp" alt="SET LIST page: four tracks with timecode offsets and the cue editor over a waveform" width="2880" height="1540" loading="lazy">
           <figcaption><b>SET LIST</b> A timecode offset for each track, and cues that send OSC, DMX and MIDI on the beat.</figcaption>
         </figure>
-        <figure class="plate panel" data-kind="product" role="tabpanel" id="panel-mixer" aria-labelledby="tab-mixer">
+        <figure data-reveal class="plate panel" data-kind="product" role="tabpanel" id="panel-mixer" aria-labelledby="tab-mixer">
           <img src="site/img/mixer.webp" alt="MIXER page: DJM-900NXS2 channel faders, EQ, FX and level meters" width="2880" height="1540" loading="lazy">
           <figcaption><b>MIXER</b> Faders, EQ, FX and meters as the DJM reports them, here a DJM-900NXS2.</figcaption>
         </figure>
@@ -98,8 +98,8 @@
           <li>The same countdown on a phone at /cuecall.</li>
         </ul>
       </div>
-      <figure class="plate split-visual" data-kind="product">
-        <img src="site/img/cuecall-board.webp" alt="CUE CALL board: countdowns for Lighting, Video, SFX and Laser groups" width="2880" height="1540" loading="lazy">
+      <figure data-reveal class="plate split-visual" data-kind="product" data-live>
+        <video class="live" muted loop playsinline preload="none" poster="site/media/cuecall-live.webp" width="1920" height="1026" aria-label="CUE CALL board: countdowns for Lighting, Video, SFX and Laser groups"><source src="site/media/cuecall-live.mp4" type="video/mp4"></video>
         <figcaption><b>CUE CALL</b> Board view.</figcaption>
       </figure>
     </div>
@@ -132,7 +132,7 @@
         </div>
         <p class="meta">Mac DMG, <span data-size="mac">32.3 MB</span>, notarized. Windows EXE, <span data-size="win">57.4 MB</span>, unsigned. Test with your receivers before a show. <a data-notes href="https://github.com/Zesminseok/ORVIK/releases/tag/v2.0.3">Release notes</a></p>
       </div>
-      <figure class="plate split-visual" data-kind="product">
+      <figure data-reveal class="plate split-visual" data-kind="product">
         <img src="site/img/cuecall-layers.webp" alt="CUE CALL layers view: master deck waveform with each group’s cues on a timeline" width="2880" height="1540" loading="lazy">
         <figcaption><b>CUE CALL</b> Layers view, cues over the master deck’s waveform.</figcaption>
       </figure>

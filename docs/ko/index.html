@@ -47,8 +47,8 @@
 
   <section class="screen" aria-label="DECKS 페이지">
     <div class="container">
-      <figure class="plate" data-kind="product">
-        <img src="../site/img/decks.webp" alt="ORVIK DECKS 페이지, 플레이어 네 대의 웨이브폼, 타임코드, BPM, SMPTE 레이어 버튼" width="2880" height="1540" fetchpriority="high">
+      <figure class="plate" data-kind="product" data-live>
+        <video class="live" muted loop playsinline preload="metadata" poster="../site/media/decks-live.webp" width="1920" height="1026" aria-label="ORVIK DECKS 페이지, 플레이어 네 대의 웨이브폼, 타임코드, BPM, SMPTE 레이어 버튼"><source src="../site/media/decks-live.mp4" type="video/mp4"></video>
         <figcaption><b>DECKS</b> 링크에 연결된 모든 플레이어의 위치, BPM, 웨이브폼, 큐.</figcaption>
       </figure>
     </div>
@@ -68,19 +68,19 @@
           <button type="button" role="tab" id="tab-setlist" aria-controls="panel-setlist" aria-selected="false" tabindex="-1">SET LIST</button>
           <button type="button" role="tab" id="tab-mixer" aria-controls="panel-mixer" aria-selected="false" tabindex="-1">MIXER</button>
         </div>
-        <figure class="plate panel" data-kind="product" role="tabpanel" id="panel-smpte" aria-labelledby="tab-smpte">
-          <img src="../site/img/smpte.webp" alt="SMPTE OUT 페이지, 레이어 A, B, MASTER의 LTC, MTC, Art-Net 타임코드 설정" width="2880" height="1540" loading="lazy">
+        <figure data-reveal class="plate panel" data-kind="product" role="tabpanel" id="panel-smpte" aria-labelledby="tab-smpte" data-live>
+          <video class="live" muted loop playsinline preload="none" poster="../site/media/smpte-live.webp" width="1920" height="1026" aria-label="SMPTE OUT 페이지, 레이어 A, B, MASTER의 LTC, MTC, Art-Net 타임코드 설정"><source src="../site/media/smpte-live.mp4" type="video/mp4"></video>
           <figcaption><b>SMPTE OUT</b> 레이어 A, B, MASTER의 LTC, MTC, Art-Net 타임코드.</figcaption>
         </figure>
-        <figure class="plate panel" data-kind="product" role="tabpanel" id="panel-output" aria-labelledby="tab-output">
+        <figure data-reveal class="plate panel" data-kind="product" role="tabpanel" id="panel-output" aria-labelledby="tab-output">
           <img src="../site/img/output.webp" alt="OUTPUT 페이지, 덱 값을 OSC, DMX, MIDI 대상으로 잇는 노드 편집기" width="2880" height="1540" loading="lazy">
           <figcaption><b>OUTPUT</b> 덱과 믹서 값을 OSC, Art-Net이나 sACN DMX, MIDI로 바꾸는 노드 편집기.</figcaption>
         </figure>
-        <figure class="plate panel" data-kind="product" role="tabpanel" id="panel-setlist" aria-labelledby="tab-setlist">
+        <figure data-reveal class="plate panel" data-kind="product" role="tabpanel" id="panel-setlist" aria-labelledby="tab-setlist">
           <img src="../site/img/setlist.webp" alt="SET LIST 페이지, 곡 네 개의 타임코드 오프셋과 웨이브폼 위의 큐 편집기" width="2880" height="1540" loading="lazy">
           <figcaption><b>SET LIST</b> 곡마다 타임코드 오프셋을 두고, 큐가 박에 맞춰 OSC, DMX, MIDI를 보냅니다.</figcaption>
         </figure>
-        <figure class="plate panel" data-kind="product" role="tabpanel" id="panel-mixer" aria-labelledby="tab-mixer">
+        <figure data-reveal class="plate panel" data-kind="product" role="tabpanel" id="panel-mixer" aria-labelledby="tab-mixer">
           <img src="../site/img/mixer.webp" alt="MIXER 페이지, DJM-900NXS2의 채널 페이더, EQ, FX, 레벨 미터" width="2880" height="1540" loading="lazy">
           <figcaption><b>MIXER</b> DJM이 알려 주는 페이더, EQ, FX, 레벨 미터. 화면은 DJM-900NXS2.</figcaption>
         </figure>
@@ -98,8 +98,8 @@
           <li>같은 카운트다운을 폰에서 /cuecall로.</li>
         </ul>
       </div>
-      <figure class="plate split-visual" data-kind="product">
-        <img src="../site/img/cuecall-board.webp" alt="CUE CALL 보드, Lighting, Video, SFX, Laser 그룹의 카운트다운" width="2880" height="1540" loading="lazy">
+      <figure data-reveal class="plate split-visual" data-kind="product" data-live>
+        <video class="live" muted loop playsinline preload="none" poster="../site/media/cuecall-live.webp" width="1920" height="1026" aria-label="CUE CALL 보드, Lighting, Video, SFX, Laser 그룹의 카운트다운"><source src="../site/media/cuecall-live.mp4" type="video/mp4"></video>
         <figcaption><b>CUE CALL</b> 보드 화면.</figcaption>
       </figure>
     </div>
@@ -132,7 +132,7 @@
         </div>
         <p class="meta">Mac DMG, <span data-size="mac">32.3 MB</span>, Apple 공증. Windows EXE, <span data-size="win">57.4 MB</span>, 서명 없음. 공연 전에 실제 수신 장비로 확인하세요. <a data-notes href="https://github.com/Zesminseok/ORVIK/releases/tag/v2.0.3">릴리즈 노트</a></p>
       </div>
-      <figure class="plate split-visual" data-kind="product">
+      <figure data-reveal class="plate split-visual" data-kind="product">
         <img src="../site/img/cuecall-layers.webp" alt="CUE CALL 레이어 화면, 마스터 덱 웨이브폼과 그룹별 큐 타임라인" width="2880" height="1540" loading="lazy">
         <figcaption><b>CUE CALL</b> 레이어 화면, 마스터 덱 웨이브폼 위의 큐.</figcaption>
       </figure>
