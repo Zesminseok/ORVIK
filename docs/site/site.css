@@ -203,12 +203,48 @@ a:hover { color: var(--color-ink); text-decoration-color: var(--color-accent); }
 .lv-t.hot .lv-t-bar span.on { background: var(--app-tile-hot); }
 .lv-t-fl { inset: 0; background: var(--app-flash); opacity: 0; }
 
-/* scroll motion (site.js, desktop): captions over the DECKS camera, the pages as one stage */
-.zoom-caps { display: none; }
-.screen.is-zoom { padding-top: 8vh; }
-.screen.is-zoom .zoom-caps { display: grid; margin-bottom: var(--space-lg); min-height: 1.2em; font-size: var(--text-display-s); line-height: 1.1; font-weight: 700; letter-spacing: var(--tracking-display); color: var(--color-ink); }
-.screen.is-zoom .zoom-cap { grid-area: 1 / 1; margin: 0; opacity: 0; }
-.switcher.is-scroll .panel, .switcher.is-scroll .panel[hidden] { display: grid !important; grid-area: 2 / 1; opacity: 0; transform: scale(0.985); transition: opacity 450ms var(--ease-out), transform 600ms var(--ease-out); }
-.switcher.is-scroll .tabs { grid-area: 1 / 1; }
-.switcher.is-scroll .panel.is-on { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { .switcher.is-scroll .panel { transition: none; } }
+/* story: six chapters of the app. Still, they read top to bottom, each line beside its screen. With motion (site.js) the
+   section holds one stage while the chapters pass: the screen changes, the camera moves, the line arrives word by word. */
+.story { padding-bottom: var(--section-gap); }
+.story-inner { display: grid; gap: var(--space-4xl); }
+.chapter { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-xl) var(--gap-columns); align-items: center; }
+.ch-copy { grid-column: 1 / span 4; display: grid; gap: var(--space-md); align-content: center; }
+.ch-plate { grid-column: 5 / span 8; }
+.ch-title { font-size: var(--text-display-s); line-height: 1.04; max-width: 13ch; }
+.ch-title .w { display: inline-block; }
+@media (max-width: 60rem) {
+  .chapter { grid-template-columns: minmax(0, 1fr); }
+  .ch-copy, .ch-plate { grid-column: 1 / -1; }
+}
+
+.story.is-story { padding-bottom: 0; }
+/* with the story on, the first screen sits right under the hero (site.js lifts it there), so the hero keeps less air below */
+.story-on .hero { padding-block: var(--space-2xl) var(--space-md); }
+@media (max-width: 60rem) { .story-on .hero { padding-block: var(--space-xl) var(--space-xs); } }
+.story.is-story .story-inner { height: 100vh; height: 100svh; gap: var(--space-xl) var(--gap-columns); grid-template-columns: repeat(12, minmax(0, 1fr)); grid-template-areas: "copy copy copy copy stage stage stage stage stage stage stage stage"; align-items: center; }
+.story.is-story .chapter { display: contents; }
+.story.is-story .ch-copy { grid-area: copy; opacity: 0; }
+.story.is-story .ch-plate { grid-area: stage; opacity: 0; will-change: opacity, transform; }
+.story.is-story .ch-plate figcaption { visibility: hidden; }
+/* phones and narrow windows: the line on top, the screen edge to edge below it and tall, so the app reads at the size of
+   the phone; the camera then pans across the screen at that height (site.js) */
+@media (max-width: 60rem) {
+  .story.is-story .story-inner { --fh: min(58svh, 150vw); grid-template-columns: minmax(0, 1fr); grid-template-areas: "copy" "stage"; grid-template-rows: auto auto; align-content: center; gap: var(--space-lg); }
+  .story.is-story .ch-copy { align-self: end; gap: var(--space-sm); }
+  .story.is-story .ch-title { font-size: var(--text-2xl); }
+  .story.is-story .ch-plate { margin-left: calc(-1 * max(var(--gutter), env(safe-area-inset-left, 0px))); margin-right: calc(-1 * max(var(--gutter), env(safe-area-inset-right, 0px))); }
+  .story.is-story .ch-plate .live-host { height: var(--fh); outline: none; border-block: 1px solid var(--color-plate); }
+  .story.is-story .ch-plate .live-zoom { height: var(--fh); width: calc(var(--fh) * 2880 / 1540); }
+  .story.is-story .ch-plate .live-zoom > img { width: 100%; height: 100%; outline: none; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* the hero arrives once: the mark wipes on from the ring, then the line and the downloads */
+  .hero h1.name img { animation: wm-in 900ms var(--ease-out) both; }
+  .banner-aside > * { animation: aside-in 520ms var(--ease-out) both; }
+  .banner-aside > :nth-child(1) { animation-delay: 360ms; }
+  .banner-aside > :nth-child(2) { animation-delay: 440ms; }
+  .banner-aside > :nth-child(3) { animation-delay: 520ms; }
+  @keyframes wm-in { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+  @keyframes aside-in { from { opacity: 0; filter: blur(6px); } to { opacity: 1; filter: blur(0); } }
+}

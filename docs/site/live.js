@@ -132,8 +132,9 @@
     if (kind === 'smpte') update.push(drawerParts(layer));
     if (kind === 'board') update.push(boardParts(layer));
     stage.appendChild(layer);
-    var fit = function () { var w = host.clientWidth; if (w) layer.style.transform = 'scale(' + (w / 2880) + ')'; };
-    fit(); if (window.ResizeObserver) new ResizeObserver(fit).observe(host); else window.addEventListener('resize', fit);
+    /* the layer follows the screenshot's drawn width (on a phone the story draws it taller than the frame is wide) */
+    var fit = function () { var w = stage.clientWidth || host.clientWidth; if (w) layer.style.transform = 'scale(' + (w / 2880) + ')'; };
+    fit(); if (window.ResizeObserver) { var ro = new ResizeObserver(fit); ro.observe(host); ro.observe(stage); } else window.addEventListener('resize', fit);
     var item = { screen: screen, visible: true, draw: function (t) { update.forEach(function (u) { u(t); }); } };
     item.draw(0); live.push(item);
   });

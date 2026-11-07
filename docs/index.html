@@ -45,64 +45,68 @@
     </div>
   </section>
 
-  <section class="screen" data-zoom aria-label="The DECKS page">
-    <div class="container">
-      <div class="zoom-caps" aria-hidden="true"><p class="zoom-cap" data-step="0">Every deck on the link</p><p class="zoom-cap" data-step="1">Waveforms on the beat grid</p><p class="zoom-cap" data-step="2">Timecode and BPM for each player</p></div>
-      <figure class="plate" data-kind="product" data-live="decks">
-        <div class="live-host"><div class="live-zoom"><img src="site/img/decks.webp" alt="ORVIK DECKS page with four players: waveforms, timecode, BPM and SMPTE layer buttons" width="2880" height="1540" fetchpriority="high"></div></div>
-        <figcaption><b>DECKS</b> Position, BPM, waveforms and cues for every player on the link.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-
-  <section class="pages" aria-labelledby="pages-head">
-    <div class="container">
-      <div class="head-split">
-        <h2 id="pages-head">From the decks to every receiver</h2>
-        <p class="lead">Timecode, OSC, DMX and MIDI, each set up on its own page.</p>
-      </div>
-      <div class="switcher" data-switcher>
-        <div class="tabs" role="tablist" aria-label="ORVIK pages">
-          <button type="button" role="tab" id="tab-smpte" aria-controls="panel-smpte" aria-selected="true">SMPTE OUT</button>
-          <button type="button" role="tab" id="tab-output" aria-controls="panel-output" aria-selected="false" tabindex="-1">OUTPUT</button>
-          <button type="button" role="tab" id="tab-setlist" aria-controls="panel-setlist" aria-selected="false" tabindex="-1">SET LIST</button>
-          <button type="button" role="tab" id="tab-mixer" aria-controls="panel-mixer" aria-selected="false" tabindex="-1">MIXER</button>
+  <section class="story" data-story aria-label="ORVIK at work">
+    <div class="container story-inner">
+      <article class="chapter" id="ch-decks" aria-labelledby="ch-decks-title">
+        <div class="ch-copy">
+          <h2 id="ch-decks-title" class="ch-title">Every deck on the link.</h2>
+          <p class="lead ch-text">Position, BPM, waveforms and cues for every player, as the players send them.</p>
         </div>
-        <figure class="plate panel" data-kind="product" role="tabpanel" id="panel-smpte" aria-labelledby="tab-smpte" data-live="smpte">
-        <div class="live-host"><div class="live-zoom"><img src="site/img/smpte.webp" alt="SMPTE OUT page: LTC, MTC and Art-Net timecode settings for layers A, B and MASTER" width="2880" height="1540" loading="lazy"></div></div>
-          <figcaption><b>SMPTE OUT</b> LTC, MTC and Art-Net timecode for layers A, B and MASTER.</figcaption>
+        <figure class="plate ch-plate" data-kind="product" data-live="decks">
+          <div class="live-host"><div class="live-zoom"><img src="site/img/decks.webp" alt="ORVIK DECKS page with four players: waveforms, timecode, BPM and SMPTE layer buttons" width="2880" height="1540" fetchpriority="high"></div></div>
+          <figcaption><b>DECKS</b></figcaption>
         </figure>
-        <figure class="plate panel" data-kind="product" role="tabpanel" id="panel-output" aria-labelledby="tab-output">
-          <img src="site/img/output.webp" alt="OUTPUT page: a node editor wiring deck values to OSC, DMX and MIDI targets" width="2880" height="1540" loading="lazy">
-          <figcaption><b>OUTPUT</b> A node editor that turns deck and mixer values into OSC, Art-Net or sACN DMX and MIDI.</figcaption>
+      </article>
+      <article class="chapter" id="ch-smpte" aria-labelledby="ch-smpte-title">
+        <div class="ch-copy">
+          <h2 id="ch-smpte-title" class="ch-title">Out as timecode.</h2>
+          <p class="lead ch-text">LTC, MTC and Art-Net timecode for layers A, B and MASTER.</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product" data-live="smpte">
+          <div class="live-host"><div class="live-zoom"><img src="site/img/smpte.webp" alt="SMPTE OUT page: LTC, MTC and Art-Net timecode settings for layers A, B and MASTER" width="2880" height="1540" loading="lazy"></div></div>
+          <figcaption><b>SMPTE OUT</b></figcaption>
         </figure>
-        <figure class="plate panel" data-kind="product" role="tabpanel" id="panel-setlist" aria-labelledby="tab-setlist">
-          <img src="site/img/setlist.webp" alt="SET LIST page: four tracks with timecode offsets and the cue editor over a waveform" width="2880" height="1540" loading="lazy">
-          <figcaption><b>SET LIST</b> A timecode offset for each track, and cues that send OSC, DMX and MIDI on the beat.</figcaption>
+      </article>
+      <article class="chapter" id="ch-output" aria-labelledby="ch-output-title">
+        <div class="ch-copy">
+          <h2 id="ch-output-title" class="ch-title">To every receiver.</h2>
+          <p class="lead ch-text">A node editor that turns deck and mixer values into OSC, Art-Net or sACN DMX and MIDI.</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product">
+          <div class="live-host"><div class="live-zoom"><img src="site/img/output.webp" alt="OUTPUT page: a node editor wiring deck values to OSC, DMX and MIDI targets" width="2880" height="1540" loading="lazy"></div></div>
+          <figcaption><b>OUTPUT</b></figcaption>
         </figure>
-        <figure class="plate panel" data-kind="product" role="tabpanel" id="panel-mixer" aria-labelledby="tab-mixer">
-          <img src="site/img/mixer.webp" alt="MIXER page: DJM-900NXS2 channel faders, EQ, FX and level meters" width="2880" height="1540" loading="lazy">
-          <figcaption><b>MIXER</b> Faders, EQ, FX and meters as the DJM reports them, here a DJM-900NXS2.</figcaption>
+      </article>
+      <article class="chapter" id="ch-setlist" aria-labelledby="ch-setlist-title">
+        <div class="ch-copy">
+          <h2 id="ch-setlist-title" class="ch-title">A cue for every moment.</h2>
+          <p class="lead ch-text">A timecode offset for each track, and cues that send OSC, DMX and MIDI on the beat.</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product">
+          <div class="live-host"><div class="live-zoom"><img src="site/img/setlist.webp" alt="SET LIST page: four tracks with timecode offsets and the cue editor over a waveform" width="2880" height="1540" loading="lazy"></div></div>
+          <figcaption><b>SET LIST</b></figcaption>
         </figure>
-      </div>
-    </div>
-  </section>
-
-  <section class="cuecall" aria-labelledby="cuecall-head">
-    <div class="container split">
-      <div class="split-text">
-        <h2 id="cuecall-head">Cue calls the crew can hear</h2>
-        <ul class="facts">
-          <li>Next cue and time left, per group.</li>
-          <li>Spoken calls: standby, three, two, one, go.</li>
-          <li>The same countdown on a phone at /cuecall.</li>
-        </ul>
-      </div>
-      <figure class="plate split-visual" data-kind="product" data-live="board">
-        <div class="live-host"><div class="live-zoom"><img src="site/img/cuecall-board.webp" alt="CUE CALL board: countdowns for Lighting, Video, SFX and Laser groups" width="2880" height="1540" loading="lazy"></div></div>
-        <figcaption><b>CUE CALL</b> Board view.</figcaption>
-      </figure>
+      </article>
+      <article class="chapter" id="ch-mixer" aria-labelledby="ch-mixer-title">
+        <div class="ch-copy">
+          <h2 id="ch-mixer-title" class="ch-title">The mixer, as it moves.</h2>
+          <p class="lead ch-text">Faders, EQ, FX and meters as the DJM reports them, here a DJM-900NXS2.</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product">
+          <div class="live-host"><div class="live-zoom"><img src="site/img/mixer.webp" alt="MIXER page: DJM-900NXS2 channel faders, EQ, FX and level meters" width="2880" height="1540" loading="lazy"></div></div>
+          <figcaption><b>MIXER</b></figcaption>
+        </figure>
+      </article>
+      <article class="chapter" id="ch-cuecall" aria-labelledby="ch-cuecall-title">
+        <div class="ch-copy">
+          <h2 id="ch-cuecall-title" class="ch-title">Cue calls the crew can hear.</h2>
+          <p class="lead ch-text">Next cue and time left per group, spoken calls, and the same countdown on a phone at /cuecall.</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product" data-live="board">
+          <div class="live-host"><div class="live-zoom"><img src="site/img/cuecall-board.webp" alt="CUE CALL board: countdowns for Lighting, Video, SFX and Laser groups" width="2880" height="1540" loading="lazy"></div></div>
+          <figcaption><b>CUE CALL</b></figcaption>
+        </figure>
+      </article>
     </div>
   </section>
 
@@ -171,8 +175,8 @@
     <p class="legal">ORVIK is an independent compatibility tool, not affiliated with AlphaTheta, Pioneer DJ, TC Supply or Resolume. Product names and trademarks are used only to describe compatibility. Art-Net™ Designed by and Copyright Artistic Licence.</p>
   </div>
 </footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="site/vendor/gsap-3.12.5/gsap.min.js" defer></script>
+<script src="site/vendor/gsap-3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="site/live.js" defer></script>
 <script src="site/site.js" defer></script>
 </body>

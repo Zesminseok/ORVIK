@@ -45,64 +45,68 @@
     </div>
   </section>
 
-  <section class="screen" data-zoom aria-label="DECKS 페이지">
-    <div class="container">
-      <div class="zoom-caps" aria-hidden="true"><p class="zoom-cap" data-step="0">링크의 모든 덱을 한 화면에</p><p class="zoom-cap" data-step="1">비트 그리드 위의 웨이브폼</p><p class="zoom-cap" data-step="2">플레이어마다 타임코드와 BPM</p></div>
-      <figure class="plate" data-kind="product" data-live="decks">
-        <div class="live-host"><div class="live-zoom"><img src="../site/img/decks.webp" alt="ORVIK DECKS 페이지, 플레이어 네 대의 웨이브폼, 타임코드, BPM, SMPTE 레이어 버튼" width="2880" height="1540" fetchpriority="high"></div></div>
-        <figcaption><b>DECKS</b> 링크에 연결된 모든 플레이어의 위치, BPM, 웨이브폼, 큐.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-
-  <section class="pages" aria-labelledby="pages-head">
-    <div class="container">
-      <div class="head-split">
-        <h2 id="pages-head">덱에서 모든 수신 장비까지</h2>
-        <p class="lead">타임코드, OSC, DMX, MIDI를 페이지마다 따로 설정합니다.</p>
-      </div>
-      <div class="switcher" data-switcher>
-        <div class="tabs" role="tablist" aria-label="ORVIK 페이지">
-          <button type="button" role="tab" id="tab-smpte" aria-controls="panel-smpte" aria-selected="true">SMPTE OUT</button>
-          <button type="button" role="tab" id="tab-output" aria-controls="panel-output" aria-selected="false" tabindex="-1">OUTPUT</button>
-          <button type="button" role="tab" id="tab-setlist" aria-controls="panel-setlist" aria-selected="false" tabindex="-1">SET LIST</button>
-          <button type="button" role="tab" id="tab-mixer" aria-controls="panel-mixer" aria-selected="false" tabindex="-1">MIXER</button>
+  <section class="story" data-story aria-label="ORVIK 작동 화면">
+    <div class="container story-inner">
+      <article class="chapter" id="ch-decks" aria-labelledby="ch-decks-title">
+        <div class="ch-copy">
+          <h2 id="ch-decks-title" class="ch-title">링크의 모든 덱을 한 화면에.</h2>
+          <p class="lead ch-text">링크에 연결된 모든 플레이어의 위치, BPM, 웨이브폼, 큐를 플레이어가 보내는 그대로.</p>
         </div>
-        <figure class="plate panel" data-kind="product" role="tabpanel" id="panel-smpte" aria-labelledby="tab-smpte" data-live="smpte">
-        <div class="live-host"><div class="live-zoom"><img src="../site/img/smpte.webp" alt="SMPTE OUT 페이지, 레이어 A, B, MASTER의 LTC, MTC, Art-Net 타임코드 설정" width="2880" height="1540" loading="lazy"></div></div>
-          <figcaption><b>SMPTE OUT</b> 레이어 A, B, MASTER의 LTC, MTC, Art-Net 타임코드.</figcaption>
+        <figure class="plate ch-plate" data-kind="product" data-live="decks">
+          <div class="live-host"><div class="live-zoom"><img src="../site/img/decks.webp" alt="ORVIK DECKS 페이지, 플레이어 네 대의 웨이브폼, 타임코드, BPM, SMPTE 레이어 버튼" width="2880" height="1540" fetchpriority="high"></div></div>
+          <figcaption><b>DECKS</b></figcaption>
         </figure>
-        <figure class="plate panel" data-kind="product" role="tabpanel" id="panel-output" aria-labelledby="tab-output">
-          <img src="../site/img/output.webp" alt="OUTPUT 페이지, 덱 값을 OSC, DMX, MIDI 대상으로 잇는 노드 편집기" width="2880" height="1540" loading="lazy">
-          <figcaption><b>OUTPUT</b> 덱과 믹서 값을 OSC, Art-Net이나 sACN DMX, MIDI로 바꾸는 노드 편집기.</figcaption>
+      </article>
+      <article class="chapter" id="ch-smpte" aria-labelledby="ch-smpte-title">
+        <div class="ch-copy">
+          <h2 id="ch-smpte-title" class="ch-title">타임코드로 내보내기.</h2>
+          <p class="lead ch-text">레이어 A, B, MASTER의 LTC, MTC, Art-Net 타임코드.</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product" data-live="smpte">
+          <div class="live-host"><div class="live-zoom"><img src="../site/img/smpte.webp" alt="SMPTE OUT 페이지, 레이어 A, B, MASTER의 LTC, MTC, Art-Net 타임코드 설정" width="2880" height="1540" loading="lazy"></div></div>
+          <figcaption><b>SMPTE OUT</b></figcaption>
         </figure>
-        <figure class="plate panel" data-kind="product" role="tabpanel" id="panel-setlist" aria-labelledby="tab-setlist">
-          <img src="../site/img/setlist.webp" alt="SET LIST 페이지, 곡 네 개의 타임코드 오프셋과 웨이브폼 위의 큐 편집기" width="2880" height="1540" loading="lazy">
-          <figcaption><b>SET LIST</b> 곡마다 타임코드 오프셋을 두고, 큐가 박에 맞춰 OSC, DMX, MIDI를 보냅니다.</figcaption>
+      </article>
+      <article class="chapter" id="ch-output" aria-labelledby="ch-output-title">
+        <div class="ch-copy">
+          <h2 id="ch-output-title" class="ch-title">모든 수신 장비로.</h2>
+          <p class="lead ch-text">덱과 믹서 값을 OSC, Art-Net이나 sACN DMX, MIDI로 바꾸는 노드 편집기.</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product">
+          <div class="live-host"><div class="live-zoom"><img src="../site/img/output.webp" alt="OUTPUT 페이지, 덱 값을 OSC, DMX, MIDI 대상으로 잇는 노드 편집기" width="2880" height="1540" loading="lazy"></div></div>
+          <figcaption><b>OUTPUT</b></figcaption>
         </figure>
-        <figure class="plate panel" data-kind="product" role="tabpanel" id="panel-mixer" aria-labelledby="tab-mixer">
-          <img src="../site/img/mixer.webp" alt="MIXER 페이지, DJM-900NXS2의 채널 페이더, EQ, FX, 레벨 미터" width="2880" height="1540" loading="lazy">
-          <figcaption><b>MIXER</b> DJM이 알려 주는 페이더, EQ, FX, 레벨 미터. 화면은 DJM-900NXS2.</figcaption>
+      </article>
+      <article class="chapter" id="ch-setlist" aria-labelledby="ch-setlist-title">
+        <div class="ch-copy">
+          <h2 id="ch-setlist-title" class="ch-title">순간마다 큐 하나.</h2>
+          <p class="lead ch-text">곡마다 타임코드 오프셋을 두고, 큐가 박에 맞춰 OSC, DMX, MIDI를 보냅니다.</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product">
+          <div class="live-host"><div class="live-zoom"><img src="../site/img/setlist.webp" alt="SET LIST 페이지, 곡 네 개의 타임코드 오프셋과 웨이브폼 위의 큐 편집기" width="2880" height="1540" loading="lazy"></div></div>
+          <figcaption><b>SET LIST</b></figcaption>
         </figure>
-      </div>
-    </div>
-  </section>
-
-  <section class="cuecall" aria-labelledby="cuecall-head">
-    <div class="container split">
-      <div class="split-text">
-        <h2 id="cuecall-head">스태프 귀에 들리는 큐 콜</h2>
-        <ul class="facts">
-          <li>그룹별 다음 큐와 남은 시간.</li>
-          <li>음성 안내: 스탠바이, 셋, 둘, 하나, 고.</li>
-          <li>같은 카운트다운을 폰에서 /cuecall로.</li>
-        </ul>
-      </div>
-      <figure class="plate split-visual" data-kind="product" data-live="board">
-        <div class="live-host"><div class="live-zoom"><img src="../site/img/cuecall-board.webp" alt="CUE CALL 보드, Lighting, Video, SFX, Laser 그룹의 카운트다운" width="2880" height="1540" loading="lazy"></div></div>
-        <figcaption><b>CUE CALL</b> 보드 화면.</figcaption>
-      </figure>
+      </article>
+      <article class="chapter" id="ch-mixer" aria-labelledby="ch-mixer-title">
+        <div class="ch-copy">
+          <h2 id="ch-mixer-title" class="ch-title">믹서가 움직이는 그대로.</h2>
+          <p class="lead ch-text">DJM이 알려 주는 페이더, EQ, FX, 레벨 미터. 화면은 DJM-900NXS2.</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product">
+          <div class="live-host"><div class="live-zoom"><img src="../site/img/mixer.webp" alt="MIXER 페이지, DJM-900NXS2의 채널 페이더, EQ, FX, 레벨 미터" width="2880" height="1540" loading="lazy"></div></div>
+          <figcaption><b>MIXER</b></figcaption>
+        </figure>
+      </article>
+      <article class="chapter" id="ch-cuecall" aria-labelledby="ch-cuecall-title">
+        <div class="ch-copy">
+          <h2 id="ch-cuecall-title" class="ch-title">스태프 귀에 들리는 큐 콜.</h2>
+          <p class="lead ch-text">그룹별 다음 큐와 남은 시간, 음성 안내, 같은 카운트다운을 폰에서 /cuecall로.</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product" data-live="board">
+          <div class="live-host"><div class="live-zoom"><img src="../site/img/cuecall-board.webp" alt="CUE CALL 보드, Lighting, Video, SFX, Laser 그룹의 카운트다운" width="2880" height="1540" loading="lazy"></div></div>
+          <figcaption><b>CUE CALL</b></figcaption>
+        </figure>
+      </article>
     </div>
   </section>
 
@@ -171,8 +175,8 @@
     <p class="legal">ORVIK은 AlphaTheta, Pioneer DJ, TC Supply, Resolume과 관계없는 독립 호환 도구입니다. 제품명과 상표는 호환 대상을 설명하기 위해서만 씁니다. Art-Net™ Designed by and Copyright Artistic Licence.</p>
   </div>
 </footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="../site/vendor/gsap-3.12.5/gsap.min.js" defer></script>
+<script src="../site/vendor/gsap-3.12.5/ScrollTrigger.min.js" defer></script>
 <script src="../site/live.js" defer></script>
 <script src="../site/site.js" defer></script>
 </body>
