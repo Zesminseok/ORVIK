@@ -1,7 +1,8 @@
 Font License Notice
 ===================
 
-The ORVIK site serves subsets of these fonts, under the SIL Open Font License, Version 1.1.
+The ORVIK site serves these fonts (Inter and JetBrains Mono as subsets, DSEG7 Classic and Space Grotesk
+unmodified in WOFF2 form), under the SIL Open Font License, Version 1.1.
 
 inter-var-latin.woff2
   Copyright (c) 2016 The Inter Project Authors
@@ -14,6 +15,18 @@ jetbrains-mono-700-latin.woff2
   (https://github.com/JetBrains/JetBrainsMono)
   Licensed under the SIL Open Font License, Version 1.1.
   Source: https://www.jetbrains.com/lp/mono/
+
+DSEG7Classic-Regular.woff2
+  Copyright (c) 2018, keshikan (http://www.keshikan.net),
+  with Reserved Font Name "DSEG".
+  Licensed under the SIL Open Font License, Version 1.1.
+  Source: https://github.com/keshikan/DSEG
+
+SpaceGrotesk-Variable.woff2
+  Copyright 2020 The Space Grotesk Project Authors
+  (https://github.com/floriankarsten/space-grotesk)
+  Licensed under the SIL Open Font License, Version 1.1.
+  Source: https://github.com/floriankarsten/space-grotesk
 
 ---
 

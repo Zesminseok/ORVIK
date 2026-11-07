@@ -121,33 +121,94 @@ a:hover { color: var(--color-ink); text-decoration-color: var(--color-accent); }
   .tabs button { flex: 1 1 50%; padding-inline: var(--space-sm); border-bottom: 1px solid var(--color-rule); }
 }
 
-/* live plates: the DECKS, SMPTE OUT and CUE CALL screens as short loops rendered from the app's own data.
-   They play only while on screen; reduced motion and no script leave the poster frame. */
-.plate video { width: 100%; height: auto; aspect-ratio: 2880 / 1540; object-fit: cover; display: block; background: var(--color-paper-3); outline: 1px solid var(--color-plate); outline-offset: -1px; border-radius: var(--radius-card); }
-.plate figcaption { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--space-2xs) var(--space-md); }
-.plate figcaption .cap { flex: 1 1 24ch; }
-.vctl { min-height: 32px; padding-inline: var(--space-sm); border: 1px solid var(--color-rule); border-radius: var(--radius-control); background: transparent; color: var(--color-ink-2); font-family: var(--font-body); font-size: var(--text-xs); font-weight: 700; cursor: pointer; transition: background-color var(--dur-micro) var(--ease-out), color var(--dur-micro) var(--ease-out), border-color var(--dur-micro) var(--ease-out); }
-.vctl:hover { background: var(--color-paper-2); color: var(--color-ink); border-color: var(--color-muted); }
-.vctl:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; transition: none; }
-.vctl:active { transform: translateY(1px); }
-
-@media (prefers-reduced-motion: no-preference) {
-  /* the hero arrives once: the mark wipes on from the ring, then the line and the downloads */
-  .hero h1.name img { animation: wm-in 900ms var(--ease-out) both; }
-  .banner-aside > * { animation: aside-in 520ms var(--ease-out) both; }
-  .banner-aside > :nth-child(1) { animation-delay: 360ms; }
-  .banner-aside > :nth-child(2) { animation-delay: 440ms; }
-  .banner-aside > :nth-child(3) { animation-delay: 520ms; }
-  @keyframes wm-in { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
-  @keyframes aside-in { from { opacity: 0; filter: blur(6px); } to { opacity: 1; filter: blur(0); } }
-
-  /* the DECKS screen rises to full size as it comes up the page */
-  @supports (animation-timeline: view()) {
-    .screen .plate { transform-origin: 50% 0; animation: plate-rise linear both; animation-timeline: view(); animation-range: entry 0% cover 35%; }
-    @keyframes plate-rise { from { transform: scale(0.93); } to { transform: scale(1); } }
-  }
-
-  /* every other screen switches on once, top to bottom, like a monitor drawing its first frame */
-  .js .plate[data-reveal]:not(.on) > img, .js .plate[data-reveal]:not(.on) > video { clip-path: inset(0 0 100% 0); }
-  .js .plate[data-reveal].on > img, .js .plate[data-reveal].on > video { clip-path: inset(0 0 0 0); transition: clip-path 640ms var(--ease-out); }
+/* live screens: the app's own colours and faces for the parts that move over each 2x screenshot (site/live.js) */
+@font-face { font-family: "DSEG7 Classic"; src: url("./fonts/DSEG7Classic-Regular.woff2") format("woff2"); font-display: swap; }
+@font-face { font-family: "Space Grotesk"; src: url("./fonts/SpaceGrotesk-Variable.woff2") format("woff2"); font-weight: 300 700; font-display: swap; }
+:root {
+  --app-card: #0a0d13; --app-wave: #090b0f; --app-head: #ff0000; --app-ink: #fdffff; --app-clock: #d39a3c; --app-bar: #0c0c0c;
+  --app-seg: #f4f4f6; --app-ghost: #262626; --app-hour: #ff6b2c; --app-sep: #c8902a; --app-panel: #1a1a1a; --app-rule: #333333;
+  --app-chip: #121212; --app-chip-line: #8a8d94; --app-chip-ink: #f3f5f5; --app-chip-on-ink: #0e0e17; --app-dim: #3a3d44;
+  --app-go: #6ef08a; --app-set: #f6a516; --app-mute: #5c5f66; --app-hdr: #141414; --app-beat: #3a4047; --app-beat-on: #f8faf7;
+  --app-tile: #222222; --app-tile-ink: #f5f5f5; --app-tile-hot: #111111; --app-next: #bdbdbd; --app-far: #d6d6d6; --app-icon: #909090;
+  --app-chip-a: #7fc8fd; --app-flash: #ffffff; --app-master: #ff9601; --app-shade: rgba(0, 0, 0, 0.18);
+  --font-seg: "DSEG7 Classic", monospace; --font-label: "Space Grotesk", var(--font-body);
 }
+.live-host { position: relative; overflow: hidden; container-type: inline-size; }
+.live-host > .live-zoom { position: relative; transform-origin: 0 0; will-change: transform; }
+.live-zoom > img { display: block; }
+.plate .live-host { outline: 1px solid var(--color-plate); outline-offset: -1px; }
+.lv-layer { position: absolute; left: 0; top: 0; width: 2880px; height: 1540px; transform-origin: 0 0; pointer-events: none; }
+.lv-layer > * { position: absolute; }
+.lv-wf { width: 1300px; height: 204px; overflow: hidden; background: var(--app-wave); }
+.lv-win { position: absolute; top: 0; height: 204px; overflow: hidden; }
+.lv-strip { position: absolute; left: 0; top: 0; width: 8400px; height: 204px; background-repeat: no-repeat; will-change: transform; }
+.lv-head { position: absolute; left: 325px; top: 0; width: 2px; height: 204px; background: var(--app-head); }
+.lv-erase { background: var(--app-card); }
+.lv-tc { color: var(--app-ink); font: 700 59.4px/1.32 var(--font-display); letter-spacing: -3.15px; white-space: nowrap; }
+.lv-sub { color: var(--app-clock); font: 700 32.4px/1.32 var(--font-display); letter-spacing: -3px; white-space: nowrap; }
+/* the plate rule sizes every <img> in a plate to the frame; the overlaid deck cards keep their own 2x size */
+.plate .lv-layer .lv-card { width: 1356px; height: 579px; aspect-ratio: auto; outline: none; background: none; border-radius: 0; }
+.lv-barfix { left: 2278px; top: 1474px; width: 349px; height: 61px; background: var(--app-bar); }
+.lv-bseg { top: 1483px; font: 40px/1 var(--font-seg); white-space: nowrap; }
+.lv-bseg .g, .lv-seg .g { color: var(--app-ghost); }
+.lv-bseg .l, .lv-seg .l { position: absolute; left: 0; top: 0; color: var(--app-seg); }
+.lv-bseg .l.h, .lv-seg.hour .l { color: var(--app-hour); }
+.lv-bsep { width: 6px; height: 6px; background: var(--app-sep); }
+.lv-dclip { left: 106px; top: 1081px; width: 2774px; height: 459px; overflow: hidden; }
+.lv-drawer { position: absolute; inset: 0; background: var(--app-bar); border-top: 2px solid var(--app-dim); }
+.lv-drt { position: absolute; left: 26px; top: 22px; color: var(--app-sep); font: 700 22px/1 var(--font-label); letter-spacing: 0.08em; }
+.lv-pn { position: absolute; top: 65px; height: 370px; background: var(--app-panel); border-top: 3px solid var(--c); }
+.lv-pn > * { position: absolute; }
+.lv-pn-name { left: 16px; top: 18px; color: var(--c); font: 700 24px/1 var(--font-label); letter-spacing: 0.08em; }
+.lv-ch { height: 36px; border: 2px solid var(--app-chip-line); color: var(--app-chip-ink); background: var(--app-chip); font: 700 18px/32px var(--font-display); text-align: center; }
+.lv-ch.on { background: var(--c); border-color: var(--c); color: var(--app-chip-on-ink); }
+.lv-ch.sel { background: var(--app-chip-ink); border-color: var(--app-chip-ink); color: var(--app-chip-on-ink); }
+.lv-ch.dim { border-color: var(--app-dim); background: transparent; }
+.lv-ch.go { background: var(--app-go); border-color: var(--app-go); color: var(--app-chip-on-ink); }
+.lv-ch.set { background: var(--app-set); border-color: var(--app-set); color: var(--app-chip-on-ink); }
+.lv-rule { left: 0; right: 0; height: 2px; background: var(--app-rule); }
+.lv-lab { top: 134px; width: 200px; margin-left: -100px; text-align: center; color: var(--app-sep); font: 700 15px/1 var(--font-label); letter-spacing: 0.08em; }
+.lv-seg { top: 154px; font: 94px/1 var(--font-seg); white-space: nowrap; }
+.lv-sep { width: 14px; height: 14px; background: var(--app-sep); }
+.lv-pm { top: 258px; width: 32px; height: 32px; border: 2px solid var(--app-chip-line); color: var(--app-chip-ink); font: 700 22px/28px var(--font-display); text-align: center; }
+.lv-pmv { top: 264px; width: 40px; text-align: center; color: var(--app-mute); font: 700 20px/1 var(--font-display); }
+.lv-pmv.hot { color: var(--app-hour); }
+.lv-olab { left: 16px; top: 326px; color: var(--app-sep); font: 700 18px/1 var(--font-label); letter-spacing: 0.08em; }
+.lv-er { background: var(--app-hdr); }
+.lv-btc { left: 31px; top: 18.3px; color: var(--app-chip-ink); font: 700 63.4px/1.32 var(--font-display); letter-spacing: 0.45px; white-space: nowrap; }
+.lv-btc b { color: var(--app-master); font-weight: 700; }
+.lv-bt { top: 38px; width: 44px; height: 44px; background: var(--app-beat); }
+.lv-bt.on { background: var(--app-beat-on); }
+.lv-btime { left: 1100px; width: 303px; top: 147px; text-align: right; color: var(--app-chip-ink); font: 700 32.4px/1.32 var(--font-display); white-space: nowrap; }
+.lv-t { width: 1428px; height: 596px; background: var(--app-tile); border-top: 10px solid var(--g); overflow: hidden; }
+.lv-t > * { position: absolute; }
+.lv-t.hot { background: var(--g); }
+.lv-t-g { left: 48px; top: 29px; display: flex; align-items: center; gap: 14px; color: var(--g); font: 700 49.5px/1 var(--font-body); }
+.lv-t-g i { display: inline-flex; width: 40px; height: 40px; color: var(--app-icon); }
+.lv-t-g svg { width: 40px; height: 40px; }
+.lv-t-a { left: 48px; top: 257px; width: 50px; height: 50px; background: var(--app-chip-a); color: var(--app-chip-on-ink); font: 700 32px/50px var(--font-display); text-align: center; }
+.lv-t-n { left: 138px; top: 233px; color: var(--app-tile-ink); font: 700 95px/1 var(--font-body); letter-spacing: -0.01em; white-space: nowrap; }
+.lv-t-cd { right: 30px; top: 85px; color: var(--g); font: 700 229.4px/1.32 var(--font-display); letter-spacing: 0; white-space: nowrap; }
+.lv-t-cd small { font-size: 0.42em; margin-left: 0.25em; }
+.lv-t-cd.far { color: var(--app-far); }
+.lv-t-bar { left: 48px; right: 48px; top: 387px; height: 18px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 4px; }
+.lv-t-bar span { background: color-mix(in srgb, var(--g) 22%, var(--app-tile)); }
+.lv-t-bar span.on { background: var(--g); }
+.lv-t-nx { right: 48px; top: 472px; text-align: right; color: var(--app-next); font: 700 30px/48px var(--font-body); white-space: nowrap; }
+.lv-t-nx b { color: var(--app-tile-ink); font-size: 36px; margin: 0 22px 0 14px; }
+.lv-t-nx em { color: var(--app-tile-ink); font: 700 38px/48px var(--font-display); font-style: normal; }
+.lv-t-nx .ghost { visibility: hidden; }
+.lv-t.hot .lv-t-g, .lv-t.hot .lv-t-g i, .lv-t.hot .lv-t-n, .lv-t.hot .lv-t-cd, .lv-t.hot .lv-t-nx, .lv-t.hot .lv-t-nx b, .lv-t.hot .lv-t-nx em { color: var(--app-tile-hot); }
+.lv-t.hot .lv-t-bar span { background: var(--app-shade); }
+.lv-t.hot .lv-t-bar span.on { background: var(--app-tile-hot); }
+.lv-t-fl { inset: 0; background: var(--app-flash); opacity: 0; }
+
+/* scroll motion (site.js, desktop): captions over the DECKS camera, the pages as one stage */
+.zoom-caps { display: none; }
+.screen.is-zoom { padding-top: 8vh; }
+.screen.is-zoom .zoom-caps { display: grid; margin-bottom: var(--space-lg); min-height: 1.2em; font-size: var(--text-display-s); line-height: 1.1; font-weight: 700; letter-spacing: var(--tracking-display); color: var(--color-ink); }
+.screen.is-zoom .zoom-cap { grid-area: 1 / 1; margin: 0; opacity: 0; }
+.switcher.is-scroll .panel, .switcher.is-scroll .panel[hidden] { display: grid !important; grid-area: 2 / 1; opacity: 0; transform: scale(0.985); transition: opacity 450ms var(--ease-out), transform 600ms var(--ease-out); }
+.switcher.is-scroll .tabs { grid-area: 1 / 1; }
+.switcher.is-scroll .panel.is-on { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .switcher.is-scroll .panel { transition: none; } }
