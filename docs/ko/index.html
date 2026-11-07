@@ -29,6 +29,24 @@
     </nav>
   </div>
 </header>
+<div class="bar" data-bar hidden>
+  <div class="container bar-row">
+    <a class="bar-mark" href="#"><img src="../site/img/wordmark-hero.png" alt="ORVIK" width="783" height="242"></a>
+    <nav class="bar-rail" aria-label="장 목록">
+      <a href="#ch-decks" data-ch="0">덱</a>
+      <a href="#ch-smpte" data-ch="1">SMPTE 출력</a>
+      <a href="#ch-output" data-ch="2">출력</a>
+      <a href="#ch-setlist" data-ch="3">세트 리스트</a>
+      <a href="#ch-mixer" data-ch="4">믹서</a>
+      <a href="#ch-cuecall" data-ch="5">큐 콜</a>
+    </nav>
+    <div class="bar-get">
+      <a class="btn btn-primary" data-asset="mac" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.3/ORVIK-2.0.3-mac-arm64.dmg">Mac<span class="bar-long">용 다운로드</span></a>
+      <a class="btn btn-secondary" data-asset="win" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.3/ORVIK-2.0.3-win-x64.exe">Windows<span class="bar-long">용 다운로드</span></a>
+    </div>
+  </div>
+  <div class="bar-line" aria-hidden="true"><span></span></div>
+</div>
 
 <main>
   <section class="hero">
@@ -47,64 +65,64 @@
 
   <section class="story" data-story aria-label="ORVIK 작동 화면">
     <div class="container story-inner">
-      <article class="chapter" id="ch-decks" aria-labelledby="ch-decks-title">
+      <article class="chapter" id="ch-decks" data-layout="top" aria-labelledby="ch-decks-title">
         <div class="ch-copy">
           <h2 id="ch-decks-title" class="ch-title">링크의 모든 덱을 한 화면에.</h2>
           <p class="lead ch-text">링크에 연결된 모든 플레이어의 위치, BPM, 웨이브폼, 큐를 플레이어가 보내는 그대로.</p>
         </div>
         <figure class="plate ch-plate" data-kind="product" data-live="decks">
           <div class="live-host"><div class="live-zoom"><img src="../site/img/decks.webp" alt="ORVIK DECKS 페이지, 플레이어 네 대의 웨이브폼, 타임코드, BPM, SMPTE 레이어 버튼" width="2880" height="1540" fetchpriority="high"></div></div>
-          <figcaption><b>DECKS</b></figcaption>
+          <figcaption><b>덱</b></figcaption>
         </figure>
       </article>
-      <article class="chapter" id="ch-smpte" aria-labelledby="ch-smpte-title">
+      <article class="chapter" id="ch-smpte" data-layout="bottom-flip" aria-labelledby="ch-smpte-title">
         <div class="ch-copy">
           <h2 id="ch-smpte-title" class="ch-title">타임코드로 내보내기.</h2>
-          <p class="lead ch-text">레이어 A, B, MASTER의 LTC, MTC, Art-Net 타임코드.</p>
+          <p class="lead ch-text">레이어 A, B, MASTER의 LTC, MTC, <span class="nw">Art-Net</span> 타임코드.</p>
         </div>
         <figure class="plate ch-plate" data-kind="product" data-live="smpte">
           <div class="live-host"><div class="live-zoom"><img src="../site/img/smpte.webp" alt="SMPTE OUT 페이지, 레이어 A, B, MASTER의 LTC, MTC, Art-Net 타임코드 설정" width="2880" height="1540" loading="lazy"></div></div>
-          <figcaption><b>SMPTE OUT</b></figcaption>
+          <figcaption><b>SMPTE 출력</b></figcaption>
         </figure>
       </article>
-      <article class="chapter" id="ch-output" aria-labelledby="ch-output-title">
+      <article class="chapter" id="ch-output" data-layout="top-flip" aria-labelledby="ch-output-title">
         <div class="ch-copy">
           <h2 id="ch-output-title" class="ch-title">모든 수신 장비로.</h2>
-          <p class="lead ch-text">덱과 믹서 값을 OSC, Art-Net이나 sACN DMX, MIDI로 바꾸는 노드 편집기.</p>
+          <p class="lead ch-text">덱과 믹서 값을 OSC, <span class="nw">Art-Net</span>이나 sACN DMX, MIDI로 바꾸는 노드 편집기.</p>
         </div>
         <figure class="plate ch-plate" data-kind="product">
           <div class="live-host"><div class="live-zoom"><img src="../site/img/output.webp" alt="OUTPUT 페이지, 덱 값을 OSC, DMX, MIDI 대상으로 잇는 노드 편집기" width="2880" height="1540" loading="lazy"></div></div>
-          <figcaption><b>OUTPUT</b></figcaption>
+          <figcaption><b>출력</b></figcaption>
         </figure>
       </article>
-      <article class="chapter" id="ch-setlist" aria-labelledby="ch-setlist-title">
+      <article class="chapter" id="ch-setlist" data-layout="bottom" aria-labelledby="ch-setlist-title">
         <div class="ch-copy">
           <h2 id="ch-setlist-title" class="ch-title">순간마다 큐 하나.</h2>
           <p class="lead ch-text">곡마다 타임코드 오프셋을 두고, 큐가 박에 맞춰 OSC, DMX, MIDI를 보냅니다.</p>
         </div>
         <figure class="plate ch-plate" data-kind="product">
           <div class="live-host"><div class="live-zoom"><img src="../site/img/setlist.webp" alt="SET LIST 페이지, 곡 네 개의 타임코드 오프셋과 웨이브폼 위의 큐 편집기" width="2880" height="1540" loading="lazy"></div></div>
-          <figcaption><b>SET LIST</b></figcaption>
+          <figcaption><b>세트 리스트</b></figcaption>
         </figure>
       </article>
-      <article class="chapter" id="ch-mixer" aria-labelledby="ch-mixer-title">
+      <article class="chapter" id="ch-mixer" data-layout="top" aria-labelledby="ch-mixer-title">
         <div class="ch-copy">
           <h2 id="ch-mixer-title" class="ch-title">믹서가 움직이는 그대로.</h2>
           <p class="lead ch-text">DJM이 알려 주는 페이더, EQ, FX, 레벨 미터. 화면은 DJM-900NXS2.</p>
         </div>
         <figure class="plate ch-plate" data-kind="product">
           <div class="live-host"><div class="live-zoom"><img src="../site/img/mixer.webp" alt="MIXER 페이지, DJM-900NXS2의 채널 페이더, EQ, FX, 레벨 미터" width="2880" height="1540" loading="lazy"></div></div>
-          <figcaption><b>MIXER</b></figcaption>
+          <figcaption><b>믹서</b></figcaption>
         </figure>
       </article>
-      <article class="chapter" id="ch-cuecall" aria-labelledby="ch-cuecall-title">
+      <article class="chapter" id="ch-cuecall" data-layout="bottom-flip" aria-labelledby="ch-cuecall-title">
         <div class="ch-copy">
           <h2 id="ch-cuecall-title" class="ch-title">스태프 귀에 들리는 큐 콜.</h2>
           <p class="lead ch-text">그룹별 다음 큐와 남은 시간, 음성 안내, 같은 카운트다운을 폰에서 /cuecall로.</p>
         </div>
         <figure class="plate ch-plate" data-kind="product" data-live="board">
           <div class="live-host"><div class="live-zoom"><img src="../site/img/cuecall-board.webp" alt="CUE CALL 보드, Lighting, Video, SFX, Laser 그룹의 카운트다운" width="2880" height="1540" loading="lazy"></div></div>
-          <figcaption><b>CUE CALL</b></figcaption>
+          <figcaption><b>큐 콜</b></figcaption>
         </figure>
       </article>
     </div>

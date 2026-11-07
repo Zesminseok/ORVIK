@@ -1,8 +1,12 @@
 /* Hallmark · shape: rack showcase · genre: modern-minimal · theme: custom (the app's DESIGN.md, The Broadcast Rack) · job: try · idea: "the product name, one plain line and the real four-deck screen" · vibe: "broadcast rack, dark booth, timecode first"
- * paper: oklch(18.7% 0.011 268) · accent: oklch(70.4% 0.195 41) · display: JetBrains Mono 700 · body: Inter · hero: Banner, the wordmark large beside one line and the two downloads, the decks screen as the next section · nav: four text links at the right edge, no wordmark (the hero carries it), no button · footer: mast, the wordmark over three link rows · imagery: screenshots 7 (the app's own --snapshot at 2x) · signature: the four-deck screen at full width under the name
+ * paper: oklch(18.7% 0.011 268) · accent: oklch(70.4% 0.195 41) · display: JetBrains Mono 700 · body: Inter · hero: Banner, the wordmark large beside one line and the two downloads, the decks screen as the next section · nav: four text links at the right edge, no wordmark (the hero carries it), no button; while the story runs a bar holds the name, the six chapters and the two downloads · footer: mast, the wordmark over three link rows · imagery: screenshots 7 (the app's own --snapshot at 2x) · signature: the four-deck screen at full width under the name
  * axes: dark/mono/chromatic-orange · posture: restrained · surface: flat, 1px edges, square plates · contrast: pass · fold: pass · v2.0.0 */
 /* Hallmark · pre-emit critique: P3 H5 E4 S5 R5 V5 · weakest: P, the page makes no claim of its own; the screens carry it, as asked (statement cut by the owner) */
 /* Hallmark · dismissed 58 · the last window holds the download band and the footer, whose link rows and non-affiliation line are required */
+/* Hallmark · dismissed 24a · the .lv- rules redraw the app's own UI over its screenshots at the app's own 2x pixel sizes; they are the picture, not the page's spacing */
+/* Hallmark · dismissed 24b · same: .lv- offsets are the app's measured pixels */
+/* Hallmark · dismissed 67 · .lv-lab is the app's own tracked label inside the screenshot; the KO caption 'SMPTE 출력' keeps SMPTE, an acronym */
+/* Hallmark · dismissed 37 · DSEG7 and Space Grotesk are the app's faces, used only inside the redrawn screens */
 @import url("./tokens.css");
 @import url("./base.css");
 
@@ -191,7 +195,7 @@ a:hover { color: var(--color-ink); text-decoration-color: var(--color-accent); }
 .lv-t-cd { right: 30px; top: 85px; color: var(--g); font: 700 229.4px/1.32 var(--font-display); letter-spacing: 0; white-space: nowrap; }
 .lv-t-cd small { font-size: 0.42em; margin-left: 0.25em; }
 .lv-t-cd.far { color: var(--app-far); }
-.lv-t-bar { left: 48px; right: 48px; top: 387px; height: 18px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 4px; }
+.lv-t-bar { left: 48px; right: 48px; top: 387px; height: 18px; display: grid; grid-template-columns: repeat(12, 1fr); gap: var(--space-2xs); }
 .lv-t-bar span { background: color-mix(in srgb, var(--g) 22%, var(--app-tile)); }
 .lv-t-bar span.on { background: var(--g); }
 .lv-t-nx { right: 48px; top: 472px; text-align: right; color: var(--app-next); font: 700 30px/48px var(--font-body); white-space: nowrap; }
@@ -212,27 +216,68 @@ a:hover { color: var(--color-ink); text-decoration-color: var(--color-accent); }
 .ch-plate { grid-column: 5 / span 8; }
 .ch-title { font-size: var(--text-display-s); line-height: 1.04; max-width: 13ch; }
 .ch-title .w { display: inline-block; }
+.nw { white-space: nowrap; }
 @media (max-width: 60rem) {
   .chapter { grid-template-columns: minmax(0, 1fr); }
   .ch-copy, .ch-plate { grid-column: 1 / -1; }
 }
 
 .story.is-story { padding-bottom: 0; }
-/* with the story on, the first screen sits right under the hero (site.js lifts it there), so the hero keeps less air below */
-.story-on .hero { padding-block: var(--space-2xl) var(--space-md); }
-@media (max-width: 60rem) { .story-on .hero { padding-block: var(--space-xl) var(--space-xs); } }
-.story.is-story .story-inner { height: 100vh; height: 100svh; gap: var(--space-xl) var(--gap-columns); grid-template-columns: repeat(12, minmax(0, 1fr)); grid-template-areas: "copy copy copy copy stage stage stage stage stage stage stage stage"; align-items: center; }
-.story.is-story .chapter { display: contents; }
-.story.is-story .ch-copy { grid-area: copy; opacity: 0; }
-.story.is-story .ch-plate { grid-area: stage; opacity: 0; will-change: opacity, transform; }
-.story.is-story .ch-plate figcaption { visibility: hidden; }
+/* with the story on, the bar takes the gap under the hero: the first screen sits right below it (site.js lifts it there) */
+:root { --bar-h: 60px; }
+.story-on .hero { padding-block: var(--space-2xl) 0; }
+@media (max-width: 60rem) { :root { --bar-h: 52px; } .story-on .hero { padding-block: var(--space-xl) 0; } }
+
+/* the bar: once the hero has gone, the name, the six chapters (where the story is, and a way to jump) and the two
+   downloads stay at the top while the story runs; it leaves with the story */
+.bar { display: none; }
+.story-on .bar { display: block; position: fixed; top: 0; left: 0; right: 0; z-index: var(--z-sticky-nav); height: var(--bar-h); background: var(--color-paper); border-bottom: 1px solid var(--color-rule); transition: transform var(--dur-long) var(--ease-out), visibility 0s; }
+.js .bar:not(.is-shown) { transform: translateY(-101%); visibility: hidden; transition: transform var(--dur-long) var(--ease-out), visibility 0s linear var(--dur-long); }
+.bar-row { height: 100%; display: flex; align-items: center; gap: var(--space-xl); }
+.bar-mark { display: inline-flex; flex-shrink: 0; }
+.bar-mark img { display: block; height: 22px; width: auto; }
+.bar-rail { display: flex; gap: var(--space-lg); margin-inline: auto; font-size: var(--text-sm); }
+.bar-rail a { position: relative; padding-block: var(--space-xs); color: var(--color-muted); text-decoration: none; white-space: nowrap; }
+.bar-rail a:hover, .bar-rail a[aria-current] { color: var(--color-ink); }
+.bar-rail a::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--color-accent); transform: scaleX(0); transform-origin: 0 50%; transition: transform var(--dur-short) var(--ease-out); }
+.bar-rail a[aria-current]::after { transform: scaleX(1); }
+.bar-mark:focus-visible, .bar-rail a:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; transition: none; }
+.bar-get { display: flex; gap: var(--space-sm); flex-shrink: 0; }
+.bar-get .btn { min-height: 36px; padding-inline: var(--space-md); font-size: var(--text-sm); }
+.bar-line { position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; }
+.bar-line span { display: block; height: 100%; background: var(--color-accent); transform: scaleX(0); transform-origin: 0 50%; }
+@media (max-width: 75rem) { .bar-long { display: none; } }
+@media (max-width: 60rem) { .bar-rail { display: none; } .bar-get { margin-left: auto; } }
+
+/* the stage: each chapter is a layer of its own under the bar, laid out three ways (the line beside the screen on the
+   left or the right, or above it with the screen wide), so one screen can travel from layout to layout (site.js) */
+.story.is-story .story-inner { position: relative; height: 100vh; height: 100svh; }
+.story.is-story .chapter { position: absolute; top: var(--bar-h); bottom: 0; left: max(var(--gutter), env(safe-area-inset-left, 0px)); right: max(var(--gutter), env(safe-area-inset-right, 0px)); grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-lg) var(--gap-columns); align-content: center; }
+.story.is-story .ch-copy { opacity: 0; }
+.story.is-story .ch-plate { opacity: 0; transform-origin: 0 0; will-change: opacity, transform; }
+.story.is-story .ch-plate figcaption { display: none; }
+.story.is-story .chapter { --stage-w: min(100%, calc((100svh - var(--bar-h) - 13rem) * 2880 / 1540)); }
+.story.is-story .ch-copy { grid-column: 1 / -1; justify-self: center; width: var(--stage-w); grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); grid-template-areas: "title text"; column-gap: var(--gap-columns); }
+.story.is-story .ch-title { grid-area: title; max-width: none; }
+.story.is-story .ch-text { grid-area: text; }
+.story.is-story .ch-plate { grid-column: 1 / -1; justify-self: center; width: var(--stage-w); }
+.story.is-story [data-layout^="top"] .ch-copy { grid-row: 1; align-items: end; }
+.story.is-story [data-layout^="top"] .ch-plate { grid-row: 2; }
+.story.is-story [data-layout^="bottom"] .ch-plate { grid-row: 1; }
+.story.is-story [data-layout^="bottom"] .ch-copy { grid-row: 2; align-items: start; }
+.story.is-story [data-layout$="flip"] .ch-copy { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); grid-template-areas: "text title"; }
+.story.is-story [data-layout$="flip"] .ch-title { text-align: right; }
+/* the camera's frame: when it moves in, the screen keeps an orange edge like the app's own window (site.js sets --fa) */
+.story.is-story .live-host { --fa: 0; }
+.story.is-story .live-host::after { content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none; box-shadow: inset 0 0 0 2px var(--color-accent); opacity: var(--fa); }
 /* phones and narrow windows: the line on top, the screen edge to edge below it and tall, so the app reads at the size of
    the phone; the camera then pans across the screen at that height (site.js) */
 @media (max-width: 60rem) {
-  .story.is-story .story-inner { --fh: min(58svh, 150vw); grid-template-columns: minmax(0, 1fr); grid-template-areas: "copy" "stage"; grid-template-rows: auto auto; align-content: center; gap: var(--space-lg); }
-  .story.is-story .ch-copy { align-self: end; gap: var(--space-sm); }
+  .story.is-story .chapter { --fh: min(54svh, 150vw); grid-template-columns: minmax(0, 1fr); gap: var(--space-lg); }
+  .story.is-story .chapter .ch-copy { width: auto; justify-self: stretch; grid-template-columns: minmax(0, 1fr); grid-template-areas: "title" "text"; gap: var(--space-sm); }
+  .story.is-story .chapter .ch-title { text-align: left; }
+  .story.is-story .chapter .ch-plate { justify-self: stretch; width: auto; margin-left: calc(-1 * max(var(--gutter), env(safe-area-inset-left, 0px))); margin-right: calc(-1 * max(var(--gutter), env(safe-area-inset-right, 0px))); }
   .story.is-story .ch-title { font-size: var(--text-2xl); }
-  .story.is-story .ch-plate { margin-left: calc(-1 * max(var(--gutter), env(safe-area-inset-left, 0px))); margin-right: calc(-1 * max(var(--gutter), env(safe-area-inset-right, 0px))); }
   .story.is-story .ch-plate .live-host { height: var(--fh); outline: none; border-block: 1px solid var(--color-plate); }
   .story.is-story .ch-plate .live-zoom { height: var(--fh); width: calc(var(--fh) * 2880 / 1540); }
   .story.is-story .ch-plate .live-zoom > img { width: 100%; height: 100%; outline: none; }
