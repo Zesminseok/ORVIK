@@ -152,7 +152,7 @@ a:hover { color: var(--color-ink); text-decoration-color: var(--color-accent); }
 .lv-sub { color: var(--app-clock); font: 700 32.4px/1.32 var(--font-display); letter-spacing: -3px; white-space: nowrap; }
 /* the plate rule sizes every <img> in a plate to the frame; the overlaid deck cards keep their own 2x size */
 .plate .lv-layer .lv-card { width: 1356px; height: 579px; aspect-ratio: auto; outline: none; background: none; border-radius: 0; }
-.lv-barfix { left: 2278px; top: 1474px; width: 349px; height: 61px; background: var(--app-bar); }
+.lv-barfix { left: 2330px; top: 1474px; width: 349px; height: 61px; background: var(--app-bar); }
 .lv-bseg { top: 1483px; font: 40px/1 var(--font-seg); white-space: nowrap; }
 .lv-bseg .g, .lv-seg .g { color: var(--app-ghost); }
 .lv-bseg .l, .lv-seg .l { position: absolute; left: 0; top: 0; color: var(--app-seg); }

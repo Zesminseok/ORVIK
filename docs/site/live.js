@@ -47,8 +47,8 @@
   /* SMPTE OUT's MASTER readout in the DECKS page's bottom bar */
   function barParts(layer) {
     layer.appendChild(el('div', 'lv-barfix'));
-    var segs = [2285, 2372, 2461, 2550].map(function (x, i) { var s = el('div', 'lv-bseg', 'left:' + x + 'px', '<span class="g">88</span>'); var l = el('span', 'l' + (i ? '' : ' h')); s.appendChild(l); layer.appendChild(s); return l; });
-    [[2358, 1495], [2358, 1509], [2446, 1495], [2446, 1509], [2535, 1517]].forEach(function (q) { layer.appendChild(el('div', 'lv-bsep', 'left:' + q[0] + 'px;top:' + q[1] + 'px')); });
+    var segs = [2337, 2424, 2513, 2602].map(function (x, i) { var s = el('div', 'lv-bseg', 'left:' + x + 'px', '<span class="g">88</span>'); var l = el('span', 'l' + (i ? '' : ' h')); s.appendChild(l); layer.appendChild(s); return l; });
+    [[2410, 1495], [2410, 1509], [2498, 1495], [2498, 1509], [2587, 1517]].forEach(function (q) { layer.appendChild(el('div', 'lv-bsep', 'left:' + q[0] + 'px;top:' + q[1] + 'px')); });
     return function (t) { var m = tc(84000 + t, 1).split(':'); for (var i = 0; i < 4; i++) segs[i].textContent = m[i]; };
   }
   /* the SMPTE OUT drawer, rebuilt on the app's 2x grid over the captured one */
