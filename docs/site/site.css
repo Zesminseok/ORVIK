@@ -7,6 +7,7 @@
 /* Hallmark · dismissed 24b · same: .lv- offsets are the app's measured pixels */
 /* Hallmark · dismissed 67 · .lv-lab is the app's own tracked label inside the screenshot; the KO caption 'SMPTE 출력' keeps SMPTE, an acronym */
 /* Hallmark · dismissed 37 · DSEG7 and Space Grotesk are the app's faces, used only inside the redrawn screens */
+/* Hallmark · dismissed 1 · Korean headings: the display mono has no Hangul, so they take the body stack (Inter, then the system Korean face) */
 @import url("./tokens.css");
 @import url("./base.css");
 
@@ -15,6 +16,9 @@
 
 :root { color-scheme: dark; }
 :lang(ko) { word-break: keep-all; }
+/* Korean headings: the display mono has no Hangul, so its wide space and full stop sat between Korean words drawn in the
+   fallback (user 2026-11-08 "타이포그래피 정리"); Korean takes the body face, heavy and slightly tight, in one family */
+:lang(ko) :is(h1, h2, h3) { font-family: var(--font-body); font-weight: 800; letter-spacing: -0.03em; }
 body { font-feature-settings: "cv11" 1; padding-block: env(safe-area-inset-top, 0px) env(safe-area-inset-bottom, 0px); }
 .container { padding-left: max(var(--gutter), env(safe-area-inset-left, 0px)); padding-right: max(var(--gutter), env(safe-area-inset-right, 0px)); }
 h1, h2 { font-weight: 700; letter-spacing: var(--tracking-display); color: var(--color-ink); }
@@ -282,7 +286,8 @@ html:not(.story-on) .hero { padding-bottom: var(--space-2xl); }
 .story.is-story .chapter { --stage-w: min(100%, calc((100svh - var(--bar-h) - 13rem) * 2880 / 1540)); }
 .story.is-story .ch-copy { grid-column: 1 / -1; justify-self: center; width: var(--stage-w); grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); grid-template-areas: "title text"; column-gap: var(--gap-columns); }
 .story.is-story .ch-title { grid-area: title; max-width: none; }
-.story.is-story .ch-text { grid-area: text; }
+.story.is-story .ch-text { grid-area: text; max-width: 34ch; }
+.ch-text { text-wrap: pretty; }   /* no last word alone on a line */
 .story.is-story .ch-plate { grid-column: 1 / -1; justify-self: center; width: var(--stage-w); }
 .story.is-story [data-layout^="top"] .ch-copy { grid-row: 1; align-items: end; }
 .story.is-story [data-layout^="top"] .ch-plate { grid-row: 2; }
@@ -304,6 +309,26 @@ html:not(.story-on) .hero { padding-bottom: var(--space-2xl); }
   .story.is-story .ch-plate .live-host { height: var(--fh); outline: none; border-block: 1px solid var(--color-plate); }
   .story.is-story .ch-plate .live-zoom { height: var(--fh); width: calc(var(--fh) * 2880 / 1540); }
   .story.is-story .ch-plate .live-zoom > img { width: 100%; height: 100%; outline: none; }
+}
+/* wide, short windows (a 1080p screen at 125 % in a browser: 1536 x 730): the whole screen fitted under a line above it
+   left wide empty sides, so the line moves into the side instead and the screen takes the height (user 2026-11-08:
+   "프로그램 전체를 보여주려고 해서 여백이 생기는거같은데 오히려 좌우 여백을줘서"). The line and the screen sit as one
+   centred pair; the line's side follows -flip, its height top / bottom, so the screen travels left and right between
+   chapters. 19/10: from there the side line gives the larger screen. */
+@media (min-width: 60.01rem) and (min-aspect-ratio: 19/10) {
+  .story.is-story .story-inner { max-width: none; }   /* the stage spans the window; the line keeps its own measure */
+  .story.is-story .chapter { --copy-w: clamp(14rem, 19vw, 22rem);
+    --stage-w: min(calc(100% - var(--copy-w) - var(--space-xl)), calc((100svh - var(--bar-h) - var(--space-xl)) * 2880 / 1540));
+    grid-template-columns: var(--copy-w) var(--stage-w); grid-template-rows: auto; justify-content: center; align-content: center; column-gap: var(--space-xl); }
+  .story.is-story [data-layout$="flip"] { grid-template-columns: var(--stage-w) var(--copy-w); }
+  .story.is-story .chapter .ch-copy { width: auto; justify-self: stretch; grid-row: 1; grid-column: 1; grid-template-columns: minmax(0, 1fr); grid-template-areas: "title" "text"; gap: var(--space-md); }
+  .story.is-story .chapter .ch-plate { grid-row: 1; grid-column: 2; width: auto; justify-self: stretch; }   /* the column is the stage */
+  .story.is-story [data-layout$="flip"] .ch-copy { grid-column: 2; }
+  .story.is-story [data-layout$="flip"] .ch-plate { grid-column: 1; }
+  .story.is-story [data-layout^="top"] .ch-copy { align-self: start; }
+  .story.is-story [data-layout^="bottom"] .ch-copy { align-self: end; }
+  .story.is-story .chapter .ch-title { font-size: clamp(1.75rem, 2.4vw, var(--text-3xl)); line-height: 1.08; text-align: left; }   /* about 13 mono characters a line in the side column */
+  .story-on .bar .container { max-width: none; }   /* the bar's edges line up with the stage's */
 }
 
 @media (prefers-reduced-motion: no-preference) {

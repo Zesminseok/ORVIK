@@ -109,7 +109,12 @@
   };
   /* the line comes in from the side away from its screen (from above when it sits over it, from below under it) and
      leaves the same way */
-  var side = function (c) { var top = /^top/.test(c.getAttribute('data-layout') || ''); return { x: 0, y: top ? -28 : 28 }; };
+  /* wide, short windows put the line beside its screen (CSS, same query): it comes in from its outer side then */
+  var besideQ = window.matchMedia('(min-width: 60.01rem) and (min-aspect-ratio: 19/10)');
+  var side = function (c) {
+    var l = c.getAttribute('data-layout') || '', top = /^top/.test(l), flip = /flip$/.test(l);
+    return { x: function () { return besideQ.matches ? (flip ? 28 : -28) : 0; }, y: function () { return besideQ.matches ? 0 : (top ? -28 : 28); } };
+  };
   var shown = null, setBar = function (on) {
     on = !!on; if (!bar || on === shown) return; shown = on;
     bar.hidden = false; bar.classList.toggle('is-shown', on); bar.inert = !on; bar.setAttribute('aria-hidden', on ? 'false' : 'true');
