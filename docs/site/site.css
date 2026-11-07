@@ -221,6 +221,29 @@ a:hover { color: var(--color-ink); text-decoration-color: var(--color-accent); }
   .chapter { grid-template-columns: minmax(0, 1fr); }
   .ch-copy, .ch-plate { grid-column: 1 / -1; }
 }
+/* still (reduced motion, no script), wider screens: the line moves round its screen chapter by chapter as the story's
+   does (user 2026-11-08: "글씨가 다 왼쪽에만 있는데 다양하게"): beside it on the left, beside it on the right, above a
+   screen set to the left, below a screen set to the right. data-layout names the story's places; these follow them. */
+@media (min-width: 60.01rem) {
+  .story:not(.is-story) [data-layout="bottom-flip"] .ch-copy { grid-column: 9 / span 4; grid-row: 1; }
+  .story:not(.is-story) [data-layout="bottom-flip"] .ch-plate { grid-column: 1 / span 8; grid-row: 1; }
+  .story:not(.is-story) [data-layout="top-flip"] .ch-copy,
+  .story:not(.is-story) [data-layout="bottom"] .ch-copy { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); column-gap: var(--gap-columns); align-items: end; }
+  .story:not(.is-story) [data-layout="top-flip"] .ch-title,
+  .story:not(.is-story) [data-layout="bottom"] .ch-title { max-width: none; }
+  .story:not(.is-story) [data-layout="top-flip"] .ch-copy { grid-column: 1 / span 10; grid-row: 1; }
+  .story:not(.is-story) [data-layout="top-flip"] .ch-plate { grid-column: 1 / span 10; grid-row: 2; }
+  .story:not(.is-story) [data-layout="bottom"] .ch-plate { grid-column: 3 / span 10; grid-row: 1; }
+  .story:not(.is-story) [data-layout="bottom"] .ch-copy { grid-column: 3 / span 10; grid-row: 2; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: start; }
+  .story:not(.is-story) [data-layout="bottom"] .ch-title { grid-column: 2; grid-row: 1; justify-self: end; text-align: right; }
+  .story:not(.is-story) [data-layout="bottom"] .ch-text { grid-column: 1; grid-row: 1; }
+  /* a line above or below its screen sits close to it */
+  .story:not(.is-story) [data-layout="top-flip"], .story:not(.is-story) [data-layout="bottom"] { row-gap: var(--space-lg); }
+}
+/* still: less air between the chapters and around them (user 2026-11-08: "어색한 여백은 줄이는게 나을거같은데") */
+.story:not(.is-story) .story-inner { gap: var(--space-2xl); }
+.story:not(.is-story) { padding-bottom: var(--space-3xl); }
+html:not(.story-on) .hero { padding-bottom: var(--space-2xl); }
 
 .story.is-story { padding-bottom: 0; }
 /* with the story on, the bar takes the gap under the hero: the first screen sits right below it (site.js lifts it there) */
