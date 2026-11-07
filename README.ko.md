@@ -7,7 +7,7 @@
 
 [![Release](https://img.shields.io/github/v/release/Zesminseok/ORVIK?label=release&color=2ea44f)](https://github.com/Zesminseok/ORVIK/releases/latest)
 
-[웹사이트](https://zesminseok.github.io/ORVIK/ko/) | [다운로드](https://github.com/Zesminseok/ORVIK/releases/latest) | [사용 설명서](docs/manual/ORVIK-manual-ko.md) | [변경 내역](CHANGELOG.ko.md) | [문의](https://github.com/Zesminseok/ORVIK/issues) | [English](README.md)
+[웹사이트](https://zesminseok.github.io/ORVIK/ko/) | [다운로드](https://github.com/Zesminseok/ORVIK/releases/latest) | [사용 설명서](https://zesminseok.github.io/ORVIK/manual/ko/) | [변경 내역](CHANGELOG.ko.md) | [문의](https://github.com/Zesminseok/ORVIK/issues) | [English](README.md)
 
 <img src="docs/media/shot-decks.png" alt="ORVIK 덱 화면" width="900">
 
@@ -125,7 +125,7 @@ ORVIK은 DJ 장비를 읽기만 하고, 인터넷으로 사용 기록을 보내�
 
 ## 문서와 지원
 
-- **사용 설명서**: [한국어](docs/manual/ORVIK-manual-ko.md), [English](docs/manual/ORVIK-manual-en.md), [日本語](docs/manual/ORVIK-manual-ja.md), [Español](docs/manual/ORVIK-manual-es.md), [Deutsch](docs/manual/ORVIK-manual-de.md), [Français](docs/manual/ORVIK-manual-fr.md), [繁體中文](docs/manual/ORVIK-manual-zh-TW.md)
+- **사용 설명서**: [한국어](https://zesminseok.github.io/ORVIK/manual/ko/), [English](https://zesminseok.github.io/ORVIK/manual/), [日本語](https://zesminseok.github.io/ORVIK/manual/ja/), [Español](https://zesminseok.github.io/ORVIK/manual/es/), [Deutsch](https://zesminseok.github.io/ORVIK/manual/de/), [Français](https://zesminseok.github.io/ORVIK/manual/fr/), [繁體中文](https://zesminseok.github.io/ORVIK/manual/zh-tw/)
 - **변경 내역**: [CHANGELOG.ko.md](CHANGELOG.ko.md)
 - **문의**: 버그와 요청은 [GitHub Issues](https://github.com/Zesminseok/ORVIK/issues), Instagram [@zes_minseok](https://instagram.com/zes_minseok)
 - **후원**: ORVIK은 기간 제한 없는 무료 베타입니다. [GitHub Sponsors](https://github.com/sponsors/zesminseok)로 개발을 후원할 수 있으며, 후원해도 기능이 더 열리지 않고, 정식 제품의 구매나 예약이 아니며, 정식 버전이나 완성 시점을 보장하지 않습니다.

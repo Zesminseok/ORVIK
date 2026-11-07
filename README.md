@@ -7,7 +7,7 @@
 
 [![Release](https://img.shields.io/github/v/release/Zesminseok/ORVIK?label=release&color=2ea44f)](https://github.com/Zesminseok/ORVIK/releases/latest)
 
-[Website](https://zesminseok.github.io/ORVIK/) | [Download](https://github.com/Zesminseok/ORVIK/releases/latest) | [Manual](docs/manual/ORVIK-manual-en.md) | [Changelog](CHANGELOG.md) | [Issues](https://github.com/Zesminseok/ORVIK/issues) | [한국어](README.ko.md)
+[Website](https://zesminseok.github.io/ORVIK/) | [Download](https://github.com/Zesminseok/ORVIK/releases/latest) | [Manual](https://zesminseok.github.io/ORVIK/manual/) | [Changelog](CHANGELOG.md) | [Issues](https://github.com/Zesminseok/ORVIK/issues) | [한국어](README.ko.md)
 
 <img src="docs/media/shot-decks.png" alt="ORVIK decks" width="900">
 
@@ -120,7 +120,7 @@ Logs can contain track titles, device names, IP and MAC addresses. Check them be
 
 ## Documentation and support
 
-- **Manual**: [English](docs/manual/ORVIK-manual-en.md), [한국어](docs/manual/ORVIK-manual-ko.md), [日本語](docs/manual/ORVIK-manual-ja.md), [Español](docs/manual/ORVIK-manual-es.md), [Deutsch](docs/manual/ORVIK-manual-de.md), [Français](docs/manual/ORVIK-manual-fr.md), [繁體中文](docs/manual/ORVIK-manual-zh-TW.md)
+- **Manual**: [English](https://zesminseok.github.io/ORVIK/manual/), [한국어](https://zesminseok.github.io/ORVIK/manual/ko/), [日本語](https://zesminseok.github.io/ORVIK/manual/ja/), [Español](https://zesminseok.github.io/ORVIK/manual/es/), [Deutsch](https://zesminseok.github.io/ORVIK/manual/de/), [Français](https://zesminseok.github.io/ORVIK/manual/fr/), [繁體中文](https://zesminseok.github.io/ORVIK/manual/zh-tw/)
 - **Changelog**: [CHANGELOG.md](CHANGELOG.md)
 - **Contact**: [GitHub Issues](https://github.com/Zesminseok/ORVIK/issues) for bugs and requests, Instagram [@zes_minseok](https://instagram.com/zes_minseok)
 - **Support**: ORVIK is a free beta with no time limit. You can support development through [GitHub Sponsors](https://github.com/sponsors/zesminseok); it unlocks no features, is not a purchase or preorder, and does not guarantee a final version or a date.
