@@ -6,7 +6,7 @@
   var screens = Array.prototype.slice.call(document.querySelectorAll('[data-live]'));
   if (!screens.length || !window.requestAnimationFrame) return;
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var dir = (document.documentElement.lang === 'ko' ? '../' : '') + 'site/live/';
+  var dir = new URL('live/', document.currentScript.src).href; /* beside this script, whatever folder the page is in */
   var LOOP = 24000;
   var p2 = function (n) { return (n < 10 ? '0' : '') + n; };
   /* HH:MM:SS:FF at 25 fps, with an hour offset (SMPTE layers) */

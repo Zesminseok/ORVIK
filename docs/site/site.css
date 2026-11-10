@@ -16,9 +16,10 @@
 
 :root { color-scheme: dark; }
 :lang(ko) { word-break: keep-all; }
+:lang(ja) { word-break: auto-phrase; } /* break between phrases, not inside a katakana word, where the browser can */
 /* Korean headings: the display mono has no Hangul, so its wide space and full stop sat between Korean words drawn in the
    fallback (user 2026-11-08 "타이포그래피 정리"); Korean takes the body face, heavy and slightly tight, in one family */
-:lang(ko) :is(h1, h2, h3) { font-family: var(--font-body); font-weight: 800; letter-spacing: -0.03em; }
+:is(:lang(ko), :lang(ja), :lang(zh)) :is(h1, h2, h3) { font-family: var(--font-body); font-weight: 800; letter-spacing: -0.03em; }
 body { font-feature-settings: "cv11" 1; padding-block: env(safe-area-inset-top, 0px) env(safe-area-inset-bottom, 0px); }
 .container { padding-left: max(var(--gutter), env(safe-area-inset-left, 0px)); padding-right: max(var(--gutter), env(safe-area-inset-right, 0px)); }
 h1, h2 { font-weight: 700; letter-spacing: var(--tracking-display); color: var(--color-ink); }
@@ -36,12 +37,28 @@ a:hover { color: var(--color-ink); text-decoration-color: var(--color-accent); }
 .nav-links { display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-lg); list-style: none; margin: 0; padding: 0; font-size: var(--text-sm); }
 .nav-links a { color: var(--color-ink-2); text-decoration: none; white-space: nowrap; display: inline-block; padding-block: var(--space-xs); }
 .nav-links a:hover { color: var(--color-ink); }
-/* sponsor: a heart in the nav and one line under the downloads (2026-11-10) */
-.heart { flex: none; }
-.nav-links a.nav-sponsor { display: inline-flex; align-items: center; gap: var(--space-2xs); }
-.nav-links a.nav-sponsor:hover .heart { color: var(--color-accent); }
-.support { display: flex; align-items: baseline; gap: var(--space-xs); margin-top: var(--space-md); }
-.support .heart { position: relative; top: 2px; color: var(--color-accent); }
+/* sponsor: a button in the nav and a button with one line under the downloads (2026-11-10) */
+.heart { flex: none; color: var(--color-accent); }
+.nav-links { align-items: center; }
+.nav-links a.nav-sponsor { display: inline-flex; align-items: center; gap: var(--space-2xs); min-height: 32px; padding: 0 var(--space-sm); border: 1px solid var(--color-muted); border-radius: var(--radius-control); color: var(--color-ink); font-weight: 700; transition: background-color var(--dur-micro) var(--ease-out), border-color var(--dur-micro) var(--ease-out); }
+.nav-links a.nav-sponsor:hover { background: var(--color-paper-2); border-color: var(--color-accent); }
+.support { display: flex; align-items: center; gap: var(--space-md); margin-top: var(--space-lg); }
+.support .btn { flex: none; gap: var(--space-xs); }
+.support .btn:hover { border-color: var(--color-accent); }
+.support .meta { margin: 0; }
+/* language menu in the nav: the same list as the manual's */
+.langs { position: relative; }
+.langs summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; gap: var(--space-xs); padding-block: var(--space-xs); color: var(--color-ink-2); white-space: nowrap; }
+.langs summary::-webkit-details-marker { display: none; }
+.langs summary::after { content: ""; width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); }
+.langs summary:hover, .langs[open] summary { color: var(--color-ink); }
+.langs summary:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+.langs ul { position: absolute; z-index: 5; right: 0; top: 100%; margin: 0; padding: var(--space-2xs) 0; list-style: none; min-width: 10rem; background: var(--color-paper-2); border: 1px solid var(--color-rule); }
+.nav-links .langs a { display: block; padding: var(--space-xs) var(--space-md); }
+.nav-links .langs a:hover, .nav-links .langs a[aria-current] { color: var(--color-ink); background: var(--color-paper); }
+.nav-links .langs a[aria-current] { box-shadow: inset 2px 0 0 var(--color-accent); }
+/* download facts, one per line */
+.meta-lines { list-style: none; margin: var(--space-md) 0 0; padding: 0; display: grid; gap: var(--space-2xs); }
 
 /* hero: Banner */
 .hero { padding-block: var(--space-3xl) var(--section-gap-s); }
@@ -126,14 +143,19 @@ a:hover { color: var(--color-ink); text-decoration-color: var(--color-accent); }
   .split-visual { order: 2; }
 }
 @media (max-width: 40rem) {
-  .nav-links { gap: var(--space-2xs) var(--space-md); flex-wrap: nowrap; }
+  .nav-links { gap: var(--space-2xs) var(--space-sm); flex-wrap: nowrap; }
   .nav-links .nav-wide { display: none; }
+  .nav-links a.nav-sponsor { padding-inline: var(--space-xs); }
   .actions .btn { flex: 1 1 100%; }
+  .support { flex-wrap: wrap; }
+  .support .btn { flex: 1 1 100%; }
   .row { grid-template-columns: minmax(0, 1fr); }
   .foot-rows > div { grid-template-columns: minmax(0, 1fr); gap: var(--space-2xs); }
   .js .tabs { width: 100%; }
   .tabs button { flex: 1 1 50%; padding-inline: var(--space-sm); border-bottom: 1px solid var(--color-rule); }
 }
+/* the longest labels (German) need a second row on the narrowest phones */
+@media (max-width: 22rem) { .nav-links { flex-wrap: wrap; justify-content: flex-end; } }
 
 /* live screens: the app's own colours and faces for the parts that move over each 2x screenshot (site/live.js) */
 @font-face { font-family: "DSEG7 Classic"; src: url("./fonts/DSEG7Classic-Regular.woff2") format("woff2"); font-display: swap; }

@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ORVIK</title>
+<meta name="description" content="ORVIK 讀取 PRO DJ LINK 上的 CDJ 與 DJM，並送出 TCNet、SMPTE 時間碼、OSC、DMX 與 MIDI。適用於 macOS 與 Windows 的免費 Beta 版。">
+<meta name="theme-color" content="#111318">
+<meta property="og:title" content="ORVIK">
+<meta property="og:description" content="將 CDJ 與 DJM 的資料以 TCNet、SMPTE 時間碼、OSC、DMX 與 MIDI 送出。">
+<meta property="og:image" content="https://zesminseok.github.io/ORVIK/site/img/social.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="../site/img/icon.png">
+<link rel="alternate" hreflang="en" href="../">
+<link rel="alternate" hreflang="ko" href="../ko/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="es" href="../es/">
+<link rel="alternate" hreflang="de" href="../de/">
+<link rel="alternate" hreflang="fr" href="../fr/">
+<link rel="alternate" hreflang="zh-TW" href="../zh-tw/">
+<link rel="alternate" hreflang="x-default" href="../">
+<script src="../site/lang.js"></script>
+<link rel="preload" href="../site/fonts/jetbrains-mono-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../site/site.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<header class="nav">
+  <div class="container nav-row">
+    <nav aria-label="網站">
+      <ul class="nav-links">
+        <li><a href="../manual/zh-tw/">手冊</a></li>
+        <li class="nav-wide"><a href="https://github.com/Zesminseok/ORVIK/blob/main/CHANGELOG.md">更新紀錄</a></li>
+        <li><a href="https://github.com/Zesminseok/ORVIK">GitHub</a></li>
+        <li><a class="nav-sponsor" href="https://github.com/sponsors/zesminseok"><svg class="heart" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 13.6 2.6 8.3a3.2 3.2 0 0 1 4.5-4.5L8 4.7l.9-.9a3.2 3.2 0 0 1 4.5 4.5z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg><span>贊助</span></a></li>
+        <li><details class="langs"><summary>繁體中文</summary><ul><li><a href="../" hreflang="en" lang="en">English</a></li><li><a href="../ko/" hreflang="ko" lang="ko">한국어</a></li><li><a href="../ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="../es/" hreflang="es" lang="es">Español</a></li><li><a href="../de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="../zh-tw/" hreflang="zh-TW" lang="zh-TW" aria-current="page">繁體中文</a></li></ul></details></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="bar" data-bar hidden>
+  <div class="container bar-row">
+    <a class="bar-mark" href="#"><img src="../site/img/wordmark-hero.png" alt="ORVIK" width="783" height="242"></a>
+    <nav class="bar-rail" aria-label="章節">
+      <a href="#ch-decks" data-ch="0">Deck</a>
+      <a href="#ch-smpte" data-ch="1">SMPTE 輸出</a>
+      <a href="#ch-output" data-ch="2">輸出</a>
+      <a href="#ch-setlist" data-ch="3">Set list</a>
+      <a href="#ch-mixer" data-ch="4">混音器</a>
+      <a href="#ch-cuecall" data-ch="5">Cue call</a>
+    </nav>
+    <div class="bar-get">
+      <a class="btn btn-primary" data-asset="mac" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.3/ORVIK-2.0.3-mac-arm64.dmg"><span class="bar-long">下載&nbsp;</span>Mac<span class="bar-long">&nbsp;版</span></a>
+      <a class="btn btn-secondary" data-asset="win" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.3/ORVIK-2.0.3-win-x64.exe"><span class="bar-long">下載&nbsp;</span>Windows<span class="bar-long">&nbsp;版</span></a>
+    </div>
+  </div>
+  <div class="bar-line" aria-hidden="true"><span></span></div>
+</div>
+
+<main>
+  <section class="hero">
+    <div class="container banner-grid">
+      <h1 class="name"><img src="../site/img/wordmark-hero.png" alt="ORVIK" width="783" height="242"></h1>
+      <div class="banner-aside">
+        <p class="lead">將 CDJ 與 DJM 的資料以 TCNet、SMPTE 時間碼、OSC、DMX 與 MIDI 送出。</p>
+        <div class="actions">
+          <a class="btn btn-primary" data-asset="mac" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.3/ORVIK-2.0.3-mac-arm64.dmg">下載 Mac 版</a>
+          <a class="btn btn-secondary" data-asset="win" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.3/ORVIK-2.0.3-win-x64.exe">下載 Windows 版</a>
+        </div>
+        <p class="meta">版本 <span data-version>2.0.3</span>，免費 Beta 版。Apple Silicon 上的 macOS 13.3 以上、Windows 10 與 11。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="story" data-story aria-label="ORVIK 運作畫面">
+    <div class="container story-inner">
+      <article class="chapter" id="ch-decks" data-layout="top" aria-labelledby="ch-decks-title">
+        <div class="ch-copy">
+          <h2 id="ch-decks-title" class="ch-title">網路上的每一台 deck。</h2>
+          <p class="lead ch-text">每台播放器的位置、BPM、波形與 cue，完全依照播放器送出的資料。</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product" data-live="decks">
+          <div class="live-host"><div class="live-zoom"><img src="../site/img/decks.webp" alt="ORVIK 的 DECKS 頁面，四台播放器的波形、時間碼、BPM 與 SMPTE layer 按鈕" width="2880" height="1540" fetchpriority="high"></div></div>
+          <figcaption><b>Deck</b></figcaption>
+        </figure>
+      </article>
+      <article class="chapter" id="ch-smpte" data-layout="bottom-flip" aria-labelledby="ch-smpte-title">
+        <div class="ch-copy">
+          <h2 id="ch-smpte-title" class="ch-title">以時間碼輸出。</h2>
+          <p class="lead ch-text">layer A、B 與 MASTER 的 LTC、MTC 與 <span class="nw">Art-Net</span> 時間碼。</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product" data-live="smpte">
+          <div class="live-host"><div class="live-zoom"><img src="../site/img/smpte.webp" alt="SMPTE OUT 頁面，layer A、B 與 MASTER 的 LTC、MTC 與 Art-Net 時間碼設定" width="2880" height="1540" loading="lazy"></div></div>
+          <figcaption><b>SMPTE 輸出</b></figcaption>
+        </figure>
+      </article>
+      <article class="chapter" id="ch-output" data-layout="top-flip" aria-labelledby="ch-output-title">
+        <div class="ch-copy">
+          <h2 id="ch-output-title" class="ch-title">送到每個接收端。</h2>
+          <p class="lead ch-text">節點編輯器，將 deck 與混音器的數值轉成 OSC、<span class="nw">Art-Net</span> 或 sACN 的 DMX，以及 MIDI。</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product">
+          <div class="live-host"><div class="live-zoom"><img src="../site/img/output.webp" alt="OUTPUT 頁面，將 deck 數值連到 OSC、DMX 與 MIDI 目標的節點編輯器" width="2880" height="1540" loading="lazy"></div></div>
+          <figcaption><b>輸出</b></figcaption>
+        </figure>
+      </article>
+      <article class="chapter" id="ch-setlist" data-layout="bottom" aria-labelledby="ch-setlist-title">
+        <div class="ch-copy">
+          <h2 id="ch-setlist-title" class="ch-title">每個瞬間都有一個 cue。</h2>
+          <p class="lead ch-text">每首曲目各有時間碼偏移，cue 對準拍點送出 OSC、DMX 與 MIDI。</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product">
+          <div class="live-host"><div class="live-zoom"><img src="../site/img/setlist.webp" alt="SET LIST 頁面，四首曲目的時間碼偏移與波形上的 cue 編輯器" width="2880" height="1540" loading="lazy"></div></div>
+          <figcaption><b>Set list</b></figcaption>
+        </figure>
+      </article>
+      <article class="chapter" id="ch-mixer" data-layout="top" aria-labelledby="ch-mixer-title">
+        <div class="ch-copy">
+          <h2 id="ch-mixer-title" class="ch-title">混音器的一舉一動。</h2>
+          <p class="lead ch-text">DJM 回報的推桿、EQ、FX 與電平表，畫面為 DJM-900NXS2。</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product">
+          <div class="live-host"><div class="live-zoom"><img src="../site/img/mixer.webp" alt="MIXER 頁面，DJM-900NXS2 的聲道推桿、EQ、FX 與電平表" width="2880" height="1540" loading="lazy"></div></div>
+          <figcaption><b>混音器</b></figcaption>
+        </figure>
+      </article>
+      <article class="chapter" id="ch-cuecall" data-layout="bottom-flip" aria-labelledby="ch-cuecall-title">
+        <div class="ch-copy">
+          <h2 id="ch-cuecall-title" class="ch-title">工作人員聽得見的 cue call。</h2>
+          <p class="lead ch-text">各群組的下一個 cue 與剩餘時間、語音播報，以及手機上 /cuecall 的同一個倒數。</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product" data-live="board">
+          <div class="live-host"><div class="live-zoom"><img src="../site/img/cuecall-board.webp" alt="CUE CALL 看板，Lighting、Video、SFX 與 Laser 群組的倒數" width="2880" height="1540" loading="lazy"></div></div>
+          <figcaption><b>Cue call</b></figcaption>
+        </figure>
+      </article>
+    </div>
+  </section>
+
+  <section class="specs" id="specs" aria-labelledby="specs-head">
+    <div class="container specs-grid">
+      <h2 id="specs-head">相容設備與環境</h2>
+      <div class="specs-body">
+        <dl class="rows">
+          <div class="row"><dt>已測試的設備</dt><dd>CDJ-3000X, CDJ-3000, CDJ-2000NXS2, DJM-V10, DJM-900NXS2</dd></div>
+          <div class="row"><dt>送出</dt><dd>TCNet、LTC、MTC、Art-Net 時間碼、OSC、DMX (Art-Net、sACN)、MIDI</dd></div>
+          <div class="row"><dt>接收</dt><dd>鍵盤、MIDI、OSC (UDP <span class="num">7700</span>)、Art-Net DMX (UDP <span class="num">6454</span>)</dd></div>
+          <div class="row"><dt>作業系統</dt><dd>Apple Silicon 上的 macOS 13.3 以上、Windows 10 與 11 (x64)</dd></div>
+          <div class="row"><dt>網際網路</dt><dd>不傳送使用資料。檢查更新時會以 App 版本向 GitHub 查詢，且可以關閉。</dd></div>
+        </dl>
+        <p class="note">其他設備尚未測試。歡迎在 <a href="https://github.com/Zesminseok/ORVIK/issues">Issues</a> 回報結果。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="get" id="download" aria-labelledby="get-head">
+    <div class="container split split-get">
+      <div class="split-text">
+        <h2 id="get-head">ORVIK <span data-version>2.0.3</span></h2>
+        <p class="lead">沒有期限的免費 Beta 版。</p>
+        <div class="actions">
+          <a class="btn btn-primary" data-asset="mac" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.3/ORVIK-2.0.3-mac-arm64.dmg">下載 Mac 版</a>
+          <a class="btn btn-secondary" data-asset="win" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.3/ORVIK-2.0.3-win-x64.exe">下載 Windows 版</a>
+        </div>
+        <ul class="meta meta-lines"><li>Mac DMG、<span data-size="mac">32.3 MB</span>、已通過 Apple 公證</li><li>Windows EXE、<span data-size="win">57.4 MB</span>、未簽署</li><li>演出前請先用實際的接收設備測試。</li><li><a data-notes href="https://github.com/Zesminseok/ORVIK/releases/tag/v2.0.3">版本說明</a></li></ul>
+        <div class="support"><a class="btn btn-secondary" href="https://github.com/sponsors/zesminseok"><svg class="heart" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 13.6 2.6 8.3a3.2 3.2 0 0 1 4.5-4.5L8 4.7l.9-.9a3.2 3.2 0 0 1 4.5 4.5z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>贊助</a><p class="meta">目前免費。如果它對你的演出有幫助，歡迎贊助開發。贊助不會解鎖任何功能，也不是購買。</p></div>
+      </div>
+      <figure class="plate split-visual" data-kind="product">
+        <img src="../site/img/cuecall-layers.webp" alt="CUE CALL 的圖層檢視，master deck 的波形與各群組 cue 的時間軸" width="2880" height="1540" loading="lazy">
+        <figcaption><b>CUE CALL</b> 圖層檢視，master deck 波形上的 cue。</figcaption>
+      </figure>
+    </div>
+  </section>
+</main>
+
+<footer class="mast">
+  <div class="container">
+    <img class="mast-mark" src="../site/img/wordmark.png" alt="ORVIK" width="168" height="56" loading="lazy">
+    <dl class="foot-rows">
+      <div><dt>手冊</dt><dd>
+        <a href="../manual/">English</a>
+        <a href="../manual/ko/" lang="ko">한국어</a>
+        <a href="../manual/ja/" lang="ja">日本語</a>
+        <a href="../manual/es/" lang="es">Español</a>
+        <a href="../manual/de/" lang="de">Deutsch</a>
+        <a href="../manual/fr/" lang="fr">Français</a>
+        <a href="../manual/zh-tw/" lang="zh-TW">繁體中文</a>
+      </dd></div>
+      <div><dt>專案</dt><dd>
+        <a href="https://github.com/Zesminseok/ORVIK/releases">發行版本</a>
+        <a href="https://github.com/Zesminseok/ORVIK/blob/main/CHANGELOG.md">更新紀錄</a>
+        <a href="https://github.com/Zesminseok/ORVIK/issues">Issues</a>
+        <a href="https://github.com/sponsors/zesminseok">贊助</a>
+        <a href="https://instagram.com/zes_minseok">Instagram</a>
+      </dd></div>
+      <div><dt>授權</dt><dd>
+        <a href="https://github.com/Zesminseok/ORVIK/blob/main/BINARY_LICENSE.md">應用程式</a>
+        <a href="https://github.com/Zesminseok/ORVIK/blob/main/LICENSE">文件</a>
+        <a href="https://github.com/Zesminseok/ORVIK/blob/main/THIRD_PARTY_NOTICES.md">第三方聲明</a>
+        <a href="../site/fonts/LICENSE.txt">字型</a>
+      </dd></div>
+    </dl>
+    <p class="legal">ORVIK 是獨立的相容工具，與 AlphaTheta、Pioneer DJ、TC Supply、Resolume 沒有關聯。產品名稱與商標僅用於說明相容對象。 Art-Net™ Designed by and Copyright Artistic Licence.</p>
+  </div>
+</footer>
+<script src="../site/vendor/gsap-3.12.5/gsap.min.js" defer></script>
+<script src="../site/vendor/gsap-3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="../site/live.js" defer></script>
+<script src="../site/site.js" defer></script>
+</body>
+</html>

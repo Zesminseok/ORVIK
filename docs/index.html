@@ -11,7 +11,15 @@
 <meta property="og:image" content="https://zesminseok.github.io/ORVIK/site/img/social.png">
 <meta property="og:type" content="website">
 <link rel="icon" href="site/img/icon.png">
+<link rel="alternate" hreflang="en" href="./">
 <link rel="alternate" hreflang="ko" href="ko/">
+<link rel="alternate" hreflang="ja" href="ja/">
+<link rel="alternate" hreflang="es" href="es/">
+<link rel="alternate" hreflang="de" href="de/">
+<link rel="alternate" hreflang="fr" href="fr/">
+<link rel="alternate" hreflang="zh-TW" href="zh-tw/">
+<link rel="alternate" hreflang="x-default" href="./">
+<script src="site/lang.js" data-auto></script>
 <link rel="preload" href="site/fonts/jetbrains-mono-700-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="site/site.css">
 <script>document.documentElement.classList.add('js')</script>
@@ -24,8 +32,8 @@
         <li><a href="manual/">Manual</a></li>
         <li class="nav-wide"><a href="https://github.com/Zesminseok/ORVIK/blob/main/CHANGELOG.md">Changelog</a></li>
         <li><a href="https://github.com/Zesminseok/ORVIK">GitHub</a></li>
-        <li><a class="nav-sponsor" href="https://github.com/sponsors/zesminseok"><svg class="heart" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 13.6 2.6 8.3a3.2 3.2 0 0 1 4.5-4.5L8 4.7l.9-.9a3.2 3.2 0 0 1 4.5 4.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg><span>Sponsor</span></a></li>
-        <li><a href="ko/" hreflang="ko" lang="ko">한국어</a></li>
+        <li><a class="nav-sponsor" href="https://github.com/sponsors/zesminseok"><svg class="heart" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 13.6 2.6 8.3a3.2 3.2 0 0 1 4.5-4.5L8 4.7l.9-.9a3.2 3.2 0 0 1 4.5 4.5z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg><span>Sponsor</span></a></li>
+        <li><details class="langs"><summary>English</summary><ul><li><a href="./" hreflang="en" lang="en" aria-current="page">English</a></li><li><a href="ko/" hreflang="ko" lang="ko">한국어</a></li><li><a href="ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="es/" hreflang="es" lang="es">Español</a></li><li><a href="de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="zh-tw/" hreflang="zh-TW" lang="zh-TW">繁體中文</a></li></ul></details></li>
       </ul>
     </nav>
   </div>
@@ -154,8 +162,8 @@
           <a class="btn btn-primary" data-asset="mac" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.3/ORVIK-2.0.3-mac-arm64.dmg">Download for Mac</a>
           <a class="btn btn-secondary" data-asset="win" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.3/ORVIK-2.0.3-win-x64.exe">Download for Windows</a>
         </div>
-        <p class="meta">Mac DMG, <span data-size="mac">32.3 MB</span>, notarized. Windows EXE, <span data-size="win">57.4 MB</span>, unsigned. Test with your receivers before a show. <a data-notes href="https://github.com/Zesminseok/ORVIK/releases/tag/v2.0.3">Release notes</a></p>
-        <p class="meta support"><svg class="heart" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 13.6 2.6 8.3a3.2 3.2 0 0 1 4.5-4.5L8 4.7l.9-.9a3.2 3.2 0 0 1 4.5 4.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg><span>ORVIK is free. If it helps your shows, you can <a href="https://github.com/sponsors/zesminseok">sponsor its development</a>. Sponsoring unlocks no features and is not a purchase.</span></p>
+        <ul class="meta meta-lines"><li>Mac DMG, <span data-size="mac">32.3 MB</span>, notarized</li><li>Windows EXE, <span data-size="win">57.4 MB</span>, unsigned</li><li>Test with your receivers before a show.</li><li><a data-notes href="https://github.com/Zesminseok/ORVIK/releases/tag/v2.0.3">Release notes</a></li></ul>
+        <div class="support"><a class="btn btn-secondary" href="https://github.com/sponsors/zesminseok"><svg class="heart" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 13.6 2.6 8.3a3.2 3.2 0 0 1 4.5-4.5L8 4.7l.9-.9a3.2 3.2 0 0 1 4.5 4.5z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>Sponsor</a><p class="meta">ORVIK is free for now. If it helps your shows, you can sponsor its development. Sponsoring unlocks no features and is not a purchase.</p></div>
       </div>
       <figure class="plate split-visual" data-kind="product">
         <img src="site/img/cuecall-layers.webp" alt="CUE CALL layers view: master deck waveform with each group’s cues on a timeline" width="2880" height="1540" loading="lazy">

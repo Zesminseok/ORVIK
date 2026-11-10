@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ORVIK</title>
+<meta name="description" content="ORVIK lee los CDJ y DJM en PRO DJ LINK y envía TCNet, timecode SMPTE, OSC, DMX y MIDI. Beta gratuita para macOS y Windows.">
+<meta name="theme-color" content="#111318">
+<meta property="og:title" content="ORVIK">
+<meta property="og:description" content="Envía los datos de CDJ y DJM como TCNet, timecode SMPTE, OSC, DMX y MIDI.">
+<meta property="og:image" content="https://zesminseok.github.io/ORVIK/site/img/social.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="../site/img/icon.png">
+<link rel="alternate" hreflang="en" href="../">
+<link rel="alternate" hreflang="ko" href="../ko/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="es" href="../es/">
+<link rel="alternate" hreflang="de" href="../de/">
+<link rel="alternate" hreflang="fr" href="../fr/">
+<link rel="alternate" hreflang="zh-TW" href="../zh-tw/">
+<link rel="alternate" hreflang="x-default" href="../">
+<script src="../site/lang.js"></script>
+<link rel="preload" href="../site/fonts/jetbrains-mono-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../site/site.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<header class="nav">
+  <div class="container nav-row">
+    <nav aria-label="Sitio">
+      <ul class="nav-links">
+        <li><a href="../manual/es/">Manual</a></li>
+        <li class="nav-wide"><a href="https://github.com/Zesminseok/ORVIK/blob/main/CHANGELOG.md">Cambios</a></li>
+        <li><a href="https://github.com/Zesminseok/ORVIK">GitHub</a></li>
+        <li><a class="nav-sponsor" href="https://github.com/sponsors/zesminseok"><svg class="heart" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 13.6 2.6 8.3a3.2 3.2 0 0 1 4.5-4.5L8 4.7l.9-.9a3.2 3.2 0 0 1 4.5 4.5z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg><span>Apoyar</span></a></li>
+        <li><details class="langs"><summary>Español</summary><ul><li><a href="../" hreflang="en" lang="en">English</a></li><li><a href="../ko/" hreflang="ko" lang="ko">한국어</a></li><li><a href="../ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="../es/" hreflang="es" lang="es" aria-current="page">Español</a></li><li><a href="../de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="../zh-tw/" hreflang="zh-TW" lang="zh-TW">繁體中文</a></li></ul></details></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="bar" data-bar hidden>
+  <div class="container bar-row">
+    <a class="bar-mark" href="#"><img src="../site/img/wordmark-hero.png" alt="ORVIK" width="783" height="242"></a>
+    <nav class="bar-rail" aria-label="Capítulos">
+      <a href="#ch-decks" data-ch="0">Decks</a>
+      <a href="#ch-smpte" data-ch="1">Salida SMPTE</a>
+      <a href="#ch-output" data-ch="2">Salida</a>
+      <a href="#ch-setlist" data-ch="3">Set list</a>
+      <a href="#ch-mixer" data-ch="4">Mezclador</a>
+      <a href="#ch-cuecall" data-ch="5">Cue call</a>
+    </nav>
+    <div class="bar-get">
+      <a class="btn btn-primary" data-asset="mac" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.3/ORVIK-2.0.3-mac-arm64.dmg"><span class="bar-long">Descargar para&nbsp;</span>Mac</a>
+      <a class="btn btn-secondary" data-asset="win" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.3/ORVIK-2.0.3-win-x64.exe"><span class="bar-long">Descargar para&nbsp;</span>Windows</a>
+    </div>
+  </div>
+  <div class="bar-line" aria-hidden="true"><span></span></div>
+</div>
+
+<main>
+  <section class="hero">
+    <div class="container banner-grid">
+      <h1 class="name"><img src="../site/img/wordmark-hero.png" alt="ORVIK" width="783" height="242"></h1>
+      <div class="banner-aside">
+        <p class="lead">Envía los datos de CDJ y DJM como TCNet, timecode SMPTE, OSC, DMX y MIDI.</p>
+        <div class="actions">
+          <a class="btn btn-primary" data-asset="mac" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.3/ORVIK-2.0.3-mac-arm64.dmg">Descargar para Mac</a>
+          <a class="btn btn-secondary" data-asset="win" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.3/ORVIK-2.0.3-win-x64.exe">Descargar para Windows</a>
+        </div>
+        <p class="meta">Versión <span data-version>2.0.3</span>, beta gratuita. macOS 13.3 o posterior en Apple Silicon, Windows 10 y 11.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="story" data-story aria-label="ORVIK en funcionamiento">
+    <div class="container story-inner">
+      <article class="chapter" id="ch-decks" data-layout="top" aria-labelledby="ch-decks-title">
+        <div class="ch-copy">
+          <h2 id="ch-decks-title" class="ch-title">Todos los decks de la red.</h2>
+          <p class="lead ch-text">Posición, BPM, formas de onda y cues de cada reproductor, tal como los envían los reproductores.</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product" data-live="decks">
+          <div class="live-host"><div class="live-zoom"><img src="../site/img/decks.webp" alt="Página DECKS de ORVIK con cuatro reproductores: formas de onda, timecode, BPM y botones de capa SMPTE" width="2880" height="1540" fetchpriority="high"></div></div>
+          <figcaption><b>Decks</b></figcaption>
+        </figure>
+      </article>
+      <article class="chapter" id="ch-smpte" data-layout="bottom-flip" aria-labelledby="ch-smpte-title">
+        <div class="ch-copy">
+          <h2 id="ch-smpte-title" class="ch-title">Salida como timecode.</h2>
+          <p class="lead ch-text">Timecode LTC, MTC y <span class="nw">Art-Net</span> para las capas A, B y MASTER.</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product" data-live="smpte">
+          <div class="live-host"><div class="live-zoom"><img src="../site/img/smpte.webp" alt="Página SMPTE OUT: ajustes de timecode LTC, MTC y Art-Net para las capas A, B y MASTER" width="2880" height="1540" loading="lazy"></div></div>
+          <figcaption><b>Salida SMPTE</b></figcaption>
+        </figure>
+      </article>
+      <article class="chapter" id="ch-output" data-layout="top-flip" aria-labelledby="ch-output-title">
+        <div class="ch-copy">
+          <h2 id="ch-output-title" class="ch-title">A cada receptor.</h2>
+          <p class="lead ch-text">Un editor de nodos que convierte los valores de los decks y del mezclador en OSC, DMX por <span class="nw">Art-Net</span> o sACN y MIDI.</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product">
+          <div class="live-host"><div class="live-zoom"><img src="../site/img/output.webp" alt="Página OUTPUT: un editor de nodos que conecta los valores de los decks con destinos OSC, DMX y MIDI" width="2880" height="1540" loading="lazy"></div></div>
+          <figcaption><b>Salida</b></figcaption>
+        </figure>
+      </article>
+      <article class="chapter" id="ch-setlist" data-layout="bottom" aria-labelledby="ch-setlist-title">
+        <div class="ch-copy">
+          <h2 id="ch-setlist-title" class="ch-title">Un cue para cada momento.</h2>
+          <p class="lead ch-text">Un offset de timecode para cada pista, y cues que envían OSC, DMX y MIDI en el beat.</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product">
+          <div class="live-host"><div class="live-zoom"><img src="../site/img/setlist.webp" alt="Página SET LIST: cuatro pistas con offsets de timecode y el editor de cues sobre una forma de onda" width="2880" height="1540" loading="lazy"></div></div>
+          <figcaption><b>Set list</b></figcaption>
+        </figure>
+      </article>
+      <article class="chapter" id="ch-mixer" data-layout="top" aria-labelledby="ch-mixer-title">
+        <div class="ch-copy">
+          <h2 id="ch-mixer-title" class="ch-title">El mezclador, en tiempo real.</h2>
+          <p class="lead ch-text">Faders, EQ, FX e indicadores de nivel tal como los comunica el DJM, aquí un DJM-900NXS2.</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product">
+          <div class="live-host"><div class="live-zoom"><img src="../site/img/mixer.webp" alt="Página MIXER: faders de canal, EQ, FX e indicadores de nivel de un DJM-900NXS2" width="2880" height="1540" loading="lazy"></div></div>
+          <figcaption><b>Mezclador</b></figcaption>
+        </figure>
+      </article>
+      <article class="chapter" id="ch-cuecall" data-layout="bottom-flip" aria-labelledby="ch-cuecall-title">
+        <div class="ch-copy">
+          <h2 id="ch-cuecall-title" class="ch-title">Cue calls que el equipo puede oír.</h2>
+          <p class="lead ch-text">Siguiente cue y tiempo restante por grupo, avisos de voz y la misma cuenta atrás en un teléfono en /cuecall.</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product" data-live="board">
+          <div class="live-host"><div class="live-zoom"><img src="../site/img/cuecall-board.webp" alt="Tablero CUE CALL: cuentas atrás de los grupos Lighting, Video, SFX y Laser" width="2880" height="1540" loading="lazy"></div></div>
+          <figcaption><b>Cue call</b></figcaption>
+        </figure>
+      </article>
+    </div>
+  </section>
+
+  <section class="specs" id="specs" aria-labelledby="specs-head">
+    <div class="container specs-grid">
+      <h2 id="specs-head">Con qué funciona</h2>
+      <div class="specs-body">
+        <dl class="rows">
+          <div class="row"><dt>Hardware probado</dt><dd>CDJ-3000X, CDJ-3000, CDJ-2000NXS2, DJM-V10, DJM-900NXS2</dd></div>
+          <div class="row"><dt>Envía</dt><dd>TCNet, LTC, MTC, timecode Art-Net, OSC, DMX (Art-Net, sACN), MIDI</dd></div>
+          <div class="row"><dt>Recibe</dt><dd>Teclado, MIDI, OSC (UDP <span class="num">7700</span>), Art-Net DMX (UDP <span class="num">6454</span>)</dd></div>
+          <div class="row"><dt>Sistemas</dt><dd>macOS 13.3 o posterior en Apple Silicon, Windows 10 y 11 (x64)</dd></div>
+          <div class="row"><dt>Internet</dt><dd>No se envían datos de uso. La búsqueda de actualizaciones consulta a GitHub con la versión de la app y se puede desactivar.</dd></div>
+        </dl>
+        <p class="note">El resto del hardware aún no se ha probado. Los resultados son bienvenidos en <a href="https://github.com/Zesminseok/ORVIK/issues">Issues</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="get" id="download" aria-labelledby="get-head">
+    <div class="container split split-get">
+      <div class="split-text">
+        <h2 id="get-head">ORVIK <span data-version>2.0.3</span></h2>
+        <p class="lead">Beta gratuita sin límite de tiempo.</p>
+        <div class="actions">
+          <a class="btn btn-primary" data-asset="mac" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.3/ORVIK-2.0.3-mac-arm64.dmg">Descargar para Mac</a>
+          <a class="btn btn-secondary" data-asset="win" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.3/ORVIK-2.0.3-win-x64.exe">Descargar para Windows</a>
+        </div>
+        <ul class="meta meta-lines"><li>Mac DMG, <span data-size="mac">32.3 MB</span>, notarizado por Apple</li><li>Windows EXE, <span data-size="win">57.4 MB</span>, sin firmar</li><li>Pruébalo con tus receptores antes de un show.</li><li><a data-notes href="https://github.com/Zesminseok/ORVIK/releases/tag/v2.0.3">Notas de la versión</a></li></ul>
+        <div class="support"><a class="btn btn-secondary" href="https://github.com/sponsors/zesminseok"><svg class="heart" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 13.6 2.6 8.3a3.2 3.2 0 0 1 4.5-4.5L8 4.7l.9-.9a3.2 3.2 0 0 1 4.5 4.5z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>Apoyar</a><p class="meta">ORVIK es gratuito por ahora. Si te ayuda en tus shows, puedes apoyar su desarrollo. El apoyo no desbloquea funciones ni es una compra.</p></div>
+      </div>
+      <figure class="plate split-visual" data-kind="product">
+        <img src="../site/img/cuecall-layers.webp" alt="Vista de capas de CUE CALL: forma de onda del deck máster con los cues de cada grupo en una línea de tiempo" width="2880" height="1540" loading="lazy">
+        <figcaption><b>CUE CALL</b> Vista de capas, cues sobre la forma de onda del deck máster.</figcaption>
+      </figure>
+    </div>
+  </section>
+</main>
+
+<footer class="mast">
+  <div class="container">
+    <img class="mast-mark" src="../site/img/wordmark.png" alt="ORVIK" width="168" height="56" loading="lazy">
+    <dl class="foot-rows">
+      <div><dt>Manual</dt><dd>
+        <a href="../manual/">English</a>
+        <a href="../manual/ko/" lang="ko">한국어</a>
+        <a href="../manual/ja/" lang="ja">日本語</a>
+        <a href="../manual/es/" lang="es">Español</a>
+        <a href="../manual/de/" lang="de">Deutsch</a>
+        <a href="../manual/fr/" lang="fr">Français</a>
+        <a href="../manual/zh-tw/" lang="zh-TW">繁體中文</a>
+      </dd></div>
+      <div><dt>Proyecto</dt><dd>
+        <a href="https://github.com/Zesminseok/ORVIK/releases">Versiones</a>
+        <a href="https://github.com/Zesminseok/ORVIK/blob/main/CHANGELOG.md">Cambios</a>
+        <a href="https://github.com/Zesminseok/ORVIK/issues">Issues</a>
+        <a href="https://github.com/sponsors/zesminseok">Apoyar</a>
+        <a href="https://instagram.com/zes_minseok">Instagram</a>
+      </dd></div>
+      <div><dt>Licencias</dt><dd>
+        <a href="https://github.com/Zesminseok/ORVIK/blob/main/BINARY_LICENSE.md">Aplicación</a>
+        <a href="https://github.com/Zesminseok/ORVIK/blob/main/LICENSE">Documentación</a>
+        <a href="https://github.com/Zesminseok/ORVIK/blob/main/THIRD_PARTY_NOTICES.md">Avisos de terceros</a>
+        <a href="../site/fonts/LICENSE.txt">Fuentes</a>
+      </dd></div>
+    </dl>
+    <p class="legal">ORVIK es una herramienta de compatibilidad independiente, sin relación con AlphaTheta, Pioneer DJ, TC Supply ni Resolume. Los nombres de productos y las marcas se usan solo para describir la compatibilidad. Art-Net™ Designed by and Copyright Artistic Licence.</p>
+  </div>
+</footer>
+<script src="../site/vendor/gsap-3.12.5/gsap.min.js" defer></script>
+<script src="../site/vendor/gsap-3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="../site/live.js" defer></script>
+<script src="../site/site.js" defer></script>
+</body>
+</html>

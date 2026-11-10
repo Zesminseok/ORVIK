@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ORVIK</title>
+<meta name="description" content="ORVIK は PRO DJ LINK 上の CDJ と DJM を読み取り、TCNet、SMPTE タイムコード、OSC、DMX、MIDI として送信します。macOS と Windows 向けの無料ベータ版。">
+<meta name="theme-color" content="#111318">
+<meta property="og:title" content="ORVIK">
+<meta property="og:description" content="CDJ と DJM のデータを TCNet、SMPTE タイムコード、OSC、DMX、MIDI として送信します。">
+<meta property="og:image" content="https://zesminseok.github.io/ORVIK/site/img/social.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="../site/img/icon.png">
+<link rel="alternate" hreflang="en" href="../">
+<link rel="alternate" hreflang="ko" href="../ko/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="es" href="../es/">
+<link rel="alternate" hreflang="de" href="../de/">
+<link rel="alternate" hreflang="fr" href="../fr/">
+<link rel="alternate" hreflang="zh-TW" href="../zh-tw/">
+<link rel="alternate" hreflang="x-default" href="../">
+<script src="../site/lang.js"></script>
+<link rel="preload" href="../site/fonts/jetbrains-mono-700-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../site/site.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<header class="nav">
+  <div class="container nav-row">
+    <nav aria-label="サイト">
+      <ul class="nav-links">
+        <li><a href="../manual/ja/">マニュアル</a></li>
+        <li class="nav-wide"><a href="https://github.com/Zesminseok/ORVIK/blob/main/CHANGELOG.md">変更履歴</a></li>
+        <li><a href="https://github.com/Zesminseok/ORVIK">GitHub</a></li>
+        <li><a class="nav-sponsor" href="https://github.com/sponsors/zesminseok"><svg class="heart" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 13.6 2.6 8.3a3.2 3.2 0 0 1 4.5-4.5L8 4.7l.9-.9a3.2 3.2 0 0 1 4.5 4.5z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg><span>支援</span></a></li>
+        <li><details class="langs"><summary>日本語</summary><ul><li><a href="../" hreflang="en" lang="en">English</a></li><li><a href="../ko/" hreflang="ko" lang="ko">한국어</a></li><li><a href="../ja/" hreflang="ja" lang="ja" aria-current="page">日本語</a></li><li><a href="../es/" hreflang="es" lang="es">Español</a></li><li><a href="../de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="../zh-tw/" hreflang="zh-TW" lang="zh-TW">繁體中文</a></li></ul></details></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="bar" data-bar hidden>
+  <div class="container bar-row">
+    <a class="bar-mark" href="#"><img src="../site/img/wordmark-hero.png" alt="ORVIK" width="783" height="242"></a>
+    <nav class="bar-rail" aria-label="チャプター">
+      <a href="#ch-decks" data-ch="0">デッキ</a>
+      <a href="#ch-smpte" data-ch="1">SMPTE 出力</a>
+      <a href="#ch-output" data-ch="2">出力</a>
+      <a href="#ch-setlist" data-ch="3">セットリスト</a>
+      <a href="#ch-mixer" data-ch="4">ミキサー</a>
+      <a href="#ch-cuecall" data-ch="5">キューコール</a>
+    </nav>
+    <div class="bar-get">
+      <a class="btn btn-primary" data-asset="mac" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.3/ORVIK-2.0.3-mac-arm64.dmg">Mac<span class="bar-long"> 版をダウンロード</span></a>
+      <a class="btn btn-secondary" data-asset="win" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.3/ORVIK-2.0.3-win-x64.exe">Windows<span class="bar-long"> 版をダウンロード</span></a>
+    </div>
+  </div>
+  <div class="bar-line" aria-hidden="true"><span></span></div>
+</div>
+
+<main>
+  <section class="hero">
+    <div class="container banner-grid">
+      <h1 class="name"><img src="../site/img/wordmark-hero.png" alt="ORVIK" width="783" height="242"></h1>
+      <div class="banner-aside">
+        <p class="lead">CDJ と DJM のデータを TCNet、SMPTE タイムコード、OSC、DMX、MIDI として送信します。</p>
+        <div class="actions">
+          <a class="btn btn-primary" data-asset="mac" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.3/ORVIK-2.0.3-mac-arm64.dmg">Mac 版をダウンロード</a>
+          <a class="btn btn-secondary" data-asset="win" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.3/ORVIK-2.0.3-win-x64.exe">Windows 版をダウンロード</a>
+        </div>
+        <p class="meta">バージョン <span data-version>2.0.3</span>、無料ベータ版。Apple シリコン搭載 Mac の macOS 13.3 以降、Windows 10 / 11。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="story" data-story aria-label="ORVIK の動作画面">
+    <div class="container story-inner">
+      <article class="chapter" id="ch-decks" data-layout="top" aria-labelledby="ch-decks-title">
+        <div class="ch-copy">
+          <h2 id="ch-decks-title" class="ch-title">リンク上の全デッキを一画面に。</h2>
+          <p class="lead ch-text">すべてのプレーヤーの再生位置、BPM、波形、キューを、プレーヤーが送るとおりに表示。</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product" data-live="decks">
+          <div class="live-host"><div class="live-zoom"><img src="../site/img/decks.webp" alt="ORVIK の DECKS ページ、プレーヤー 4 台の波形、タイムコード、BPM、SMPTE レイヤーボタン" width="2880" height="1540" fetchpriority="high"></div></div>
+          <figcaption><b>デッキ</b></figcaption>
+        </figure>
+      </article>
+      <article class="chapter" id="ch-smpte" data-layout="bottom-flip" aria-labelledby="ch-smpte-title">
+        <div class="ch-copy">
+          <h2 id="ch-smpte-title" class="ch-title">タイムコードとして出力。</h2>
+          <p class="lead ch-text">レイヤー A、B、MASTER の LTC、MTC、<span class="nw">Art-Net</span> タイムコード。</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product" data-live="smpte">
+          <div class="live-host"><div class="live-zoom"><img src="../site/img/smpte.webp" alt="SMPTE OUT ページ、レイヤー A、B、MASTER の LTC、MTC、Art-Net タイムコード設定" width="2880" height="1540" loading="lazy"></div></div>
+          <figcaption><b>SMPTE 出力</b></figcaption>
+        </figure>
+      </article>
+      <article class="chapter" id="ch-output" data-layout="top-flip" aria-labelledby="ch-output-title">
+        <div class="ch-copy">
+          <h2 id="ch-output-title" class="ch-title">あらゆる受信機器へ。</h2>
+          <p class="lead ch-text">デッキとミキサーの値を OSC、<span class="nw">Art-Net</span> または sACN の DMX、MIDI に変換するノードエディター。</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product">
+          <div class="live-host"><div class="live-zoom"><img src="../site/img/output.webp" alt="OUTPUT ページ、デッキの値を OSC、DMX、MIDI の送信先につなぐノードエディター" width="2880" height="1540" loading="lazy"></div></div>
+          <figcaption><b>出力</b></figcaption>
+        </figure>
+      </article>
+      <article class="chapter" id="ch-setlist" data-layout="bottom" aria-labelledby="ch-setlist-title">
+        <div class="ch-copy">
+          <h2 id="ch-setlist-title" class="ch-title">すべての瞬間にキューを。</h2>
+          <p class="lead ch-text">曲ごとにタイムコードオフセットを設定し、キューが拍に合わせて OSC、DMX、MIDI を送信します。</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product">
+          <div class="live-host"><div class="live-zoom"><img src="../site/img/setlist.webp" alt="SET LIST ページ、4 曲のタイムコードオフセットと波形上のキューエディター" width="2880" height="1540" loading="lazy"></div></div>
+          <figcaption><b>セットリスト</b></figcaption>
+        </figure>
+      </article>
+      <article class="chapter" id="ch-mixer" data-layout="top" aria-labelledby="ch-mixer-title">
+        <div class="ch-copy">
+          <h2 id="ch-mixer-title" class="ch-title">ミキサーの動きをそのままに。</h2>
+          <p class="lead ch-text">DJM が伝えるフェーダー、EQ、FX、レベルメーター。画面は DJM-900NXS2。</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product">
+          <div class="live-host"><div class="live-zoom"><img src="../site/img/mixer.webp" alt="MIXER ページ、DJM-900NXS2 のチャンネルフェーダー、EQ、FX、レベルメーター" width="2880" height="1540" loading="lazy"></div></div>
+          <figcaption><b>ミキサー</b></figcaption>
+        </figure>
+      </article>
+      <article class="chapter" id="ch-cuecall" data-layout="bottom-flip" aria-labelledby="ch-cuecall-title">
+        <div class="ch-copy">
+          <h2 id="ch-cuecall-title" class="ch-title">スタッフの耳に届くキューコール。</h2>
+          <p class="lead ch-text">グループごとの次のキューと残り時間、音声コール。同じカウントダウンはスマートフォンの /cuecall でも。</p>
+        </div>
+        <figure class="plate ch-plate" data-kind="product" data-live="board">
+          <div class="live-host"><div class="live-zoom"><img src="../site/img/cuecall-board.webp" alt="CUE CALL ボード、Lighting、Video、SFX、Laser グループのカウントダウン" width="2880" height="1540" loading="lazy"></div></div>
+          <figcaption><b>キューコール</b></figcaption>
+        </figure>
+      </article>
+    </div>
+  </section>
+
+  <section class="specs" id="specs" aria-labelledby="specs-head">
+    <div class="container specs-grid">
+      <h2 id="specs-head">対応機器と環境</h2>
+      <div class="specs-body">
+        <dl class="rows">
+          <div class="row"><dt>テスト済みの機器</dt><dd>CDJ-3000X, CDJ-3000, CDJ-2000NXS2, DJM-V10, DJM-900NXS2</dd></div>
+          <div class="row"><dt>送信</dt><dd>TCNet、LTC、MTC、Art-Net タイムコード、OSC、DMX (Art-Net、sACN)、MIDI</dd></div>
+          <div class="row"><dt>受信</dt><dd>キーボード、MIDI、OSC (UDP <span class="num">7700</span>)、Art-Net DMX (UDP <span class="num">6454</span>)</dd></div>
+          <div class="row"><dt>動作環境</dt><dd>Apple シリコン搭載 Mac の macOS 13.3 以降、Windows 10 / 11 (x64)</dd></div>
+          <div class="row"><dt>インターネット</dt><dd>使用データは送信しません。アップデート確認はアプリのバージョンを添えて GitHub に問い合わせるもので、オフにできます。</dd></div>
+        </dl>
+        <p class="note">その他の機器はまだテストしていません。結果は <a href="https://github.com/Zesminseok/ORVIK/issues">Issues</a> でお知らせください。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="get" id="download" aria-labelledby="get-head">
+    <div class="container split split-get">
+      <div class="split-text">
+        <h2 id="get-head">ORVIK <span data-version>2.0.3</span></h2>
+        <p class="lead">期間制限のない無料ベータ版。</p>
+        <div class="actions">
+          <a class="btn btn-primary" data-asset="mac" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.3/ORVIK-2.0.3-mac-arm64.dmg">Mac 版をダウンロード</a>
+          <a class="btn btn-secondary" data-asset="win" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.3/ORVIK-2.0.3-win-x64.exe">Windows 版をダウンロード</a>
+        </div>
+        <ul class="meta meta-lines"><li>Mac DMG、<span data-size="mac">32.3 MB</span>、Apple 公証済み</li><li>Windows EXE、<span data-size="win">57.4 MB</span>、署名なし</li><li>本番前に実際の受信機器で確認してください。</li><li><a data-notes href="https://github.com/Zesminseok/ORVIK/releases/tag/v2.0.3">リリースノート</a></li></ul>
+        <div class="support"><a class="btn btn-secondary" href="https://github.com/sponsors/zesminseok"><svg class="heart" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 13.6 2.6 8.3a3.2 3.2 0 0 1 4.5-4.5L8 4.7l.9-.9a3.2 3.2 0 0 1 4.5 4.5z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>支援する</a><p class="meta">現在は無料です。公演で役に立ったら、開発を支援していただけます。支援しても機能は増えず、購入にもあたりません。</p></div>
+      </div>
+      <figure class="plate split-visual" data-kind="product">
+        <img src="../site/img/cuecall-layers.webp" alt="CUE CALL のレイヤー表示、マスターデッキの波形と各グループのキューのタイムライン" width="2880" height="1540" loading="lazy">
+        <figcaption><b>CUE CALL</b> レイヤー表示、マスターデッキの波形上のキュー。</figcaption>
+      </figure>
+    </div>
+  </section>
+</main>
+
+<footer class="mast">
+  <div class="container">
+    <img class="mast-mark" src="../site/img/wordmark.png" alt="ORVIK" width="168" height="56" loading="lazy">
+    <dl class="foot-rows">
+      <div><dt>マニュアル</dt><dd>
+        <a href="../manual/">English</a>
+        <a href="../manual/ko/" lang="ko">한국어</a>
+        <a href="../manual/ja/" lang="ja">日本語</a>
+        <a href="../manual/es/" lang="es">Español</a>
+        <a href="../manual/de/" lang="de">Deutsch</a>
+        <a href="../manual/fr/" lang="fr">Français</a>
+        <a href="../manual/zh-tw/" lang="zh-TW">繁體中文</a>
+      </dd></div>
+      <div><dt>プロジェクト</dt><dd>
+        <a href="https://github.com/Zesminseok/ORVIK/releases">リリース</a>
+        <a href="https://github.com/Zesminseok/ORVIK/blob/main/CHANGELOG.md">変更履歴</a>
+        <a href="https://github.com/Zesminseok/ORVIK/issues">Issues</a>
+        <a href="https://github.com/sponsors/zesminseok">支援</a>
+        <a href="https://instagram.com/zes_minseok">Instagram</a>
+      </dd></div>
+      <div><dt>ライセンス</dt><dd>
+        <a href="https://github.com/Zesminseok/ORVIK/blob/main/BINARY_LICENSE.md">アプリの利用条件</a>
+        <a href="https://github.com/Zesminseok/ORVIK/blob/main/LICENSE">ドキュメントの利用条件</a>
+        <a href="https://github.com/Zesminseok/ORVIK/blob/main/THIRD_PARTY_NOTICES.md">サードパーティの通知</a>
+        <a href="../site/fonts/LICENSE.txt">フォント</a>
+      </dd></div>
+    </dl>
+    <p class="legal">ORVIK は AlphaTheta、Pioneer DJ、TC Supply、Resolume とは関係のない独立した互換ツールです。製品名と商標は互換対象を示すためにのみ使用しています。 Art-Net™ Designed by and Copyright Artistic Licence.</p>
+  </div>
+</footer>
+<script src="../site/vendor/gsap-3.12.5/gsap.min.js" defer></script>
+<script src="../site/vendor/gsap-3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="../site/live.js" defer></script>
+<script src="../site/site.js" defer></script>
+</body>
+</html>

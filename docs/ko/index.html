@@ -12,6 +12,14 @@
 <meta property="og:type" content="website">
 <link rel="icon" href="../site/img/icon.png">
 <link rel="alternate" hreflang="en" href="../">
+<link rel="alternate" hreflang="ko" href="../ko/">
+<link rel="alternate" hreflang="ja" href="../ja/">
+<link rel="alternate" hreflang="es" href="../es/">
+<link rel="alternate" hreflang="de" href="../de/">
+<link rel="alternate" hreflang="fr" href="../fr/">
+<link rel="alternate" hreflang="zh-TW" href="../zh-tw/">
+<link rel="alternate" hreflang="x-default" href="../">
+<script src="../site/lang.js"></script>
 <link rel="preload" href="../site/fonts/jetbrains-mono-700-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../site/site.css">
 <script>document.documentElement.classList.add('js')</script>
@@ -24,8 +32,8 @@
         <li><a href="../manual/ko/">설명서</a></li>
         <li class="nav-wide"><a href="https://github.com/Zesminseok/ORVIK/blob/main/CHANGELOG.ko.md">변경 내역</a></li>
         <li><a href="https://github.com/Zesminseok/ORVIK/blob/main/README.ko.md">GitHub</a></li>
-        <li><a class="nav-sponsor" href="https://github.com/sponsors/zesminseok"><svg class="heart" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 13.6 2.6 8.3a3.2 3.2 0 0 1 4.5-4.5L8 4.7l.9-.9a3.2 3.2 0 0 1 4.5 4.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg><span>후원</span></a></li>
-        <li><a href="../" hreflang="en" lang="en">English</a></li>
+        <li><a class="nav-sponsor" href="https://github.com/sponsors/zesminseok"><svg class="heart" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 13.6 2.6 8.3a3.2 3.2 0 0 1 4.5-4.5L8 4.7l.9-.9a3.2 3.2 0 0 1 4.5 4.5z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg><span>후원</span></a></li>
+        <li><details class="langs"><summary>한국어</summary><ul><li><a href="../" hreflang="en" lang="en">English</a></li><li><a href="../ko/" hreflang="ko" lang="ko" aria-current="page">한국어</a></li><li><a href="../ja/" hreflang="ja" lang="ja">日本語</a></li><li><a href="../es/" hreflang="es" lang="es">Español</a></li><li><a href="../de/" hreflang="de" lang="de">Deutsch</a></li><li><a href="../fr/" hreflang="fr" lang="fr">Français</a></li><li><a href="../zh-tw/" hreflang="zh-TW" lang="zh-TW">繁體中文</a></li></ul></details></li>
       </ul>
     </nav>
   </div>
@@ -154,8 +162,8 @@
           <a class="btn btn-primary" data-asset="mac" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.3/ORVIK-2.0.3-mac-arm64.dmg">Mac용 다운로드</a>
           <a class="btn btn-secondary" data-asset="win" href="https://github.com/Zesminseok/ORVIK/releases/download/v2.0.3/ORVIK-2.0.3-win-x64.exe">Windows용 다운로드</a>
         </div>
-        <p class="meta">Mac DMG, <span data-size="mac">32.3 MB</span>, Apple 공증. Windows EXE, <span data-size="win">57.4 MB</span>, 서명 없음. 공연 전에 실제 수신 장비로 확인하세요. <a data-notes href="https://github.com/Zesminseok/ORVIK/releases/tag/v2.0.3">릴리즈 노트</a></p>
-        <p class="meta support"><svg class="heart" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 13.6 2.6 8.3a3.2 3.2 0 0 1 4.5-4.5L8 4.7l.9-.9a3.2 3.2 0 0 1 4.5 4.5z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg><span>ORVIK은 무료입니다. 공연에 도움이 됐다면 <a href="https://github.com/sponsors/zesminseok">개발을 후원</a>할 수 있습니다. 후원해도 기능이 더 열리지 않으며 구매가 아닙니다.</span></p>
+        <ul class="meta meta-lines"><li>Mac DMG, <span data-size="mac">32.3 MB</span>, Apple 공증</li><li>Windows EXE, <span data-size="win">57.4 MB</span>, 서명 없음</li><li>공연 전에 실제 수신 장비로 확인하세요.</li><li><a data-notes href="https://github.com/Zesminseok/ORVIK/releases/tag/v2.0.3">릴리즈 노트</a></li></ul>
+        <div class="support"><a class="btn btn-secondary" href="https://github.com/sponsors/zesminseok"><svg class="heart" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 13.6 2.6 8.3a3.2 3.2 0 0 1 4.5-4.5L8 4.7l.9-.9a3.2 3.2 0 0 1 4.5 4.5z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>후원하기</a><p class="meta">지금은 무료입니다. 공연에 도움이 됐다면 개발을 후원할 수 있습니다. 후원해도 기능이 더 열리지 않으며 구매가 아닙니다.</p></div>
       </div>
       <figure class="plate split-visual" data-kind="product">
         <img src="../site/img/cuecall-layers.webp" alt="CUE CALL 레이어 화면, 마스터 덱 웨이브폼과 그룹별 큐 타임라인" width="2880" height="1540" loading="lazy">
@@ -170,8 +178,8 @@
     <img class="mast-mark" src="../site/img/wordmark.png" alt="ORVIK" width="168" height="56" loading="lazy">
     <dl class="foot-rows">
       <div><dt>설명서</dt><dd>
-        <a href="../manual/ko/">한국어</a>
-        <a href="../manual/" lang="en">English</a>
+        <a href="../manual/">English</a>
+        <a href="../manual/ko/" lang="ko">한국어</a>
         <a href="../manual/ja/" lang="ja">日本語</a>
         <a href="../manual/es/" lang="es">Español</a>
         <a href="../manual/de/" lang="de">Deutsch</a>
