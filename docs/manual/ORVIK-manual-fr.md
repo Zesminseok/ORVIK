@@ -29,6 +29,8 @@ Ce manuel décrit les écrans d'ORVIK et leurs éléments. Les numéros des imag
 
 ORVIK reçoit les informations de lecture des CDJ et DJM et les transmet aux logiciels de lumière et de vidéo : TCNet, timecode SMPTE (LTC, MTC, Art-Net), OSC, DMX (Art-Net, sACN), MIDI et MIDI Clock. Il peut aussi montrer les cues de la set list à l'équipe technique dans des fenêtres de cue call et les annoncer à voix haute. Il interroge seulement les appareils ; il ne les commande pas.
 
+**Sécurité.** ORVIK n’est pas un dispositif de sécurité. Ses sorties (timecode, OSC, DMX, MIDI et actions de cue) peuvent arriver en retard, s’arrêter ou se répéter si un réseau, un ordinateur ou une platine tombe en panne. Ne laissez jamais ORVIK déclencher ou maintenir seul un effet qui peut blesser des personnes ou endommager des biens : flammes, pyrotechnie, jets de CO2, lasers ou machinerie en mouvement. Ces effets exigent leurs propres systèmes de sécurité : une commande de validation ou d’homme mort tenue par un opérateur formé, un arrêt d’urgence et les limites fixées par le fabricant de l’appareil et par la réglementation locale. Testez chaque cue avec les vrais récepteurs avant le spectacle.
+
 ### Prérequis
 
 | Élément | Détail |
@@ -374,6 +376,8 @@ L'éditeur de cues s'ouvre sous la liste de la page SET LIST, avec la liste des 
 - **Sortie des cues** — l'interrupteur au-dessus de l'éditeur active et désactive l'envoi des actions.
 
 Les cues réagissent seulement au morceau qui joue sur le deck master. Si ce morceau n'est pas dans la set list, aucun cue n'est envoyé. Le temps du cue est calculé avec la grille de temps et la position de lecture. Les cues appartiennent à l'entrée de set list ; le même morceau a donc des cues différents dans chaque set list.
+
+Les actions de cue qui atteignent des effets pouvant blesser des personnes (flammes, CO2, pyrotechnie, lasers) doivent passer par le système de sécurité propre à cet effet. Voir **Sécurité** à la section 1.
 
 ---
 

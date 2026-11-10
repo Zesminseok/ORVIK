@@ -61,6 +61,8 @@ ORVIK은 있는 그대로, 이용 가능한 상태로 제공됩니다. 법률이
 
 법률이 허용하는 최대 범위에서 저작권자와 기여자는 ORVIK과 관련하여 발생하는 직접 또는 간접 손해, 이익, 매출, 데이터 손실, 장비 고장, 공연 중단, 제작 손실, 네트워크 장애 또는 제3자 청구에 대해 책임을 지지 않습니다.
 
+ORVIK은 안전 장치나 안전 제어 시스템이 아닙니다. 화염, 파이로, CO2, 레이저, 움직이는 기계 등 사람의 신체나 재산에 위험을 줄 수 있는 장치를 ORVIK의 출력에만 의존하여 작동시켜서는 안 됩니다. 그러한 장치에 필요한 독립된 안전 장치, 자격 있는 운용자, 관련 법령과 제조사 지침의 준수는 이용자가 갖추어야 합니다.
+
 **고의나 중대한 과실로 인한 책임, 법률상 배제하거나 제한할 수 없는 책임 및 소비자의 강행법상 권리는 위 조항의 적용에서 제외됩니다.**
 
 ### 9. 언어
@@ -125,6 +127,8 @@ To the extent permitted by applicable law, violation of these terms terminates t
 ORVIK is provided as is and as available. To the extent permitted by law, no warranty is given regarding merchantability, fitness for a particular purpose, title, non-infringement, compatibility, accuracy or uninterrupted operation.
 
 To the maximum extent permitted by law, the copyright holder and contributors are not liable for direct or indirect damages, lost profits, revenue or data, equipment failure, show interruption, production loss, network disruption or third-party claims related to ORVIK.
+
+ORVIK is not a safety device or a safety control system. Equipment that can endanger people or property, such as flames, pyrotechnics, CO2 jets, lasers or moving machinery, must not be operated in reliance on ORVIK's outputs alone. The user is responsible for the independent safety systems, qualified operators and compliance with applicable law and manufacturer instructions that such equipment requires.
 
 **These provisions do not exclude or limit liability for intentional misconduct or gross negligence, liability that cannot lawfully be excluded or limited, or consumers' mandatory statutory rights.**
 

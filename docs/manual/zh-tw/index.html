@@ -43,6 +43,7 @@
 <h2 id="1-開始之前"><span class="ch-num">1</span><span class="ch-name">開始之前</span></h2>
 <h3 id="orvik-是什麼">ORVIK 是什麼</h3>
 <p>ORVIK 接收 CDJ 與 DJM 的播放資訊，並轉送給燈光與影像軟體：TCNet, SMPTE 時間碼 (LTC, MTC, Art-Net), OSC, DMX (Art-Net, sACN), MIDI 與 MIDI Clock。它也能在 cue call 視窗中向工作人員顯示 set list 的 cue 並唸出來。它只向器材詢問資訊，不控制器材。</p>
+<p><strong>安全。</strong> ORVIK 不是安全裝置。網路、電腦或唱盤發生問題時，其輸出（時間碼、OSC、DMX、MIDI 與 Cue 動作）可能延遲、中斷或重複。請勿只靠 ORVIK 觸發或維持任何可能造成人員受傷或財物損壞的裝置，例如火焰、煙火、CO2 噴射、雷射或會移動的機械。這類效果需要自己的安全系統：由受過訓練的操作人員按住的許可（Dead-man）開關、緊急停止，以及設備製造商與當地法規規定的限制。演出前請以實際的接收裝置測試每一個 Cue。</p>
 <h3 id="系統需求">系統需求</h3>
 <div class="tbl"><table><thead><tr><th scope="col">項目</th><th scope="col">內容</th></tr></thead><tbody><tr><th scope="row">作業系統</th><td>macOS 13.3 以上 (Apple Silicon), Windows 10, 11 (x64)</td></tr><tr><th scope="row">已驗證器材</th><td>CDJ-3000X, CDJ-3000, CDJ-2000NXS2, DJM-V10, DJM-900NXS2</td></tr></tbody></table></div>
 <p>可取得的資訊依器材, 韌體與連線方式而異。</p>
@@ -143,6 +144,7 @@
 <div class="fig-grid cols-2"><figure class="fig" data-fig="15b-cue-editor"><div class="fig-frame"><img src="../img/15b-cue-editor.webp" alt="Cue 編輯器" width="1362" height="283" loading="lazy" decoding="async"></div><figcaption>Cue 編輯器：+ Cue (C), 匯入 Hot Cue, 對齊, 縮放, 試聽, Cue 輸出, 整首曲目與放大的區段。</figcaption></figure><figure class="fig" data-fig="15c-cue-list"><div class="fig-frame"><img src="../img/15c-cue-list.webp" alt="Cue 列表" width="446" height="535" loading="lazy" decoding="async"></div><figcaption>Cue 列表：時間, 小節.拍, Cue 名稱與群組。</figcaption></figure></div>
 <ul class="bul"><li><strong>波形</strong> — 整首曲目與放大的區段，附拍格, 小節編號, 樂句帶與 cue 標記。波形來自音訊檔, HISTORY 記錄或 CDJ 傳來的波形，有哪個用哪個。CDJ 波形需要開啟曲目庫 (編輯器會提議開啟)。沒有波形時 cue 只依時間放置。</li><li><strong>移動位置</strong> — 點波形移動編輯位置。<strong>對齊</strong> (關, 拍, 小節, 影格) 把位置對齊格線。<strong>縮放</strong>改變放大的範圍。</li><li><strong>+ Cue (C)</strong> — 在編輯位置建立 cue。有音訊檔時會試聽該處。</li><li><strong>匯入 Hot Cue</strong> — 把 rekordbox 的 hot cue 與記憶點帶入作為 cue 位置。</li><li><strong>Cue 列表</strong> — 時間, 小節.拍, 名稱, 群組與動作摘要。</li><li><strong>Cue 設定</strong> — 名稱, 時間, 小節.拍, 群組, 預告 (預設或拍數), 語音 (跟隨群組, 是, 否), 要唸的內容 (空白則唸 cue 名稱) 與動作清單。</li><li><strong>動作清單</strong> — 由上而下依序執行：OSC (目的地, 位址, 型別 i/f/s, 值), Art-Net DMX (universe, 多個 通道=值), MIDI (裝置, 通道, Note on/off, CC, Program) 與等待 (毫秒，或拍與小節)。目的地清單與 OUTPUT 相同。</li><li><strong>群組</strong> — Cue 所屬的工作群組。預設群組為燈光, 影像, SFX 與雷射；群組選單中的<strong>編輯群組…</strong>可改名, 改色或新增。群組決定 cue call 視窗與語音輸出。</li><li><strong>Cue 輸出</strong> — 編輯器上方的開關控制是否送出動作。</li></ul>
 <p>Cue 只對 master deck 上播放的曲目反應。該曲目不在 set list 中時不會送出任何 cue。Cue 的拍由拍格與播放位置計算。Cue 屬於 set list 的項目，因此同一曲目在不同 set list 中有不同的 cue。</p>
+<p>會送到可能傷人的效果（火焰、CO2、煙火、雷射）的 Cue 動作，務必經過該效果本身的安全系統。請參閱第 1 章的<strong>安全</strong>。</p>
 </section>
 <section class="chapter" aria-labelledby="11-cue-call">
 <h2 id="11-cue-call"><span class="ch-num">11</span><span class="ch-name">CUE CALL</span></h2>

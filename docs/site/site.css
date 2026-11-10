@@ -36,6 +36,12 @@ a:hover { color: var(--color-ink); text-decoration-color: var(--color-accent); }
 .nav-links { display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-lg); list-style: none; margin: 0; padding: 0; font-size: var(--text-sm); }
 .nav-links a { color: var(--color-ink-2); text-decoration: none; white-space: nowrap; display: inline-block; padding-block: var(--space-xs); }
 .nav-links a:hover { color: var(--color-ink); }
+/* sponsor: a heart in the nav and one line under the downloads (2026-11-10) */
+.heart { flex: none; }
+.nav-links a.nav-sponsor { display: inline-flex; align-items: center; gap: var(--space-2xs); }
+.nav-links a.nav-sponsor:hover .heart { color: var(--color-accent); }
+.support { display: flex; align-items: baseline; gap: var(--space-xs); margin-top: var(--space-md); }
+.support .heart { position: relative; top: 2px; color: var(--color-accent); }
 
 /* hero: Banner */
 .hero { padding-block: var(--space-3xl) var(--section-gap-s); }

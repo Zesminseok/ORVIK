@@ -29,6 +29,8 @@ Este manual describe las pantallas de ORVIK y sus partes. Los números de las im
 
 ORVIK recibe la información de reproducción de los CDJ y DJM y la envía a programas de iluminación y vídeo: TCNet, código de tiempo SMPTE (LTC, MTC, Art-Net), OSC, DMX (Art-Net, sACN), MIDI y MIDI Clock. También puede mostrar los cues del set list al personal técnico en ventanas de cue call y anunciarlos en voz alta. Solo pide información a los equipos; no los controla.
 
+**Seguridad.** ORVIK no es un dispositivo de seguridad. Sus salidas (timecode, OSC, DMX, MIDI y acciones de cue) pueden llegar tarde, detenerse o repetirse si falla una red, un ordenador o un deck. No dejes que ORVIK por sí solo dispare o mantenga nada que pueda herir a personas o dañar bienes, como llamas, pirotecnia, chorros de CO2, láseres o maquinaria en movimiento. Esos efectos necesitan sus propios sistemas de seguridad: un interruptor de habilitación u hombre muerto en manos de un operador formado, una parada de emergencia y los límites que fijen el fabricante del equipo y la normativa local. Prueba cada cue con los receptores reales antes del show.
+
 ### Requisitos
 
 | Elemento | Detalle |
@@ -374,6 +376,8 @@ El editor de cues se abre bajo la lista en la página SET LIST, con la lista de 
 - **Salida de cues** — el interruptor sobre el editor activa y desactiva el envío de acciones.
 
 Los cues reaccionan solo a la pista que suena en el deck maestro. Si esa pista no está en el set list, no se envía ningún cue. El beat del cue se calcula con la rejilla de beats y la posición de reproducción. Los cues pertenecen a la entrada del set list, así que la misma pista tiene cues distintos en cada set list.
+
+Las acciones de cue que lleguen a efectos capaces de herir a personas (llamas, CO2, pirotecnia, láseres) deben pasar por el sistema de seguridad propio de ese efecto. Consulta **Seguridad** en la sección 1.
 
 ---
 

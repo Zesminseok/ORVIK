@@ -29,6 +29,8 @@ Dieses Handbuch beschreibt die Bildschirme von ORVIK und ihre Teile. Die Nummern
 
 ORVIK empfängt die Wiedergabedaten von CDJ und DJM und gibt sie an Licht- und Videosoftware weiter: TCNet, SMPTE-Timecode (LTC, MTC, Art-Net), OSC, DMX (Art-Net, sACN), MIDI und MIDI Clock. Außerdem kann es der Crew die Cues der Set List in Cue-Call-Fenstern zeigen und sie ansagen. Es fragt die Geräte nur ab; es steuert sie nicht.
 
+**Sicherheit.** ORVIK ist keine Sicherheitseinrichtung. Seine Ausgaben (Timecode, OSC, DMX, MIDI und Cue-Aktionen) können verspätet ankommen, aussetzen oder sich wiederholen, wenn ein Netzwerk, ein Computer oder ein Deck ausfällt. ORVIK darf nichts allein auslösen oder halten, was Menschen verletzen oder Sachen beschädigen kann, etwa Flammen, Pyrotechnik, CO2-Jets, Laser oder bewegte Maschinen. Solche Effekte brauchen eigene Sicherheitssysteme: einen Freigabe- oder Totmannschalter in der Hand einer geschulten Person, einen Not-Halt und die Grenzen, die der Gerätehersteller und die örtlichen Vorschriften setzen. Vor der Show jeden Cue mit den echten Empfängern testen.
+
 ### Voraussetzungen
 
 | Punkt | Details |
@@ -374,6 +376,8 @@ Der Cue-Editor öffnet sich unter der Liste auf der Seite SET LIST, mit der Cue-
 - **Cue-Ausgabe** — der Schalter über dem Editor schaltet das Senden der Aktionen ein und aus.
 
 Cues reagieren nur auf den Titel, der im Master-Deck läuft. Steht dieser Titel nicht in der Set List, wird kein Cue gesendet. Der Beat des Cues wird aus Beatgrid und Wiedergabeposition berechnet. Cues gehören zum Set-List-Eintrag, derselbe Titel hat also in jeder Set List andere Cues.
+
+Cue-Aktionen, die Effekte erreichen, die Menschen verletzen können (Flammen, CO2, Pyrotechnik, Laser), müssen über das Sicherheitssystem dieses Effekts laufen. Siehe **Sicherheit** in Abschnitt 1.
 
 ---
 

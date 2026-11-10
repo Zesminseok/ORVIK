@@ -56,6 +56,12 @@ macOS가 제공하는 시스템 라이브러리(libcurl, zlib, ICU, CommonCrypto
 
 ORVIK의 기본 앨범아트와 앱 심볼에는 [앱 이용 조건](BINARY_LICENSE.md)이 적용됩니다. 별도 라이선스가 있는 자료는 해당 라이선스를 따릅니다.
 
+### 웹사이트
+
+| 구성요소 | 라이선스 |
+| --- | --- |
+| GSAP 3.12.5, ScrollTrigger (GreenSock) | [GSAP 표준 라이선스](https://gsap.com/standard-license). Copyright GreenSock. 웹사이트(`docs/site/vendor/`)에서만 쓰며 앱에는 들어 있지 않습니다. |
+
 ### 사용자 미디어
 
 ORVIK의 사용권은 음원, 앨범아트, 메타데이터 또는 그 밖의 제3자 자료에 대한 권리를 부여하지 않습니다. 사용자는 자신의 작업에서 이를 사용, 표시, 전달, 저장하는 데 필요한 권리를 확보해야 합니다.
@@ -115,6 +121,12 @@ System libraries provided by macOS (libcurl, zlib, ICU, CommonCrypto, Apple fram
 The fonts are embedded in the app executable; copies for the web viewer are in `Contents/Resources/app/renderer/fonts/`. Font copyright notices and full license texts are in `licenses/fonts/LICENSE.txt`.
 
 ORVIK's default artwork and application symbol are covered by the [application license](BINARY_LICENSE.md). Separately licensed materials remain subject to their own licenses.
+
+### Website
+
+| Component | License |
+| --- | --- |
+| GSAP 3.12.5, ScrollTrigger (GreenSock) | [GSAP standard license](https://gsap.com/standard-license). Copyright GreenSock. Used by the website only (`docs/site/vendor/`); not part of the app. |
 
 ### User media
 
