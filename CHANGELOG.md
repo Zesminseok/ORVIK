@@ -5,6 +5,47 @@
 Changes in public releases. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).<br>
 Downloads are on the [latest release](https://github.com/Zesminseok/ORVIK/releases/latest) page.
 
+## [2.0.4] - 2026-11-22
+
+### Added
+
+- OUTPUT: a Smooth node with attack, sustain and release, a Beat/Downbeat envelope, and a live graph on every node.
+- OUTPUT: node search, bypass, zoom, notes, and a menu on each wire. DMX, OSC and MIDI outputs show their values over the last few seconds.
+- NETWORK: warnings when the PRO DJ LINK set-up is wrong (another program using the ports, the wrong subnet, an adapter with no traffic). The footer LINK chip shows them too.
+- NETWORK: a CHECK LOG lists device and app problems as they happen.
+- Right-click a deck's title to hide it on the deck and in the web viewer. TCNet metadata and the other outputs keep the title.
+- Decks show how long the link has been lost.
+- The web cue call page (`/cuecall`) has a light scheme, plays voice calls on the device, and its lanes show the grid and the loop.
+- Art-Net timecode repeats a stopped deck's frame while the hold option is on, as LTC does.
+- The docked panel slides in and out, and set list rows slide when they move.
+- The manual and the terms have a safety notice.
+
+### Changed
+
+- Deck waveforms scroll more steadily. Timecode outputs are not affected.
+- A jog held down, a backspin, reverse play and a vinyl brake are shown and sent as the deck moves.
+- A deck's position no longer stands still right after ORVIK joins the link or at the very end of a track.
+- FLOW deck headers always read AIR / M / S, and the add-deck tile sits where the next deck will appear.
+- CUE CALL: a wide board tile shows the cue name on its own rows, the ticker's label has its own row, and a voice call disappears once it has been spoken.
+- macOS: the main window keeps the system title bar, and the header drags the window as on Windows.
+- Korean and French wording was reviewed, and more labels are translated in every language.
+
+### Fixed
+
+- Waveforms could tremble during normal playback and stand still in a loop.
+- A hot cue pressed repeatedly could be taken for reverse play.
+- LTC, MTC and Art-Net timecode could, rarely, jump or lag by a frame or two.
+- MIDI ports did not reopen after a device was unplugged and plugged in again.
+- Hot cue names longer than six characters were cut off.
+- A long DMX cue's off value might not be sent when ORVIK quit, and quitting could wait for a voice render.
+- ORVIK could crash when quitting with a popup open, or when the OSC popup was opened with no OSC target saved.
+- macOS: closing SETTINGS paused the app for about half a second.
+- CUE CALL: the next track's title could be drawn over the voice line, and the layers list hid a next cue more than 70 seconds away.
+- OUTPUT: an edit reset every node graph, and Smooth crept toward its target without reaching it.
+- The cue editor did not open when SET LIST was shown before the first frame.
+- Changes saved just before quitting were not always written.
+- Several labels appeared in Korean in every language, and some were black on black in the light scheme.
+
 ## [2.0.3] - 2026-11-07
 
 ### Added
@@ -352,6 +393,7 @@ ORVIK 2.0 is a native app (C++ / JUCE) that replaces the Electron app. It starts
 
 </details>
 
+[2.0.4]: https://github.com/Zesminseok/ORVIK/releases/tag/v2.0.4
 [2.0.3]: https://github.com/Zesminseok/ORVIK/releases/tag/v2.0.3
 [2.0.2]: https://github.com/Zesminseok/ORVIK/releases/tag/v2.0.2
 [2.0.1]: https://github.com/Zesminseok/ORVIK/releases/tag/v2.0.1
